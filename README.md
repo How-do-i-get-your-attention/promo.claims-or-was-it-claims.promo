@@ -3,4 +3,5 @@
   <img width="40" height="40" src="apple.png">
   <img width="40" height="40" src="android.png">
   <img width="40" height="40" src="microsoft.png">
+  <img width="40" height="40" src="html5.png">
 </p>
