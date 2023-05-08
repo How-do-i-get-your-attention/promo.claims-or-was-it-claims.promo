@@ -1,8 +1,8 @@
 //
 //  AppDelegate.m
-//  iOS
+//  apple
 //
-//  Created by HOW TO GET YOUR ATTENSION on 07/05/2023.
+//  Created by HOW TO GET YOUR ATTENSION on 08/05/2023.
 //
 
 #import "AppDelegate.h"
@@ -45,7 +45,7 @@
     // The persistent container for the application. This implementation creates and returns a container, having loaded the store for the application to it.
     @synchronized (self) {
         if (_persistentContainer == nil) {
-            _persistentContainer = [[NSPersistentContainer alloc] initWithName:@"iOS"];
+            _persistentContainer = [[NSPersistentContainer alloc] initWithName:@"apple"];
             [_persistentContainer loadPersistentStoresWithCompletionHandler:^(NSPersistentStoreDescription *storeDescription, NSError *error) {
                 if (error != nil) {
                     // Replace this implementation with code to handle the error appropriately.
