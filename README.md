@@ -1,17 +1,17 @@
 <h1 align="center"><strong>Promo.Claims or was it Claims.Promo</strong></h1>
 <p align="center">
-  <img width="40" height="40" src="apple.png">
-  <img width="40" height="40" src="c.png">
+  <img height="40" src="apple.png">
+  <img height="40" src="c.png">
       <br/>
-  <img width="40" height="40" src="android.png">
-    <img width="40" height="40" src="java.png">
-    <img width="40" height="40" src="cplusplus.png">
+  <img height="40" src="android.png">
+    <img height="40" src="java.png">
+    <img height="40" src="cplusplus.png">
     <br/>
-  <img width="40" height="40" src="microsoft.png">
-  <img width="40" height="40" src="cplusplus.png">
+  <img height="40" src="microsoft.png">
+  <img height="40" src="cplusplus.png">
   <br/>
-  <img width="40" height="40" src="webassembly.png">
-    <img width="40" height="40" src="cplusplus.png">
-  <img width="40" height="40" src="html5.png">
-  <img width="40" height="40" src="javascript.png">
+  <img height="40" src="webassembly.png">
+    <img height="40" src="cplusplus.png">
+  <img height="40" src="html5.png">
+  <img height="40" src="javascript.png">
 </p>
