@@ -28,3 +28,10 @@ macOS 13.3<br/>
 tvOS 16.4<br/>
     
 </div>
+<div align="center">
+
+<img height="40" src="android.png"><br/>
+minSdk 19<br/>
+targetSdk 33<br/>
+    
+</div>
