@@ -18,20 +18,3 @@
   <img height="40" src="html5.png">
   <img height="40" src="javascript.png">
 </p>
-
-# <h2 align="center"><strong>Version</strong></h1>
-<div align="center">
-
-<img height="40" src="apple.png"><br/>
-iOS 16.4<br/>
-macOS 13.3<br/>
-tvOS 16.4<br/>
-    
-</div>
-<div align="center">
-
-<img height="40" src="android.png"><br/>
-minSdk 19<br/>
-targetSdk 33<br/>
-    
-</div>
