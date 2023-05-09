@@ -19,3 +19,5 @@
   <img height="40" src="html5.png">
   <img height="40" src="javascript.png">
 </p>
+<p align="center">You see this because you accessed the primary source and were accepted as a developer for how-do-i-get-your-attention.com.</p>
+
