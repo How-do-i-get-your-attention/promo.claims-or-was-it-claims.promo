@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="html5.cpp">
+    <ClCompile Include="web.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
