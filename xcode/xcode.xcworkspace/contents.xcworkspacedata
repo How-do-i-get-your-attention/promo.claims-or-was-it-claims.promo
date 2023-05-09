@@ -2,6 +2,15 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:apple/apple.xcodeproj">
+      location = "group:tvos/tvos.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:macos/macos.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:watchos/watchos.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:ios/ios.xcodeproj">
    </FileRef>
 </Workspace>
