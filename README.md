@@ -1,4 +1,4 @@
-<h1 align="center"><strong>Promo.Claims or was it Claims.Promo</strong></h1>
+# <h1 align="center"><strong>Promo.Claims or was it Claims.Promo</strong></h1>
 <p align="center">
      <img height="40" src="apple.png">
    <img height="40" src="Xcode.png">
@@ -18,3 +18,4 @@
   <img height="40" src="html5.png">
   <img height="40" src="javascript.png">
 </p>
+
