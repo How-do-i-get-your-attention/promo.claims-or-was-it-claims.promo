@@ -2,6 +2,7 @@
 <p align="center">
      <img height="40" src="apple.png">
    <img height="40" src="Xcode.png">
+        <img height="40" src="swift.png">
   <img height="40" src="ObjC.png">
   <img height="40" src="c.png">
       <br/>
