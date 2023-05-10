@@ -141,7 +141,7 @@ In addition to the programmer fee, we will be charging a services fee to cover t
 We will share 5% of the profits from the project with the team each day.
 Finally, I want to make it clear that we have a zero-tolerance policy for disputes and conflicts within the team. If any team member engages in behavior that is disruptive or harmful to the project, they will be immediately removed from the team.
 
-First, I want to make it clear that we do not use open source or other free tools. We pay annually for licenses from Microsoft, Apple, Android, and hosting services.
+First, I want to make it clear that we do not use open source or other free code. We pay annually for licenses from Microsoft, Apple, Android, and hosting services.
 WEE BUILD!!!!
 
 Thank you for your time and commitment to this project.
