@@ -26,7 +26,6 @@ After the acquisition of NeXT by Apple, Steve Jobs returned to Apple as an advis
   The Altair 8800 was designed and produced by the company MITS (Micro Instrumentation and Telemetry Systems), which was founded by Ed Roberts and Forrest Mims in 1969. MITS was based in Albuquerque, New Mexico, and initially focused on developing electronic calculators and other scientific instruments. <br/>  <br/>
 They are so old that I couldn't find a png for them so I have saved their logo as mark.jpg 🕵️
 Mr Bill gates "Micro" -Soft come on dude.!<br/>  <br/>
-<br/><br/>
 As Microsoft grew and began developing software for other platforms, such as the IBM PC, the company began using higher-level programming languages such as C, which allowed for faster development and easier maintenance of software. C++ was later introduced as an extension of the C programming language, and Microsoft began using it for developing more complex software products.<br/><br/>
   C++ is not owned or controlled by Microsoft, but Microsoft is one of the major contributors to the development and standardization of the language. Microsoft has been actively involved in the development of C++ for many years, and has developed many tools and libraries for working with C++.<br/><br/>
 
