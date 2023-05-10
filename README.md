@@ -1,25 +1,13 @@
 <h1 align="center"><strong>Promo.Claims or was it Claims.Promo</strong></h1>
-<p align="center">
-     <img height="40" src="apple.png">
-     <img height="40" src="Xcode.png">
-      <img height="40" src="swift.png">
+<p align="center"><small>Did you know about milliseconds? humans only see 24 or 25 frames per second, which is very close to the 25-millisecond per image.</small></p>
 
-      <br/>
-  <img height="40" src="android.png">
-     <img height="40" src="cmake.png">
-    <img height="40" src="java.png">
-    <img height="40" src="cplusplus.png">
-    <br/>
-  <img height="40" src="microsoft.png">
-  <img height="40" src="cplusplus.png">
-  <br/>
-  <img height="40" src="webassembly.png">
-    <img height="40" src="cplusplus.png">
-  <img height="40" src="html5.png">
-  <img height="40" src="javascript.png">
-</p>
-<p align="center">You see this because you accessed the primary source and were accepted as a developer for how-do-i-get-your-attention.com.<br/>
-You have the opportunity to use our products for free.<br/>
-As long as it is in our environment.
-</p>
+Xcode
 
+A start point for iOS
+Is main
+to start a app in obj c wee use UIApplicationMain
+
+UIApplicationMain
+have some function
+
+ 
