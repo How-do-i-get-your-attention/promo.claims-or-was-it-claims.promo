@@ -10,7 +10,8 @@
 @implementation AppPrincipal
 - (instancetype)init {
     if (self = [super init]) {
-        // Perform any custom setup here
+      
+      [self s]
     }
     return self;
 }

@@ -1,5 +1,5 @@
 #import <UIKit/UIKit.h>
 
-@interface AppPrincipal : UIApplication
+@interface AppPrincipal :IResponder < UIApplication>
 
 @end
