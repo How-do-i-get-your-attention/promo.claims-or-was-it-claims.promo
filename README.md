@@ -5,5 +5,5 @@
 </div>
 <p align="center"><small>Did you know about milliseconds? humans only see 24 or 25 frames per second, which is very close to the 25-millisecond per image.</small></p>
 <div>
-<img src="c.png"/>  <img src="NeXt.png"/> <img src="cplusplus.png"/>
+<img src="c.png"/>  <img src="NeXT.png"/> <img src="cplusplus.png"/>
 </smail>
