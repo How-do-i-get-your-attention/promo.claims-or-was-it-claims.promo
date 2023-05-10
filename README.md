@@ -43,7 +43,9 @@ Android: What to say.. thx google..
 <h1 align="center"><strong>Let programmers be programmers</strong></h1>
 <div align="center">
 <small>
-This project is not open source although there will be some source code that will be public. It is done on purpose. Project go out on. That >programmers< must be >programmers<.<br/>
+This project is not open source although there will be some source code that will be public.
+<strong> It is done on purpose. </strong>
+That >programmers< must be >programmers<.<br/>
 <strong>I'm not a developer. I am a programmer.</strong>
 </small>
 </div>
