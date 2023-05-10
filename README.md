@@ -46,8 +46,9 @@ Android: What to say.. thx google..
 This project is not open source although there will be some source code that will be public.
 <strong> It is done on purpose. </strong>
 That >programmers< must be >programmers<.<br/>
-<strong>I'm not a developer. I am a programmer.</strong>
- <u>If you want to join why haven't you read the source code in this file? </u><br/>
+<strong>I'm not a developer. I am a programmer.</strong><br/>
+ <u>If you want to join why haven't you read the source code in this file?(README.MD) </u><br/>
   <strong>I know how to make comments in markdown(MD).</strong><br/>
+  
 </small>
 </div>
