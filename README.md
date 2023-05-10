@@ -178,3 +178,4 @@ That >programmers< must be >programmers<.<br/>
 <!--"I will send you an email" if you are accepted as a presenter with your first name and dot and your lastname@how-to-get-your-attention.com-->
 </small>
 </div>
+<!--Have a nice day!-->
