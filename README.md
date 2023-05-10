@@ -35,3 +35,7 @@ In addition to using C++ in its own software products, Microsoft has contributed
 
 Android: What to say.. thx google..
 </small>
+<h1 align="center"><strong>Let programmers be programmers</strong></h1>
+<small>
+This project is not open source although there will be some source code that will be public.
+</small>
