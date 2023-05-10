@@ -21,7 +21,8 @@ Steve Jobs was one of the co-founders of Apple Inc. in 1976 and played a major r
   Steve Jobs was the CEO of NeXT Computer Inc. from its founding in 1985 until its acquisition by Apple Inc. in 1996. So, he was the owner of NeXT for a little over 10 years.
   <br/><br/>
 After the acquisition of NeXT by Apple, Steve Jobs returned to Apple as an advisor, and eventually became the CEO of Apple in 1997. He played a key role in turning around Apple's fortunes and making it one of the most successful technology companies in the world.
-  <br/>
-  In the early days of Microsoft, the company primarily developed software for the Altair 8800, one of the first commercially successful personal computers. The programming language used for this software was primarily assembly language, which was a low-level language that allowed for direct control over the computer's hardware.
-  
+  <br/>  <br/>
+  In the early days of Microsoft, the company primarily developed software for the Altair 8800, one of the first commercially successful personal computers. The programming language used for this software was primarily assembly language, which was a low-level language that allowed for direct control over the computer's hardware. <br/>  <br/>
+  The Altair 8800 was designed and produced by the company MITS (Micro Instrumentation and Telemetry Systems), which was founded by Ed Roberts and Forrest Mims in 1969. MITS was based in Albuquerque, New Mexico, and initially focused on developing electronic calculators and other scientific instruments. <br/>  <br/>
+They are so old that I couldn't find a png for them so I have saved their logo as mark.jpg 🕵️
 </small>
