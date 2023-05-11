@@ -6,7 +6,6 @@ Programmers let's get together
 <div align="center">
 <!--
 I just place this platform, that's my main focus.
-  btw: its also center in view ;)
 -->
   <img src="android.png" width="40"/><img src="microsoft.png" width="40"/><img src="apple.png" width="40"/>
 </div>
@@ -49,7 +48,7 @@ Steve Jobs was one of the co-founders of Apple Inc. in 1976 and played a major r
   Steve Jobs was the CEO of NeXT Computer Inc. from its founding in 1985 until its acquisition by Apple Inc. in 1996. So, he was the owner of NeXT for a little over 10 years.
   <br/><br/>
 After the acquisition of NeXT by Apple, Steve Jobs returned to Apple as an advisor, and eventually became the CEO of Apple in 1997. He played a key role in turning around Apple's fortunes and making it one of the most successful technology companies in the world.
-  <br/>  <br/>
+  <br/><br/>
   In the early days of Microsoft, the company primarily developed software for the Altair 8800, one of the first commercially successful personal computers. The programming language used for this software was primarily assembly language, which was a low-level language that allowed for direct control over the computer's hardware. <br/>  <br/>
   The Altair 8800 was designed and produced by the company MITS (Micro Instrumentation and Telemetry Systems), which was founded by Ed Roberts and Forrest Mims in 1969. MITS was based in Albuquerque, New Mexico, and initially focused on developing electronic calculators and other scientific instruments. <br/>  <br/>
 They are so old that I couldn't find a png for them so I have saved their logo as mark.jpg 🕵️
@@ -117,7 +116,7 @@ In addition to the programmer fee, we will be charging a services fee to cover t
 We will share 5% of the profits from the project with the team each day.
 Finally, I want to make it clear that we have a zero-tolerance policy for disputes and conflicts within the team. If any team member engages in behavior that is disruptive or harmful to the project, they will be immediately removed from the team.
 
-First, I want to make it clear that we do not use open source or other free code. We pay annually for licenses from Microsoft, Apple, Android, and hosting services.
+First, I want to make it clear that we do not use open source or other free code.(Without the approval of pirasath luxchumykanthan) We pay annually for licenses from Microsoft, Apple, Android, and hosting services.
 WEE BUILD!!!!
 
 Thank you for your time and commitment to this project.
@@ -129,8 +128,8 @@ Pirasath Luxchumykanthan
 <div align="center">
 <small>
 This project is not open source although there will be some source code that will be public.
-<strong> It is done on purpose. </strong>
-That >programmers< must be >programmers<.<br/>
+<strong> It is done on purpose. </strong><br/>
+A >programmers< must be >programmers<.<br/>
 <strong>I'm not a developer. I am a programmer.</strong><br/>
  <u>If you want to join why haven't you read the source code in this file?(README.MD) </u><br/>
   <strong>I know how to make comments in markdown(MD).</strong><br/>
