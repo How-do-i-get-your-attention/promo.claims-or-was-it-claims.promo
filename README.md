@@ -79,7 +79,11 @@ I just place this platform, that's my main focus.
 <!--
 A document have have many layers.
 -->
-<p align="center"><small>Did you know about milliseconds? humans only see 24 or 25 frames per second, which is very close to the 25-millisecond per image.</small></p>
+<p align="center"><small>
+The human auditory system is capable of detecting sound waves in the range of 20 Hz to 20,000 Hz. The perception of sound is a continuous process and not divided into distinct frames like in video or images. Therefore, the concept of "frames per millisecond" is not applicable to sound perception.
+<br/><br/>
+However, the human auditory system is capable of distinguishing between sounds that differ by as little as 2-3 Hz in frequency, and can detect changes in loudness as small as 1 dB. This high level of sensitivity enables humans to perceive complex sounds such as music, speech, and environmental sounds with a high degree of accuracy and fidelity.
+  </small></p>
 <!-
 Why did i choice c++.?
 It runs on any device. Server Mobile Tabelt watch anything..
