@@ -26,6 +26,59 @@ If you know there is something called Remote Explorer. it just one of them if yo
 There more than you know.
 have you read the source code in the other files.
 I can also figure out how to make comments in c
+
+
+Well  need to get out..
+
+in 2023 the market for tablet and mobile is it as just a note..
+/*
+Apple  - App Store (xcode)
+Microsoft - Microsoft Store(Visual Studio)
+Google - Google Play Store(Android Studio)
+Samsung (Android Studio)(SDK Available) - Galaxy Store (Own Studio)
+Xiaomi (Android Studio)(SDK Available) - Mi App Store (Own Studio)
+Oppo (Android Studio)(SDK Available)- Oppo App Market (Own Studio)
+Vivo (Android Studio)(SDK Available) - Vivo App Store (Own Studio)
+Huawei (AppGallery) - (SDK Available)
+LG (Android Studio) - LG Content Store (SDK Available)
+Sony (Android Studio) - Sony Mobile Store (SDK Available)
+Lenovo (Android Studio) - Lenovo App Store (SDK Available)
+Motorola (Android Studio) - Motorola Store (SDK Available)
+HTC (Android Studio) - HTC Store (SDK Available)
+Nokia (Android Studio) - Nokia Mobile Store (SDK Available)
+ASUS (Android Studio) - ASUS App Store (SDK Available)
+BlackBerry (Android Studio) - BlackBerry World (SDK Available)
+Amazon (Fire tablets) - Amazon Appstore (SDK Available)
+Microsoft (Surface tablets) - Microsoft Store (SDK Available)
+Acer (Android Studio) - Acer Store (SDK Available)
+HP (Android Studio) - HP App Catalog (SDK Available)
+TCL (Android Studio) - TCL App Store (SDK Available)
+ZTE (Android Studio) - ZTE App Store (SDK Available)
+Meizu (Android Studio) - Meizu App Store (SDK Available)
+Realme (Android Studio) - Realme Store (SDK Available)
+Panasonic (Android Studio) - Panasonic App Store (SDK Available)
+Coolpad (Android Studio) - Coolpad App Store (SDK Available)
+Honor (Android Studio) - Honor AppGallery (SDK Available)
+Alcatel (Android Studio) - Alcatel App Store (SDK Available)
+Sharp (Android Studio) - Sharp App Store (SDK Available)
+Micromax (Android Studio) - Micromax App Store (SDK Available)
+Karbonn (Android Studio) - Karbonn App Store (SDK Available)
+Lava (Android Studio) - Lava App Store (SDK Available)
+Razer (Android Studio) - Razer Game Store (SDK Available)
+Archos (Android Studio) - Archos Media Store (SDK Available)
+Toshiba (Android Studio) - Toshiba App Place (SDK Available)
+Fujitsu (Android Studio) - Fujitsu App Market (SDK Available)
+Philips (Android Studio) - Philips App Gallery (SDK Available)
+Yota Devices (Android Studio) - YotaApps (SDK Available)
+Infinix (Android Studio) - Infinix App Store (SDK Available)
+Tecno (Android Studio) - Tecno App Store (SDK Available)
+Wiko (Android Studio) - Wiko App Store (SDK Available)
+Elephone (Android Studio) - Elephone App Store (SDK Available)
+Intex (Android Studio) - Intex App Store (SDK Available)
+iBall (Android Studio) - iBall App Store (SDK Available)
+Celkon (Android Studio) - Celkon App Store (SDK Available)
+Swipe (Android Studio) - Swipe App Store (SDK Available)
+*/
 -->
 <div align="center">
   <img src="c.png" height="20"/>  
