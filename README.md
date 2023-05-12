@@ -13,72 +13,9 @@ I just place this platform, that's my main focus.
 A document have have many layers.
 -->
 <p align="center"><small>Did you know about milliseconds? humans only see 24 or 25 frames per second, which is very close to the 25-millisecond per image.</small></p>
-<!-
-Why did i choice c++.?
-It runs on any device. Server Mobile Tabelt watch anything..
-But if you see! about "C". I still tell the story.(PUBLIC)
-About apple, microsoft and android. but for real. android also have alot c++ and that's also in apple to.
-but the truth is just that there are different ways of adding files to it. And compile it.
-And more trust way to do it.
-I personally use Visual Studio "Code" Remember "Code".
-There are many tools that are better than those built into Visual studio visual studio "community".
-If you know there is something called Remote Explorer. it just one of them if you are tired of sharing files back and forth from your mac or pc.
-There more than you know.
-have you read the source code in the other files.
-I can also figure out how to make comments in c
 
 
-Well  need to get out..
 
-in 2023 the market for tablet and mobile is it as just a note..
-/*
-Apple - App Store (Xcode)
-Microsoft - Microsoft Store (Visual Studio)
-Google - Google Play Store (Android Studio)
-Samsung (Android Studio)(SDK Available) - Galaxy Store (Tizen)(Google Play)
-Xiaomi (Android Studio)(SDK Available) - Mi App Store (Mi Developer Studio)(Google Play)
-Oppo (Android Studio)(SDK Available) - Oppo App Market (Oppo Developer Studio)(Google Play)
-Vivo (Android Studio)(SDK Available) - Vivo App Store (Google Play)(Google Play)
-Huawei  - (AppGallery)(SDK Available) 
-LG (Android Studio)(SDK Available) - LG Content Store (Google Play)
-Sony (Android Studio)(SDK Available) - Sony Mobile Store (Google Play)
-Lenovo (Android Studio)(SDK Available) - Lenovo App Store (Google Play)
-Motorola (Android Studio)(SDK Available) - Motorola Store (Google Play)
-HTC (Android Studio)(SDK Available) - HTC Store (Google Play)
-Nokia (Android Studio)(SDK Available) - Nokia Mobile Store (Google Play)
-ASUS (Android Studio)(SDK Available) - ASUS App Store (Google Play)
-BlackBerry (Android Studio)(SDK Available) - BlackBerry World (Google Play)
-Amazon (Fire tablets)(SDK Available) - Amazon Appstore (Google Play)
-Acer (Android Studio)(SDK Available) - Acer Store (Google Play)
-HP (Android Studio)(SDK Available) - HP App Catalog (Google Play)
-TCL (Android Studio)(SDK Available) - TCL App Store (Google Play)
-ZTE (Android Studio)(SDK Available) - ZTE App Store (Google Play)
-Meizu (Android Studio)(SDK Available) - Meizu App Store (Google Play)
-Realme (Android Studio)(SDK Available) - Realme Store (Google Play)
-Panasonic (Android Studio)(SDK Available) - Panasonic App Store (Google Play)
-Coolpad (Android Studio)(SDK Available) - Coolpad App Store (Google Play)
-Honor (Android Studio)(SDK Available) - Honor AppGallery (Google Play)
-Alcatel (Android Studio)(SDK Available) - Alcatel App Store (Google Play)
-Sharp (Android Studio)(SDK Available) - Sharp App Store (Google Play)
-Micromax (Android Studio)(SDK Available) - Micromax App Store (Google Play)
-Karbonn (Android Studio)(SDK Available) - Karbonn App Store (Google Play)
-Lava (Android Studio)(SDK Available) - Lava App Store (Google Play)
-Razer (Android Studio)(SDK Available) - Razer Game Store (Google Play)
-Archos (Android Studio)(SDK Available) - Archos Media Store (Google Play)
-Toshiba (Android Studio)(SDK Available) - Toshiba App Place (Google Play)
-Fujitsu (Android Studio)(SDK Available) - Fujitsu App Market (Google Play)
-Philips (Android Studio)(SDK Available) - Philips App Gallery (Google Play)
-Yota Devices (Android Studio)(SDK Available) - YotaApps (Google Play)
-Infinix (Android Studio)(SDK Available) - Infinix App Store (Google Play)
-Tecno (Android Studio)(SDK Available) - Tecno App Store (Google Play)
-Wiko (Android Studio)(SDK Available) - Wiko App Store (Google Play)
-Elephone (Android Studio)(SDK Available) - Elephone App Store (Google Play)
-Intex (Android Studio)(SDK Available) - Intex App Store (Google Play)
-iBall (Android Studio)(SDK Available) - iBall App Store (Google Play)
-Celkon (Android Studio)(SDK Available) - Celkon App Store (Google Play)
-Swipe (Android Studio) (SDK Available) - Swipe App Store (Google Play)
-*/
--->
 <div align="center">
   <img src="c.png" height="20"/>  
   <img src="NeXT.png" height="20"/>  
@@ -114,17 +51,11 @@ In addition to using C++ in its own software products, Microsoft has contributed
 
 Android: What to say.. thx google..
 </small>
-<!--
 <!--Message to the programmer.:-->
 <h1 align="center"><strong>Promo.Claims or was it Claims.Promo</strong></h1>
-<!--
-Programmers let's get together
--->
+<!--Programmers let's get together-->
 <div align="center">
-<!--
-I just place this platform, that's my main focus.
-  btw: its also center in view ;)
--->
+<!--I just place this platform, that's my main focus.-->
   <img src="android.png" width="40"/><img src="microsoft.png" width="40"/><img src="apple.png" width="40"/>
 </div>
 <!--
@@ -163,15 +94,8 @@ I can also figure out how to make comments in c
 Dear team,
 
 I wanted to clarify some ground rules for being part of this project. As the inventor and CEO of how-to-get-your-attention.com, I want to make sure that everyone involved understands their roles and responsibilities.
-
-First, I want to remind everyone that the code you write for this project is owned by how-to-get-your-attention.com, with approval. As the owner, I reserve the right to take a fee of 3% for paying clients. However, I may choose to take a lower percentage in some products.
-
-In addition to the programmer fee, we will be charging a services fee to cover the costs of hosting, maintenance, and customer support. The services fee will be 15% of the total amount paid by customers for our products, plus applicable taxes and company taxes in the countries where we operate.
-
-We will share 5% of the profits from the project with the team each day.
-Finally, I want to make it clear that we have a zero-tolerance policy for disputes and conflicts within the team. If any team member engages in behavior that is disruptive or harmful to the project, they will be immediately removed from the team.
-
-First, I want to make it clear that we do not use open source or other free code.(Without the approval of pirasath luxchumykanthan) We pay annually for licenses from Microsoft, Apple, Android, and hosting services.
+First, I want to make it clear that we do not use open source or other free code.(Without the approval of pirasath luxchumykanthan) We pay annually for licenses from Microsoft, Apple, Android and other and hosting services.
+No more mistake for c# or python or what ever
 WEE BUILD!!!!
 
 Thank you for your time and commitment to this project.
@@ -190,7 +114,10 @@ A >programmers< must be >programmers<.<br/>
   <strong>I know how to make comments in markdown(MD).</strong><br/>
   Pirasath Luxchumykanthan
 <!--For you: pirasath.luxchumykanthan@how-to-get-your-attention.com for public office@how-to-get-your-attention.com -->
-<!--"I will send you an email" if you are accepted as a presenter with your first name and dot and your lastname@how-to-get-your-attention.com-->
+<!--
+"I will send you an email" if you are accepted as a presenter with your first name and dot and your lastname@how-to-get-your-attention.com
+I also know how to make comment in code..
+-->
 </small>
 </div>
 <!--Have a nice day!-->
