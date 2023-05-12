@@ -77,7 +77,6 @@ Intex (Android Studio)(SDK Available) - Intex App Store (Google Play)
 iBall (Android Studio)(SDK Available) - iBall App Store (Google Play)
 Celkon (Android Studio)(SDK Available) - Celkon App Store (Google Play)
 Swipe (Android Studio) (SDK Available) - Swipe App Store (Google Play)
-Celkon (Android Studio) - Celkon App Store (Google Play)
 */
 -->
 <div align="center">
