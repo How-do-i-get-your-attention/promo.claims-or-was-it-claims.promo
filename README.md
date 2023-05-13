@@ -49,7 +49,7 @@ Microsoft uses C++ extensively in the development of its software products, incl
 
 In addition to using C++ in its own software products, Microsoft has contributed to the development of C++ through its participation in the ISO C++ standardization process, and through the development of the Visual C++ compiler and related tools. Overall, while C++ is not owned by Microsoft, the company has played a significant role in the development and advancement of the language.<br/><br/>
 
-Thanks to Android for a wide range of brands, including Alcatel, Acer, Amazon, Archos, ASUS, BlackBerry, Celkon, Coolpad, Elephone, Fujitsu, Google, HP, HTC, Huawei, iBall, Infinix, Intex, Karbonn, Lava, Lenovo, LG, Micromax, Meizu, Motorola, Nokia, Oppo, Panasonic, Philips, Razer, Realme, Samsung, Sharp, Sony, Swipe, TCL, Tecno, Toshiba, Vivo, Wiko, Xiaomi, Yota Devices, ZTE, and many more. But it's only a backup. There are some systems that we programmers have more access to.
+Thanks to Android for a wide range of brands, including Alcatel, Acer, Amazon, Archos, ASUS, BlackBerry, Celkon, Coolpad, Elephone, Fujitsu, Google, HP, HTC, Huawei, iBall, Infinix, Intex, Karbonn, Lava, Lenovo, LG, Micromax, Meizu, Motorola, Nokia, Oppo, Panasonic, Philips, Razer, Realme, Samsung, Sharp, Sony, Swipe, TCL, Tecno, Toshiba, Vivo, Wiko, Xiaomi, Yota Devices, ZTE, and many more.
 
 </small>
 <!--Message to the programmer.:-->
