@@ -95,7 +95,7 @@ I can also figure out how to make comments in c
 Dear team,
 
 I wanted to clarify some ground rules for being part of this project. As the inventor and CEO of how-to-get-your-attention.com, I want to make sure that everyone involved understands their roles and responsibilities.
-First, I want to make it clear that we do not use open source or other free code.(Without the approval of pirasath luxchumykanthan) We pay annually for licenses from Microsoft, Apple, Android and other and hosting services.
+First, I want to make it clear that we do not use open source or other free code.(Without the approval of pirasath luxchumykanthan) We pay annually for licenses from Microsoft, Apple, Android, other and hosting services.
 No more mistake for c# or python or what ever
 WEE BUILD!!!!
 
