@@ -51,6 +51,23 @@ In addition to using C++ in its own software products, Microsoft has contributed
 
 Thanks to Android for a wide range of brands, including Alcatel, Acer, Amazon, Archos, ASUS, BlackBerry, Celkon, Coolpad, Elephone, Fujitsu, Google, HP, HTC, Huawei, iBall, Infinix, Intex, Karbonn, Lava, Lenovo, LG, Micromax, Meizu, Motorola, Oppo, Panasonic, Philips, Razer, Realme, Samsung, Sharp, Sony, Swipe, TCL, Tecno, Toshiba, Vivo, Wiko, Xiaomi, Yota Devices, ZTE, and many more.
 
+The similarities between Android Q gestures and iOS gestures are undeniable. The concept of swiping up from the bottom of the screen to go home or access recent apps is a distinctive feature of Apple's iOS interface.
+
+Copying ideas in the tech industry is not uncommon, and it has happened in both directions between Apple and Google. Steve Jobs himself acknowledged that great ideas are often borrowed or "stolen" to create something new and better.
+
+While the basic idea of a bottom bar gesture is shared, Android's implementation is not identical to iOS. Android has its own distinct commands and features, such as contextual app suggestions and a universal search bar. Additionally, Android's edge-of-screen back gestures are specific to the Android platform.
+
+On the other hand, Apple has also borrowed concepts from Android. For example, having a card-based info feed one swipe to the right from the home screen (Today View) was inspired by Google's Google Now/Google Feed. Apple also adopted the swipe-down gesture to access and manage notifications, a feature that originated in Android.
+
+The back-and-forth borrowing of ideas is a common occurrence in tech evolution. Good ideas tend to spread across platforms, leading to the development of standards and benefiting users of various devices.
+
+It's worth noting that sometimes, directly copying concepts may not work well in a different environment. For example, emulating Apple's App Shortcuts on Android may not be the most sensible approach. Similarly, Android's attempt to replicate iOS-like gestures for opening the Overview interface may feel awkward and inconsistent.
+
+Ultimately, feeling indignant about companies copying each other's ideas misses the point. Apple and Google are corporations, and consumers are the ones who benefit from their continuous efforts to improve products.
+
+In the end, this evolution and idea borrowing lead to progress and better products for all users. Regardless of platform preference, consumers ultimately win by getting improved gadgets, even if it involves some degree of copying along the way.
+
+
 </small>
 <!--Message to the programmer.:-->
 <h1 align="center"><strong>Promo.Claims or was it Claims.Promo</strong></h1>
