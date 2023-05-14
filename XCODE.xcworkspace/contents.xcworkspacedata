@@ -4,4 +4,10 @@
    <FileRef
       location = "group:Software/Software.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:Software/from mac.cpp">
+   </FileRef>
+   <FileRef
+      location = "group:Software/from mac.hpp">
+   </FileRef>
 </Workspace>
