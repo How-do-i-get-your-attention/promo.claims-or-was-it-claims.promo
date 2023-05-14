@@ -123,10 +123,15 @@ Pirasath Luxchumykanthan
 -->
 <h2 align="center"><strong>The Cryptic Project: Revealing Select Source Code for Public Glimpses</strong></h2>
 <small>
-The Cryptic Project: Revealing Select Source Code for Public Glimpses
 This project, although not open source, offers a glimpse into certain portions of the source code that will be made public. Its intentional design aims to uphold the essence of being a programmer. As a developer, your participation is welcomed. Have you explored the source code in the accompanying file, README.MD? Feel free to leave your markdown (MD) comments there.
 <br/><br/>  
-The choice to incorporate Objective-C and C++ stems from their ability to bridge the gap between modern languages like Swift, Java, C#, PHP, Python, and the realm of low-level machine programming. It's not about favoring one language over another; rather, it enables development across Android, Apple, and Microsoft platforms, catering to diverse user needs.
+The choice to incorporate Objective-C and C++ (including C++20) stems from their ability to bridge the gap between modern languages like Swift, Java, C#, PHP, Python, and the realm of low-level machine programming. It's not about favoring one language over another; rather, it enables development across Android, Apple, and Microsoft platforms, catering to diverse user needs. By including Objective-C and C++ (including C++20), we ensure compatibility and take advantage of their respective features to create robust and versatile applications.
+<br/><br/>  
+Furthermore, by embracing C++20, we enhance the cross-platform capabilities of our development approach. With C++20 support, we can leverage its latest features and enhancements, ensuring that our applications are fully supported on Android, Apple, and Microsoft platforms. This comprehensive language support allows us to develop applications that seamlessly integrate across these platforms, providing a consistent and optimized user experience.
+<br/><br/>  
+By utilizing C++20, we harness the power of modern language features while maintaining broad compatibility, enabling us to tap into the extensive ecosystem of libraries and frameworks available for C++. This flexibility opens up a wide range of possibilities for our application development, ensuring that we can meet the diverse needs of our users across different platforms.
+<br/><br/>  
+In summary, incorporating Objective-C and C++ (including C++20) allows us to bridge the gap between modern languages and low-level machine programming while ensuring compatibility and maximizing cross-platform capabilities across Android, Apple, and Microsoft platforms. This approach provides us with the tools and flexibility to create robust, versatile, and high-performing applications.
 <br/><br/>  
 Objective-C and C++ empower me to harness the strength and flexibility of low-level programming while maintaining compatibility with contemporary frameworks and libraries. They allow me to leverage existing codebases and unlock the full potential of underlying hardware.
 <br/><br/>  
