@@ -1,5 +1,37 @@
 <!--Message to the programmer.:-->
 <h1 align="center"><strong>Promo.Claims or was it Claims.Promo</strong></h1>
+<div align="center">
+<h2>Android installation</h2>
+  <img src="android.png" width="40"/>
+      <br/>
+    <img src="monitor.png" width="20"/> The installation needs to be done separately.
+    <br/>
+    <img src="tablet.png" width="20"/> The installation needs to be done separately.
+    <br/>
+    <img src="mobile.png" width="20"/> The installation needs to be done separately.
+    <br/>
+  <img src="smartwatch.png" width="20"/> The installation needs to be done separately.
+</div>
+<div align="center">
+<h2>Microsoft installation</h2>
+  <img src="microsoft.png" width="40"/>
+        <br/>
+    <img src="monitor.png" width="20"/> The installation needs to be done separately.
+      <br/>
+    <img src="tablet.png" width="20"/> The installation needs to be done separately.
+</div>
+<div align="center">
+<h2>Apple installation</h2>
+  <img src="apple.png" width="40"/>
+        <br/>
+    <img src="monitor.png" width="20"/> The installation needs to be done separately.
+      <br/>
+    <img src="tablet.png" width="20"/> The installation needs to be done separately.
+  <br/>
+    <img src="mobile.png" width="20"> The installation needs to be done separately.
+  <br/>
+    <img src="smartwatch.png" width="20"/> The installation is done by mobile.
+</div>
 <!--
 Programmers let's get together
 -->
@@ -161,38 +193,7 @@ http://www.how-to-get-your-attention.com
 I also know how to make comment in code..
 -->
 
-<div align="center">
-<h2>Android installation</h2>
-  <img src="android.png" width="40"/>
-      <br/>
-    <img src="monitor.png" width="20"/> The installation needs to be done separately.
-    <br/>
-    <img src="tablet.png" width="20"/> The installation needs to be done separately.
-    <br/>
-    <img src="mobile.png" width="20"/> The installation needs to be done separately.
-    <br/>
-  <img src="smartwatch.png" width="20"/> The installation needs to be done separately.
-</div>
-<div align="center">
-<h2>Microsoft installation</h2>
-  <img src="microsoft.png" width="40"/>
-        <br/>
-    <img src="monitor.png" width="20"/> The installation needs to be done separately.
-      <br/>
-    <img src="tablet.png" width="20"/> The installation needs to be done separately.
-</div>
-<div align="center">
-<h2>Apple installation</h2>
-  <img src="apple.png" width="40"/>
-        <br/>
-    <img src="monitor.png" width="20"/> The installation needs to be done separately.
-      <br/>
-    <img src="tablet.png" width="20"/> The installation needs to be done separately.
-  <br/>
-    <img src="mobile.png" width="20"> The installation needs to be done separately.
-  <br/>
-    <img src="smartwatch.png" width="20"/> The installation is done by mobile.
-</div>
+
 </small>
 
 <!--Have a nice day!-->
