@@ -130,7 +130,17 @@ A >programmers< must be >programmers<.<br/>
 <strong>I'm not a developer. I am a programmer.</strong><br/>
  <u>If you want to join why haven't you read the source code in this file?(README.MD) </u><br/>
   <strong>I know how to make comments in markdown(MD).</strong><br/>
-  Pirasath Luxchumykanthan
+  <u>
+  The reason I chose to utilize Objective-C and C++ is because they serve as a versatile bridge between modern languages like Swift, Java, C#, PHP, Python, and the low-level world of machine programming. It's not about favoring one language over another. In fact, my focus is on developing for Android, Apple, and Microsoft platforms, catering to a diverse range of users.
+<br/><br/>
+Objective-C and C++ allow me to tap into the power and flexibility of lower-level programming while still maintaining compatibility with modern frameworks and libraries. They provide me with the opportunity to leverage existing codebases and unlock the full potential of the underlying hardware.
+<br/><br/>
+By using Objective-C and C++, I can create robust applications that seamlessly integrate with the Android, Apple, and Microsoft ecosystems, providing a rich user experience across multiple platforms. Whether it's Java, C#, Swift, PHP, Python, or other languages, my goal is to harness their strengths and create exceptional software that meets the needs of a variety of devices and platforms.
+ <br/><br/>
+  I have chosen to use Windows Server because I trust Microsoft's commitment to maintaining robust security measures. They invest considerable resources in keeping their systems secure and up to date. On the other hand, Linux can sometimes be slower in addressing security vulnerabilities. Additionally, Apple has shifted its focus away from server technologies, so Windows Server remains a reliable choice for my server needs. With Windows Server, I can confidently ensure the stability, performance, and security of my infrastructure while leveraging the comprehensive tools and support provided by Microsoft.
+  </u>
+by:<br/>  
+Pirasath Luxchumykanthan
 <!--For you: pirasath.luxchumykanthan@how-to-get-your-attention.com for public office@how-to-get-your-attention.com -->
 <!--
 "I will send you an email" if you are accepted as a presenter with your first name and dot and your lastname@how-to-get-your-attention.com
