@@ -160,7 +160,7 @@ Building our system in accordance with PCI standards showcases our dedication to
     <br/><br/>  
   by:<br/>  
 Pirasath Luxchumykanthan, Inventor and Founder<br/>
-[how-to-get-your-attention.com](http://www.how-to-get-your-attention.com)
+http://www.how-to-get-your-attention.com
 <!--For you: pirasath.luxchumykanthan@how-to-get-your-attention.com for public office@how-to-get-your-attention.com -->
 <!--
 "I will send you an email" if you are accepted as a presenter with your first name and dot and your lastname@how-to-get-your-attention.com
