@@ -84,7 +84,7 @@ The human auditory system is capable of detecting sound waves in the range of 20
 <br/><br/>
 However, the human auditory system is capable of distinguishing between sounds that differ by as little as 2-3 Hz in frequency, and can detect changes in loudness as small as 1 dB. This high level of sensitivity enables humans to perceive complex sounds such as music, speech, and environmental sounds with a high degree of accuracy and fidelity.
   </small></p>
-<!-
+<!--
 Why did i choice c++.?
 It runs on any device. Server Mobile Tabelt watch anything..
 But if you see! about "C". I still tell the story.(PUBLIC)
@@ -117,9 +117,6 @@ No more mistake for c# or python or what ever
 WEE BUILD!!!!
 
 Thank you for your time and commitment to this project.
-
-Best regards,
-Pirasath Luxchumykanthan
 -->
 <h2 align="center"><strong>The Cryptic Project: Revealing Select Source Code for Public Glimpses</strong></h2>
 <small>
