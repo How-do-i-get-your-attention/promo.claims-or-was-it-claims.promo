@@ -166,5 +166,21 @@ http://www.how-to-get-your-attention.com
 "I will send you an email" if you are accepted as a presenter with your first name and dot and your lastname@how-to-get-your-attention.com
 I also know how to make comment in code..
 -->
+
+<div align="center">
+<h2>Android</h2>
+  <img src="android.png" width="40"/>
+</div>
 </small>
+
+<div align="center">
+<h2>Microsoft</h2>
+  <img src="microsoft.png" width="40"/>
+</div>
+<div align="center">
+<h2>Apple</h2>
+  <img src="apple.png" width="40"/>
+</div>
+</small>
+
 <!--Have a nice day!-->
