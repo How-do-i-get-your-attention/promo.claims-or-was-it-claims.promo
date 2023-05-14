@@ -70,7 +70,7 @@ In the end, this evolution and idea borrowing lead to progress and better produc
 
 </small>
 <!--Message to the programmer.:-->
-<h1 align="center"><strong>Promo.Claims or was it Claims.Promo</strong></h1>
+<h2 align="center"><strong>Unveiling the Power Within: Decoding the Essence of Auditory Perception</strong></h2>
 <!--Programmers let's get together-->
 <div align="center">
 <!--I just place this platform, that's my main focus.-->
@@ -121,8 +121,7 @@ Thank you for your time and commitment to this project.
 Best regards,
 Pirasath Luxchumykanthan
 -->
-<h1 align="center"><strong>Let programmers be programmers</strong></h1>
-<div align="center">
+<h2 align="center"><strong>Unleashing the Code Warriors: Letting Programmers Conquer the Machine</strong></h2>
 <small>
 This project is not open source although there will be some source code that will be public.
 <strong> It is done on purpose. </strong><br/>
@@ -147,5 +146,4 @@ Pirasath Luxchumykanthan
 I also know how to make comment in code..
 -->
 </small>
-</div>
 <!--Have a nice day!-->
