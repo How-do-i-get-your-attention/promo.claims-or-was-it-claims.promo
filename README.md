@@ -70,7 +70,7 @@ In the end, this evolution and idea borrowing lead to progress and better produc
 
 </small>
 <!--Message to the programmer.:-->
-<h1 align="center"><strong>Promo.Claims or was it Claims.Promo</strong></h1>
+<h2 align="center"><strong>Unveiling the Power Within: Decoding the Essence of Auditory Perception</strong></h2>
 <!--Programmers let's get together-->
 <div align="center">
 <!--I just place this platform, that's my main focus.-->
@@ -121,21 +121,46 @@ Thank you for your time and commitment to this project.
 Best regards,
 Pirasath Luxchumykanthan
 -->
-<h1 align="center"><strong>Let programmers be programmers</strong></h1>
-<div align="center">
+<h2 align="center"><strong>The Cryptic Project: Revealing Select Source Code for Public Glimpses</strong></h2>
 <small>
-This project is not open source although there will be some source code that will be public.
-<strong> It is done on purpose. </strong><br/>
-A >programmers< must be >programmers<.<br/>
-<strong>I'm not a developer. I am a programmer.</strong><br/>
- <u>If you want to join why haven't you read the source code in this file?(README.MD) </u><br/>
-  <strong>I know how to make comments in markdown(MD).</strong><br/>
-  Pirasath Luxchumykanthan
+The Cryptic Project: Revealing Select Source Code for Public Glimpses
+This project, although not open source, offers a glimpse into certain portions of the source code that will be made public. Its intentional design aims to uphold the essence of being a programmer. As a developer, your participation is welcomed. Have you explored the source code in the accompanying file, README.MD? Feel free to leave your markdown (MD) comments there.
+<br/><br/>  
+The choice to incorporate Objective-C and C++ stems from their ability to bridge the gap between modern languages like Swift, Java, C#, PHP, Python, and the realm of low-level machine programming. It's not about favoring one language over another; rather, it enables development across Android, Apple, and Microsoft platforms, catering to diverse user needs.
+<br/><br/>  
+Objective-C and C++ empower me to harness the strength and flexibility of low-level programming while maintaining compatibility with contemporary frameworks and libraries. They allow me to leverage existing codebases and unlock the full potential of underlying hardware.
+<br/><br/>  
+By utilizing Objective-C and C++, I can craft robust applications that seamlessly integrate with the Android, Apple, and Microsoft ecosystems, delivering exceptional user experiences across multiple platforms. Whether it's Java, C#, Swift, PHP, Python, or other languages, my goal is to capitalize on their unique strengths, creating remarkable software for diverse devices and platforms.
+<br/><br/>  
+Windows Server has been my chosen platform due to my confidence in Microsoft's unwavering commitment to maintaining stringent security measures. Microsoft invests substantial resources into ensuring the security and up-to-dateness of their systems. In contrast, Linux sometimes exhibits delays in addressing security vulnerabilities. Furthermore, Apple has shifted its focus away from server technologies, solidifying Windows Server as a reliable solution for my server requirements. Leveraging Windows Server allows me to ensure the stability, performance, and security of my infrastructure, benefiting from the comprehensive tools and support provided by Microsoft.
+<br/><br/>  
+It is important to note that as the founder of the how-do-i-get-your-attention.com company, I have established a revenue-sharing model where the company receives a 2% share of each sale in the market for the products we provide. This percentage is solely controlled by Pirasath Luxchumykanthan.
+<br/><br/>  
+Additionally, as part of our revenue-sharing model, there is a 5% contributory fee added to all products. This fee is distributed among all individuals who have contributed to the project, and it is only applied once for each sale. It is the responsibility of each individual to handle their respective taxes or fees that may be incurred. Please note that the contributory 5% fee applies primarily to external contributors who are not directly employed by the company. If you are a direct employee of the company, this fee may not be applicable. 5% contributory fee is calculated based on the remaining sales within a 24-hour period. This fee represents the portion allocated to marketing efforts during that specific day
+<br/><br/>  
+In addition, as part of our marketing model, there is a 5% marketing fee added to all products. This fee is allocated to the project's marketing efforts and is applied once for each sale.
+<br/><br/>  
+  I have undertaken this task to learn about machine learning and coding, as well as to explore the possibilities they offer. My goal is to create a platform that is loyal to all its users. It is crucial to me that we adhere to all standards, including regulations such as GDPR, CCPA, COPPA, HIPAA, PCI DSS, ECPA, PIPEDA, and APP, among others. In the early stages of this venture, building a network is paramount. Therefore, I cannot disclose the specific percentages of the various payment gateways at this time. However, you can refer to the source code if you are technically inclined.
+<br/><br/>  
+Furthermore, our main focus is to establish a strong presence in the market. We offer our product for free, but certain features or aspects of the product may have associated costs. When determining the price, we take into account our percentage, the payment processing fees, taxes, and corporate taxes.
+  <br/><br/>  
+  Even though we are not currently members of PCI, we can still build our system in accordance with PCI standards. This involves implementing appropriate security measures, including protection of card information, secure network configuration, strong access controls, and regular monitoring of our systems to detect and address any security risks.
+  <br/><br/>  
+By striving for PCI compliance, we demonstrate our commitment to protecting customer information and ensuring secure payment processes on our platform. While we are not currently PCI members, we can take steps to meet PCI standards and explore membership at a later stage to gain additional recognition and benefits as a PCI member.
+  <br/><br/>  
+To achieve PCI compliance, it is important to understand and implement the necessary security measures within our payment processing flow. Consulting a PCI expert or security consultant can be beneficial to ensure that we adhere to the relevant guidelines and best practices.
+  <br/><br/>  
+Building our system in accordance with PCI standards showcases our dedication to protecting payment information and creating a secure environment for our users. If you have further questions or require additional guidance on PCI DSS or related topics, I am here to assist you.
+    <br/><br/>  
+  Certainly! When there are updates, we should update this document accordingly. It's important to keep the information accurate and up-to-date to reflect any changes in regulations, standards, or our platform's practices. By regularly reviewing and revising this document, we can ensure that it remains relevant and aligns with the current legal framework and industry requirements. If you need assistance with future updates or have any questions, feel free to reach out.
+    <br/><br/>  
+  by:<br/>  
+Pirasath Luxchumykanthan, Inventor and Founder<br/>
+[how-to-get-your-attention.com](http://www.how-to-get-your-attention.com)
 <!--For you: pirasath.luxchumykanthan@how-to-get-your-attention.com for public office@how-to-get-your-attention.com -->
 <!--
 "I will send you an email" if you are accepted as a presenter with your first name and dot and your lastname@how-to-get-your-attention.com
 I also know how to make comment in code..
 -->
 </small>
-</div>
 <!--Have a nice day!-->
