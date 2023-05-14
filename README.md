@@ -168,7 +168,7 @@ I also know how to make comment in code..
 -->
 
 <div align="center">
-<h2>Android</h2>
+<h2>Android installation</h2>
   <img src="android.png" width="40"/>
       <br/>
     <img src="monitor.png" width="20"/> The installation needs to be done separately.
@@ -180,8 +180,7 @@ I also know how to make comment in code..
   <img src="smartwatch.png" width="20"/> The installation needs to be done separately.
 </div>
 <div align="center">
-<h2>Microsoft</h2>
-
+<h2>Microsoft installation</h2>
   <img src="microsoft.png" width="40"/>
         <br/>
     <img src="monitor.png" width="20"/> The installation needs to be done separately.
@@ -189,7 +188,7 @@ I also know how to make comment in code..
     <img src="tablet.png" width="20"/> The installation needs to be done separately.
 </div>
 <div align="center">
-<h2>Apple</h2>
+<h2>Apple installation</h2>
   <img src="apple.png" width="40"/>
         <br/>
     <img src="monitor.png" width="20"/> The installation needs to be done separately.
