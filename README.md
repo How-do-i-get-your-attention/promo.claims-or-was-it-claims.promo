@@ -25,19 +25,28 @@
   <tr>
     <td align="center"><img src="mobile.png" width="15"/> </td>
      <td align="center"><img src="setup.png" width="15"/></td>
-    <td align="center"><img src="setup.png" width="15"/></td>
-     <td align="center"><img src="setup.png" width="15"/></td>
+    <td></td>
+     <td align="center"><img src="setup.png" width="15"/><img src="link.png" width="15"/></td>
   </tr>
   <tr>
-    <td align="center"><img src="smartwatch.png" width="15"/>(Whact)</td>
-    <td>Cell 5</td>
-    <td>Cell 6</td>
+    <td align="center"><img src="smartwatch.png" width="15"/></td>
+     <td align="center"><img src="setup.png" width="15"/></td>
+    <td align="center"></td>
+     <td align="center"><img src="link.png" width="15"/></td>
   </tr>
   <tr>
     <td align="center"><img src="Television.png" width="15"/></td>
     <td align="center"><img src="setup.png" width="15"/></td>
+    <td></td>
     <td align="center"><img src="setup.png" width="15"/></td>
-    <td align="center"><img src="setup.png" width="15"/></td>
+  </tr>
+  <tr>
+     <td><img src="setup.png" width="15"/></td>
+     <td colspan="3">The installation needs to be done separately.</td>
+  </tr>
+   <tr>
+     <td><img src="link.png" width="15"/></td>
+      <td colspan="3">The installation is done by the linker.</td>
   </tr>
 </table>
 </div>   
