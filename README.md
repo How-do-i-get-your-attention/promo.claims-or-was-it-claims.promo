@@ -2,21 +2,44 @@
 
 <small>
 <h1 align="center" style="color:pink; font-size:24px;"><strong>Promo.Claims or was it Claims.Promo</strong></h1>
-
-<style>
-table {
-    color: white;
-    background-color: pink;
-}
-</style>
+<div align="center">
+<table style="color: white; background-color: pink;">
+   <tr>
+    <td></td>
+    <td align="center"><img src="android.png" width="20"/></td>
+    <td align="center"><img src="microsoft.png" width="20"/></td>
+    <td align="center"><img src="apple.png" width="20"/></td>
+  </tr>
+   <tr>
+    <td align="center"><img src="monitor.png" width="15"/></td>
+    <td align="center"><img src="setup.png" width="15"/></td>
+    <td align="center"><img src="setup.png" width="15"/></td>
+     <td align="center"><img src="setup.png" width="15"/></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="tablet.png" width="15"/></td>
+    <td>Header 2</td>
+    <td>Header 3</td>
+  </tr>
+  <tr>
+    <td align="center"><img src="mobile.png" width="15"/> </td>
+    <td>Cell 2</td>
+    <td>Cell 3</td>
+  </tr>
+  <tr>
+    <td align="center"><img src="smartwatch.png" width="15"/></td>
+    <td>Cell 5</td>
+    <td>Cell 6</td>
+  </tr>
+  <tr>
+    <td align="center"><img src="Television.png" width="15"/></td>
+    <td>Cell 8</td>
+    <td>Cell 9</td>
+  </tr>
+</table>
+</div>   
+  
     
-| Header 1 | Header 2 | Header 3 |
-| - | :--: | :-------: |
-| <img src="monitor.png" width="20"/>   | Cell 2   | Cell 3   |
-| <img src="tablet.png" width="20"/>   | Cell 5   | Cell 6   |
-| <img src="mobile.png" width="20"/>   | Cell 8   | Cell 9   |
-| <img src="smartwatch.png" width="20"/>   | Cell 2   | Cell 3   |
-| <img src="television.png" width="20"/>   | Cell 2   | Cell 3   |
 <div align="center">
 <h2>Android installation</h2>
   <img src="android.png" width="40"/>
