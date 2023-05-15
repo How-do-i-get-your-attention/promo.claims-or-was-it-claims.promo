@@ -14,7 +14,7 @@
     <td align="center"><img src="monitor.png" width="15"/></td>
     <td align="center"><img src="setup.png" width="15"/></td>
     <td align="center"><img src="setup.png" width="15"/></td>
-     <td align="center"><img src="setup.png" width="15"/></td>
+    <td align="center"><img src="setup.png" width="15"/></td>
   </tr>
   <tr>
     <td align="center"><img src="tablet.png" width="15"/></td>
@@ -42,11 +42,11 @@
   </tr>
   <tr>
      <td><img src="setup.png" width="15"/></td>
-     <td colspan="3">The installation needs to be done separately.</td>
+     <td colspan="4">The installation needs to be done separately.</td>
   </tr>
    <tr>
      <td><img src="link.png" width="15"/></td>
-      <td colspan="3">The installation is done by the linker.</td>
+      <td colspan="4">The installation is done by the linker.</td>
   </tr>
 </table>
 </div>   
