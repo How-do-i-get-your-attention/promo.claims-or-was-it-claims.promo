@@ -3,6 +3,8 @@
 <div align="center">
 <h2>Android installation</h2>
   <img src="android.png" width="40"/>
+        <br/>
+    <img src="television.png" width="20"/> The installation needs to be done separately.
       <br/>
     <img src="monitor.png" width="20"/> The installation needs to be done separately.
     <br/>
@@ -23,6 +25,8 @@
 <div align="center">
 <h2>Apple installation</h2>
   <img src="apple.png" width="40"/>
+          <br/>
+    <img src="television.png" width="20"/> The installation needs to be done separately.
         <br/>
     <img src="monitor.png" width="20"/> The installation needs to be done separately.
       <br/>
