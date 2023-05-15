@@ -216,7 +216,11 @@ I also know how to make comment in code..
 
 
 
-<strong><li>
+<strong><u>
+<!-- 
+HyperText Markup Language, was developed by Tim Berners-Lee in the early 1990s while he was working at CERN Then everyone was connected 
+Thats why i try to make this work in HTML to
+-->
 The history starts from the 1960s with ARPANET, connecting everyone through the internet.
-</strong></li>
+</u></strong>
 <!--Have a nice day!-->
