@@ -9,6 +9,7 @@ table {
     background-color: pink;
 }
 </style>
+    
 | Header 1 | Header 2 | Header 3 |
 | - | :--: | :-------: |
 | <img src="monitor.png" width="20"/>   | Cell 2   | Cell 3   |
