@@ -5,11 +5,11 @@
 <div align="center">
 <table style="color: white; background-color: pink;">
    <tr>
-    <td></td>
+    <td align="center" style="width: 100px;"><img src="love.png" width="20"/></td>
     <td align="center" style="width: 100px;"><img src="android.png" width="20"/></td>
-    <td align="center" style="width: 100px;"><img src="microsoft.png" width="20"/></td>
+    <td align="center" style="width: 100px;"><img src="microsoft.png" width="20"/</td>
     <td align="center" style="width: 100px;"><img src="apple.png" width="20"/></td>
-    <td align="center" style="width: 100px;"><img src="retailer.jpg" width="20"/></td>
+    <td align="center" style="width: 100px;"><img src="edit.png" width="20"/></td>
   </tr>
    <tr>
     <td align="center"><img src="monitor.png" width="15"/></td>
@@ -44,7 +44,7 @@
     <td align="center"><img src="setup.png" width="15"/></td>
     <td></td>
     <td align="center"><img src="setup.png" width="15"/></td>
-    <td></td>
+    <td align="center"> <img src="cplusplus.png" height="15"/> </td>
   </tr>
    <tr>
     <td align="center"><img src="server.png" width="15"/></td>
