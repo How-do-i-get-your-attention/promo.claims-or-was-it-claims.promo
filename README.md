@@ -51,7 +51,9 @@
           <td></td>
     <td align="center"><img src="setup.png" width="15"/></td>
     <td></td>
-    <td></td>
+    <td align="center">
+       <img src="html5.png" width="15"/> + <img src="javascript.png" width="15"/> + <img src="webassembly.png" width="15"/>
+     </td> 
   </tr>
   <tr>
      <td><img src="setup.png" width="15"/></td>
