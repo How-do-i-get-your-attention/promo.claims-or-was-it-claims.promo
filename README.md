@@ -18,23 +18,26 @@
   </tr>
   <tr>
     <td align="center"><img src="tablet.png" width="15"/></td>
-    <td>Header 2</td>
-    <td>Header 3</td>
+    <td align="center"><img src="setup.png" width="15"/></td>
+    <td align="center"><img src="setup.png" width="15"/></td>
+     <td align="center"><img src="setup.png" width="15"/></td>
   </tr>
   <tr>
     <td align="center"><img src="mobile.png" width="15"/> </td>
-    <td>Cell 2</td>
-    <td>Cell 3</td>
+     <td align="center"><img src="setup.png" width="15"/></td>
+    <td align="center"><img src="setup.png" width="15"/></td>
+     <td align="center"><img src="setup.png" width="15"/></td>
   </tr>
   <tr>
-    <td align="center"><img src="smartwatch.png" width="15"/></td>
+    <td align="center"><img src="smartwatch.png" width="15"/>(Whact)</td>
     <td>Cell 5</td>
     <td>Cell 6</td>
   </tr>
   <tr>
     <td align="center"><img src="Television.png" width="15"/></td>
-    <td>Cell 8</td>
-    <td>Cell 9</td>
+    <td align="center"><img src="setup.png" width="15"/></td>
+    <td align="center"><img src="setup.png" width="15"/></td>
+    <td align="center"><img src="setup.png" width="15"/></td>
   </tr>
 </table>
 </div>   
