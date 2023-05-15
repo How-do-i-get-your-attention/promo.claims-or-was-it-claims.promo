@@ -200,20 +200,6 @@ By utilizing Objective-C and C++, I can craft robust applications that seamlessl
 <br/><br/>  
 Windows Server has been my chosen platform due to my confidence in Microsoft's unwavering commitment to maintaining stringent security measures. Microsoft invests substantial resources into ensuring the security and up-to-dateness of their systems. In contrast, Linux sometimes exhibits delays in addressing security vulnerabilities. Furthermore, Apple has shifted its focus away from server technologies, solidifying Windows Server as a reliable solution for my server requirements. Leveraging Windows Server allows me to ensure the stability, performance, and security of my infrastructure, benefiting from the comprehensive tools and support provided by Microsoft.
 <br/><br/>   
-  I have undertaken this task to learn about machine learning and coding, as well as to explore the possibilities they offer. My goal is to create a platform that is loyal to all its users. It is crucial to me that we adhere to all standards, including regulations such as GDPR, CCPA, COPPA, HIPAA, PCI DSS, ECPA, PIPEDA, and APP, among others. In the early stages of this venture, building a network is paramount. Therefore, I cannot disclose the specific percentages of the various payment gateways at this time. However, you can refer to the source code if you are technically inclined.
-<br/><br/>  
-Furthermore, our main focus is to establish a strong presence in the market. We offer our product for free, but certain features or aspects of the product may have associated costs. When determining the price, we take into account our percentage, the payment processing fees, taxes, and corporate taxes.
-  <br/><br/>  
-  Even though we are not currently members of PCI, we can still build our system in accordance with PCI standards. This involves implementing appropriate security measures, including protection of card information, secure network configuration, strong access controls, and regular monitoring of our systems to detect and address any security risks.
-  <br/><br/>  
-By striving for PCI compliance, we demonstrate our commitment to protecting customer information and ensuring secure payment processes on our platform. While we are not currently PCI members, we can take steps to meet PCI standards and explore membership at a later stage to gain additional recognition and benefits as a PCI member.
-  <br/><br/>  
-To achieve PCI compliance, it is important to understand and implement the necessary security measures within our payment processing flow. Consulting a PCI expert or security consultant can be beneficial to ensure that we adhere to the relevant guidelines and best practices.
-  <br/><br/>  
-Building our system in accordance with PCI standards showcases our dedication to protecting payment information and creating a secure environment for our users. If you have further questions or require additional guidance on PCI DSS or related topics, I am here to assist you.
-    <br/><br/>  
-  Certainly! When there are updates, we should update this document accordingly. It's important to keep the information accurate and up-to-date to reflect any changes in regulations, standards, or our platform's practices. By regularly reviewing and revising this document, we can ensure that it remains relevant and aligns with the current legal framework and industry requirements. If you need assistance with future updates or have any questions, feel free to reach out.
-    <br/><br/>  
   by:<br/>  
 Pirasath Luxchumykanthan, Inventor and Founder<br/>
 http://www.how-to-get-your-attention.com
