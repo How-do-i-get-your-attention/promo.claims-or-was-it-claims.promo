@@ -53,7 +53,7 @@
     <td></td>
     <td align="center">
        <!-- I made this bce is us developer-->
-       <img src="html5.png" width="15"/> + <img src="javascript.png" width="15"/> + <img src="webassembly.png" width="15"/> +   <img src="c.png" height="20"/>   + <img src="cplusplus.png" height="15"/> 
+       <img src="html5.png" width="15"/> + <img src="javascript.png" width="15"/> + <img src="webassembly.png" width="15"/>   + <img src="cplusplus.png" height="15"/> 
      </td> 
   </tr>
   <tr>
@@ -233,4 +233,6 @@ Thats why i try to make this work in HTML to
 -->
 The history starts from the 1960s with ARPANET, connecting everyone through the internet.
 </u></strong>
+
+
 <!--Have a nice day!-->
