@@ -9,7 +9,7 @@
     <td align="center" style="width: 100px;"><img src="android.png" width="20"/></td>
     <td align="center" style="width: 100px;"><img src="microsoft.png" width="20"/></td>
     <td align="center" style="width: 100px;"><img src="apple.png" width="20"/></td>
-    <td></td>
+    <td align="center" style="width: 100px;"><img src="retailer.jpg" width="20"/></td>
   </tr>
    <tr>
     <td align="center"><img src="monitor.png" width="15"/></td>
@@ -52,7 +52,7 @@
     <td align="center"><img src="setup.png" width="15"/></td>
     <td></td>
     <td align="center">
-       <img src="html5.png" width="15"/> + <img src="javascript.png" width="15"/> + <img src="webassembly.png" width="15"/>
+       <img src="html5.png" width="15"/> + <img src="javascript.png" width="15"/> + <img src="webassembly.png" width="15"/> +   <img src="c.png" height="20"/>   + <img src="cplusplus.png" height="15"/> 
      </td> 
   </tr>
   <tr>
