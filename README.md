@@ -6,9 +6,9 @@
 <table style="color: white; background-color: pink;">
             <tr>
        <td align="center" style="width: 100px;"><img src="supermarket.png" width="20"/></td>
-    <td align="center" style="width: 100px;"><img src="android_studio.png" width="20"/></td>
-    <td align="center" style="width: 100px;"><img src="visual_studio.png" width="20"/</td>
-    <td align="center" style="width: 100px;"><img src="xcode.jpg" width="20"/></td>
+    <td align="center" style="width: 100px;"><img src="google_play.png" width="20"/></td>
+    <td align="center" style="width: 100px;"><img src="microsoft_store.png" width="20"/</td>
+    <td align="center" style="width: 100px;"><img src="apple_play.jpg" width="20"/></td>
             <td align="center" colspan="2"  rowspan="2"><img src="supermarket.png" width="20"/> +  <img src="edit.png" width="20"/> + <img src="love.png" width="20"/> + <img src="retailer.png" width="20"/></td>
   </tr>
       <tr>
