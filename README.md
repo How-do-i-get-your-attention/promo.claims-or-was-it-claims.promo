@@ -87,7 +87,7 @@
   </tr>
   <tr>
      <td><img src="setup.png" width="15"/></td>
-        <td colspan="5"><sub>The installation needs to be done separately by</sub> <img src="retailer.png" width="20"/></td>
+        <td colspan="5"><sub>The installation needs to be done separately by <img src="supermarket.png" width="20"/>  <img src="retailer.png" width="20"/></sub></td>
   </tr>
    <tr>
      <td><img src="link.png" width="15"/></td>
@@ -261,6 +261,6 @@ HyperText Markup Language, was developed by Tim Berners-Lee in the early 1990s w
 Thats why i try to make this work in HTML to
 -->
 </u></strong>
-<h1 align="center">The history starts from the 1960s with ARPANET. Connecting everyone through the internet.</h1>
+<h3 align="center">The history starts from the 1960s with ARPANET. Connecting everyone through the internet.</h3>
 
 <!--Have a nice day!-->
