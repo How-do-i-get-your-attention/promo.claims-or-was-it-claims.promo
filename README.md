@@ -291,11 +291,11 @@ It's worth noting that while Android is primarily associated with smartphones an
   <p>
     Android Studio is the official Integrated Development Environment (IDE) for Android app development. It provides a comprehensive set of tools and resources to create, test, and deploy applications specifically for Android devices.
   </p>
-  <h2>Features and Tools</h2>
+  <h4 align="center">Features and Tools</h4>
   <p>
     Android Studio offers a range of features and tools to enhance productivity, including a code editor with intelligent code completion and refactoring capabilities, a visual layout editor for designing app interfaces, a built-in emulator for testing apps on virtual devices, and powerful debugging tools.
   </p>
-  <h2>Development Workflow</h2>
+  <h4 align="center">Development Workflow</h4>
   <p>
     Android Studio supports the entire app development workflow. Developers can manage dependencies, configure project settings, write code in Java or Kotlin, design user interfaces using XML or visual editors, and preview the app in real-time within the IDE.
   </p>
