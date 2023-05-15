@@ -252,8 +252,7 @@ I also know how to make comment in code..
 HyperText Markup Language, was developed by Tim Berners-Lee in the early 1990s while he was working at CERN Then everyone was connected 
 Thats why i try to make this work in HTML to
 -->
-The history starts from the 1960s with ARPANET, connecting everyone through the internet.
 </u></strong>
-
+<h1 align="center">The history starts from the 1960s with ARPANET, connecting everyone through the internet.</h1>
 
 <!--Have a nice day!-->
