@@ -261,6 +261,6 @@ HyperText Markup Language, was developed by Tim Berners-Lee in the early 1990s w
 Thats why i try to make this work in HTML to
 -->
 </u></strong>
-<h1 align="center">The history starts from the 1960s with ARPANET.<br/>Connecting everyone through the internet.</h1>
+<h1 align="center">The history starts from the 1960s with ARPANET. Connecting everyone through the internet.</h1>
 
 <!--Have a nice day!-->
