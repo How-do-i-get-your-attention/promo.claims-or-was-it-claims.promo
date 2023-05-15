@@ -216,5 +216,7 @@ I also know how to make comment in code..
 
 
 
-
+<strong><li>
+The history starts from the 1960s with ARPANET, connecting everyone through the internet.
+</strong></li>
 <!--Have a nice day!-->
