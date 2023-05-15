@@ -1,10 +1,11 @@
+<small>
 <!--Message to the programmer.:-->
 <h1 align="center"><strong>Promo.Claims or was it Claims.Promo</strong></h1>
 <div align="center">
 <h2>Android installation</h2>
   <img src="android.png" width="40"/>
         <br/>
-    <img src="television.png" width="20"/> The installation needs to be done separately.
+    <img src="Television.png" width="20"/> The installation needs to be done separately.
       <br/>
     <img src="monitor.png" width="20"/> The installation needs to be done separately.
     <br/>
@@ -26,7 +27,7 @@
 <h2>Apple installation</h2>
   <img src="apple.png" width="40"/>
           <br/>
-    <img src="television.png" width="20"/> The installation needs to be done separately.
+    <img src="Television.png" width="20"/> The installation needs to be done separately.
         <br/>
     <img src="monitor.png" width="20"/> The installation needs to be done separately.
       <br/>
@@ -48,7 +49,8 @@ I just place this platform, that's my main focus.
 <!--
 A document have have many layers.
 -->
-<p align="center"><small>Did you know about milliseconds? humans only see 24 or 25 frames per second, which is very close to the 25-millisecond per image.</small></p>
+<h2>Did you know?</h2>
+<p align="center"><small>Did you know about milliseconds? humans only see 24 or 25 frames per second, which is very close to the 25-millisecond per image.</p>
 
 
 
@@ -58,7 +60,7 @@ A document have have many layers.
   <img src="mark.jpg" height="20"/> 
   <img src="cplusplus.png" height="20"/>
 </div>
-<small>
+
 C was not created by Steve Jobs. C was created by Dennis Ritchie and Ken Thompson at Bell Labs in the early 1970s.<br/> <br/>
 Steve Jobs was a co-founder of Apple Inc. and played a significant role in the development of Apple's products, including the Apple II, Macintosh, and the iPhone. While Apple's products have been developed using a variety of programming languages, including C and C++, Steve Jobs was not directly involved in the creation of those languages.<br/> <br/>
 However, Steve Jobs did recognize the importance of technology and software in the success of Apple, and he played a key role in driving the company's focus on user experience and design. He also had a strong influence on the development of the personal computer industry, and his vision helped to shape the way that we use technology today.<br/> <br/>
@@ -104,7 +106,6 @@ Ultimately, feeling indignant about companies copying each other's ideas misses 
 In the end, this evolution and idea borrowing lead to progress and better products for all users. Regardless of platform preference, consumers ultimately win by getting improved gadgets, even if it involves some degree of copying along the way.
 
 
-</small>
 <!--Message to the programmer.:-->
 <h2 align="center"><strong>Unveiling the Power Within: Decoding the Essence of Auditory Perception</strong></h2>
 <!--Programmers let's get together-->
@@ -119,7 +120,7 @@ A document have have many layers.
 The human auditory system is capable of detecting sound waves in the range of 20 Hz to 20,000 Hz. The perception of sound is a continuous process and not divided into distinct frames like in video or images. Therefore, the concept of "frames per millisecond" is not applicable to sound perception.
 <br/><br/>
 However, the human auditory system is capable of distinguishing between sounds that differ by as little as 2-3 Hz in frequency, and can detect changes in loudness as small as 1 dB. This high level of sensitivity enables humans to perceive complex sounds such as music, speech, and environmental sounds with a high degree of accuracy and fidelity.
-  </small></p>
+ </p>
 <!--
 Why did i choice c++.?
 It runs on any device. Server Mobile Tabelt watch anything..
@@ -155,7 +156,6 @@ WEE BUILD!!!!
 Thank you for your time and commitment to this project.
 -->
 <h2 align="center"><strong>The Cryptic Project: Revealing Select Source Code for Public Glimpses</strong></h2>
-<small>
 This project, although not open source, offers a glimpse into certain portions of the source code that will be made public. Its intentional design aims to uphold the essence of being a programmer. As a developer, your participation is welcomed. Have you explored the source code in the accompanying file, README.MD? Feel free to leave your markdown (MD) comments there.
 <br/><br/>  
 The choice to incorporate Objective-C and C++ stems from their ability to bridge the gap between modern languages like Swift, Java, C#, PHP, Python, and the realm of low-level machine programming. It's not about favoring one language over another; rather, it enables development across Android, Apple, and Microsoft platforms, catering to diverse user needs. By including Objective-C and C++, we ensure compatibility and take advantage of their respective features to create robust and versatile applications.
