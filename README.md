@@ -99,14 +99,6 @@
 
 <!--
 Programmers let's get together
--->
-<div align="center">
-<!--
-I just place this platform, that's my main focus.
--->
-  <img src="android.png" width="40"/><img src="microsoft.png" width="40"/><img src="apple.png" width="40"/>
-</div>
-<!--
 A document have have many layers.
 -->
 <p align="center">Did you know about milliseconds? humans only see 24 or 25 frames per second, which is very close to the 25-millisecond per image.</p>
@@ -167,10 +159,6 @@ In the end, this evolution and idea borrowing lead to progress and better produc
 <!--Message to the programmer.:-->
 <h2 align="center"><strong>Unveiling the Power Within: Decoding the Essence of Auditory Perception</strong></h2>
 <!--Programmers let's get together-->
-<div align="center">
-<!--I just place this platform, that's my main focus.-->
-  <img src="android.png" width="40"/><img src="microsoft.png" width="40"/><img src="apple.png" width="40"/>
-</div>
 <!--
 A document have have many layers.
 -->
