@@ -91,7 +91,7 @@
   </tr>
    <tr>
      <td><img src="link.png" width="15"/></td>
-               <td colspan="5"><sub>The installation is done by the linker to a application.</sub></td>
+               <td colspan="5"><sub>The installation is done by the linker to a application. <img src="setup.png" width="15"/> <img src="link.png" width="15"/></sub></td>
   </tr>
 </table>
 </div>   
