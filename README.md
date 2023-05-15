@@ -74,9 +74,7 @@ I just place this platform, that's my main focus.
 -->
   <img src="android.png" width="40"/><img src="microsoft.png" width="40"/><img src="apple.png" width="40"/>
 </div>
-<!--
-A document have have many layers.
--->
+
 <p align="center"><small>Did you know about milliseconds? humans only see 24 or 25 frames per second, which is very close to the 25-millisecond per image.</small></p>
 
 
@@ -149,15 +147,6 @@ However, the human auditory system is capable of distinguishing between sounds t
 </p>
 <!--
 Why did i choice c++.?
-It runs on any device. Server Mobile Tabelt watch anything..
-But if you see! about "C". I still tell the story.(PUBLIC)
-About apple, microsoft and android. but for real. android also have alot c++ and that's also in apple to.
-but the truth is just that there are different ways of adding files to it. And compile it.
-And more trust way to do it.
-I personally use Visual Studio "Code" Remember "Code".
-There are many tools that are better than those built into Visual studio visual studio "community".
-If you know there is something called Remote Explorer. it just one of them if you are tired of sharing files back and forth from your mac or pc.
-There more than you know.
 have you read the source code in the other files.
 I can also figure out how to make comments in c
 
@@ -205,6 +194,7 @@ Pirasath Luxchumykanthan, Inventor and Founder<br/>
 http://www.how-to-get-your-attention.com
 <!--For you: pirasath.luxchumykanthan@how-to-get-your-attention.com for public office@how-to-get-your-attention.com -->
 <!--
+WHY NOT JOIN!!
 "I will send you an email" if you are accepted as a presenter with your first name and dot and your lastname@how-to-get-your-attention.com
 I also know how to make comment in code..
 -->
