@@ -9,7 +9,7 @@
     <td align="center" style="width: 100px;"><img src="google_play.png" width="20"/></td>
     <td align="center" style="width: 100px;"><img src="microsoft_store.png" width="20"/</td>
     <td align="center" style="width: 100px;"><img src="apple_play.png" width="20"/></td>
-            <td align="center" colspan="2"  rowspan="2"><img src="supermarket.png" width="20"/> +  <img src="edit.png" width="20"/> + <img src="retailer.png" width="20"/> =  <img src="love.png" width="20"/> </td>
+            <td align="center" colspan="2"  rowspan="2"><img src="supermarket.png" width="20"/> +  <img src="retailer.png" width="20"/> + <img src="edit.png" width="20"/> =  <img src="love.png" width="20"/> </td>
   </tr>
       <tr>
        <td align="center" style="width: 100px;"><img src="edit.png" width="20"/></td>
