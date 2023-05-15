@@ -1,6 +1,6 @@
 <!--Message to the programmer.:-->
 
-<small>
+
 <h1 align="center" style="color:pink; font-size:24px;"><strong>Promo.Claims or was it Claims.Promo</strong></h1>
 <div align="center">
 <table style="color: white; background-color: pink;">
@@ -46,13 +46,6 @@
     <td align="center"><img src="setup.png" width="15"/></td>
         <td></td>
   </tr>
-     <tr>
-    <td align="center"><img src="server.png" width="15"/></td>
-            <td></td>
-    <td align="center"><img src="setup.png" width="15"/></td>
-    <td></td>
-        <td></td>
-  </tr>
   <tr>
      <td><img src="setup.png" width="15"/></td>
      <td colspan="4">The installation needs to be done separately.</td>
@@ -64,9 +57,20 @@
 </table>
 </div>   
   
-<h2 align="center" style="color:pink; font-size:24px;"><strong>Did you know?</strong></h2>
 
-<p align="center"><small>Did you know about milliseconds? humans only see 24 or 25 frames per second, which is very close to the 25-millisecond per image.</small></p>
+<!--
+Programmers let's get together
+-->
+<div align="center">
+<!--
+I just place this platform, that's my main focus.
+-->
+  <img src="android.png" width="40"/><img src="microsoft.png" width="40"/><img src="apple.png" width="40"/>
+</div>
+<!--
+A document have have many layers.
+-->
+<p align="center">Did you know about milliseconds? humans only see 24 or 25 frames per second, which is very close to the 25-millisecond per image.</p>
 
 
 
@@ -76,7 +80,7 @@
   <img src="mark.jpg" height="20"/> 
   <img src="cplusplus.png" height="20"/>
 </div>
-<small>
+
 C was not created by Steve Jobs. C was created by Dennis Ritchie and Ken Thompson at Bell Labs in the early 1970s.<br/> <br/>
 Steve Jobs was a co-founder of Apple Inc. and played a significant role in the development of Apple's products, including the Apple II, Macintosh, and the iPhone. While Apple's products have been developed using a variety of programming languages, including C and C++, Steve Jobs was not directly involved in the creation of those languages.<br/> <br/>
 However, Steve Jobs did recognize the importance of technology and software in the success of Apple, and he played a key role in driving the company's focus on user experience and design. He also had a strong influence on the development of the personal computer industry, and his vision helped to shape the way that we use technology today.<br/> <br/>
@@ -138,9 +142,16 @@ However, the human auditory system is capable of distinguishing between sounds t
 </p>
 <!--
 Why did i choice c++.?
+It runs on any device. Server Mobile Tabelt watch anything..
+But if you see! about "C". I still tell the story.(PUBLIC)
+About apple, microsoft and android. but for real. android also have alot c++ and that's also in apple to.
+but the truth is just that there are different ways of adding files to it. And compile it.
+And more trust way to do it.
+I personally use Visual Studio "Code" Remember "Code".
+There more than you know.
 have you read the source code in the other files.
 I can also figure out how to make comments in c
-
+If you wish to join find away
 
 
 -->
@@ -180,17 +191,30 @@ By utilizing Objective-C and C++, I can craft robust applications that seamlessl
 <br/><br/>  
 Windows Server has been my chosen platform due to my confidence in Microsoft's unwavering commitment to maintaining stringent security measures. Microsoft invests substantial resources into ensuring the security and up-to-dateness of their systems. In contrast, Linux sometimes exhibits delays in addressing security vulnerabilities. Furthermore, Apple has shifted its focus away from server technologies, solidifying Windows Server as a reliable solution for my server requirements. Leveraging Windows Server allows me to ensure the stability, performance, and security of my infrastructure, benefiting from the comprehensive tools and support provided by Microsoft.
 <br/><br/>   
+  I have undertaken this task to learn about machine learning and coding, as well as to explore the possibilities they offer. My goal is to create a platform that is loyal to all its users. It is crucial to me that we adhere to all standards, including regulations such as GDPR, CCPA, COPPA, HIPAA, PCI DSS, ECPA, PIPEDA, and APP, among others. In the early stages of this venture, building a network is paramount. Therefore, I cannot disclose the specific percentages of the various payment gateways at this time. However, you can refer to the source code if you are technically inclined.
+<br/><br/>  
+Furthermore, our main focus is to establish a strong presence in the market. We offer our product for free, but certain features or aspects of the product may have associated costs. When determining the price, we take into account our percentage, the payment processing fees, taxes, and corporate taxes.
+  <br/><br/>  
+  Even though we are not currently members of PCI, we can still build our system in accordance with PCI standards. This involves implementing appropriate security measures, including protection of card information, secure network configuration, strong access controls, and regular monitoring of our systems to detect and address any security risks.
+  <br/><br/>  
+By striving for PCI compliance, we demonstrate our commitment to protecting customer information and ensuring secure payment processes on our platform. While we are not currently PCI members, we can take steps to meet PCI standards and explore membership at a later stage to gain additional recognition and benefits as a PCI member.
+  <br/><br/>  
+To achieve PCI compliance, it is important to understand and implement the necessary security measures within our payment processing flow. Consulting a PCI expert or security consultant can be beneficial to ensure that we adhere to the relevant guidelines and best practices.
+  <br/><br/>  
+Building our system in accordance with PCI standards showcases our dedication to protecting payment information and creating a secure environment for our users. If you have further questions or require additional guidance on PCI DSS or related topics, I am here to assist you.
+    <br/><br/>  
+  Certainly! When there are updates, we should update this document accordingly. It's important to keep the information accurate and up-to-date to reflect any changes in regulations, standards, or our platform's practices. By regularly reviewing and revising this document, we can ensure that it remains relevant and aligns with the current legal framework and industry requirements. If you need assistance with future updates or have any questions, feel free to reach out.
+    <br/><br/>  
   by:<br/>  
 Pirasath Luxchumykanthan, Inventor and Founder<br/>
 http://www.how-to-get-your-attention.com
 <!--For you: pirasath.luxchumykanthan@how-to-get-your-attention.com for public office@how-to-get-your-attention.com -->
 <!--
-WHY NOT JOIN!!
 "I will send you an email" if you are accepted as a presenter with your first name and dot and your lastname@how-to-get-your-attention.com
 I also know how to make comment in code..
 -->
 
 
-</small>
+
 
 <!--Have a nice day!-->
