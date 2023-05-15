@@ -6,39 +6,45 @@
 <table style="color: white; background-color: pink;">
    <tr>
     <td></td>
-    <td align="center"><img src="android.png" width="20"/></td>
-    <td align="center"><img src="microsoft.png" width="20"/></td>
-    <td align="center"><img src="apple.png" width="20"/></td>
+    <td align="center" style="width: 100px;"><img src="android.png" width="20"/></td>
+    <td align="center" style="width: 100px;"><img src="microsoft.png" width="20"/></td>
+    <td align="center" style="width: 100px;"><img src="apple.png" width="20"/></td>
+    <td></td>
   </tr>
    <tr>
     <td align="center"><img src="monitor.png" width="15"/></td>
     <td align="center"><img src="setup.png" width="15"/></td>
     <td align="center"><img src="setup.png" width="15"/></td>
     <td align="center"><img src="setup.png" width="15"/></td>
+   <td></td>  
   </tr>
   <tr>
     <td align="center"><img src="tablet.png" width="15"/></td>
     <td align="center"><img src="setup.png" width="15"/></td>
     <td align="center"><img src="setup.png" width="15"/></td>
-     <td align="center"><img src="setup.png" width="15"/></td>
+    <td align="center"><img src="setup.png" width="15"/></td>
+    <td></td>
   </tr>
   <tr>
     <td align="center"><img src="mobile.png" width="15"/> </td>
      <td align="center"><img src="setup.png" width="15"/></td>
     <td></td>
      <td align="center"><img src="setup.png" width="15"/><img src="link.png" width="15"/></td>
+        <td></td>
   </tr>
   <tr>
     <td align="center"><img src="smartwatch.png" width="15"/></td>
      <td align="center"><img src="setup.png" width="15"/></td>
     <td align="center"></td>
      <td align="center"><img src="link.png" width="15"/></td>
+        <td></td>
   </tr>
   <tr>
     <td align="center"><img src="Television.png" width="15"/></td>
     <td align="center"><img src="setup.png" width="15"/></td>
     <td></td>
     <td align="center"><img src="setup.png" width="15"/></td>
+        <td></td>
   </tr>
   <tr>
      <td><img src="setup.png" width="15"/></td>
@@ -51,39 +57,7 @@
 </table>
 </div>   
   
-    
-<div align="center">
-<h2>Android installation</h2>
-  <img src="android.png" width="40"/>
-      <br/>
-    <img src="monitor.png" width="20"/> The installation needs to be done separately.
-    <br/>
-    <img src="tablet.png" width="20"/> The installation needs to be done separately.
-    <br/>
-    <img src="mobile.png" width="20"/> The installation needs to be done separately.
-    <br/>
-  <img src="smartwatch.png" width="20"/> The installation needs to be done separately.
-</div>
-<div align="center">
-<h2>Microsoft installation</h2>
-  <img src="microsoft.png" width="40"/>
-        <br/>
-    <img src="monitor.png" width="20"/> The installation needs to be done separately.
-      <br/>
-    <img src="tablet.png" width="20"/> The installation needs to be done separately.
-</div>
-<div align="center">
-<h2>Apple installation</h2>
-  <img src="apple.png" width="40"/>
-        <br/>
-    <img src="monitor.png" width="20"/> The installation needs to be done separately.
-      <br/>
-    <img src="tablet.png" width="20"/> The installation needs to be done separately.
-  <br/>
-    <img src="mobile.png" width="20"> The installation needs to be done separately.
-  <br/>
-    <img src="smartwatch.png" width="20"/> The installation is done by mobile.
-</div>
+
 <!--
 Programmers let's get together
 -->
