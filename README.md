@@ -44,7 +44,14 @@
     <td align="center"><img src="setup.png" width="15"/></td>
     <td></td>
     <td align="center"><img src="setup.png" width="15"/></td>
-        <td></td>
+    <td></td>
+  </tr>
+   <tr>
+    <td align="center"><img src="server.png" width="15"/></td>
+          <td></td>
+    <td align="center"><img src="setup.png" width="15"/></td>
+    <td></td>
+    <td></td>
   </tr>
   <tr>
      <td><img src="setup.png" width="15"/></td>
