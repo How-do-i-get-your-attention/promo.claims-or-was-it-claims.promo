@@ -28,7 +28,11 @@
                         <img src="love.png" width="20"/>
                         </a>
                </td>
-    <td align="center" style="width: 100px;"><img src="android.png" width="20"/></td>
+    <td align="center" style="width: 100px;">
+                <a href="https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo#android">
+                <img src="android.png" width="20"/>
+                </a>
+                            </td>
     <td align="center" style="width: 100px;"><img src="microsoft.png" width="20"/</td>
     <td align="center" style="width: 100px;"><img src="apple.png" width="20"/></td>
     <td align="center" style="width: 100px;"><img src="edit.png" width="20"/></td>
