@@ -1,0 +1,4 @@
+#Mon May 15 02:53:54 CEST 2023
+base.0=D\:\\How-do-i-get-your-attention\\promo.claims-or-was-it-claims.promo\\Android\\app\\build\\intermediates\\dex\\huwaii_storeDebug\\mergeDexHuwaii_storeDebug\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

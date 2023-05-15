@@ -1,11 +1,19 @@
-<small>
 <!--Message to the programmer.:-->
-<h1 align="center"><strong>Promo.Claims or was it Claims.Promo</strong></h1>
+
+<small>
+<h1 align="center" style="color:pink; font-size:24px;"><strong>Promo.Claims or was it Claims.Promo</strong></h1>
+
+
+| Header 1 | Header 2 | Header 3 |
+| - | :--: | :-------: |
+| <img src="monitor.png" width="20"/>   | Cell 2   | Cell 3   |
+| <img src="tablet.png" width="20"/>   | Cell 5   | Cell 6   |
+| <img src="mobile.png" width="20"/>   | Cell 8   | Cell 9   |
+| <img src="smartwatch.png" width="20"/>   | Cell 2   | Cell 3   |
+| <img src="television.png" width="20"/>   | Cell 2   | Cell 3   |
 <div align="center">
 <h2>Android installation</h2>
   <img src="android.png" width="40"/>
-        <br/>
-    <img src="Television.png" width="20"/> The installation needs to be done separately.
       <br/>
     <img src="monitor.png" width="20"/> The installation needs to be done separately.
     <br/>
@@ -26,8 +34,6 @@
 <div align="center">
 <h2>Apple installation</h2>
   <img src="apple.png" width="40"/>
-          <br/>
-    <img src="Television.png" width="20"/> The installation needs to be done separately.
         <br/>
     <img src="monitor.png" width="20"/> The installation needs to be done separately.
       <br/>
@@ -49,8 +55,7 @@ I just place this platform, that's my main focus.
 <!--
 A document have have many layers.
 -->
-<h2>Did you know?</h2>
-<p align="center"><small>Did you know about milliseconds? humans only see 24 or 25 frames per second, which is very close to the 25-millisecond per image.</p>
+<p align="center"><small>Did you know about milliseconds? humans only see 24 or 25 frames per second, which is very close to the 25-millisecond per image.</small></p>
 
 
 
@@ -60,7 +65,7 @@ A document have have many layers.
   <img src="mark.jpg" height="20"/> 
   <img src="cplusplus.png" height="20"/>
 </div>
-
+<small>
 C was not created by Steve Jobs. C was created by Dennis Ritchie and Ken Thompson at Bell Labs in the early 1970s.<br/> <br/>
 Steve Jobs was a co-founder of Apple Inc. and played a significant role in the development of Apple's products, including the Apple II, Macintosh, and the iPhone. While Apple's products have been developed using a variety of programming languages, including C and C++, Steve Jobs was not directly involved in the creation of those languages.<br/> <br/>
 However, Steve Jobs did recognize the importance of technology and software in the success of Apple, and he played a key role in driving the company's focus on user experience and design. He also had a strong influence on the development of the personal computer industry, and his vision helped to shape the way that we use technology today.<br/> <br/>
@@ -105,7 +110,6 @@ Ultimately, feeling indignant about companies copying each other's ideas misses 
 
 In the end, this evolution and idea borrowing lead to progress and better products for all users. Regardless of platform preference, consumers ultimately win by getting improved gadgets, even if it involves some degree of copying along the way.
 
-
 <!--Message to the programmer.:-->
 <h2 align="center"><strong>Unveiling the Power Within: Decoding the Essence of Auditory Perception</strong></h2>
 <!--Programmers let's get together-->
@@ -116,11 +120,11 @@ In the end, this evolution and idea borrowing lead to progress and better produc
 <!--
 A document have have many layers.
 -->
-<p align="center"><small>
+<p align="center">
 The human auditory system is capable of detecting sound waves in the range of 20 Hz to 20,000 Hz. The perception of sound is a continuous process and not divided into distinct frames like in video or images. Therefore, the concept of "frames per millisecond" is not applicable to sound perception.
 <br/><br/>
 However, the human auditory system is capable of distinguishing between sounds that differ by as little as 2-3 Hz in frequency, and can detect changes in loudness as small as 1 dB. This high level of sensitivity enables humans to perceive complex sounds such as music, speech, and environmental sounds with a high degree of accuracy and fidelity.
- </p>
+</p>
 <!--
 Why did i choice c++.?
 It runs on any device. Server Mobile Tabelt watch anything..
