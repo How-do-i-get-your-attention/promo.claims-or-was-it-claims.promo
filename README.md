@@ -91,7 +91,7 @@
   </tr>
    <tr>
      <td><img src="link.png" width="15"/></td>
-      <td colspan="5">The installation is done by the linker.</td>
+               <td colspan="5"><sub>The installation is done by the linker to a application.</sub></td>
   </tr>
 </table>
 </div>   
@@ -261,6 +261,6 @@ HyperText Markup Language, was developed by Tim Berners-Lee in the early 1990s w
 Thats why i try to make this work in HTML to
 -->
 </u></strong>
-<h1 align="center">The history starts from the 1960s with ARPANET, connecting everyone through the internet.</h1>
+<h1 align="center">The history starts from the 1960s with ARPANET.<br/>Connecting everyone through the internet.</h1>
 
 <!--Have a nice day!-->
