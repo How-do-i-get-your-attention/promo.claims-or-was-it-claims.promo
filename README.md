@@ -9,7 +9,7 @@
     <td align="center" style="width: 100px;"><img src="android_studio.png" width="20"/></td>
     <td align="center" style="width: 100px;"><img src="visual_studio.png" width="20"/</td>
     <td align="center" style="width: 100px;"><img src="xcode.jpg" width="20"/></td>
-    <td></td>
+            <td align="center" colspan="2" ><img src="love.png" width="20"/></td>
   </tr>
    <tr>
     <td align="center" style="width: 100px;"><img src="love.png" width="20"/></td>
@@ -17,6 +17,7 @@
     <td align="center" style="width: 100px;"><img src="microsoft.png" width="20"/</td>
     <td align="center" style="width: 100px;"><img src="apple.png" width="20"/></td>
     <td align="center" style="width: 100px;"><img src="edit.png" width="20"/></td>
+    <td align="center" style="width: 100px;"><img src="retailer.png" width="20"/></td>
   </tr>
    <tr>
     <td align="center"><img src="monitor.png" width="15"/></td>
@@ -24,6 +25,7 @@
     <td align="center"><img src="setup.png" width="15"/></td>
     <td align="center"><img src="setup.png" width="15"/></td>
       <td align="center"><img src="android_studio.png" height="15"/> + <img src="visual_studio.png" height="15"/> + <img src="xcode.jpg" height="15"/> + <img src="c.png" height="15"/>  + <img src="cplusplus.png" height="15"/> </td> 
+           <td>comming soon</td>
   </tr>
   <tr>
     <td align="center"><img src="tablet.png" width="15"/></td>
@@ -31,6 +33,7 @@
     <td align="center"><img src="setup.png" width="15"/></td>
     <td align="center"><img src="setup.png" width="15"/></td>
     <td align="center"><img src="android_studio.png" height="15"/> + <img src="visual_studio.png" height="15"/> + <img src="xcode.jpg" height="15"/> + <img src="c.png" height="15"/>  + <img src="cplusplus.png" height="15"/>
+        <td>comming soon</td>
   </tr>
   <tr>
     <td align="center"><img src="mobile.png" width="15"/> </td>
@@ -38,6 +41,7 @@
     <td></td>
      <td align="center"><img src="setup.png" width="15"/><img src="link.png" width="15"/></td>
         <td align="center"><img src="android_studio.png" height="15"/> + <img src="visual_studio.png" height="15"/> + <img src="xcode.jpg" height="15"/> + <img src="c.png" height="15"/>  + <img src="cplusplus.png" height="15"/> </td> 
+             <td>comming soon</td>
   </tr>
   <tr>
     <td align="center"><img src="smartwatch.png" width="15"/></td>
@@ -45,6 +49,7 @@
     <td align="center"></td>
      <td align="center"><img src="link.png" width="15"/></td>
          <td align="center"><img src="android_studio.png" height="15"/> + <img src="visual_studio.png" height="15"/> + <img src="xcode.jpg" height="15"/> + <img src="c.png" height="15"/>  + <img src="cplusplus.png" height="15"/>  </td>
+             <td>comming soon</td>
   </tr>
   <tr>
     <td align="center"><img src="Television.png" width="15"/></td>
@@ -52,24 +57,26 @@
     <td></td>
     <td align="center"><img src="setup.png" width="15"/></td>
     <td align="center"><img src="android_studio.png" height="15"/> + <img src="visual_studio.png" height="15"/> + <img src="xcode.jpg" height="15"/> + <img src="c.png" height="15"/>  + <img src="cplusplus.png" height="15"/> </td>
+             <td>comming soon</td>
   </tr>
    <tr>
     <td align="center"><img src="server.png" width="15"/></td>
           <td></td>
     <td align="center"><img src="setup.png" width="15"/></td>
     <td></td>
-    <td align="center">
+    <td align="center"  colspan="2">
        <!-- I made this bce is us developer-->
-    <img src="visual_studio.png" height="15"/> +  <img src="html5.png" width="15"/> + <img src="javascript.png" width="15"/> + <img src="webassembly.png" width="15"/>   + <img src="cplusplus.png" height="15"/> 
+    <img src="visual_studio.png" height="15" /> +  <img src="html5.png" width="15"/> + <img src="javascript.png" width="15"/> + <img src="webassembly.png" width="15"/>   + <img src="cplusplus.png" height="15"/> 
      </td> 
+           
   </tr>
   <tr>
      <td><img src="setup.png" width="15"/></td>
-     <td colspan="4">The installation needs to be done separately.</td>
+     <td colspan="5">The installation needs to be done separately.</td>
   </tr>
    <tr>
      <td><img src="link.png" width="15"/></td>
-      <td colspan="4">The installation is done by the linker.</td>
+      <td colspan="5">The installation is done by the linker.</td>
   </tr>
 </table>
 </div>   
