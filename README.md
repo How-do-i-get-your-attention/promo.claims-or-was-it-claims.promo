@@ -3,7 +3,12 @@
 <small>
 <h1 align="center" style="color:pink; font-size:24px;"><strong>Promo.Claims or was it Claims.Promo</strong></h1>
 
-
+<style>
+table {
+    color: white;
+    background-color: pink;
+}
+</style>
 | Header 1 | Header 2 | Header 3 |
 | - | :--: | :-------: |
 | <img src="monitor.png" width="20"/>   | Cell 2   | Cell 3   |
