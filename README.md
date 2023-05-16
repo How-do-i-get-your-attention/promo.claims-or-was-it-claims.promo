@@ -227,37 +227,19 @@ WEE BUILD!!!!
 Thank you for your time and commitment to this project.
 -->
 <h2 align="center"><strong>The Cryptic Project: Revealing Select Source Code for Public Glimpses</strong></h2>
-This project, although not open source, offers a glimpse into certain portions of the source code that will be made public. Its intentional design aims to uphold the essence of being a programmer. As a developer, your participation is welcomed. Have you explored the source code in the accompanying file, README.MD? Feel free to leave your markdown (MD) comments there.
-<br/><br/>  
-The choice to incorporate Objective-C and C++ stems from their ability to bridge the gap between modern languages like Swift, Java, C#, PHP, Python, and the realm of low-level machine programming. It's not about favoring one language over another; rather, it enables development across Android, Apple, and Microsoft platforms, catering to diverse user needs. By including Objective-C and C++, we ensure compatibility and take advantage of their respective features to create robust and versatile applications.
-<br/><br/>  
-Furthermore, by embracing C++, we enhance the cross-platform capabilities of our development approach. With C++ support, we can leverage its features and enhancements, ensuring that our applications are fully supported on Android, Apple, and Microsoft platforms. This comprehensive language support allows us to develop applications that seamlessly integrate across these platforms, providing a consistent and optimized user experience.
-<br/><br/>  
-By utilizing C++, we harness the power of modern language features while maintaining broad compatibility, enabling us to tap into the extensive ecosystem of libraries and frameworks available for C++. This flexibility opens up a wide range of possibilities for our application development, ensuring that we can meet the diverse needs of our users across different platforms.
-<br/><br/>  
-In summary, incorporating Objective-C and C++ allows us to bridge the gap between modern languages and low-level machine programming while ensuring compatibility and maximizing cross-platform capabilities across Android, Apple, and Microsoft platforms. This approach provides us with the tools and flexibility to create robust, versatile, and high-performing applications.
-<br/><br/>  
-Objective-C and C++ empower us to harness the strength and flexibility of low-level programming while maintaining compatibility with contemporary frameworks and libraries. They allow us to leverage existing codebases and unlock the full potential of underlying hardware.
-<br/><br/>  
-Objective-C and C++ empower me to harness the strength and flexibility of low-level programming while maintaining compatibility with contemporary frameworks and libraries. They allow me to leverage existing codebases and unlock the full potential of underlying hardware.
-<br/><br/>  
-By utilizing Objective-C and C++, I can craft robust applications that seamlessly integrate with the Android, Apple, and Microsoft ecosystems, delivering exceptional user experiences across multiple platforms. Whether it's Java, C#, Swift, PHP, Python, or other languages, my goal is to capitalize on their unique strengths, creating remarkable software for diverse devices and platforms.
-<br/><br/>  
-Windows Server has been my chosen platform due to my confidence in Microsoft's unwavering commitment to maintaining stringent security measures. Microsoft invests substantial resources into ensuring the security and up-to-dateness of their systems. In contrast, Linux sometimes exhibits delays in addressing security vulnerabilities. Furthermore, Apple has shifted its focus away from server technologies, solidifying Windows Server as a reliable solution for my server requirements. Leveraging Windows Server allows me to ensure the stability, performance, and security of my infrastructure, benefiting from the comprehensive tools and support provided by Microsoft.
-<br/><br/>   
-  I have undertaken this task to learn about machine learning and coding, as well as to explore the possibilities they offer. My goal is to create a platform that is loyal to all its users. It is crucial to me that we adhere to all standards, including regulations such as GDPR, CCPA, COPPA, HIPAA, PCI DSS, ECPA, PIPEDA, and APP, among others. In the early stages of this venture, building a network is paramount. Therefore, I cannot disclose the specific percentages of the various payment gateways at this time. However, you can refer to the source code if you are technically inclined.
-<br/><br/>  
-Furthermore, our main focus is to establish a strong presence in the market. We offer our product for free, but certain features or aspects of the product may have associated costs. When determining the price, we take into account our percentage, the payment processing fees, taxes, and corporate taxes.
-  <br/><br/>  
-  Even though we are not currently members of PCI, we can still build our system in accordance with PCI standards. This involves implementing appropriate security measures, including protection of card information, secure network configuration, strong access controls, and regular monitoring of our systems to detect and address any security risks.
-  <br/><br/>  
-By striving for PCI compliance, we demonstrate our commitment to protecting customer information and ensuring secure payment processes on our platform. While we are not currently PCI members, we can take steps to meet PCI standards and explore membership at a later stage to gain additional recognition and benefits as a PCI member.
-  <br/><br/>  
-To achieve PCI compliance, it is important to understand and implement the necessary security measures within our payment processing flow. Consulting a PCI expert or security consultant can be beneficial to ensure that we adhere to the relevant guidelines and best practices.
-  <br/><br/>  
-Building our system in accordance with PCI standards showcases our dedication to protecting payment information and creating a secure environment for our users. If you have further questions or require additional guidance on PCI DSS or related topics, I am here to assist you.
-    <br/><br/>  
-  Certainly! When there are updates, we should update this document accordingly. It's important to keep the information accurate and up-to-date to reflect any changes in regulations, standards, or our platform's practices. By regularly reviewing and revising this document, we can ensure that it remains relevant and aligns with the current legal framework and industry requirements. If you need assistance with future updates or have any questions, feel free to reach out.
+Attention developers and tech enthusiasts! Welcome to this groundbreaking project that unveils a sneak peek into our carefully crafted source code. While not open source, it carries the spirit of true programmers at its core. We invite you, passionate developers, to dive into the accompanying README.MD file, explore the code, and leave your markdown (MD) comments to join us on this exhilarating journey.
+   <br/><br/> 
+When it comes to our choice of platforms, we stand proudly on the shoulders of giants. For our Apple products, we harness the mighty Swift, a language designed to empower developers like you. Swift's modernity and elegance make it the perfect companion for iOS, macOS, watchOS, and tvOS app development. With Swift, we tap into Apple's native frameworks and unleash a new level of seamless integration and top-notch performance. Get ready to create stunning experiences that dazzle Apple users!
+   <br/><br/> 
+But our ambition doesn't stop there. For our Android adventures, we turn to the trusty Java. Battle-tested and revered, Java is the driving force behind countless Android success stories. It opens doors to a vibrant community, a galaxy of libraries and frameworks, and the boundless possibilities of the Android universe. Strap in and prepare to build remarkable apps that captivate the Android crowd!
+   <br/><br/> 
+And let's not forget our partnership with Microsoft. We embrace the raw power of C++, a language that fuels our front-end on Microsoft platforms. With C++, we unleash untamed performance, control over system resources, and seamless integration with Microsoft's technologies. We venture into the realm of Windows, armed with a language that unlocks the full potential of Microsoft's ecosystem. Prepare to conquer Windows with your coding prowess!
+   <br/><br/> 
+Now, let's talk servers. We choose Windows Server, fortified with Microsoft's unwavering commitment to rock-solid security. Rest assured, we take your data's safety seriously. Microsoft invests substantial resources to ensure their systems are always on the cutting edge of security. While others falter, we confidently stride forward, leaving behind any concerns about vulnerabilities. Windows Server becomes our fortress, providing stability, top-notch performance, and the comprehensive tools we need to fortify our infrastructure.
+   <br/><br/> 
+We live in a fast-paced world where things change in the blink of an eye. That's why we pledge to keep this document fresh and relevant. As regulations evolve and standards shift, we'll be here, updating it to ensure we're always in sync with the industry's pulse. If you have any questions or suggestions, don't hesitate to reach out. Together, we'll shape the future of technology!
+   <br/><br/> 
+Unleash your creativity, leave your mark in the source code, and join us on this epic quest to revolutionize the tech landscape. Let's push boundaries, defy limits, and create software that leaves a lasting impression. Together, we'll build a world where innovation knows no bounds!any questions, feel free to reach out.
     <br/><br/>  
   by:<br/>  
 Pirasath Luxchumykanthan, Inventor and Founder<br/>
