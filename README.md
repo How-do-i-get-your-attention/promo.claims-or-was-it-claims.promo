@@ -141,6 +141,8 @@ A document have have many layers.
   <img src="NeXT.png" height="20"/>  
   <img src="mark.jpg" height="20"/> 
   <img src="cplusplus.png" height="20"/>
+              <img src="java.png" height="20"/>
+                      <img src="swift.png" height="20"/>
 </div>
 
 C was not created by Steve Jobs. C was created by Dennis Ritchie and Ken Thompson at Bell Labs in the early 1970s.<br/> <br/>
