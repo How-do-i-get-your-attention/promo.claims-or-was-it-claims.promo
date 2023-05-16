@@ -44,7 +44,9 @@
   </tr>
    <tr>
     <td align="center"><img src="monitor.png" width="15"/></td>
-    <td align="center"><img src="setup.png" width="15"/></td>
+    <td align="center">
+                <img src="setup.png" width="15"/>
+    </td>
     <td align="center"><img src="setup.png" width="15"/></td>
     <td align="center"><img src="setup.png" width="15"/></td>
       <td align="center">
