@@ -113,9 +113,8 @@
     <td align="center"><img src="setup.png" width="15"/></td>
     <td></td>
     <td align="center"  colspan="2">
-       <!-- I made this bce is us developer-->
-    <img src="visual_studio.png" height="15" /> +  <img src="html5.png" width="15"/> + <img src="javascript.png" width="15"/> + <img src="webassembly.png" width="15"/>  
-     </td> 
+            <img src="visual_studio.png" height="15" /> +  <img src="html5.png" width="15"/> + <img src="javascript.png" width="15"/> + <img src="webassembly.png" width="15"/>  
+    </td> 
            
   </tr>
   <tr>
