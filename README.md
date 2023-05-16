@@ -2,8 +2,7 @@
 
 
 <h1 align="center" style="color:pink; font-size:24px;"><strong>Promo.Claims or was it Claims.Promo</strong></h1>
-<div align="center">
-<table style="color: white; background-color: pink;">
+<div align="center"><table style="color: white; background-color: pink;">
             <tr>
        <td align="center" style="width: 100px;"><img src="supermarket.png" width="20"/></td>
     <td align="center" style="width: 100px;"><img src="google_play.png" width="20"/></td>
@@ -117,10 +116,15 @@
     </td> 
            
   </tr>
+              <tr>
+     <td><img src="love.png" width="15"/></td>
+        <td colspan="5"><sub>You</sub></td>
+  </tr>
   <tr>
      <td><img src="setup.png" width="15"/></td>
         <td colspan="5"><sub>The installation needs to be done separately by <img src="supermarket.png" width="20"/> or  <img src="retailer.png" width="20"/></sub></td>
   </tr>
+            
    <tr>
      <td><img src="link.png" width="15"/></td>
                <td colspan="5"><sub>The installation is done by the linker to a application. <img src="setup.png" width="15"/> <img src="link.png" width="15"/></sub></td>
