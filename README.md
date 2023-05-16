@@ -118,7 +118,7 @@
   </tr>
   <tr>
      <td><img src="setup.png" width="15"/></td>
-        <td colspan="5"><sub>The installation needs to be done separately by <img src="supermarket.png" width="20"/>  <img src="retailer.png" width="20"/></sub></td>
+        <td colspan="5"><sub>The installation needs to be done separately by <img src="supermarket.png" width="20"/> or  <img src="retailer.png" width="20"/></sub></td>
   </tr>
    <tr>
      <td><img src="link.png" width="15"/></td>
