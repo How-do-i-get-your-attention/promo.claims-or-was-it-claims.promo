@@ -19,11 +19,11 @@
        <td align="center" style="width: 100px;"><img src="edit.png" width="20"/></td>
     <td align="center" style="width: 100px;">
                 <a href="https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/tree/master#android-studio">
-                <img src="android_studio.png" width="20"/>
+                <img src="android_studio.png" width="20"/> <img src="java.png" height="15"/> 
                 </a>
                   </td>
-    <td align="center" style="width: 100px;"><img src="visual_studio.png" width="20"/</td>
-    <td align="center" style="width: 100px;"><img src="xcode.jpg" width="20"/></td>
+    <td align="center" style="width: 100px;"><img src="visual_studio.png" width="20"/> <img src="cplusplus.png" height="15"/> </td>
+    <td align="center" style="width: 100px;"><img src="xcode.jpg" width="20"/> <img src="swift.png" height="15"/> </td>
        
   </tr>
    <tr>
@@ -51,7 +51,8 @@
                   <a href="https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/tree/master#android-studio">
                   <img src="android_studio.png" height="15"/>
                   </a>
-                  + <img src="visual_studio.png" height="15"/> + <img src="xcode.jpg" height="15"/> + <img src="c.png" height="15"/>  + <img src="cplusplus.png" height="15"/> </td> 
+                  + <img src="visual_studio.png" height="15"/>  
+                  + <img src="xcode.jpg" height="15"/>
            <td>comming soon</td>
   </tr>
   <tr>
@@ -63,7 +64,8 @@
                              <a href="https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/tree/master#android-studio">
                   <img src="android_studio.png" height="15"/>
                   </a>
-                + <img src="visual_studio.png" height="15"/> + <img src="xcode.jpg" height="15"/> + <img src="c.png" height="15"/>  + <img src="cplusplus.png" height="15"/>
+                + <img src="visual_studio.png" height="15"/> 
+                + <img src="xcode.jpg" height="15"/>
         <td>comming soon</td>
   </tr>
   <tr>
@@ -73,8 +75,9 @@
      <td align="center"><img src="setup.png" width="15"/><img src="link.png" width="15"/></td>
         <td align="center">             <a href="https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/tree/master#android-studio">
                   <img src="android_studio.png" height="15"/>
-                  </a>+ 
-                    <img src="visual_studio.png" height="15"/> + <img src="xcode.jpg" height="15"/> + <img src="c.png" height="15"/>  + <img src="cplusplus.png" height="15"/> </td> 
+                  </a>
+                    + <img src="xcode.jpg" height="15"/>  
+              </td> 
              <td>comming soon</td>
   </tr>
   <tr>
@@ -85,8 +88,9 @@
          <td align="center">
                                   <a href="https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/tree/master#android-studio">
                   <img src="android_studio.png" height="15"/>
-                  </a>
-                     + <img src="visual_studio.png" height="15"/> + <img src="xcode.jpg" height="15"/> + <img src="c.png" height="15"/>  + <img src="cplusplus.png" height="15"/>  </td>
+                  </a> +
+                     <img src="xcode.jpg" height="15"/>
+              </td>
              <td>comming soon</td>
   </tr>
   <tr>
@@ -98,7 +102,7 @@
                              <a href="https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/tree/master#android-studio">
                   <img src="android_studio.png" height="15"/>
                   </a>
-                + <img src="visual_studio.png" height="15"/> + <img src="xcode.jpg" height="15"/> + <img src="c.png" height="15"/>  + <img src="cplusplus.png" height="15"/> </td>
+                + <img src="xcode.jpg" height="15"/>  </td>
              <td>comming soon</td>
   </tr>
    <tr>
@@ -108,7 +112,7 @@
     <td></td>
     <td align="center"  colspan="2">
        <!-- I made this bce is us developer-->
-    <img src="visual_studio.png" height="15" /> +  <img src="html5.png" width="15"/> + <img src="javascript.png" width="15"/> + <img src="webassembly.png" width="15"/>   + <img src="cplusplus.png" height="15"/> 
+    <img src="visual_studio.png" height="15" /> +  <img src="html5.png" width="15"/> + <img src="javascript.png" width="15"/> + <img src="webassembly.png" width="15"/>  
      </td> 
            
   </tr>
