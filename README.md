@@ -9,15 +9,17 @@
     <td align="center" style="width: 100px;"><img src="microsoft_store.png" width="20"/</td>
     <td align="center" style="width: 100px;"><img src="apple_play.png" width="20"/></td>
             <td align="center" colspan="2"  rowspan="2"><img src="supermarket.png" width="20"/> +  <img src="retailer.png" width="20"/> + <img src="edit.png" width="20"/> =  
-                     <img src="love.png" width="20"/>
+             <a href="https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/tree/master#the-history-starts-from-the-1960s-with-arpanet-connecting-everyone-through-the-internet">
+                        <img src="love.png" width="20"/>
                         </a>
-          
+             </td>
   </tr>
       <tr>
        <td align="center" style="width: 100px;"><img src="edit.png" width="20"/></td>
     <td align="center" style="width: 100px;">
-               <img src="android_studio.png" width="20"/> <img src="java.png" height="15"/> 
-              
+                <a href="https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/tree/master#android-studio">
+                <img src="android_studio.png" width="20"/> <img src="java.png" height="15"/> 
+                </a>
                   </td>
     <td align="center" style="width: 100px;"><img src="visual_studio.png" width="20"/> <img src="cplusplus.png" height="15"/> </td>
     <td align="center" style="width: 100px;"><img src="xcode.jpg" width="20"/> <img src="swift.png" height="15"/> </td>
@@ -25,12 +27,14 @@
   </tr>
    <tr>
     <td align="center" style="width: 100px;">
+               <a href="https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/tree/master#the-history-starts-from-the-1960s-with-arpanet-connecting-everyone-through-the-internet">
                         <img src="love.png" width="20"/>
-                      
+                        </a>
                </td>
     <td align="center" style="width: 100px;">
+                <a href="https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo#android">
                 <img src="android.png" width="20"/>
-              
+                </a>
                             </td>
     <td align="center" style="width: 100px;"><img src="microsoft.png" width="20"/</td>
     <td align="center" style="width: 100px;"><img src="apple.png" width="20"/></td>
@@ -45,8 +49,9 @@
     <td align="center"><img src="setup.png" width="15"/></td>
     <td align="center"><img src="setup.png" width="15"/></td>
       <td align="center">
+                  <a href="https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/tree/master#android-studio">
                   <img src="android_studio.png" height="15"/>
-           
+                  </a>
                   + <img src="visual_studio.png" height="15"/>  
                   + <img src="xcode.jpg" height="15"/>
            <td>comming soon</td>
@@ -57,8 +62,9 @@
     <td align="center"><img src="setup.png" width="15"/></td>
     <td align="center"><img src="setup.png" width="15"/></td>
     <td align="center">
+                             <a href="https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/tree/master#android-studio">
                   <img src="android_studio.png" height="15"/>
-              
+                  </a>
                 + <img src="visual_studio.png" height="15"/> 
                 + <img src="xcode.jpg" height="15"/>
         <td>comming soon</td>
@@ -68,9 +74,9 @@
      <td align="center"><img src="setup.png" width="15"/></td>
     <td></td>
      <td align="center"><img src="setup.png" width="15"/><img src="link.png" width="15"/></td>
-        <td align="center">          
-        <img src="android_studio.png" height="15"/>
-                  
+        <td align="center">             <a href="https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/tree/master#android-studio">
+                  <img src="android_studio.png" height="15"/>
+                  </a>
                     + <img src="xcode.jpg" height="15"/>  
               </td> 
              <td>comming soon</td>
@@ -81,7 +87,9 @@
     <td align="center"></td>
      <td align="center"><img src="link.png" width="15"/></td>
          <td align="center">
-                  <img src="android_studio.png" height="15"/> +
+                                  <a href="https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/tree/master#android-studio">
+                  <img src="android_studio.png" height="15"/>
+                  </a> +
                      <img src="xcode.jpg" height="15"/>
               </td>
              <td>comming soon</td>
@@ -92,8 +100,9 @@
     <td></td>
     <td align="center"><img src="setup.png" width="15"/></td>
     <td align="center">
-                 <img src="android_studio.png" height="15"/>
-                  
+                             <a href="https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/tree/master#android-studio">
+                  <img src="android_studio.png" height="15"/>
+                  </a>
                 + <img src="xcode.jpg" height="15"/>  </td>
              <td>comming soon</td>
   </tr>
@@ -261,5 +270,26 @@ Thats why i try to make this work in HTML to
 -->
 </u></strong>
 <h3 align="center">The history starts from the 1960s with ARPANET. Connecting everyone through the internet.</h3>
-
+<h2 align="center">Android</h2>
+Android is an open-source operating system primarily designed for mobile devices such as smartphones and tablets. It was developed by Android Inc., a company founded in 2003 by Andy Rubin, Rich Miner, Nick Sears, and Chris White. In 2005, Android Inc. was acquired by Google, and since then, Google has been the primary controlling entity behind the Android operating system.
+<br/><br/>
+Android is not limited to a specific device or manufacturer. It is designed to be an open platform, allowing various hardware manufacturers to adopt and customize it for their devices. This has resulted in a wide range of Android devices available in the market, including smartphones, tablets, smartwatches, smart TVs, and other types of gadgets.
+<br/><br/>
+Prominent hardware manufacturers such as Samsung, LG, HTC, Motorola, Sony, and many others have produced Android-based devices. These manufacturers incorporate the Android operating system into their devices and often customize it with their own user interfaces and additional features.
+<br/><br/>
+While Google controls the development and direction of the Android operating system, it collaborates with hardware manufacturers, carriers, and developers to ensure compatibility and provide necessary updates, security patches, and other improvements to the ecosystem.
+<br/><br/>
+It's worth noting that while Android is primarily associated with smartphones and tablets, it has also been adapted for other devices like smart TVs, streaming boxes, and even some laptops, offering a versatile operating system for a wide range of devices.
+<h3 align="center">Android studio</h3>
+  <p>
+    Android Studio is the official Integrated Development Environment (IDE) for Android app development. It provides a comprehensive set of tools and resources to create, test, and deploy applications specifically for Android devices.
+  </p>
+  <h4 align="center">Features and Tools</h4>
+  <p>
+    Android Studio offers a range of features and tools to enhance productivity, including a code editor with intelligent code completion and refactoring capabilities, a visual layout editor for designing app interfaces, a built-in emulator for testing apps on virtual devices, and powerful debugging tools.
+  </p>
+  <h4 align="center">Development Workflow</h4>
+  <p>
+    Android Studio supports the entire app development workflow. Developers can manage dependencies, configure project settings, write code in Java or Kotlin, design user interfaces using XML or visual editors, and preview the app in real-time within the IDE.
+  </p>
 <!--Have a nice day!-->
