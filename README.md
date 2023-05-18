@@ -88,7 +88,7 @@
      <td align="center"><img src="link.png" width="15"/></td>
          <td align="center">
                                   <a href="https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/tree/master#android-studio">
-                  <img src="android_studio.png" height="15"/>
+                  <img src="jetbrains.png" height="15"/>
                   </a> +
                      <img src="xcode.jpg" height="15"/>
               </td>
