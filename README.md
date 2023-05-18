@@ -18,7 +18,7 @@
        <td align="center" style="width: 100px;"><img src="edit.png" width="20"/></td>
     <td align="center" style="width: 100px;">
                 <a href="https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/tree/master#android-studio">
-                <img src="jetbrain.jpg" width="20"/> <img src="kotline.jpg" height="15"/> 
+                <img src="jetbrains.jpg" width="20"/> <img src="kotline.jpg" height="15"/> 
                 </a>
                   </td>
     <td align="center" style="width: 100px;"><img src="visual_studio.png" width="20"/> <img src="cplusplus.png" height="15"/> </td>
