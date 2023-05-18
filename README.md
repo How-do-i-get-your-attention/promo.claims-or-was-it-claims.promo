@@ -6,7 +6,7 @@
             <tr>
        <td align="center" style="width: 100px;"><img src="supermarket.png" width="20"/></td>
     <td align="center" style="width: 100px;"><img src="google_play.png" width="20"/></td>
-    <td align="center" style="width: 100px;"><img src="microsoft_store.png" width="20"/</td>
+    <td align="center" style="width: 100px;"><img src="microsoft_store.png" width="20"/></td>
     <td align="center" style="width: 100px;"><img src="apple_play.png" width="20"/></td>
             <td align="center" colspan="2"  rowspan="2"><img src="supermarket.png" width="20"/> +  <img src="retailer.png" width="20"/> + <img src="edit.png" width="20"/> =  
              <a href="https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/tree/master#the-history-starts-from-the-1960s-with-arpanet-connecting-everyone-through-the-internet">
@@ -18,7 +18,7 @@
        <td align="center" style="width: 100px;"><img src="edit.png" width="20"/></td>
     <td align="center" style="width: 100px;">
                 <a href="https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/tree/master#android-studio">
-                <img src="jetbrain.png" width="20"/> <img src="kotline.jpg" height="15"/> 
+                <img src="jetbrain.jpg" width="20"/> <img src="kotline.jpg" height="15"/> 
                 </a>
                   </td>
     <td align="center" style="width: 100px;"><img src="visual_studio.png" width="20"/> <img src="cplusplus.png" height="15"/> </td>
