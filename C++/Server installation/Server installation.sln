@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33712.159
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Server installation", "Server installation.vcxproj", "{DB768592-3676-43A9-BAAD-448F74C4D32F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM = Debug|ARM
+		Debug|ARM64 = Debug|ARM64
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|ARM = Release|ARM
+		Release|ARM64 = Release|ARM64
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DB768592-3676-43A9-BAAD-448F74C4D32F}.Debug|ARM.ActiveCfg = Debug|ARM
+		{DB768592-3676-43A9-BAAD-448F74C4D32F}.Debug|ARM.Build.0 = Debug|ARM
+		{DB768592-3676-43A9-BAAD-448F74C4D32F}.Debug|ARM.Deploy.0 = Debug|ARM
+		{DB768592-3676-43A9-BAAD-448F74C4D32F}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{DB768592-3676-43A9-BAAD-448F74C4D32F}.Debug|ARM64.Build.0 = Debug|ARM64
+		{DB768592-3676-43A9-BAAD-448F74C4D32F}.Debug|ARM64.Deploy.0 = Debug|ARM64
+		{DB768592-3676-43A9-BAAD-448F74C4D32F}.Debug|x64.ActiveCfg = Debug|x64
+		{DB768592-3676-43A9-BAAD-448F74C4D32F}.Debug|x64.Build.0 = Debug|x64
+		{DB768592-3676-43A9-BAAD-448F74C4D32F}.Debug|x64.Deploy.0 = Debug|x64
+		{DB768592-3676-43A9-BAAD-448F74C4D32F}.Debug|x86.ActiveCfg = Debug|Win32
+		{DB768592-3676-43A9-BAAD-448F74C4D32F}.Debug|x86.Build.0 = Debug|Win32
+		{DB768592-3676-43A9-BAAD-448F74C4D32F}.Debug|x86.Deploy.0 = Debug|Win32
+		{DB768592-3676-43A9-BAAD-448F74C4D32F}.Release|ARM.ActiveCfg = Release|ARM
+		{DB768592-3676-43A9-BAAD-448F74C4D32F}.Release|ARM.Build.0 = Release|ARM
+		{DB768592-3676-43A9-BAAD-448F74C4D32F}.Release|ARM.Deploy.0 = Release|ARM
+		{DB768592-3676-43A9-BAAD-448F74C4D32F}.Release|ARM64.ActiveCfg = Release|ARM64
+		{DB768592-3676-43A9-BAAD-448F74C4D32F}.Release|ARM64.Build.0 = Release|ARM64
+		{DB768592-3676-43A9-BAAD-448F74C4D32F}.Release|ARM64.Deploy.0 = Release|ARM64
+		{DB768592-3676-43A9-BAAD-448F74C4D32F}.Release|x64.ActiveCfg = Release|x64
+		{DB768592-3676-43A9-BAAD-448F74C4D32F}.Release|x64.Build.0 = Release|x64
+		{DB768592-3676-43A9-BAAD-448F74C4D32F}.Release|x64.Deploy.0 = Release|x64
+		{DB768592-3676-43A9-BAAD-448F74C4D32F}.Release|x86.ActiveCfg = Release|Win32
+		{DB768592-3676-43A9-BAAD-448F74C4D32F}.Release|x86.Build.0 = Release|Win32
+		{DB768592-3676-43A9-BAAD-448F74C4D32F}.Release|x86.Deploy.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ED05DB43-CCDA-47B5-B23F-E611030D6C39}
+	EndGlobalSection
+EndGlobal

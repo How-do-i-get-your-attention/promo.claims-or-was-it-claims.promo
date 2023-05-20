@@ -5,38 +5,78 @@ import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Paint
 import android.os.Bundle
+import android.view.SurfaceHolder
+import android.view.SurfaceView
 import androidx.appcompat.app.AppCompatActivity
-import android.view.View
 
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-
         val rootView = window.decorView
-
         rootView.setBackgroundColor(Color.BLACK)
-        val circleView = CircleView(this)
-        circleView.setBackgroundColor(Color.BLACK)
-        setContentView(circleView)
+
+        val uiSurfaceView = UISurfaceView(this)
+        setContentView(uiSurfaceView)
     }
 
-    private class CircleView(context: Context) : View(context) {
-        private val paint = Paint()
+    private class UISurfaceView(context: Context) : SurfaceView(context), SurfaceHolder.Callback {
+        private var animationThread: AnimationThread? = null
 
-        override fun onDraw(canvas: Canvas) {
-            super.onDraw(canvas)
+        init {
+            holder.addCallback(this)
+        }
 
-            // Set the color of the circle
-            paint.color = Color.RED
+        override fun surfaceCreated(holder: SurfaceHolder) {
+            animationThread = AnimationThread(holder)
+            animationThread?.start()
+        }
 
-            // Calculate the center coordinates and radius of the circle
-            val centerX = width / 2f
-            val centerY = height / 2f
-            val radius = width / 4f
+        override fun surfaceChanged(holder: SurfaceHolder, format: Int, width: Int, height: Int) {
+            // Handle surface changes, if needed
+        }
 
-            // Draw the circle on the canvas
-            canvas.drawCircle(centerX, centerY, radius, paint)
+        override fun surfaceDestroyed(holder: SurfaceHolder) {
+            var retry = true
+            animationThread?.setRunning(false)
+
+            while (retry) {
+                try {
+                    animationThread?.join()
+                    retry = false
+                } catch (e: InterruptedException) {
+                    // Handle interruption
+                }
+            }
+        }
+
+        private inner class AnimationThread(private val surfaceHolder: SurfaceHolder) : Thread() {
+            private var isRunning = false
+
+            override fun run() {
+                isRunning = true
+
+                while (isRunning) {
+                    val canvas: Canvas? = surfaceHolder.lockCanvas()
+
+                    if (canvas != null) {
+                        // Perform animation drawing operations on the canvas
+                        drawAnimation(canvas)
+
+                        surfaceHolder.unlockCanvasAndPost(canvas)
+                    }
+
+                    // Adjust the animation timing as needed
+                    sleep(16) // 60 FPS (approximately)
+                }
+            }
+
+            fun setRunning(isRunning: Boolean) {
+                this.isRunning = isRunning
+            }
+
+
         }
     }
 }
