@@ -258,12 +258,6 @@ http://www.how-to-get-your-attention.com
 "I will send you an email" if you are accepted as a presenter with your first name and dot and your lastname@how-to-get-your-attention.com
 I also know how to make comment in code..
 -->
-<h2>Your memory also gets old.
-  by:<br/>  
-Pirasath Luxchumykanthan, Inventor and Founder<br/>
-</h2>
-
-
 <strong><u>
 <!-- 
 HyperText Markup Language, was developed by Tim Berners-Lee in the early 1990s while he was working at CERN Then everyone was connected 
@@ -272,3 +266,6 @@ Thats why i try to make this work in HTML to
 </u></strong>
 <h3 align="center">The history starts from the 1960s with ARPANET. Connecting everyone through the internet.</h3>
 
+<h2>"Your memory also gets old."</h2>
+  by:<br/>  
+Pirasath Luxchumykanthan, Inventor and Founder<br/>
