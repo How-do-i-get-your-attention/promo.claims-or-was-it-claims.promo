@@ -21,16 +21,7 @@ App::App()
 {
     Suspending({ this, &App::OnSuspending });
 
-#if defined _DEBUG && !defined DISABLE_XAML_GENERATED_BREAK_ON_UNHANDLED_EXCEPTION
-    UnhandledException([this](IInspectable const&, UnhandledExceptionEventArgs const& e)
-    {
-        if (IsDebuggerPresent())
-        {
-            auto errorMessage = e.Message();
-            __debugbreak();
-        }
-    });
-#endif
+
 }
 
 /// <summary>
