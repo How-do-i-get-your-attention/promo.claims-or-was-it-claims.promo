@@ -252,17 +252,12 @@ We live in a fast-paced world where things change in the blink of an eye. That's
    <br/><br/> 
 Unleash your creativity, leave your mark in the source code, and join us on this epic quest to revolutionize the tech landscape. Let's push boundaries, defy limits, and create software that leaves a lasting impression. Together, we'll build a world where innovation knows no bounds!any questions, feel free to reach out.
     <br/><br/>  
-  by:<br/>  
-Pirasath Luxchumykanthan, Inventor and Founder<br/>
 http://www.how-to-get-your-attention.com
 <!--For you: pirasath.luxchumykanthan@how-to-get-your-attention.com for public office@how-to-get-your-attention.com -->
 <!--
 "I will send you an email" if you are accepted as a presenter with your first name and dot and your lastname@how-to-get-your-attention.com
 I also know how to make comment in code..
 -->
-
-
-
 <strong><u>
 <!-- 
 HyperText Markup Language, was developed by Tim Berners-Lee in the early 1990s while he was working at CERN Then everyone was connected 
@@ -270,26 +265,7 @@ Thats why i try to make this work in HTML to
 -->
 </u></strong>
 <h3 align="center">The history starts from the 1960s with ARPANET. Connecting everyone through the internet.</h3>
-<h2 align="center">Android</h2>
-Android is an open-source operating system primarily designed for mobile devices such as smartphones and tablets. It was developed by Android Inc., a company founded in 2003 by Andy Rubin, Rich Miner, Nick Sears, and Chris White. In 2005, Android Inc. was acquired by Google, and since then, Google has been the primary controlling entity behind the Android operating system.
-<br/><br/>
-Android is not limited to a specific device or manufacturer. It is designed to be an open platform, allowing various hardware manufacturers to adopt and customize it for their devices. This has resulted in a wide range of Android devices available in the market, including smartphones, tablets, smartwatches, smart TVs, and other types of gadgets.
-<br/><br/>
-Prominent hardware manufacturers such as Samsung, LG, HTC, Motorola, Sony, and many others have produced Android-based devices. These manufacturers incorporate the Android operating system into their devices and often customize it with their own user interfaces and additional features.
-<br/><br/>
-While Google controls the development and direction of the Android operating system, it collaborates with hardware manufacturers, carriers, and developers to ensure compatibility and provide necessary updates, security patches, and other improvements to the ecosystem.
-<br/><br/>
-It's worth noting that while Android is primarily associated with smartphones and tablets, it has also been adapted for other devices like smart TVs, streaming boxes, and even some laptops, offering a versatile operating system for a wide range of devices.
-<h3 align="center">Android studio</h3>
-  <p>
-    Android Studio is the official Integrated Development Environment (IDE) for Android app development. It provides a comprehensive set of tools and resources to create, test, and deploy applications specifically for Android devices.
-  </p>
-  <h4 align="center">Features and Tools</h4>
-  <p>
-    Android Studio offers a range of features and tools to enhance productivity, including a code editor with intelligent code completion and refactoring capabilities, a visual layout editor for designing app interfaces, a built-in emulator for testing apps on virtual devices, and powerful debugging tools.
-  </p>
-  <h4 align="center">Development Workflow</h4>
-  <p>
-    Android Studio supports the entire app development workflow. Developers can manage dependencies, configure project settings, write code in Java or Kotlin, design user interfaces using XML or visual editors, and preview the app in real-time within the IDE.
-  </p>
-<!--Have a nice day!-->
+
+<h2>"Your memory also gets old."</h2>
+  by:<br/>  
+Pirasath Luxchumykanthan, Inventor and Founder<br/>
