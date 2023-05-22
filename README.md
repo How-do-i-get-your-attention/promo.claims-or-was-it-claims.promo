@@ -269,3 +269,20 @@ Thats why i try to make this work in HTML to
 <h2>"Your memory also gets old."</h2>
   by:<br/>  
 Pirasath Luxchumykanthan, Inventor and Founder<br/>
+
+<h1>APK {0x50, 0x4B, 0x03, 0x04}</h1>
+The zlib library, which provides the underlying compression and decompression functionality for the built-in ZIP support in Android, was developed by Jean-loup Gailly and Mark Adler. It is an open-source library that has been widely adopted and integrated into various software systems, including the Android platform.
+
+Regarding an article specifically about the Android ZIP version 2.0, it may be challenging to find a comprehensive article solely focused on that specific topic. However, I can provide some information about the evolution of the ZIP format and its relevance to Android.
+
+The ZIP format itself was first introduced by Phil Katz in the late 1980s. It has since undergone several updates and extensions to accommodate new features, enhanced compression methods, and improved compatibility. The initial ZIP 2.0 format provided a foundation for storing compressed files and directories in a single archive.
+
+As for the specific integration of the ZIP format in the Android platform, it is an essential component for packaging and distributing Android apps in the form of APK files. The ZIP format is used to compress and structure the app's resources, assets, and compiled code within the APK file.
+
+While the ZIP format has evolved over time with newer versions and extensions, the built-in ZIP support in Android primarily focuses on the fundamental aspects necessary for handling APK files. This includes file compression, extraction, and directory structures.
+
+For more detailed information about the ZIP format and its integration in Android, you may refer to official documentation and resources provided by Android, such as the Android Developer website and Android Open Source Project (AOSP) documentation.
+
+Please note that accessing some articles or publications may require subscription or payment, depending on the source and publisher.
+
+
