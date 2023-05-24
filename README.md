@@ -300,3 +300,8 @@ The contents of DMG files can include file systems, application files, metadata,
 <h2>Conclusion</h2>
 Understanding the first bytes of executable files and DMG files provides insights into their respective file formats and structures. While the first bytes help identify the file format, it's essential to consider the overall structure, headers, and other elements within the file to fully comprehend its functionality.
 Exploring file formats broadens our knowledge of how different systems handle and interpret files. By understanding these nuances, we can better work with, analyze, and appreciate the rich diversity of file formats in the digital world.
+
+
+Well, now that you've made it this far reading about things I've written, you might as well continue and dive into the thrilling adventures of my diary. Brace yourself for a rollercoaster of emotions, dramatic plot twists, and the occasional doodle of a questionable quality. Enjoy the journey!
+
+<h2>24-05-2023</h2>
