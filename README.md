@@ -147,7 +147,7 @@ A document have have many layers.
   <img src="mark.jpg" height="20"/> 
   <img src="cplusplus.png" height="20"/>
               <img src="java.png" height="20"/>
-              <img src="csharp.png" height="20"/>
+              <img src="cplusplus.png" height="20"/>
                   <img src="kotline.jpg" height="20"/>
                       <img src="swift.png" height="20"/>
 </div>
@@ -356,4 +356,24 @@ Warm regards,
 ME or I.
 
 
+<h2>30-05-2023 23:42 Danish time Pirasath Luxchumykanthan</h2>
+Why I Like C++
+
+C++ is a powerful programming language that offers several features that I find appealing. Here are some reasons why I enjoy working with C++:
+
+1. Macros: C++ provides the ability to define macros, which allow for code expansion and customization. Macros can be used to define objects, functions, and other constructs, providing flexibility and reducing code duplication.
+
+2. Android Development: C++ can be used in Android development through the Native Development Kit (NDK). While there may be some performance overhead or a need to interact with Java (and now Kotlin), the ability to use C++ opens up opportunities for efficient and low-level programming on the Android platform.
+
+3. Kotlin's Rise: I believe that Kotlin is gradually replacing Java in the Android ecosystem. Kotlin is a modern and concise programming language that offers enhanced features and interoperability with existing Java codebases. Its popularity continues to grow, and it provides an alternative to Java for Android development.
+
+4. Unified View on Mobile Platforms: Both iOS and Android platforms follow a similar approach where most functionality needs to be implemented within the application itself. This provides a consistent development experience across mobile platforms, making it easier to transition between the two.
+
+5. Control on Servers: When working on server-side applications, C++ offers full control and flexibility. Its performance characteristics, low-level programming capabilities, and rich ecosystem of libraries make it well-suited for server development.
+
+6. C++ on macOS: While macOS is gradually transitioning to Swift as a safer programming language, C++ still holds its ground. C++ allows developers to build efficient and high-performance applications on macOS, especially in areas that require low-level access or extensive use of existing C++ libraries.
+
+In addition to the above, I particularly appreciate working with bytes, functions, and the multitude of options available in C++. This allows for fine-grained control over operations and enables optimization in various scenarios.
+
+Why not build a cloud application that can work with Android, macOS, iOS, and Windows?
 
