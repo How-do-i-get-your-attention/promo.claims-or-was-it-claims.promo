@@ -416,3 +416,22 @@ Building a profitable software company requires careful planning and a strong vi
 
 
 <h2>30-05-2023 20:12 Danish time Pirasath Luxchumykanthan</h2>
+WinMain and wWinMain in Windows Applications
+In a Windows application, the entry point function is typically either WinMain or wWinMain, depending on the string encoding requirements of the application.
+
+WinMain
+The WinMain function has the following signature:
+
+c++
+int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow);
+It serves as the entry point for ANSI-encoded strings, using the system's default code page. This is suitable for applications that don't need to work extensively with Unicode.
+
+wWinMain
+On the other hand, if you need to work with UTF-16 encoded strings (wide-character strings), you can use the wWinMain function as the entry point. It has the following signature:
+
+int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR lpCmdLine, int nCmdShow);
+The wWinMain function accepts wide-character strings (UTF-16) for command-line arguments, allowing for better handling of Unicode text and filenames in your Windows application.
+
+Choose the appropriate entry point (WinMain or wWinMain) based on the string encoding requirements of your application. 
+
+Wee wWinMain provides the necessary support.
