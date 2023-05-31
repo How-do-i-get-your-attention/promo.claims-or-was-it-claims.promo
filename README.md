@@ -430,8 +430,6 @@ wWinMain
 On the other hand, if you need to work with UTF-16 encoded strings (wide-character strings), you can use the wWinMain function as the entry point. It has the following signature:
 
 int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR lpCmdLine, int nCmdShow);
-The wWinMain function accepts wide-character strings (UTF-16) for command-line arguments, allowing for better handling of Unicode text and filenames in your Windows application.
-
-Choose the appropriate entry point (WinMain or wWinMain) based on the string encoding requirements of your application. 
-
-Wee wWinMain provides the necessary support.
+The wWinMain function accepts wide-character strings (UTF-16) for command-line arguments, allowing for better handling of Unicode text and filenames in this "Windows application".
+Choose the appropriate entry point (WinMain or wWinMain) based on the string encoding requirements of your/this application. 
+Wee use wWinMain provides the necessary support to start op the app in windows server.
