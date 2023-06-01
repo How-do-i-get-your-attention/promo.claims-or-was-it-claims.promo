@@ -448,7 +448,6 @@ int WINAPI wWinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, 
     {
         // Code to handle service-specific logic
         // This block will execute when the code is running as a service
-        OutputDebugString(L"Running as a service");
         return 0;
     }
     // Code to handle non-service logic
