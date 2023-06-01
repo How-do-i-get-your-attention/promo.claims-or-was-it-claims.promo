@@ -442,6 +442,7 @@ Wee use wWinMain provides the necessary support to start op the background servi
 #endif
 
 #include <windows.h>
+
 // Entry point for the Win32 Application
 int WINAPI wWinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _In_ LPWSTR lpCmdLine, _In_ int nCmdShow)
 {
@@ -449,15 +450,14 @@ int WINAPI wWinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, 
     {
         // Code to handle service-specific logic
         // This block will execute when the code is running as a service
+        OutputDebugString(L"Running as a service");
+        return 0;
     }
-    else
-    {
-        // Code to handle non-service logic
-        // This block will execute when the code is running as a regular application
-    }
+    // Code to handle non-service logic
+    // This block will execute when the code is running as a regular application
+
     return 0;
 }
-
 ```
  I will demonstrate how to utilize an application as a Windows service, showcasing the ability to distinguish between service-specific and non-service execution. The provided code snippet will serve as an example to illustrate this differentiation.
 
