@@ -434,4 +434,46 @@ The wWinMain function accepts wide-character strings (UTF-16) for command-line a
 Choose the appropriate entry point (WinMain or wWinMain) based on the string encoding requirements of your/this application. 
 Wee use wWinMain provides the necessary support to start op the background services in windows server.
 
+```Win32/Win32.cpp
+#ifndef UNICODE
+#define UNICODE
+#endif
 
+#include <windows.h>
+<h2>01-06-2023 18:23 Danish time Pirasath Luxchumykanthan</h2>
+// Entry point for the Win32 Application
+int WINAPI wWinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _In_ LPWSTR lpCmdLine, _In_ int nCmdShow)
+{
+    if (lpCmdLine == NULL)
+    {
+        // Code to handle service-specific logic
+        // This block will execute when the code is running as a service
+    }
+    else
+    {
+        // Code to handle non-service logic
+        // This block will execute when the code is running as a regular application
+    }
+
+    return 0;
+}
+
+```
+ I will demonstrate how to utilize an application as a Windows service, showcasing the ability to distinguish between service-specific and non-service execution. The provided code snippet will serve as an example to illustrate this differentiation.
+
+Entry Point for the Win32 Application:
+The wWinMain function serves as the entry point for the Win32 application. It accepts several parameters, including the instance handle, previous instance handle, command line, and window display options.
+
+Differentiating Service-Specific and Non-Service Execution:
+Within the wWinMain function, we can utilize the lpCmdLine parameter to determine whether the application is running as a service or a regular application. This parameter represents the command line passed to the application during execution.
+
+If lpCmdLine is NULL, it indicates that the application is running as a service. In this case, we can add code within the corresponding block to handle service-specific logic. This logic can include initialization, setting up service-specific functionality, and any other tasks required by the service.
+
+On the other hand, if lpCmdLine is not NULL, it implies that the application is running as a regular application. The code within the corresponding block can handle non-service logic, such as user interactions, graphical interfaces, or other functionalities specific to regular application execution.
+
+Conclusion:
+By examining the lpCmdLine parameter within the wWinMain function, we can distinguish between service-specific and non-service execution. This allows us to implement different code paths based on the application's context.
+
+Keep in mind that this code snippet provides a basic framework for differentiating between service and non-service execution. Additional customization and error handling may be required depending on the specific requirements of your application.
+
+Remember to adhere to best practices and ensure that your code functions correctly in both service and non-service scenarios.
