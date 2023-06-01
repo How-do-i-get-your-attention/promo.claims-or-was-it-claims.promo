@@ -455,7 +455,6 @@ int WINAPI wWinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, 
         // Code to handle non-service logic
         // This block will execute when the code is running as a regular application
     }
-
     return 0;
 }
 
