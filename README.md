@@ -471,7 +471,9 @@ On the other hand, if lpCmdLine is not NULL, it implies that the application is 
 Conclusion:
 By examining the lpCmdLine parameter within the wWinMain function, we can distinguish between service-specific and non-service execution. This allows us to implement different code paths based on the application's context.
 
----
+
+<h2>01-06-2023 21:45 Danish time Pirasath Luxchumykanthan</h2>
+
 I've created Win32/Developer.h.
 ```
  Developer& dev = Developer::getInstance();
