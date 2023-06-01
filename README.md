@@ -478,6 +478,7 @@ I've created Win32/Developer.h.
 ```
  Developer& dev = Developer::getInstance();
             dev.Messages("hallo world");
+            //Win32/Developer.txt
 ```
 So, why did I create this file? As a developer, I believe in the importance of logging and tracking the actions and changes made during the development process. While console messages can be useful for real-time debugging, they often get lost or overwritten. By having a dedicated log file, I can easily look back and review the entire development journey, spot any errors, and analyze the actions taken.
 
