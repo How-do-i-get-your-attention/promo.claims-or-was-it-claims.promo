@@ -440,6 +440,7 @@ Wee use wWinMain provides the necessary support to start op the background servi
 #ifndef UNICODE
 #define UNICODE
 #endif
+// Run on windows
 #include <windows.h>
 // Entry point for the Win32 Application
 int WINAPI wWinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _In_ LPWSTR lpCmdLine, _In_ int nCmdShow)
