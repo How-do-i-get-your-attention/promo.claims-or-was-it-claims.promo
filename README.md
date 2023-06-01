@@ -475,7 +475,7 @@ By examining the lpCmdLine parameter within the wWinMain function, we can distin
 <h2>01-06-2023 21:45 Danish time Pirasath Luxchumykanthan</h2>
 
 I've created Win32/Developer.h.
-```
+```Win32/Developer.h
  Developer& dev = Developer::getInstance();
             dev.Messages("hallo world");
             //Win32/Developer.txt
