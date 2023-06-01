@@ -475,6 +475,4 @@ On the other hand, if lpCmdLine is not NULL, it implies that the application is 
 Conclusion:
 By examining the lpCmdLine parameter within the wWinMain function, we can distinguish between service-specific and non-service execution. This allows us to implement different code paths based on the application's context.
 
-Keep in mind that this code snippet provides a basic framework for differentiating between service and non-service execution. Additional customization and error handling may be required depending on the specific requirements of your application.
 
-Remember to adhere to best practices and ensure that your code functions correctly in both service and non-service scenarios.
