@@ -471,4 +471,14 @@ On the other hand, if lpCmdLine is not NULL, it implies that the application is 
 Conclusion:
 By examining the lpCmdLine parameter within the wWinMain function, we can distinguish between service-specific and non-service execution. This allows us to implement different code paths based on the application's context.
 
+---
+I've created Win32/Developer.h.
+```
+ Developer& dev = Developer::getInstance();
+            dev.Messages("hallo world");
+```
+So, why did I create this file? As a developer, I believe in the importance of logging and tracking the actions and changes made during the development process. While console messages can be useful for real-time debugging, they often get lost or overwritten. By having a dedicated log file, I can easily look back and review the entire development journey, spot any errors, and analyze the actions taken.
 
+Using a log file allows me to maintain a comprehensive record of my work, ensuring that the source code is fine-tuned and functions at its best. It's an essential practice to achieve a 100% working solution.
+
+Additionally, once I'm done testing and have deployed the application to a server, I'll remove the logging function from the release version. This step is crucial to optimize resource usage, as logging unnecessary information in a server environment can consume RAM and disk space without providing any meaningful benefits.
