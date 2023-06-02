@@ -414,4 +414,14 @@ At how-do-i-get-your-attention.com, our primary focus is to develop a comprehens
 Conclusion:
 Building a profitable software company requires careful planning and a strong vision. With how-do-i-get-your-attention.com, I aim to create a platform that not only solves everyday problems but also generates revenue through valuable software offerings. By redirecting visitors to my GitHub projects, I hope to demonstrate the potential of my company and provide users with practical and effective solutions. Stay tuned for more updates and developments as how-do-i-get-your-attention.com continues to evolve and make a positive impact in the software industry.
 
+<h2>02-06-2023 18:02 Danish time Pirasath Luxchumykanthan</h2>
 
+In Windows Server, we have the Local Security Authority (LSA), which allows us to create administrator accounts with expiration dates or modify regular accounts. This provides flexibility and control over user management in the server environment.
+
+One useful feature is the ability to create services that run under the System account. The System account is a built-in account in Windows that has extensive privileges and can perform various tasks. By setting a service to run under the System account, it can continue running even when no user is logged in or when the server restarts. This is particularly handy when automating server tasks or updates. With a script or service, you can manage background tasks and ensure they run smoothly without the need for manual intervention.
+
+To manage services in Windows Server, we can utilize the Service Control Manager. The Service Control Manager provides a central location to view, configure, and control the services running on the server. It allows us to start, stop, restart, and modify the behavior of services, providing flexibility in managing server applications and processes.
+
+By leveraging services and the System account, administrators can automate server maintenance, updates, and various tasks. This helps streamline operations, reduce manual effort, and ensure the server remains functional even when no user is actively logged in.
+
+Overall, the combination of the LSA, services, and the Service Control Manager offers powerful capabilities for managing and automating tasks in Windows Server environments. It allows administrators to maintain server efficiency and reliability while reducing the need for constant manual intervention.
