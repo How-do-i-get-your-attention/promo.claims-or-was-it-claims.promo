@@ -461,3 +461,7 @@ And then I write the article, blog, or news.
 Follow me on Twitter: [@PCOrCP](https://twitter.com/PCOrCP)
 
 \#GitHub \#Article \#Date \#DanishTime
+
+<h2>03-06-2023 10:06 Danish time Pirasath Luxchumykanthan</h2>
+
+In C++, remember that the main() function is where our program begins. It's like the launchpad for all the action! This is where we can write our own code, bringing our brilliant ideas to life. The best part? We have total control over how our program behaves and what it does, just by crafting our code inside main(). So let's embrace the power of main() and create something extraordinary. It's time to write our own code, experiment, and witness the magic unfold!
