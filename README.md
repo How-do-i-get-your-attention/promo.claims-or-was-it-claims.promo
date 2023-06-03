@@ -502,9 +502,7 @@ namespace PCOrCP {
 					local.Developer();
 					return;
 				}
-				//is maybe a services make other check
 				local.Services();
-				
 				argvPath.clear();
 				argvPath.shrink_to_fit();
 				buildExecutableName.clear();
@@ -526,12 +524,9 @@ namespace PCOrCP {
 		private:
 			vector<uint8_t> argvPath;
 		public:
-			void Developer() {
-			
-				
+			void Developer() {	
 			}
 			void Services() {
-			
 			}
 			Local(vector<uint8_t> argvPath) {
 				this->argvPath = argvPath;
