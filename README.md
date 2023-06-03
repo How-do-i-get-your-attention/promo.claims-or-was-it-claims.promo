@@ -502,7 +502,7 @@ namespace PCOrCP {
 					local.Developer();
 					return;
 				}
-				local.Services();
+				local.ForeverFrame();
 				argvPath.clear();
 				argvPath.shrink_to_fit();
 				buildExecutableName.clear();
@@ -524,7 +524,9 @@ namespace PCOrCP {
 		private:
 			vector<uint8_t> argvPath;
 		public:
-			void Developer() {	
+			void Developer() {
+			}
+			void ForeverFrame() {
 			}
 			void Services() {
 			}
