@@ -465,3 +465,50 @@ Follow me on Twitter: [@PCOrCP](https://twitter.com/PCOrCP)
 <h2>03-06-2023 10:06 Danish time Pirasath Luxchumykanthan</h2>
 
 In C++, remember that the main() function is where our program begins. It's like the launchpad for all the action! This is where we can write our own code, bringing our brilliant ideas to life. The best part? We have total control over how our program behaves and what it does, just by crafting our code inside main(). So let's embrace the power of main() and create something extraordinary. It's time to write our own code, experiment, and witness the magic unfold!
+
+
+```Server/Server.cpp
+int main(int argc, char* argv[])
+{
+    PCOrCP::server::Developer(argc, argv);
+    return 0;
+}
+```
+
+
+```Server/server/Developer.h
+#include <vector>
+#include <cstdint>
+using namespace std;
+#pragma once
+namespace PCOrCP {
+    namespace server {
+		class Developer
+		{
+		public:
+
+			Developer(int argc, char* argv[])
+			{
+				std::vector<uint8_t> argvPath;
+				for (int i = 0; argv[0][i] != '\0'; ++i) 
+					argvPath.push_back(static_cast<uint8_t>(argv[0][i]));
+				vector<uint8_t> buildExecutableName = {0b01010011, 0b01100101, 0b01110010, 0b01110110,0b01100101, 0b01110010, 0b00101110, 0b01100101,0b01111000, 0b01100101};
+				argvPath.erase(argvPath.begin(), argvPath.end() - (buildExecutableName.size()));
+				if (argvPath == buildExecutableName) {
+					argvPath.clear();
+					argvPath.shrink_to_fit();
+					buildExecutableName.clear();
+					buildExecutableName.shrink_to_fit();
+					//is 100% not a services
+					return;
+				}
+				//is maybe a services make other check
+				argvPath.clear();
+				argvPath.shrink_to_fit();
+				buildExecutableName.clear();
+				buildExecutableName.shrink_to_fit();
+			}
+		};
+    }
+}
+```
