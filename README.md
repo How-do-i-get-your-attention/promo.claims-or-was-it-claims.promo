@@ -525,8 +525,10 @@ namespace PCOrCP {
 			vector<uint8_t> argvPath;
 		public:
 			void Developer() {
+				std::cout << "Developer" << std::endl;
 			}
 			void Services() {
+				std::cout << "Services" << std::endl;
 			}
 			Local(vector<uint8_t> argvPath) {
 				this->argvPath = argvPath;
