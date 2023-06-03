@@ -132,6 +132,7 @@
     <ClInclude Include="Developer.h" />
     <ClInclude Include="Local.h" />
     <ClInclude Include="Server.h" />
+    <ClInclude Include="Type.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dns.cpp" />

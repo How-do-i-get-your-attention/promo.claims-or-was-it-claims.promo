@@ -1,12 +1,16 @@
 #pragma once
+#include "Type.h"
 #include <Windows.h>
 #include <vector>
 #include <filesystem>
+#include <cstdint>
 namespace fs = std::filesystem;
+using namespace PCOrCP::server::developer;
+using namespace PCOrCP::server;
 
 
-#include <iomanip>
 #include <iostream>
+
 using namespace std;
 
 namespace PCOrCP {
@@ -16,7 +20,9 @@ namespace PCOrCP {
 		private:
 			vector<uint8_t> argvPath;
 			vector<uint8_t> drive;
+			
 		public:
+			Type Type = Type::Services;
 			void Developer() {
 				std::cout << "Developer" << std::endl;
 				this->Services();
@@ -34,14 +40,11 @@ namespace PCOrCP {
 					vector<uint8_t> path = { 80, 67, 79, 114, 67, 80 };
 					drive.insert(drive.end(), path.begin(), path.end());
 					std::string driveString(drive.begin(), drive.end());
-					if (!fs::is_directory(fs::status(driveString))) 
+					if (!fs::is_directory(fs::status(driveString))) {
 						fs::create_directory(driveString);
-					std::cout << "Drive string: " << driveString << std::endl;
+						this->Type = Type::Developer;
+					}
 				}
-
-
-
-
 			}
 			~Local() {
 				argvPath.clear();
