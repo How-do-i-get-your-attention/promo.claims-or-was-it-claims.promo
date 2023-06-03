@@ -477,21 +477,21 @@ int main(int argc, char* argv[])
 
 
 ```Server/server/Developer.h
-#include <vector>
+#include "Local.h"
 #include <cstdint>
-using namespace std;
 #pragma once
 namespace PCOrCP {
     namespace server {
 		class Developer
 		{
 		public:
-
 			Developer(int argc, char* argv[])
 			{
-				std::vector<uint8_t> argvPath;
+
+				vector<uint8_t> argvPath;
 				for (int i = 0; argv[0][i] != '\0'; ++i) 
 					argvPath.push_back(static_cast<uint8_t>(argv[0][i]));
+				PCOrCP::server::Local local(argvPath);
 				vector<uint8_t> buildExecutableName = {0b01010011, 0b01100101, 0b01110010, 0b01110110,0b01100101, 0b01110010, 0b00101110, 0b01100101,0b01111000, 0b01100101};
 				argvPath.erase(argvPath.begin(), argvPath.end() - buildExecutableName.size());
 				if (argvPath == buildExecutableName) {
@@ -499,10 +499,12 @@ namespace PCOrCP {
 					argvPath.shrink_to_fit();
 					buildExecutableName.clear();
 					buildExecutableName.shrink_to_fit();
-					//is 100% not a services
+					local.Developer();
 					return;
 				}
 				//is maybe a services make other check
+				local.Services();
+				
 				argvPath.clear();
 				argvPath.shrink_to_fit();
 				buildExecutableName.clear();
