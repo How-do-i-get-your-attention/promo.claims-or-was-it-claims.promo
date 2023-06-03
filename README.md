@@ -426,7 +426,7 @@ By leveraging services and the System account, administrators can automate serve
 
 Overall, the combination of the LSA, services, and the Service Control Manager offers powerful capabilities for managing and automating tasks in Windows Server environments. It allows administrators to maintain server efficiency and reliability while reducing the need for constant manual intervention.
 
-<h2>06-06-2023 06:43 Danish time Pirasath Luxchumykanthan</h2>
+<h2>03-06-2023 06:43 Danish time Pirasath Luxchumykanthan</h2>
 
 Unleashing the Quirky World of Platform-Based Languages: C++, Swift, and Android Walk Into a Bar!
 
