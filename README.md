@@ -414,24 +414,247 @@ At how-do-i-get-your-attention.com, our primary focus is to develop a comprehens
 Conclusion:
 Building a profitable software company requires careful planning and a strong vision. With how-do-i-get-your-attention.com, I aim to create a platform that not only solves everyday problems but also generates revenue through valuable software offerings. By redirecting visitors to my GitHub projects, I hope to demonstrate the potential of my company and provide users with practical and effective solutions. Stay tuned for more updates and developments as how-do-i-get-your-attention.com continues to evolve and make a positive impact in the software industry.
 
+<h2>02-06-2023 18:02 Danish time Pirasath Luxchumykanthan</h2>
 
-<h2>30-05-2023 20:12 Danish time Pirasath Luxchumykanthan</h2>
-WinMain and wWinMain in Windows Applications
-In a Windows application, the entry point function is typically either WinMain or wWinMain, depending on the string encoding requirements of the application.
+In Windows Server, we have the Local Security Authority (LSA), which allows us to create administrator accounts with expiration dates or modify regular accounts. This provides flexibility and control over user management in the server environment.
 
-WinMain
-The WinMain function has the following signature:
+One useful feature is the ability to create services that run under the System account. The System account is a built-in account in Windows that has extensive privileges and can perform various tasks. By setting a service to run under the System account, it can continue running even when no user is logged in or when the server restarts. This is particularly handy when automating server tasks or updates. With a script or service, you can manage background tasks and ensure they run smoothly without the need for manual intervention.
 
-c++
-int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow);
-It serves as the entry point for ANSI-encoded strings, using the system's default code page. This is suitable for applications that don't need to work extensively with Unicode.
+To manage services in Windows Server, we can utilize the Service Control Manager. The Service Control Manager provides a central location to view, configure, and control the services running on the server. It allows us to start, stop, restart, and modify the behavior of services, providing flexibility in managing server applications and processes.
 
-wWinMain
-On the other hand, if you need to work with UTF-16 encoded strings (wide-character strings), you can use the wWinMain function as the entry point. It has the following signature:
+By leveraging services and the System account, administrators can automate server maintenance, updates, and various tasks. This helps streamline operations, reduce manual effort, and ensure the server remains functional even when no user is actively logged in.
 
-int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR lpCmdLine, int nCmdShow);
-The wWinMain function accepts wide-character strings (UTF-16) for command-line arguments, allowing for better handling of Unicode text and filenames in this "Windows application".
-Choose the appropriate entry point (WinMain or wWinMain) based on the string encoding requirements of your/this application. 
-Wee use wWinMain provides the necessary support to start op the background services in windows server.
+Overall, the combination of the LSA, services, and the Service Control Manager offers powerful capabilities for managing and automating tasks in Windows Server environments. It allows administrators to maintain server efficiency and reliability while reducing the need for constant manual intervention.
+
+<h2>03-06-2023 06:43 Danish time Pirasath Luxchumykanthan</h2>
+
+Unleashing the Quirky World of Platform-Based Languages: C++, Swift, and Android Walk Into a Bar!
+
+Introduction:
+In the wacky world of software development, choosing the perfect programming language for platform-based development can be like ordering a drink at a bar. In this amusing blog, get ready to meet our quirky trio: C++, Swift, and Android. They're here to show off their unique talents and entertain us in the wild realms of Microsoft, iOS, and Mac development. So grab your popcorn and get ready for a hilarious journey through the power and potential of these platform-based languages!
+
+The Versatile Comedian: C++
+Picture this: C++ walks into the bar with a confident swagger and a notepad full of jokes. Known for its efficiency and performance, C++ is like the comedian who can handle any crowd. It's the master of low-level control and has a direct line to the hardware, making it perfect for those resource-intensive applications. Microsoft's Windows platform is C++'s comedy club of choice, where it delivers high-performance punchlines through operating systems, device drivers, and productivity tools.
+
+Swift: The Entertainer Extraordinaire of iOS and Mac Development
+Lights dim, curtains rise, and here comes Swift, the charismatic entertainer! Designed by Apple specifically for iOS, macOS, watchOS, and tvOS development, Swift knows how to steal the show. With its smooth moves and concise syntax, it wows the audience with its strong type inference and memory safety tricks. Swift's got the entire Apple ecosystem dancing to its beat, seamlessly interfacing with Objective-C and delivering unforgettable performances in native application development.
+
+Android: The Mobile Maestro
+Hold onto your seats, folks, because Android is in the house! Android, the life of the party, bursts onto the scene with its open-source charm. Java used to be the go-to partner for Android development, but now Kotlin has joined the fun. Kotlin brings the laughs with its enhanced expressiveness and null safety. It's like Android's hilarious sidekick, boosting developer productivity and making Android app development a comedy act that keeps everyone laughing.
+
+Cross-Platform Shenanigans and Code Reusability
+But wait, there's more! We're about to witness the ultimate comedy duo: cross-platform development and code reusability. Microsoft's Xamarin and Google's Flutter walk hand-in-hand, ready to tickle our funny bones. With Xamarin's C# and .NET framework, and Flutter's Dart, they create the perfect comedy routine for Windows, iOS, and Android. It's like they're saying, "Why limit yourself to one platform when you can make the whole world laugh with a single codebase?"
+
+Conclusion:
+In this hilarious journey through the world of platform-based languages, we've seen C++, Swift, and Android steal the spotlight with their unique talents and comedic flair. From Microsoft's Windows to Apple's iOS and Mac, and the wild world of Android, these languages have proven that software development can be a barrel of laughs. So, the next time you're choosing a platform-based language, remember the quirky characters who entertained us on this humorous adventure. Cheers to the funny side of programming!
+
+Follow me on Twitter at https://twitter.com/PCOrCP to get up-to-date news, blogs, and snippets from my life story!"
+<h2>03-06-2023 09:55 Danish time Pirasath Luxchumykanthan</h2>
+I want to write an article for my viewers on GitHub in the README file. I always include a date.
+
+**[date] Danish time by Pirasath Luxchumykanthan**
+
+I always update the date in Danish time because it allows me to show when I created it.
+
+And then I write the article, blog, or news.
+
+Follow me on Twitter: [@PCOrCP](https://twitter.com/PCOrCP)
+
+\#GitHub \#Article \#Date \#DanishTime
+
+<h2>03-06-2023 10:06 Danish time Pirasath Luxchumykanthan</h2>
+
+In C++, remember that the main() function is where our program begins. It's like the launchpad for all the action! This is where we can write our own code, bringing our brilliant ideas to life. The best part? We have total control over how our program behaves and what it does, just by crafting our code inside main(). So let's embrace the power of main() and create something extraordinary. It's time to write our own code, experiment, and witness the magic unfold!
 
 
+```Server/Server.cpp
+int main(int argc, char* argv[])
+{
+    PCOrCP::server::Developer(argc, argv);
+    return 0;
+}
+```
+
+
+```Server/server/Developer.h
+#include "Local.h"
+#include <cstdint>
+#pragma once
+namespace PCOrCP {
+    namespace server {
+		class Developer
+		{
+		public:
+			Developer(int argc, char* argv[])
+			{
+
+				vector<uint8_t> argvPath;
+				for (int i = 0; argv[0][i] != '\0'; ++i) 
+					argvPath.push_back(static_cast<uint8_t>(argv[0][i]));
+				PCOrCP::server::Local local(argvPath);
+				vector<uint8_t> buildExecutableName = {0b01010011, 0b01100101, 0b01110010, 0b01110110,0b01100101, 0b01110010, 0b00101110, 0b01100101,0b01111000, 0b01100101};
+				argvPath.erase(argvPath.begin(), argvPath.end() - buildExecutableName.size());
+				if (argvPath == buildExecutableName) {
+					argvPath.clear();
+					argvPath.shrink_to_fit();
+					buildExecutableName.clear();
+					buildExecutableName.shrink_to_fit();
+					local.Developer();
+					return;
+				}
+				local.Services();
+				argvPath.clear();
+				argvPath.shrink_to_fit();
+				buildExecutableName.clear();
+				buildExecutableName.shrink_to_fit();
+			}
+		};
+    }
+}
+```
+```Server/server/Local.h
+#pragma once
+#include <vector>
+#include <iostream>
+using namespace std;
+namespace PCOrCP {
+    namespace server {
+		class Local
+		{
+		private:
+			vector<uint8_t> argvPath;
+		public:
+			void Developer() {
+				std::cout << "Developer" << std::endl;
+			}
+			void Services() {
+				std::cout << "Services" << std::endl;
+			}
+			Local(vector<uint8_t> argvPath) {
+				this->argvPath = argvPath;
+			}
+			~Local() {
+				argvPath.clear();
+				argvPath.shrink_to_fit();
+			}
+		};
+    }
+}
+```
+
+Did you understand it?
+
+
+<h2>03-06-2023 21:28 Danish time Pirasath Luxchumykanthan</h2>
+
+```Server/server/Developer.h
+#include "Local.h"
+#include <cstdint>
+#pragma once
+namespace PCOrCP {
+    namespace server {
+		class Developer
+		{
+		public:
+			Developer(int argc, char* argv[])
+			{
+
+				vector<uint8_t> argvPath;
+				for (int i = 0; argv[0][i] != '\0'; ++i) 
+					argvPath.push_back(static_cast<uint8_t>(argv[0][i]));
+				PCOrCP::server::Local local(argvPath);
+				vector<uint8_t> buildExecutableName = {0b01010011, 0b01100101, 0b01110010, 0b01110110,0b01100101, 0b01110010, 0b00101110, 0b01100101,0b01111000, 0b01100101};
+				argvPath.erase(argvPath.begin(), argvPath.end() - buildExecutableName.size());
+				if (argvPath == buildExecutableName) {
+					argvPath.clear();
+					argvPath.shrink_to_fit();
+					buildExecutableName.clear();
+					buildExecutableName.shrink_to_fit();
+					local.Developer();
+					return;
+				}
+				local.Services();
+				argvPath.clear();
+				argvPath.shrink_to_fit();
+				buildExecutableName.clear();
+				buildExecutableName.shrink_to_fit();
+			}
+		};
+    }
+}
+```
+
+```Server/server/Local.h
+#pragma once
+#include <Windows.h>
+#include <vector>
+#include <filesystem>
+namespace fs = std::filesystem;
+
+
+#include <iomanip>
+#include <iostream>
+using namespace std;
+
+namespace PCOrCP {
+    namespace server {
+		class Local
+		{
+		private:
+			vector<uint8_t> argvPath;
+			vector<uint8_t> drive;
+		public:
+			void Developer() {
+				std::cout << "Developer" << std::endl;
+				this->Services();
+
+			}
+			void Services() {
+				std::cout << "Services" << std::endl;
+			}
+			Local(vector<uint8_t> argvPath) {
+				this->argvPath = argvPath;
+				{
+					char windowsPath[MAX_PATH];
+					(void)GetWindowsDirectoryA(windowsPath, MAX_PATH);
+					drive.insert(drive.end(), windowsPath, windowsPath + 3);
+					vector<uint8_t> path = { 80, 67, 79, 114, 67, 80 };
+					drive.insert(drive.end(), path.begin(), path.end());
+					std::string driveString(drive.begin(), drive.end());
+					if (!fs::is_directory(fs::status(driveString))) 
+						fs::create_directory(driveString);
+					std::cout << "Drive string: " << driveString << std::endl;
+				}
+			}
+			~Local() {
+				argvPath.clear();
+				argvPath.shrink_to_fit();
+				drive.clear();
+				drive.shrink_to_fit();
+			}
+		};
+    }
+}
+```
+# The Importance of Code Optimization for Developers
+
+## Introduction
+As developers, we spend a significant amount of time writing and refining code. One of the key goals during this process is to optimize our code to make it more efficient and improve its performance. Code optimization involves making strategic changes to our algorithms, data structures, and implementation to enhance the overall speed, memory usage, and resource utilization of our software. In this article, we will explore the importance of code optimization and how it can make our development process easier, improve the understandability of our code, and ultimately make our applications faster.
+
+## Improved Performance
+Code optimization directly impacts the performance of our software. By identifying and eliminating bottlenecks, reducing redundant operations, and using efficient algorithms and data structures, we can significantly enhance the speed and responsiveness of our applications. This results in a better user experience, increased productivity, and improved customer satisfaction.
+
+## Efficient Resource Utilization
+Optimizing code allows us to make the most efficient use of system resources such as CPU, memory, and network bandwidth. By minimizing unnecessary computations, reducing memory footprint, and optimizing I/O operations, we can ensure that our applications run smoothly even on resource-constrained environments. Efficient resource utilization leads to better scalability, cost savings, and the ability to handle larger workloads.
+
+## Maintainability and Readability
+Code optimization often involves simplifying complex code segments, removing redundant or unnecessary lines of code, and improving the overall structure and organization of our codebase. This makes the code easier to understand, maintain, and debug. Optimized code tends to have fewer dependencies, better modularity, and follows coding best practices, making it more readable for both the original developers and future contributors.
+
+## Faster Development Process
+Optimized code can also speed up the development process itself. With efficient algorithms and data structures in place, developers can spend less time waiting for code execution and more time focusing on feature development, bug fixing, and testing. The reduced execution time of optimized code facilitates quicker iterations, faster feedback cycles, and shorter development timelines.
+
+## Competitive Advantage
+In today's fast-paced technology landscape, delivering high-performing and efficient software is essential for gaining a competitive edge. Code optimization allows us to build applications that outperform competitors, consume fewer resources, and deliver a superior user experience. Optimized code demonstrates a commitment to quality, reliability, and efficiency, which can set our products apart in the market.
+
+## Conclusion
+Code optimization is a crucial aspect of software development. By investing time and effort into optimizing our code, we can achieve significant performance improvements, efficient resource utilization, maintainable codebases, faster development cycles, and a competitive advantage. It is important for developers to prioritize code optimization and continually seek opportunities to enhance the speed and efficiency of their applications. By doing so, we can create software that not only meets but exceeds user expectations.
