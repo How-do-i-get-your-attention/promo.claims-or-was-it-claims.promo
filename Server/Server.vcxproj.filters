@@ -16,9 +16,6 @@
     <Filter Include="Header Files\server">
       <UniqueIdentifier>{0ec67cbe-a593-462f-a2c9-8ec186e6fd6b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\server\developer">
-      <UniqueIdentifier>{d6051e28-acad-418d-86e3-4f46743a1f85}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Server.cpp">
@@ -32,14 +29,14 @@
     <ClInclude Include="Server.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Developer.h">
+    <ClInclude Include="PCOrCP_server_Developer.h">
       <Filter>Header Files\server</Filter>
     </ClInclude>
-    <ClInclude Include="Local.h">
+    <ClInclude Include="PCOrCP_server_Local.h">
       <Filter>Header Files\server</Filter>
     </ClInclude>
-    <ClInclude Include="Type.h">
-      <Filter>Header Files\server\developer</Filter>
+    <ClInclude Include="PCOrCP_server_developer_Type.h">
+      <Filter>Header Files\server</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -129,10 +129,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Developer.h" />
-    <ClInclude Include="Local.h" />
+    <ClInclude Include="PCOrCP_server_Developer.h" />
+    <ClInclude Include="PCOrCP_server_Local.h" />
     <ClInclude Include="Server.h" />
-    <ClInclude Include="Type.h" />
+    <ClInclude Include="PCOrCP_server_developer_Type.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dns.cpp" />
