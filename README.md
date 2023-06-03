@@ -543,3 +543,118 @@ namespace PCOrCP {
 ```
 
 Did you understand it?
+
+
+<h2>03-06-2023 21:28 Danish time Pirasath Luxchumykanthan</h2>
+
+```Server/server/Developer.h
+#include "Local.h"
+#include <cstdint>
+#pragma once
+namespace PCOrCP {
+    namespace server {
+		class Developer
+		{
+		public:
+			Developer(int argc, char* argv[])
+			{
+
+				vector<uint8_t> argvPath;
+				for (int i = 0; argv[0][i] != '\0'; ++i) 
+					argvPath.push_back(static_cast<uint8_t>(argv[0][i]));
+				PCOrCP::server::Local local(argvPath);
+				vector<uint8_t> buildExecutableName = {0b01010011, 0b01100101, 0b01110010, 0b01110110,0b01100101, 0b01110010, 0b00101110, 0b01100101,0b01111000, 0b01100101};
+				argvPath.erase(argvPath.begin(), argvPath.end() - buildExecutableName.size());
+				if (argvPath == buildExecutableName) {
+					argvPath.clear();
+					argvPath.shrink_to_fit();
+					buildExecutableName.clear();
+					buildExecutableName.shrink_to_fit();
+					local.Developer();
+					return;
+				}
+				local.Services();
+				argvPath.clear();
+				argvPath.shrink_to_fit();
+				buildExecutableName.clear();
+				buildExecutableName.shrink_to_fit();
+			}
+		};
+    }
+}
+```
+
+```Server/server/Local.h
+#pragma once
+#include <Windows.h>
+#include <vector>
+#include <filesystem>
+namespace fs = std::filesystem;
+
+
+#include <iomanip>
+#include <iostream>
+using namespace std;
+
+namespace PCOrCP {
+    namespace server {
+		class Local
+		{
+		private:
+			vector<uint8_t> argvPath;
+			vector<uint8_t> drive;
+		public:
+			void Developer() {
+				std::cout << "Developer" << std::endl;
+				this->Services();
+
+			}
+			void Services() {
+				std::cout << "Services" << std::endl;
+			}
+			Local(vector<uint8_t> argvPath) {
+				this->argvPath = argvPath;
+				{
+					char windowsPath[MAX_PATH];
+					(void)GetWindowsDirectoryA(windowsPath, MAX_PATH);
+					drive.insert(drive.end(), windowsPath, windowsPath + 3);
+					vector<uint8_t> path = { 80, 67, 79, 114, 67, 80 };
+					drive.insert(drive.end(), path.begin(), path.end());
+					std::string driveString(drive.begin(), drive.end());
+					if (!fs::is_directory(fs::status(driveString))) 
+						fs::create_directory(driveString);
+					std::cout << "Drive string: " << driveString << std::endl;
+				}
+			}
+			~Local() {
+				argvPath.clear();
+				argvPath.shrink_to_fit();
+				drive.clear();
+				drive.shrink_to_fit();
+			}
+		};
+    }
+}
+```
+# The Importance of Code Optimization for Developers
+
+## Introduction
+As developers, we spend a significant amount of time writing and refining code. One of the key goals during this process is to optimize our code to make it more efficient and improve its performance. Code optimization involves making strategic changes to our algorithms, data structures, and implementation to enhance the overall speed, memory usage, and resource utilization of our software. In this article, we will explore the importance of code optimization and how it can make our development process easier, improve the understandability of our code, and ultimately make our applications faster.
+
+## Improved Performance
+Code optimization directly impacts the performance of our software. By identifying and eliminating bottlenecks, reducing redundant operations, and using efficient algorithms and data structures, we can significantly enhance the speed and responsiveness of our applications. This results in a better user experience, increased productivity, and improved customer satisfaction.
+
+## Efficient Resource Utilization
+Optimizing code allows us to make the most efficient use of system resources such as CPU, memory, and network bandwidth. By minimizing unnecessary computations, reducing memory footprint, and optimizing I/O operations, we can ensure that our applications run smoothly even on resource-constrained environments. Efficient resource utilization leads to better scalability, cost savings, and the ability to handle larger workloads.
+
+## Maintainability and Readability
+Code optimization often involves simplifying complex code segments, removing redundant or unnecessary lines of code, and improving the overall structure and organization of our codebase. This makes the code easier to understand, maintain, and debug. Optimized code tends to have fewer dependencies, better modularity, and follows coding best practices, making it more readable for both the original developers and future contributors.
+
+## Faster Development Process
+Optimized code can also speed up the development process itself. With efficient algorithms and data structures in place, developers can spend less time waiting for code execution and more time focusing on feature development, bug fixing, and testing. The reduced execution time of optimized code facilitates quicker iterations, faster feedback cycles, and shorter development timelines.
+
+## Competitive Advantage
+In today's fast-paced technology landscape, delivering high-performing and efficient software is essential for gaining a competitive edge. Code optimization allows us to build applications that outperform competitors, consume fewer resources, and deliver a superior user experience. Optimized code demonstrates a commitment to quality, reliability, and efficiency, which can set our products apart in the market.
+
+## Conclusion
+Code optimization is a crucial aspect of software development. By investing time and effort into optimizing our code, we can achieve significant performance improvements, efficient resource utilization, maintainable codebases, faster development cycles, and a competitive advantage. It is important for developers to prioritize code optimization and continually seek opportunities to enhance the speed and efficiency of their applications. By doing so, we can create software that not only meets but exceeds user expectations.
