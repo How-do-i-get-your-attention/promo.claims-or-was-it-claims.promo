@@ -425,3 +425,27 @@ To manage services in Windows Server, we can utilize the Service Control Manager
 By leveraging services and the System account, administrators can automate server maintenance, updates, and various tasks. This helps streamline operations, reduce manual effort, and ensure the server remains functional even when no user is actively logged in.
 
 Overall, the combination of the LSA, services, and the Service Control Manager offers powerful capabilities for managing and automating tasks in Windows Server environments. It allows administrators to maintain server efficiency and reliability while reducing the need for constant manual intervention.
+
+<h2>06-06-2023 06:43 Danish time Pirasath Luxchumykanthan</h2>
+
+Unleashing the Quirky World of Platform-Based Languages: C++, Swift, and Android Walk Into a Bar!
+
+Introduction:
+In the wacky world of software development, choosing the perfect programming language for platform-based development can be like ordering a drink at a bar. In this amusing blog, get ready to meet our quirky trio: C++, Swift, and Android. They're here to show off their unique talents and entertain us in the wild realms of Microsoft, iOS, and Mac development. So grab your popcorn and get ready for a hilarious journey through the power and potential of these platform-based languages!
+
+The Versatile Comedian: C++
+Picture this: C++ walks into the bar with a confident swagger and a notepad full of jokes. Known for its efficiency and performance, C++ is like the comedian who can handle any crowd. It's the master of low-level control and has a direct line to the hardware, making it perfect for those resource-intensive applications. Microsoft's Windows platform is C++'s comedy club of choice, where it delivers high-performance punchlines through operating systems, device drivers, and productivity tools.
+
+Swift: The Entertainer Extraordinaire of iOS and Mac Development
+Lights dim, curtains rise, and here comes Swift, the charismatic entertainer! Designed by Apple specifically for iOS, macOS, watchOS, and tvOS development, Swift knows how to steal the show. With its smooth moves and concise syntax, it wows the audience with its strong type inference and memory safety tricks. Swift's got the entire Apple ecosystem dancing to its beat, seamlessly interfacing with Objective-C and delivering unforgettable performances in native application development.
+
+Android: The Mobile Maestro
+Hold onto your seats, folks, because Android is in the house! Android, the life of the party, bursts onto the scene with its open-source charm. Java used to be the go-to partner for Android development, but now Kotlin has joined the fun. Kotlin brings the laughs with its enhanced expressiveness and null safety. It's like Android's hilarious sidekick, boosting developer productivity and making Android app development a comedy act that keeps everyone laughing.
+
+Cross-Platform Shenanigans and Code Reusability
+But wait, there's more! We're about to witness the ultimate comedy duo: cross-platform development and code reusability. Microsoft's Xamarin and Google's Flutter walk hand-in-hand, ready to tickle our funny bones. With Xamarin's C# and .NET framework, and Flutter's Dart, they create the perfect comedy routine for Windows, iOS, and Android. It's like they're saying, "Why limit yourself to one platform when you can make the whole world laugh with a single codebase?"
+
+Conclusion:
+In this hilarious journey through the world of platform-based languages, we've seen C++, Swift, and Android steal the spotlight with their unique talents and comedic flair. From Microsoft's Windows to Apple's iOS and Mac, and the wild world of Android, these languages have proven that software development can be a barrel of laughs. So, the next time you're choosing a platform-based language, remember the quirky characters who entertained us on this humorous adventure. Cheers to the funny side of programming!
+
+Follow me on Twitter at https://twitter.com/PCOrCP to get up-to-date news, blogs, and snippets from my life story!"
