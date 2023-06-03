@@ -514,3 +514,33 @@ namespace PCOrCP {
     }
 }
 ```
+```Server/server/Local.h
+#pragma once
+#include <vector>
+#include <iostream>
+using namespace std;
+namespace PCOrCP {
+    namespace server {
+		class Local
+		{
+		private:
+			vector<uint8_t> argvPath;
+		public:
+			void Developer() {
+			
+				
+			}
+			void Services() {
+			
+			}
+			Local(vector<uint8_t> argvPath) {
+				this->argvPath = argvPath;
+			}
+			~Local() {
+				argvPath.clear();
+				argvPath.shrink_to_fit();
+			}
+		};
+    }
+}
+```
