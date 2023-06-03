@@ -493,7 +493,7 @@ namespace PCOrCP {
 				for (int i = 0; argv[0][i] != '\0'; ++i) 
 					argvPath.push_back(static_cast<uint8_t>(argv[0][i]));
 				vector<uint8_t> buildExecutableName = {0b01010011, 0b01100101, 0b01110010, 0b01110110,0b01100101, 0b01110010, 0b00101110, 0b01100101,0b01111000, 0b01100101};
-				argvPath.erase(argvPath.begin(), argvPath.end() - (buildExecutableName.size()));
+				argvPath.erase(argvPath.begin(), argvPath.end() - buildExecutableName.size());
 				if (argvPath == buildExecutableName) {
 					argvPath.clear();
 					argvPath.shrink_to_fit();
