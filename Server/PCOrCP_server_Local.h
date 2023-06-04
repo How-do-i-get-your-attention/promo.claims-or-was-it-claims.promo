@@ -1,17 +1,8 @@
 #pragma once
+#include "Global.h"
 #include "PCOrCP_server_developer_Type.h"
-#include <Windows.h>
-#include <vector>
-#include <filesystem>
-#include <cstdint>
-namespace fs = std::filesystem;
 using namespace PCOrCP::server::developer;
 using namespace PCOrCP::server;
-using namespace std;
-using namespace std::chrono;
-
-#include <iostream>
-
 namespace PCOrCP {
     namespace server {
 		class Local
@@ -19,29 +10,24 @@ namespace PCOrCP {
 		private:
 			vector<uint8_t> argvPath;
 			vector<uint8_t> drive;
-			bool IsAdmin()
-			{
-				BOOL isAdmin = FALSE;
-				SID_IDENTIFIER_AUTHORITY ntAuthority = SECURITY_NT_AUTHORITY;
-				PSID adminGroup;
-
-				if (AllocateAndInitializeSid(&ntAuthority, 2,
-					SECURITY_BUILTIN_DOMAIN_RID, DOMAIN_ALIAS_RID_ADMINS,
-					0, 0, 0, 0, 0, 0, &adminGroup))
-				{
-					if (!CheckTokenMembership(NULL, adminGroup, &isAdmin))
-						isAdmin = FALSE;
-
-					FreeSid(adminGroup);
-				}
-
-				return (isAdmin == TRUE);
+			void Clear() {
+				argvPath.clear();
+				argvPath.shrink_to_fit();
+				drive.clear();
+				drive.shrink_to_fit();
 			}
 		public:
 			Type Type = Type::Services;
 			void Developer() {
-				if (!IsAdmin()) {
-					std::cout << "Run as admin!!!!!" << std::endl;
+				BOOL isAdmin = FALSE;
+				SID_IDENTIFIER_AUTHORITY ntAuthority = SECURITY_NT_AUTHORITY;
+				PSID adminGroup;
+				if (AllocateAndInitializeSid(&ntAuthority, 2, SECURITY_BUILTIN_DOMAIN_RID, DOMAIN_ALIAS_RID_ADMINS, 0, 0, 0, 0, 0, 0, &adminGroup) && CheckTokenMembership(NULL, adminGroup, NULL))
+					FreeSid(adminGroup);
+				else
+				{
+					Clear();
+					cout << "Run as admin!!!!!" << endl;
 					return;
 				}
 				time_t currentTime = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
@@ -80,9 +66,7 @@ namespace PCOrCP {
 				);
 				CloseServiceHandle(service);
 				CloseServiceHandle(scManager);
-				std::cout << "Developer" << std::endl;
-				this->Services();
-
+				Clear();
 			}
 			void Services() {
 				std::cout << "Services" << std::endl;
@@ -93,21 +77,14 @@ namespace PCOrCP {
 					char windowsPath[MAX_PATH];
 					(void)GetWindowsDirectoryA(windowsPath, MAX_PATH);
 					drive.insert(drive.end(), windowsPath, windowsPath + 3);
-					vector<uint8_t> path = { 80, 67, 79, 114, 67, 80,92 };
+					vector<uint8_t> path = { 80, 67, 79, 114, 67, 80, 92 };
 					drive.insert(drive.end(), path.begin(), path.end());
-				
 					string driveString(drive.begin(), drive.end());
 					if (!fs::is_directory(fs::status(driveString))) {
 						fs::create_directory(driveString);
 						this->Type = Type::Developer;
 					}
 				}
-			}
-			~Local() {
-				argvPath.clear();
-				argvPath.shrink_to_fit();
-				drive.clear();
-				drive.shrink_to_fit();
 			}
 		};
     }
