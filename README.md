@@ -429,14 +429,14 @@ Please note that the specific methods for accessing environment variables and co
 "As I continue to write code, I will provide updates so you can follow along with the progress."
 
 I've interpreted your sentence as indicating that i be sharing updates about the code i writing. 
-By Pirasath Luxchumykanthan (BTW READ ME AS SOUCE CODE)
-
-
-<!--All under here is what i do Pirasath Luxchumykanthan.:-->
-
+By Pirasath Luxchumykanthan 
+(BTW. READ(no space)ME.(md) AS SOUCE CODE)
 <!--
 Okay, that's cool!"
 
-If you have any more text you'd like me to review or any further questions, feel free to ask
-
+If you have any more text you'd like me to review or any further questions, feel free to ask.
+hello@how-do-i-get-your-attention.com
 -->
+<!--All under here is what i do Pirasath Luxchumykanthan.:-->
+
+
