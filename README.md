@@ -418,3 +418,7 @@ VisualStudioDir=C:\Users\{username}\OneDrive\Dokumenter\Visual Studio 2022
 ```
 
 This example demonstrates the essential data that Windows provides, which includes command-line arguments and environment variables. By understanding and utilizing this data, you can create more complex and robust programs in C++.
+
+Why do we need this information? It's actually quite valuable when developing software. It allows us to understand our application's runtime environment, which is crucial when performing tasks such as software installations or debugging. Accessing command-line arguments can inform our program about user-specified parameters, while environment variables can provide context about the system our software is running on. This understanding can help us tailor our software to function optimally under various conditions and configurations.
+
+
