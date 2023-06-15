@@ -439,4 +439,50 @@ hello@how-do-i-get-your-attention.com
 -->
 <!--All under here is what i do Pirasath Luxchumykanthan.:-->
 
+# Exploring Static Functions in C++ with an Example
+
+## Introduction
+
+In C++, the `static` keyword can be applied to various entities, including variables, member functions, and even classes. In this blog post, we will focus on static member functions and explore their usage and benefits. To illustrate their practical application, we'll refer to an example from your code.
+
+## Static Functions
+
+In C++, a static member function is a function that belongs to a class rather than an instance of the class. Unlike regular member functions, static member functions do not have access to the `this` pointer and cannot access non-static members directly. They are independent of any particular object of the class.
+
+## Example Usage
+
+Let's consider the modified `wmain` function from your code snippet. You have a variable `Argc` that you want to access and update within the function. To accomplish this, you can declare `Argc` as a static member variable and access it using a static member function.
+
+```
+#include <Windows.h>
+#include <iostream>
+using namespace std;
+
+class Example {
+    static int Argc;
+
+public:
+    static int GetArgc() {
+        return Argc;
+    }
+
+    static void SetArgc(int argc) {
+        Argc = argc;
+    }
+};
+
+int Example::Argc = 0;
+
+int wmain(int argc, wchar_t* argv[], wchar_t* envp[]) {
+    Example::SetArgc(argc);
+
+    // Access the value of Argc using the static member function
+    int storedArgc = Example::GetArgc();
+    wcout << L"Stored argc: " << storedArgc << endl;
+
+    // Rest of the code...
+
+    return 0;
+}
+```
 
