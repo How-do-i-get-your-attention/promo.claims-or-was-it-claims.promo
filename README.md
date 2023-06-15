@@ -508,3 +508,11 @@ When a class object is no longer needed, such as when it goes out of scope or is
 The automatic destruction feature helps ensure that resources are properly released and memory is deallocated, which can be particularly beneficial in scenarios where manual cleanup might be error-prone or easily overlooked.
 
 By defining a destructor within a class, you can specify the cleanup actions that need to be performed when an object of that class is destroyed. The destructor is invoked automatically and you don't need to explicitly call it.
+
+The PCOrCP class serves as a crucial component in your application, providing a start and end point for its execution. The constructor, PCOrCP(), marks the initiation of your application, while the destructor, ~PCOrCP(), signifies its termination.
+
+Upon creating an instance of the PCOrCP class, the constructor is automatically invoked. This is where you can perform any necessary initialization tasks, such as setting up resources, configuring the environment, or initializing variables. The constructor establishes the initial state of your application, preparing it for execution.
+
+As your application nears its end or reaches the designated termination point, the destructor is automatically called. Within the destructor, you can handle cleanup operations, release resources, and perform any necessary finalization tasks. This ensures that your application concludes gracefully, freeing any acquired resources and leaving the system in an appropriate state.
+
+The PCOrCP class encapsulates the lifecycle of your application, encapsulating the start and end points. By leveraging the constructor and destructor, you can manage the application's initialization and termination seamlessly. This allows for modular and organized code, promoting better maintainability and reliability.
