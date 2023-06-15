@@ -835,5 +835,4 @@ if (SUCCEEDED(hr)) {
 It's important to check `HRESULT` values after making function or method calls to handle errors appropriately and provide meaningful error messages or take corrective actions.
 
 For detailed information about specific `HRESULT` values and their meanings, refer to the documentation of the function or method you are using, as well as the Windows API documentation.
-
-I hope this explanation helps! Let me know if you have any further questions.
+.
