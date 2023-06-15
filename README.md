@@ -464,37 +464,33 @@ Let's consider the modified `wmain` function from my code snippet. You have a va
 #include <Windows.h>
 #include <iostream>
 using namespace std;
-
-class Example {
-    static int Argc;
-
+class PCOrCP
+{
 public:
-    static int GetArgc() {
-        return Argc;
+    static int Result;
+    PCOrCP(int argc, wchar_t* argv[], wchar_t* envp[]) {
+        Result = 0;
+        // // Print the number of command-line arguments
+        //wcout << L"Number of command-line arguments: " << argc << endl;
+        //wcout << L"argv: "  << endl;
+        // // Loop through each command-line argument and print
+        // for (int i = 0; i < argc; i++)
+        //     wcout << argv[i] << endl;
+        // wcout << L"envp: " << endl;
+        // // Loop through each environment variable and print
+        // for (wchar_t** env = envp; *env != 0; env++)
+        //     wcout << *env << endl;
     }
-
-    static void SetArgc(int argc) {
-        Argc = argc;
+    ~PCOrCP() {
+        Result = 1;
     }
 };
-
-int Example::Argc = 0;
-
 int wmain(int argc, wchar_t* argv[], wchar_t* envp[]) {
-    Example::SetArgc(argc);
 
-    // Access the value of Argc using the static member function
-    int storedArgc = Example::GetArgc();
-    wcout << L"Stored argc: " << storedArgc << endl;
-
-    // Rest of the code...
-
-    return 0;
+    PCOrCP obj(argc, argv, envp);
+    return PCOrCP::Result;
 }
 ```
-
-
-
 
 Conclusion
 Static member functions in C++ provide a powerful tool for encapsulating functionality that is not tied to specific instances of a class. They allow you to access and manipulate static member variables and perform operations that are independent of object state. In your code, you successfully utilized a static member function to manage and access the Argc variable.
