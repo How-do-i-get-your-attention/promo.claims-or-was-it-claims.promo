@@ -486,3 +486,10 @@ int wmain(int argc, wchar_t* argv[], wchar_t* envp[]) {
 }
 ```
 
+
+In this example, the class Example is introduced to encapsulate the Argc variable and provide static member functions to access and modify its value. The static member variable Argc is initialized to 0 outside the class definition. Within the wmain function, you can use Example::SetArgc(argc) to store the value of argc in the static member variable. Similarly, Example::GetArgc() allows you to retrieve the stored value of Argc.
+
+Conclusion
+Static member functions in C++ provide a powerful tool for encapsulating functionality that is not tied to specific instances of a class. They allow you to access and manipulate static member variables and perform operations that are independent of object state. In your code, you successfully utilized a static member function to manage and access the Argc variable.
+
+By understanding and utilizing static member functions effectively, you can enhance code organization, improve encapsulation, and achieve more flexible and maintainable code.
