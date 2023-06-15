@@ -808,3 +808,32 @@ Click "Apply" to save the changes.
 Once you have added the wbemuuid.lib library to the project properties, the Visual Studio build system will automatically link the library during the build process, resolving any references to functions or symbols from the library.
 
 Make sure to specify the library in the project configuration (e.g., Debug, Release) that you are actively building.
+
+## HRESULT
+
+In Windows programming, `HRESULT` (or Handle to Result) is a data type used to represent the success or failure status of a function or method call. It is a 32-bit signed integer value defined in the Windows API.
+
+The `HRESULT` data type combines error information and status flags into a single value. It consists of three components:
+
+- Severity: The most significant bit indicates whether the value represents success or failure.
+- Facility: The bits that follow the severity indicate the facility that defines the error.
+- Error Code: The remaining bits represent the specific error code within the facility.
+
+The value `S_OK` (0x00000000) represents a successful operation, while values such as `E_FAIL` (0x80004005) indicate a general failure.
+
+`HRESULT` values can be checked using predefined macros like `SUCCEEDED` and `FAILED`. For example:
+
+```cpp
+HRESULT hr = SomeFunction();
+if (SUCCEEDED(hr)) {
+    // Operation succeeded
+} else {
+    // Operation failed
+}
+```
+
+It's important to check `HRESULT` values after making function or method calls to handle errors appropriately and provide meaningful error messages or take corrective actions.
+
+For detailed information about specific `HRESULT` values and their meanings, refer to the documentation of the function or method you are using, as well as the Windows API documentation.
+
+I hope this explanation helps! Let me know if you have any further questions.
