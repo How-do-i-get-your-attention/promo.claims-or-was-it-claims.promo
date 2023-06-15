@@ -303,3 +303,9 @@ Exploring file formats broadens our knowledge of how different systems handle an
 
 Well, now that you've made it this far reading about things I've written, you might as well continue and dive into the thrilling adventures of my diary. Brace yourself for a rollercoaster of emotions, dramatic plot twists, and the occasional doodle of a questionable quality. Enjoy the journey!
 
+<h1><img src="cplusplus.png" height="20"/> C++ windows</h1>
+```cpp
+// main.cpp
+#include <Windows.h>
+```
+
