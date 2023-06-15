@@ -617,3 +617,39 @@ In this example, the reinterpret_cast operator is used to cast a pointer of type
 It's important to note that using reinterpret_cast should be limited to specific cases where you have a deep understanding of the underlying memory layout and the potential risks involved. Prefer other types of type casting (such as static_cast or dynamic_cast) whenever possible, as they provide more type safety and maintainability.
 
 Use reinterpret_cast sparingly and carefully, considering the potential pitfalls and undefined behavior associated with it. It should be used as a last resort when there is a clear understanding of the consequences.
+
+## const
+
+Here's an explanation of the const keyword:
+
+The const keyword is a type qualifier that can be applied to variables, function parameters, member functions, and return types.
+When applied to a variable, it indicates that the value of that variable is read-only and cannot be modified.
+The const keyword is used to enforce immutability and prevent unintended modifications to variables.
+Constants declared with const must be initialized at the time of declaration and cannot be modified later in the program.
+The const keyword can be used with fundamental types (e.g., int, float), user-defined types (e.g., classes, structures), and pointers.
+When applied to member functions, it specifies that the member function does not modify the state of the object on which it is called (const member functions).
+The use of const can help ensure program correctness, improve code readability, and enable compiler optimizations.
+It is considered good practice to use const whenever possible to express the intent of immutability and enhance code safety.
+Here are a few examples illustrating the usage of const:
+
+```
+const int MAX_VALUE = 100;
+```
+
+In this example, MAX_VALUE is declared as a constant variable, and its value is set to 100. It cannot be modified later in the program.
+```
+void printMessage(const std::string& message) {
+    std::cout << message << std::endl;
+}
+
+class MyClass {
+public:
+    void printValue() const {
+        std::cout << value << std::endl;
+    }
+private:
+    int value = 42;
+};
+```
+
+Using const is a good practice but not needed.
