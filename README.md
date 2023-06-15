@@ -889,8 +889,37 @@ The `W` suffix in `RegisterEventSourceW` indicates that this is the wide-charact
 
 When using this function in your code, make sure to include the necessary header file (`windows.h`) and link against the appropriate libraries when building your C++ project.
 
+## LPCWSTR
+
+In C++, `LPCWSTR` is a type alias defined in the Windows API for a "Long Pointer to a Constant Wide String". It represents a pointer to a null-terminated array of wide characters (`wchar_t`), where the string is read-only and cannot be modified.
+
+Let's break down the meaning of each part of the `LPCWSTR` type alias:
+
+- `LP`: "Long Pointer" is a historical term that indicates a pointer to a memory block.
+- `C`: "Constant" indicates that the string is read-only and cannot be modified.
+- `WSTR`: "Wide String" represents a string composed of wide characters, where each character typically occupies 2 bytes (UTF-16 encoding) and allows for the representation of a wider range of characters, including international characters.
+
+So, `LPCWSTR` is used to represent a read-only pointer to a null-terminated wide string in C++. It is commonly used in Windows programming when dealing with functions or APIs that expect wide strings, such as those operating with Unicode or the Windows API itself.
+
+Here's an example of using `LPCWSTR` to declare a constant wide string:
+
+```cpp
+#include <iostream>
+#include <Windows.h>
+
+int main() {
+    LPCWSTR myString = L"Hello, World!";
+    std::wcout << myString << std::endl;
+
+    return 0;
+}
+```
+
+In this example, `myString` is declared as an `LPCWSTR` and assigned the value of the wide string `L"Hello, World!"`. The string is then printed to the console using `std::wcout` to handle wide characters.
+
+It's important to note that `LPCWSTR` is specific to the Windows API and may not be recognized by other platforms or compilers. In more recent versions of Windows, the use of `const wchar_t*` instead of `LPCWSTR` is often preferred.
        
-# WORD
+## WORD
 
 
 In C++, the `WORD` type is a built-in data type defined in the Windows API. It stands for "Word" and represents a 16-bit unsigned integer (i.e., a value ranging from 0 to 65,535).
