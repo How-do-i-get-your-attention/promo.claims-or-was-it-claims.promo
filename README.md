@@ -305,6 +305,6 @@ Well, now that you've made it this far reading about things I've written, you mi
 
 <h1><img src="cplusplus.png" height="20"/> C++ windows</h1>
 <code>
-#include <W\u0069ndows.h>
+#include < W\u0069ndows.h >
 </code>
 
