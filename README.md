@@ -314,3 +314,10 @@ The Windows.h header file allows developers to access a wide range of features a
 ## Usage
 To use the functionality provided by the Windows API, simply include the Windows.h header file in your C++ code:
 
+
+```
+int wmain(int argc, wchar_t* argv[]) {
+
+    return 0;
+}
+```
