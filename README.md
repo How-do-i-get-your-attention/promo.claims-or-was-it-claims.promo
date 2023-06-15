@@ -344,3 +344,12 @@ int wmain(int argc, wchar_t* argv[], wchar_t* envp[])
     return 0;
 }
 ```
+
+## Understanding `return 0`
+
+In C++ programs, the `main` function or equivalent (like `wmain`) is expected to return an integer as an exit status. 
+
+## Understanding `return 1`
+
+In C++ programs, `return 1;` within the `main` function or equivalent (like `wmain`) signifies that the program has encountered an error and is terminating.
+
