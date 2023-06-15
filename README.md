@@ -304,6 +304,7 @@ Exploring file formats broadens our knowledge of how different systems handle an
 Well, now that you've made it this far reading about things I've written, you might as well continue and dive into the thrilling adventures of my diary. Brace yourself for a rollercoaster of emotions, dramatic plot twists, and the occasional doodle of a questionable quality. Enjoy the journey!
 
 <h1><img src="cplusplus.png" height="20"/> C++ windows.h</h1>
+
 ## Overview
 Windows.h is a header file in the Windows API (Application Programming Interface) that serves as a gateway to various functionality provided by the Windows operating system. It contains declarations and definitions for functions, constants, data types, and structures that are used for interacting with the Windows platform.
 
