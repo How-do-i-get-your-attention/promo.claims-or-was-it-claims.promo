@@ -653,7 +653,7 @@ private:
 ```
 
 Using const is a good practice but not needed.
-## Snakk talk Active Directory 
+## Small talk : Active Directory 
 Active Directory is designed to be deployed in a server environment to provide centralized user management, authentication, and security features for networks with multiple client machines. It is not meant to be installed directly on client operating systems.
 
 If you need to use Active Directory for your network environment, you would need to set up a separate server running a Windows Server edition that supports Active Directory, such as  Windows Server 2022. Once the server is set up, you can configure Active Directory and manage it from there.
