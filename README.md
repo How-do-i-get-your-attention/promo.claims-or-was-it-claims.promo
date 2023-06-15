@@ -653,3 +653,150 @@ private:
 ```
 
 Using const is a good practice but not needed.
+
+Active Directory is designed to be deployed in a server environment to provide centralized user management, authentication, and security features for networks with multiple client machines. It is not meant to be installed directly on client operating systems.
+
+If you need to use Active Directory for your network environment, you would need to set up a separate server running a Windows Server edition that supports Active Directory, such as  Windows Server 2022. Once the server is set up, you can configure Active Directory and manage it from there.
+
+Windows 11 Pro, as a client operating system, does not have the capability to act as an Active Directory server itself. Its primary purpose is to be a workstation or client machine that connects to an Active Directory domain controlled by a server running a Windows Server edition.
+
+If you require Active Directory functionality for your network, I recommend setting up a separate server running a Windows Server edition and configuring Active Directory on that server.
+
+To send a command to a Windows Server for installing Active Directory programmatically in C++, you can use the Windows Management Instrumentation (WMI) API. The WMI API provides a set of functions and interfaces for managing and querying Windows systems.
+
+Here's an example of how you can use the WMI API in C++ to remotely install Active Directory on a Windows Server:
+
+```
+#include <windows.h>
+#include <comdef.h>
+#include <Wbemidl.h>
+
+#pragma comment(lib, "wbemuuid.lib")
+
+int main()
+{
+    HRESULT hres;
+
+    // Step 1: Initialize COM
+    hres = CoInitializeEx(0, COINIT_MULTITHREADED);
+    if (FAILED(hres))
+    {
+        // Error handling
+        return 1;
+    }
+
+    // Step 2: Initialize security
+    hres = CoInitializeSecurity(
+        NULL,
+        -1,
+        NULL,
+        NULL,
+        RPC_C_AUTHN_LEVEL_DEFAULT,
+        RPC_C_IMP_LEVEL_IMPERSONATE,
+        NULL,
+        EOAC_NONE,
+        NULL);
+    if (FAILED(hres))
+    {
+        // Error handling
+        CoUninitialize();
+        return 1;
+    }
+
+    // Step 3: Obtain the initial locator
+    IWbemLocator* pLoc = NULL;
+    hres = CoCreateInstance(
+        CLSID_WbemLocator,
+        0,
+        CLSCTX_INPROC_SERVER,
+        IID_IWbemLocator,
+        (LPVOID*)&pLoc);
+    if (FAILED(hres))
+    {
+        // Error handling
+        CoUninitialize();
+        return 1;
+    }
+
+    // Step 4: Connect to WMI
+    IWbemServices* pSvc = NULL;
+    hres = pLoc->ConnectServer(
+        _bstr_t(L"root\\CIMV2"),
+        NULL,
+        NULL,
+        0,
+        NULL,
+        0,
+        0,
+        &pSvc);
+    if (FAILED(hres))
+    {
+        // Error handling
+        pLoc->Release();
+        CoUninitialize();
+        return 1;
+    }
+
+    // Step 5: Set the security levels on the proxy
+    hres = CoSetProxyBlanket(
+        pSvc,
+        RPC_C_AUTHN_WINNT,
+        RPC_C_AUTHZ_NONE,
+        NULL,
+        RPC_C_AUTHN_LEVEL_CALL,
+        RPC_C_IMP_LEVEL_IMPERSONATE,
+        NULL,
+        EOAC_NONE);
+    if (FAILED(hres))
+    {
+        // Error handling
+        pSvc->Release();
+        pLoc->Release();
+        CoUninitialize();
+        return 1;
+    }
+
+    // Step 6: Execute the command to install Active Directory
+    BSTR method = SysAllocString(L"Install");
+    BSTR path = SysAllocString(L"Win32_Role.Name='AD-Domain-Services'");
+
+    IWbemClassObject* pClass = NULL;
+    hres = pSvc->GetObject(path, 0, NULL, &pClass, NULL);
+    if (SUCCEEDED(hres))
+    {
+        IWbemClassObject* pOutParams = NULL;
+        hres = pClass->ExecMethod(method, NULL, 0, NULL, NULL, &pOutParams, NULL);
+        if (SUCCEEDED(hres))
+        {
+            // Command executed successfully
+            pOutParams->Release();
+        }
+        else
+        {
+            // Error handling
+        }
+
+        pClass->Release();
+    }
+    else
+    {
+        // Error handling
+    }
+
+    // Clean up
+    SysFreeString(method);
+    SysFreeString(path);
+    pSvc->Release();
+    pLoc->Release();
+    CoUninitialize();
+
+    return 0;
+}
+
+```
+This code demonstrates the basic steps to connect to the WMI namespace and execute the Install method on the Win32_Role class to install Active Directory. It uses the COM interfaces provided by the WMI API.
+
+Note that this example assumes you have the necessary permissions and credentials to perform the installation remotely. Additionally, you may need to adjust the namespace, class, and method names based on your specific environment and requirements.
+
+Make sure to include the necessary header files and link against the wbemuuid.lib library when building your C++ project.
+
