@@ -315,7 +315,32 @@ The Windows.h header file allows developers to access a wide range of features a
 We use this to connect to Windows Server systems. 
 We like to use Windows Server to protect our clients, as it includes virus protection. Additionally, it allows us to expand our server farm easily and efficiently.
 
+```
+#include <Windows.h>
+```
+
+<h1><img src="cplusplus.png" height="20"/> C++ wmain</h1>
+
+# Understanding `wmain` in C++
+
+`wmain` is a special function used in C++ programs on Windows platforms. It's similar to the traditional `main` function, which is the typical entry point for a C++ program, but is designed to handle wide strings (Unicode).
+
+## Parameters
+
+- `argc`: An integer representing the count of command-line arguments.
+- `argv`: An array of wide string command-line arguments.
+- `envp`: An array of environment variables.
+
+Here, `argc` represents the number of command-line arguments passed to the program, `argv` is an array of wide character strings containing the command-line arguments, and `envp` is an array of wide character strings containing the program's environment variables.
+
+## Usage of `wmain`
+
+The `wmain` function can be used similarly to the `main` function. It allows you to access and process command-line arguments and perform operations accordingly. Here's an example illustrating the basic usage of `wmain`:
 
 ```
 #include <Windows.h>
+int wmain(int argc, wchar_t* argv[], wchar_t* envp[]) 
+{
+    return 0;
+}
 ```
