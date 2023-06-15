@@ -1003,5 +1003,3 @@ int main()
 In this example, `ReportEventW` is called with the `hEventLog`, `eventType`, and other required parameters. The `eventType` is set to `EVENTLOG_INFORMATION_TYPE`, indicating an informational event.
 
 By selecting the appropriate `wType` value, you can provide better context and understanding of the event being logged in the event viewer.
-
-I hope this explanation helps clarify the usage and significance of the `wType` parameter in the `ReportEvent` function. If you have any further questions, feel free to ask!
