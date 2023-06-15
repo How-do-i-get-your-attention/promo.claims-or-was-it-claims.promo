@@ -944,4 +944,64 @@ In this example, a `WORD` variable named `myWord` is declared and assigned a val
 
 It's important to note that the `WORD` type is platform-dependent and may have different sizes on different systems. On Windows, it is typically defined as an `unsigned short` (2 bytes) to ensure consistent behavior across different compilers and platforms.
 
-I hope this explanation clarifies the purpose and usage of the `WORD` type in C++. If you have any more questions, feel free to ask!
+
+
+
+....
+## ReportEvent -> WORD wType
+
+
+The `wType` parameter expects a `WORD` value, which is a 16-bit unsigned integer. It can take one or a combination of the following predefined values or constants:
+
+- `EVENTLOG_SUCCESS` (0x0000): Represents a successful event. This type is used to indicate that an operation or action has completed successfully.
+
+- `EVENTLOG_ERROR_TYPE` (0x0001): Represents an error event. This type is used to indicate that an error has occurred during an operation or action.
+
+- `EVENTLOG_WARNING_TYPE` (0x0002): Represents a warning event. This type is used to indicate a non-fatal issue or condition that requires attention.
+
+- `EVENTLOG_INFORMATION_TYPE` (0x0004): Represents an informational event. This type is used to provide additional information about an operation or action.
+
+- `EVENTLOG_AUDIT_SUCCESS` (0x0008): Represents a successful audit event. This type is used for security auditing to indicate a successful security-related action or event.
+
+- `EVENTLOG_AUDIT_FAILURE` (0x0010): Represents a failed audit event. This type is used for security auditing to indicate a failed security-related action or event.
+
+The choice of `wType` value depends on the nature and purpose of the event you are logging. By specifying the appropriate `wType`, you can categorize the event and convey its significance to the event viewer and readers of the event log.
+
+Here's an example of using `ReportEvent` with the `wType` parameter:
+
+```cpp
+#include <Windows.h>
+#include <iostream>
+
+void LogEvent()
+{
+    HANDLE hEventLog = RegisterEventSourceW(nullptr, L"MyEventSource"); // Replace "MyEventSource" with your event source name
+
+    if (hEventLog != nullptr)
+    {
+        WORD eventType = EVENTLOG_INFORMATION_TYPE; // Set the desired event type
+
+        ReportEventW(hEventLog, eventType, 0, 0, nullptr, 0, 0, nullptr, nullptr);
+
+        DeregisterEventSource(hEventLog);
+    }
+    else
+    {
+        std::cerr << "Failed to register event source." << std::endl;
+    }
+}
+
+int main()
+{
+    // Example usage
+    LogEvent();
+
+    return 0;
+}
+```
+
+In this example, `ReportEventW` is called with the `hEventLog`, `eventType`, and other required parameters. The `eventType` is set to `EVENTLOG_INFORMATION_TYPE`, indicating an informational event.
+
+By selecting the appropriate `wType` value, you can provide better context and understanding of the event being logged in the event viewer.
+
+I hope this explanation helps clarify the usage and significance of the `wType` parameter in the `ReportEvent` function. If you have any further questions, feel free to ask!
