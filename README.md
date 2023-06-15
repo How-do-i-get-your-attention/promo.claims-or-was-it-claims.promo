@@ -375,3 +375,51 @@ This creates a static library. Static libraries are essentially collections of o
 4. Click on **General**.
 5. The first setting is **Configuration Type** where you can choose between `.exe`, `.dll`, and `.lib`.
 
+
+<h1><img src="cplusplus.png" height="20"/>Starting a new C++ project</h1>
+Starting a new C++ project in Visual Studio can be as simple as creating an empty project, naming it "Server", and adding a main.cpp file. However, understanding the data that Windows provides us is crucial for more advanced programming tasks.
+
+Let's illustrate this by writing a code snippet:
+
+```
+#include <Windows.h>
+#include <iostream>
+using namespace std;
+int wmain(int argc, wchar_t* argv[], wchar_t* envp[]) {
+
+    // Print the number of command-line arguments
+    wcout << L"Number of command-line arguments: " << argc << endl;
+    wcout << L"argv: "  << endl;
+
+    // Loop through each command-line argument and print
+    for (int i = 0; i < argc; i++)
+        wcout << argv[i] << endl;
+
+    wcout << L"envp: " << endl;
+
+    // Loop through each environment variable and print
+    for (wchar_t** env = envp; *env != 0; env++)
+        wcout << *env << endl;
+
+    return 0;
+}
+```
+
+In the above code, we print out some essential data. For instance, we display the number of command-line arguments, the arguments themselves, and the environment variables.
+
+When executed, it should look something like this:
+```
+Number of command-line arguments: 1
+argv:
+D:\How-do-i-get-your-attention\promo.claims-or-was-it-claims.promo\Server\x64\Release\Server.exe
+envp:
+ALLUSERSPROFILE=C:\ProgramData
+APPDATA=C:\Users\{username}\AppData\Roaming
+CommonProgramFiles=C:\Program Files\Common Files
+...
+USERPROFILE=C:\Users\{username}
+VisualStudioDir=C:\Users\{username}\OneDrive\Dokumenter\Visual Studio 2022
+...
+```
+
+This example demonstrates the essential data that Windows provides, which includes command-line arguments and environment variables. By understanding and utilizing this data, you can create more complex and robust programs in C++.
