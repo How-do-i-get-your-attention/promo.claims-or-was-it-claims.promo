@@ -537,3 +537,31 @@ private:
 By utilizing the PCOrCP class, you establish a clear and structured approach to managing the lifecycle of your application. The constructor and destructor serve as vital entry and exit points, ensuring proper initialization and termination.
 
 Remember, the provided code serves as a framework for understanding the concept. Feel free to customize and add functionality within the constructor and destructor according to the specific requirements of your application.
+
+
+# Understanding `int` and `wchar_t` in C++
+
+## `int`
+In C++, the `int` data type is used to represent whole numbers, also known as integers. It is a fundamental data type that occupies 4 bytes (32 bits) of memory on most systems. However, the exact size may vary depending on the platform.
+
+The range of values that can be stored in an `int` is determined by the number of bits allocated to it. For a 32-bit `int`, the range is approximately -2,147,483,648 to 2,147,483,647. If you need only non-negative values, you can use the `unsigned int` type, which allows for a larger positive range.
+
+The `int` type is commonly used for counting, indexing, arithmetic operations, and representing integers in general. It is signed by default, meaning it can represent both positive and negative numbers.
+
+**Example:**
+```cpp
+int x = 42;
+```
+## wchar_t
+The wchar_t data type in C++ is used to represent wide characters, which are typically non-ASCII characters or special symbols. It is commonly used for handling wide strings and supporting internationalization (i18n) in programs.
+
+The size of wchar_t is implementation-defined and can vary across different systems. It is typically 2 or 4 bytes in size, depending on the platform. Wide character strings are typically represented using the wchar_t type and prefixed with the letter 'L'.
+
+Example:
+```
+wchar_t ch = L'A';
+```
+
+The wchar_t type becomes particularly useful when dealing with languages that require a wider range of characters than can be represented by the regular char type. It enables proper handling of multilingual text and special characters.
+
+It's important to note that the wchar_t type is not commonly used for regular ASCII characters. For such cases, the char or std::string types are typically preferred.
