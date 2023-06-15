@@ -396,7 +396,6 @@ int wmain(int argc, wchar_t* argv[], wchar_t* envp[]) {
     // Loop through each environment variable and print
     for (wchar_t** env = envp; *env != 0; env++)
         wcout << *env << endl;
-
     return 0;
 }
 ```
