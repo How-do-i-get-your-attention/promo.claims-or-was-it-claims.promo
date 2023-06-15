@@ -565,3 +565,30 @@ wchar_t ch = L'A';
 The wchar_t type becomes particularly useful when dealing with languages that require a wider range of characters than can be represented by the regular char type. It enables proper handling of multilingual text and special characters.
 
 It's important to note that the wchar_t type is not commonly used for regular ASCII characters. For such cases, the char or std::string types are typically preferred.
+
+## System
+
+The system() function is defined in the <cstdlib> header file.
+Its signature is int system(const char* command).
+It takes a command as a string argument and executes it in the command processor of the operating system.
+The command is passed as a narrow string (const char*).
+The return value of system() is an implementation-defined value, which can vary depending on the system and the executed command. It can be used to determine the success or failure of the command execution.
+Some important points to note about the system() function:
+
+It is a simple way to execute system commands, but it has some limitations and considerations:
+It depends on the operating system's command processor, so the behavior can vary across different platforms.
+It may introduce security risks if the command string is constructed dynamically or involves user input. It's important to properly validate and sanitize the input to prevent command injection vulnerabilities.
+It can block the execution of the program until the command finishes running, which may cause delays or pauses in the program flow.
+It is not suitable for complex or interactive commands that require input or produce output during execution. For such cases, alternative approaches like using libraries or APIs specific to the task are recommended.
+Here's an example of using the system() function to execute a command:
+```
+#include <cstdlib> // For system() function
+int main() {
+    int result = system("echo Hello, World!"); // Execute the command "echo Hello, World!"
+    return result;
+}
+```
+
+In this example, the system() function is used to execute the command "echo Hello, World!" using the underlying operating system's command processor. The return value of system() is then stored in the result variable.
+
+It's important to use the system() function judiciously, considering the limitations and potential security implications. Alternatives such as using specific libraries or APIs are often preferred for more robust and controlled command execution.
