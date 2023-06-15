@@ -21,7 +21,7 @@
                 <img src="jetbrains.png" width="20"/> <img src="kotline.jpg" height="15"/> 
                 </a>
                   </td>
-    <td align="center" style="width: 100px;"><img src="visual_studio.png" width="20"/> <img src="csharp.png" height="15"/> </td>
+    <td align="center" style="width: 100px;"><img src="visual_studio.png" width="20"/> <img src="cplusplus.png" height="15"/> </td>
     <td align="center" style="width: 100px;"><img src="xcode.jpg" width="20"/> <img src="swift.png" height="15"/> </td>
        
   </tr>
