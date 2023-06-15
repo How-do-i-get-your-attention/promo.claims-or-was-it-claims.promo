@@ -775,21 +775,18 @@ int main()
         {
             // Error handling
         }
-
         pClass->Release();
     }
     else
     {
         // Error handling
     }
-
     // Clean up
     SysFreeString(method);
     SysFreeString(path);
     pSvc->Release();
     pLoc->Release();
     CoUninitialize();
-
     return 0;
 }
 
@@ -800,3 +797,14 @@ Note that this example assumes you have the necessary permissions and credential
 
 Make sure to include the necessary header files and link against the wbemuuid.lib library when building your C++ project.
 
+If you are using Visual Studio as your development environment, here are the steps to add the wbemuuid.lib library dependency:
+
+Right-click on your project in the Solution Explorer and select "Properties" from the context menu.
+In the project properties, navigate to "Configuration Properties" > "Linker" > "Input".
+In the "Additional Dependencies" field, add wbemuuid.lib to the list of libraries.
+Separate each library with a semicolon (;) if there are multiple libraries.
+For example: wbemuuid.lib;otherlibrary.lib
+Click "Apply" to save the changes.
+Once you have added the wbemuuid.lib library to the project properties, the Visual Studio build system will automatically link the library during the build process, resolving any references to functions or symbols from the library.
+
+Make sure to specify the library in the project configuration (e.g., Debug, Release) that you are actively building.
