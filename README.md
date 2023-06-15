@@ -318,8 +318,4 @@ We like to use Windows Server to protect our clients, as it includes virus prote
 
 ```
 #include <Windows.h>
-int wmain(int argc, wchar_t* argv[]) {
-
-    return 0;
-}
 ```
