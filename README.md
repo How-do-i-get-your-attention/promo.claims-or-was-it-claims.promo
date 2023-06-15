@@ -500,3 +500,11 @@ Conclusion
 Static member functions in C++ provide a powerful tool for encapsulating functionality that is not tied to specific instances of a class. They allow you to access and manipulate static member variables and perform operations that are independent of object state. In your code, you successfully utilized a static member function to manage and access the Argc variable.
 
 By understanding and utilizing static member functions effectively, i can enhance code organization, improve encapsulation, and achieve more flexible and maintainable code.
+
+In C++, one of the benefits of using a class is that it provides automatic destruction when it goes out of scope. This automatic destruction is managed through the class destructor, which is a special member function.
+
+When a class object is no longer needed, such as when it goes out of scope or is explicitly deleted, the destructor is automatically called to perform any necessary cleanup operations. The destructor allows you to release resources, deallocate memory, or perform any other required cleanup tasks.
+
+The automatic destruction feature helps ensure that resources are properly released and memory is deallocated, which can be particularly beneficial in scenarios where manual cleanup might be error-prone or easily overlooked.
+
+By defining a destructor within a class, you can specify the cleanup actions that need to be performed when an object of that class is destroyed. The destructor is invoked automatically and you don't need to explicitly call it.
