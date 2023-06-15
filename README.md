@@ -353,3 +353,25 @@ In C++ programs, the `main` function or equivalent (like `wmain`) is expected to
 
 In C++ programs, `return 1;` within the `main` function or equivalent (like `wmain`) signifies that the program has encountered an error and is terminating.
 
+
+# Configuration Types in Visual Studio
+
+In Visual Studio, the **Configuration Type** setting in a project's property pages determines the type of output file your project creates. Here are the three key types:
+
+## 1. `.exe` (Application)
+This creates an executable file. An `.exe` file contains a program that can run directly when clicked. This is the default setting for most project types.
+
+## 2. `.dll` (Dynamic-Link Library)
+This creates a Dynamic-Link Library, which is a binary file containing code and data that multiple programs can use simultaneously. DLLs promote code reuse and efficient memory usage by allowing multiple applications to access the contents of a single file.
+
+## 3. `.lib` (Static Library)
+This creates a static library. Static libraries are essentially collections of object files that are linked into an application during the linking phase of compilation, and they exist as a single, standalone file.
+
+# How to find Configuration Type in Visual Studio
+
+1. Open your project in Visual Studio.
+2. In **Solution Explorer**, right-click on your project, then click **Properties**.
+3. In the **Properties** window, expand the **Configuration Properties** list.
+4. Click on **General**.
+5. The first setting is **Configuration Type** where you can choose between `.exe`, `.dll`, and `.lib`.
+
