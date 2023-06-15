@@ -653,7 +653,7 @@ private:
 ```
 
 Using const is a good practice but not needed.
-
+## Snakk talk Active Directory 
 Active Directory is designed to be deployed in a server environment to provide centralized user management, authentication, and security features for networks with multiple client machines. It is not meant to be installed directly on client operating systems.
 
 If you need to use Active Directory for your network environment, you would need to set up a separate server running a Windows Server edition that supports Active Directory, such as  Windows Server 2022. Once the server is set up, you can configure Active Directory and manage it from there.
@@ -835,4 +835,44 @@ if (SUCCEEDED(hr)) {
 It's important to check `HRESULT` values after making function or method calls to handle errors appropriately and provide meaningful error messages or take corrective actions.
 
 For detailed information about specific `HRESULT` values and their meanings, refer to the documentation of the function or method you are using, as well as the Windows API documentation.
-.
+            
+##  Windows Event Logging 
+            
+To create an event log entry on an error condition in C++, you can use the Windows Event Logging API. Here's a basic example of how to log an error using the event logging functions:
+
+```cpp
+#include <windows.h>
+
+void LogError(const wchar_t* message)
+{
+    HANDLE eventLog = RegisterEventSource(NULL, L"YourApplicationName");
+
+    if (eventLog != NULL)
+    {
+        const wchar_t* strings[] = { message };
+
+        ReportEvent(eventLog, EVENTLOG_ERROR_TYPE, 0, 0, NULL, 1, 0, strings, NULL);
+
+        DeregisterEventSource(eventLog);
+    }
+}
+```
+
+In this example:
+
+1. The `RegisterEventSource` function is used to obtain a handle to the event log. Replace `"YourApplicationName"` with the desired name for your application or a custom log source name.
+
+2. If the handle obtained is not NULL, the `ReportEvent` function is used to write an event to the event log. The event type is set to `EVENTLOG_ERROR_TYPE` to indicate an error. You can customize the event category, event ID, and other parameters as needed.
+
+3. The error message is passed as an array of strings (`strings[]` in this example). You can include additional strings or information in the event log entry by extending the array.
+
+4. Finally, the `DeregisterEventSource` function is used to release the event log handle.
+
+Make sure to include the necessary header files (`windows.h`) and link against the appropriate libraries when building your C++ project.
+
+To view the logged events, you can open the Event Viewer on your Windows system and navigate to the corresponding event log.
+
+Note that administrative privileges may be required to write to the event log. Ensure that your application or the user running the application has the necessary permissions to create event log entries.
+
+
+
