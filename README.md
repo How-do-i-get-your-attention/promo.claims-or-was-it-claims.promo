@@ -312,7 +312,8 @@ Windows.h is a header file in the Windows API (Application Programming Interface
 The Windows.h header file allows developers to access a wide range of features and services offered by the Windows operating system. It provides access to functions for creating and managing windows, handling input and events, interacting with files and directories, accessing system information, and much more. By including Windows.h in your C++ code, you can harness the power of the Windows API and develop applications that leverage the capabilities of the Windows platform.
 
 ## Usage
-To use the functionality provided by the Windows API, simply include the Windows.h header file in your C++ code:
+We use this to connect to Windows Server systems. 
+We like to use Windows Server to protect our clients, as it includes virus protection. Additionally, it allows us to expand our server farm easily and efficiently.
 
 
 ```
