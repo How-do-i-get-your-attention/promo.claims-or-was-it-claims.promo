@@ -425,3 +425,7 @@ Why do we need this information? It's actually quite valuable when developing so
 "How do we access similar data on other platforms such as iOS, macOS, or Android? in c++ Do we need all the information that these platforms can provide? These are important considerations, and we'll delve deeper into these topics later."
 
 Please note that the specific methods for accessing environment variables and command-line arguments can vary between different operating systems. On Unix-based systems like macOS and iOS, you can generally access this data in a similar way to Windows. However, for Android, due to its unique architecture and security model, accessing such information might require different approaches or might not be readily available at all. We'll explore these differences in detail in upcoming discussions.
+
+"As I continue to write code, I will provide updates so you can follow along with the progress."
+
+I've interpreted your sentence as indicating that i be sharing updates about the code i writing.  Pirasath Luxchumykanthan
