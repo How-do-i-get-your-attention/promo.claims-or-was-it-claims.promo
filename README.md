@@ -147,7 +147,6 @@ A document have have many layers.
   <img src="mark.jpg" height="20"/> 
   <img src="cplusplus.png" height="20"/>
               <img src="java.png" height="20"/>
-              <img src="cplusplus.png" height="20"/>
                   <img src="kotline.jpg" height="20"/>
                       <img src="swift.png" height="20"/>
 </div>
