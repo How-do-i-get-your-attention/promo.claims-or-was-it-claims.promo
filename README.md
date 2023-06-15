@@ -422,3 +422,6 @@ This example demonstrates the essential data that Windows provides, which includ
 Why do we need this information? It's actually quite valuable when developing software. It allows us to understand our application's runtime environment, which is crucial when performing tasks such as software installations or debugging. Accessing command-line arguments can inform our program about user-specified parameters, while environment variables can provide context about the system our software is running on. This understanding can help us tailor our software to function optimally under various conditions and configurations.
 
 
+"How do we access similar data on other platforms such as iOS, macOS, or Android? in c++ Do we need all the information that these platforms can provide? These are important considerations, and we'll delve deeper into these topics later."
+
+Please note that the specific methods for accessing environment variables and command-line arguments can vary between different operating systems. On Unix-based systems like macOS and iOS, you can generally access this data in a similar way to Windows. However, for Android, due to its unique architecture and security model, accessing such information might require different approaches or might not be readily available at all. We'll explore these differences in detail in upcoming discussions.
