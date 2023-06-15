@@ -428,4 +428,11 @@ Please note that the specific methods for accessing environment variables and co
 
 "As I continue to write code, I will provide updates so you can follow along with the progress."
 
-I've interpreted your sentence as indicating that i be sharing updates about the code i writing.  Pirasath Luxchumykanthan
+I've interpreted your sentence as indicating that i be sharing updates about the code i writing. 
+By Pirasath Luxchumykanthan
+
+
+<div style="background-color: red; color: white; padding: 10px">
+  This is some text inside a red box!
+</div>
+
