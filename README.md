@@ -492,3 +492,57 @@ public:
 In the `PCOrCP.h` file, I included the necessary `iostream` library for the `std::cout` statement. I also corrected the message inside the `Init()` function to say "Init works perfectly."
 
 It's important to note that the provided code doesn't have any functional implementation beyond printing the message in the `Init()` function.
+
+
+
+```cpp
+// PCOrCP.h
+
+#pragma once
+
+#include <iostream>
+
+class PCOrCP {
+public:
+    static wchar_t** Argv;
+    static wchar_t** Envp;
+
+    static void Init() {
+        std::cout << "Init works perfectly" << std::endl;
+    }
+
+    PCOrCP(wchar_t* argv[], wchar_t* envp[]);
+    ~PCOrCP() {
+    }
+};
+```
+
+In the `PCOrCP.h` file, I removed the `static int Argc` member since it is no longer being used.
+
+```cpp
+// main.cpp
+
+#include "PCOrCP.h"
+
+#pragma warning(disable: 26444)
+
+wchar_t** PCOrCP::Argv = nullptr;
+wchar_t** PCOrCP::Envp = nullptr;
+
+PCOrCP::PCOrCP(wchar_t* argv[], wchar_t* envp[]) {
+    PCOrCP::Argv = argv;
+    PCOrCP::Envp = envp;
+    PCOrCP::Init();
+}
+
+int wmain(int argc, wchar_t* argv[], wchar_t* envp[]) {
+    PCOrCP(argv, envp);
+    return 0;
+}
+```
+
+In the `main.cpp` file, I removed the `int argc` parameter and updated the constructor accordingly.
+
+With these changes, the `int argc` parameter is no longer needed, and you can directly pass `argv` and `envp` to the `PCOrCP` constructor. The program will execute the `Init()` function and print the "Init works perfectly" message.
+
+Let me know if there's anything else I can assist you with!
