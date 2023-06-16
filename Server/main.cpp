@@ -1,17 +1,13 @@
-#include <Windows.h>
-#include <iostream>
-using namespace std;
-int wmain(int argc, wchar_t* argv[], wchar_t* envp[]) {
+#include "PCOrCP.h"
+#pragma warning(disable: 26444)
+int PCOrCP::Argc = 0;
+wchar_t** PCOrCP::Argv = nullptr;
+wchar_t** PCOrCP::Envp = nullptr;
 
-    // Print the number of command-line arguments
-   wcout << L"Number of command-line arguments: " << argc << endl;
-   wcout << L"argv: "  << endl;
-    // Loop through each command-line argument and print
-    for (int i = 0; i < argc; i++)
-        wcout << argv[i] << endl;
-    wcout << L"envp: " << endl;
-    // Loop through each environment variable and print
-    for (wchar_t** env = envp; *env != 0; env++)
-        wcout << *env << endl;
-    return 0;
+PCOrCP::PCOrCP(int argc, wchar_t* argv[], wchar_t* envp[]) {
+	PCOrCP::Argc = argc;
+	PCOrCP::Argv = argv;
+	PCOrCP::Envp = envp;
+	PCOrCP::Init();
 }
+int wmain(int argc, wchar_t* argv[], wchar_t* envp[]){PCOrCP(argc, argv, envp);return 0;}
