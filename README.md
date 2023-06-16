@@ -131,8 +131,7 @@
   </tr>
 </table>
 </div>   
-  
-<img src="https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/blob/master/Server/ClassDiagram.png"/>
+<div align="center"> <img src="https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/blob/master/Server/ClassDiagram.png"/></div>
 <!--
 Programmers let's get together
 A document have have many layers.
