@@ -545,4 +545,33 @@ In the `main.cpp` file, I removed the `int argc` parameter and updated the const
 
 With these changes, the `int argc` parameter is no longer needed, and you can directly pass `argv` and `envp` to the `PCOrCP` constructor. The program will execute the `Init()` function and print the "Init works perfectly" message.
 
-Let me know if there's anything else I can assist you with!
+Sure! Here's the corrected version of your text:
+
+```cpp
+#pragma once
+#include <iostream>
+
+class PCOrCP
+{
+private:
+	static void Services()
+	{
+		// Implementation of the services goes here
+	}
+
+public:
+	static wchar_t** Argv;
+	static wchar_t** Envp;
+
+	static void Init()
+	{
+		Services();
+	};
+};
+```
+
+In the updated text, I made the necessary formatting improvements and adjusted the placement of the comment. Additionally, I added a comment inside the `Services()` function to indicate that it is the place where your services implementation should be placed.
+
+The function `Services()` is declared as private, which means it can only be accessed within the `PCOrCP` class and is not accessible from other files or classes. This encapsulation ensures that the implementation details of the services are hidden from external code, promoting better code organization and security.
+
+Please let me know if there is anything else I can help you with!
