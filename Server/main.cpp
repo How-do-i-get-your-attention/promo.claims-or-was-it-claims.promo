@@ -3,7 +3,6 @@
 int PCOrCP::Argc = 0;
 wchar_t** PCOrCP::Argv = nullptr;
 wchar_t** PCOrCP::Envp = nullptr;
-
 PCOrCP::PCOrCP(int argc, wchar_t* argv[], wchar_t* envp[]) {
 	PCOrCP::Argc = argc;
 	PCOrCP::Argv = argv;
