@@ -439,3 +439,56 @@ hello@how-do-i-get-your-attention.com
 -->
 <!--All under here is what i do Pirasath Luxchumykanthan.:-->
 
+
+```cpp
+// main.cpp
+
+#include "PCOrCP.h"
+
+#pragma warning(disable: 26444)
+
+int PCOrCP::Argc = 0;
+wchar_t** PCOrCP::Argv = nullptr;
+wchar_t** PCOrCP::Envp = nullptr;
+
+PCOrCP::PCOrCP(int argc, wchar_t* argv[], wchar_t* envp[]) {
+    PCOrCP::Argc = argc;
+    PCOrCP::Argv = argv;
+    PCOrCP::Envp = envp;
+    PCOrCP::Init();
+}
+
+int wmain(int argc, wchar_t* argv[], wchar_t* envp[]) {
+    PCOrCP(argc, argv, envp);
+    return 0;
+}
+```
+
+In the code above, I made some formatting adjustments and removed unnecessary comments. The `PCOrCP` constructor receives the `argc`, `argv[]`, and `envp[]` parameters and initializes the corresponding static members.
+
+```cpp
+// PCOrCP.h
+
+#pragma once
+
+#include <iostream>
+
+class PCOrCP {
+public:
+    static int Argc;
+    static wchar_t** Argv;
+    static wchar_t** Envp;
+
+    static void Init() {
+        std::cout << "Init works perfectly" << std::endl;
+    }
+
+    PCOrCP(int argc, wchar_t* argv[], wchar_t* envp[]);
+    ~PCOrCP() {
+    }
+};
+```
+
+In the `PCOrCP.h` file, I included the necessary `iostream` library for the `std::cout` statement. I also corrected the message inside the `Init()` function to say "Init works perfectly."
+
+It's important to note that the provided code doesn't have any functional implementation beyond printing the message in the `Init()` function.
