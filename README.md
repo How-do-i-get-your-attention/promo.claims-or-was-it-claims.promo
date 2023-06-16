@@ -944,10 +944,6 @@ In this example, a `WORD` variable named `myWord` is declared and assigned a val
 
 It's important to note that the `WORD` type is platform-dependent and may have different sizes on different systems. On Windows, it is typically defined as an `unsigned short` (2 bytes) to ensure consistent behavior across different compilers and platforms.
 
-
-
-
-....
 ## ReportEvent -> WORD wType
 
 
