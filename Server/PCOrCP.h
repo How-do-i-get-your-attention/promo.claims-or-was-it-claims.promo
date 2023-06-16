@@ -1,16 +1,24 @@
 #pragma once
+#include <Windows.h>
+
 #include <iostream>
 class PCOrCP
 {
+private:
+	static void Services() {
+		SERVICE_TABLE_ENTRY serviceTable[] =
+		{
+			{ const_cast<LPWSTR>(SERVICE_NAME), ServiceMain },
+			{ NULL, NULL }
+		};
+	}
 public:
-	static int Argc;
 	static wchar_t** Argv;
 	static wchar_t** Envp; 
 	static void Init() {
-		std::cout << "Init works perfectly" << std::endl; 
-
+		Services();
 	};
-	PCOrCP(int argc, wchar_t* argv[], wchar_t* envp[]);
+	PCOrCP(wchar_t* argv[], wchar_t* envp[]);
 	~PCOrCP() {
 	
 	}
