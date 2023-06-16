@@ -545,7 +545,7 @@ In the `main.cpp` file, I removed the `int argc` parameter and updated the const
 
 With these changes, the `int argc` parameter is no longer needed, and you can directly pass `argv` and `envp` to the `PCOrCP` constructor. The program will execute the `Init()` function and print the "Init works perfectly" message.
 
-Sure! Here's the corrected version of your text:
+
 
 ```cpp
 #pragma once
