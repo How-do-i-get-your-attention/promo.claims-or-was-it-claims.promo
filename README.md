@@ -560,8 +560,6 @@ public:
 };
 ```
 
-In the updated text, I made the necessary formatting improvements and adjusted the placement of the comment. Additionally, I added a comment inside the `Services()` function to indicate that it is the place where your services implementation should be placed.
-
-The function `Services()` is declared as private, which means it can only be accessed within the `PCOrCP` class and is not accessible from other files or classes. This encapsulation ensures that the implementation details of the services are hidden from external code, promoting better code organization and security.
+In the updated text, I made the necessary formatting improvements and adjusted the placement of the comment. Additionally, I added a comment inside the `Init()` function to indicate that it is the place where your services implementation should be placed.
 
 Please let me know if there is anything else I can help you with!
