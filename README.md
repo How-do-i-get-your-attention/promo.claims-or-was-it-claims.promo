@@ -553,19 +553,10 @@ With these changes, the `int argc` parameter is no longer needed, and you can di
 class PCOrCP
 {
 private:
-	static void Services()
-	{
-		// Implementation of the services goes here
-	}
-
 public:
 	static wchar_t** Argv;
 	static wchar_t** Envp;
-
-	static void Init()
-	{
-		Services();
-	};
+	static void Init();
 };
 ```
 
