@@ -562,13 +562,94 @@ public:
 
 In the updated text, I made the necessary formatting improvements and adjusted the placement of the comment. Additionally, I added a comment inside the `Init()` function to indicate that it is the place where your services implementation should be placed.
 
-Please let me know if there is anything else I can help you with!
 
-# 20230620231757.0
+```md
+# Redirecting Functions in C++ with PCOrCP
 
-In the programming world, version numbers hold significant importance. I have chosen a versioning format for my programming, and it will consist of a year (4 digits), followed by a month (2 digits), and a day (2 digits). After that, there will be a timestamp indicating the hour (2 digits) and minutes (2 digits), separated by a dot. Finally, there will be a user or dev ID. For example, 20230620231757.0 represents the version number, where "0" refers to my ID.
+In C++, the `PCOrCP` namespace provides a mechanism for redirecting functions between the `Setup` and `Services` projects using the `Program` class. The `RunAs` enum is used to differentiate between the two modes of operation. By passing the `envp` and `argv` to the `Program` constructor, the appropriate functions can be executed based on the selected mode.
 
-Versioning numbers are crucial for tracking the progress and updates of software projects. They help in identifying different releases and iterations, ensuring proper management and organization. By following a structured approach to versioning, developers can efficiently communicate changes, fixes, and enhancements to the users or other developers.
+```cpp
+#pragma once
+#include <vector>
+#include <iostream>
 
-Integrating error-tracking mechanisms not only helps in addressing bugs but also contributes to continuous improvement. By analyzing the error reports associated with specific version numbers, developers can identify patterns, common issues, and areas that require further optimization. This data-driven approach assists in refining the software and delivering enhanced user experiences.
+namespace PCOrCP {
+    enum RunAs
+    {
+        Setup,
+        Services
+    };
 
+    class Program final
+    {
+    public:
+        static wchar_t** argv;
+        static wchar_t** envp;
+        static const RunAs RunAsValue;
+
+        void PrintValues(wchar_t** values)
+        {
+            for (int i = 0; values[i] != nullptr; ++i) {
+                std::wcout << values[i] << std::endl;
+            }
+        }
+
+        Program(wchar_t* envp[], wchar_t* argv[])
+        {
+            Program::envp = envp;
+            Program::argv = argv;
+
+            switch (RunAsValue){
+                case Setup:
+                {
+                    PrintValues(argv);
+                    PrintValues(envp);
+                }
+                break;
+                case Services:
+                {
+                    // Functionality for Services mode
+                }
+                break;
+            }
+            exit(0);
+        }
+    };
+
+    wchar_t** Program::argv = nullptr;
+    wchar_t** Program::envp = nullptr;
+}
+```
+
+The above code snippet defines the `PCOrCP` namespace, which encapsulates the functionality for redirecting functions. The `Program` class represents the entry point for the redirection logic. The `RunAs` enum specifies the available modes of operation: `Setup` and `Services`. Depending on the selected mode, the `PrintValues` function is called to output the values of `argv` and `envp`.
+
+To use the `PCOrCP` functionality, you can create two separate projects: `Setup` and `Services`. In the `Setup` project, include the following code in a file called `PCOrCP.cpp`:
+
+```cpp
+#include "../Program/PCOrCP.h"
+const PCOrCP::RunAs PCOrCP::Program::RunAsValue = PCOrCP::Setup;
+
+int wmain(int argc, wchar_t* argv[], wchar_t* envp[])
+{
+    PCOrCP::Program(envp, argv);
+    return 0;
+}
+```
+
+Similarly, in the `Services` project, include the following code in a file called `PCOrCP.cpp`:
+
+```cpp
+#include "../Program/PCOrCP.h"
+const PCOrCP::RunAs PCOrCP::Program::RunAsValue = PCOrCP::Services;
+
+int wmain(int argc, wchar_t* argv[], wchar_t* envp[])
+{
+    PCOrCP::Program(envp, argv);
+    return 0;
+}
+```
+
+By specifying the appropriate `RunAs` value and passing the `envp` and `argv` to the `Program` constructor, the functions in the corresponding mode will be executed.
+
+In conclusion, the `PCOrCP` mechanism provides a flexible way to redirect functions between different projects based on the desired mode of operation. However, it's important to note that the `Setup` project requires administrator privileges, while the `Services` project needs to be run with the local system account in Windows. Further enhancements can be made to extend the functionality and handle more complex scenarios.
+```
