@@ -623,7 +623,7 @@ namespace PCOrCP {
 
 The above code snippet defines the `PCOrCP` namespace, which encapsulates the functionality for redirecting functions. The `Program` class represents the entry point for the redirection logic. The `RunAs` enum specifies the available modes of operation: `Setup` and `Services`. Depending on the selected mode, the `PrintValues` function is called to output the values of `argv` and `envp`.
 
-To use the `PCOrCP` functionality, you can create two separate projects: `Setup` and `Services`. In the `Setup` project, include the following code in a file called `PCOrCP.cpp`:
+To use the `PCOrCP` functionality, I can create two separate projects: `Setup` and `Services`. In the `Setup` project, include the following code in a file called `PCOrCP.cpp`:
 
 ```cpp
 #include "../Program/PCOrCP.h"
