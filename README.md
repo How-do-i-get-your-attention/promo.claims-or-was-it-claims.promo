@@ -652,4 +652,4 @@ int wmain(int argc, wchar_t* argv[], wchar_t* envp[])
 By specifying the appropriate `RunAs` value and passing the `envp` and `argv` to the `Program` constructor, the functions in the corresponding mode will be executed.
 
 In conclusion, the `PCOrCP` mechanism provides a flexible way to redirect functions between different projects based on the desired mode of operation. However, it's important to note that the `Setup` project requires administrator privileges, while the `Services` project needs to be run with the local system account in Windows. Further enhancements can be made to extend the functionality and handle more complex scenarios.
-```
+
