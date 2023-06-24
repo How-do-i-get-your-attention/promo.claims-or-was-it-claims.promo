@@ -1,7 +1,7 @@
 #include "../Program/PCOrCP.h"
-const PCOrCP::RunAs PCOrCP::Program::RunAsValue = PCOrCP::Setup;
+#pragma warning(disable : 26444)
 int wmain(int argc, wchar_t* argv[], wchar_t* envp[])
 {
-    PCOrCP::Program(envp, argv);
+    PCOrCP::Program(envp, argv, PCOrCP::Setup);
     return 0;
 }

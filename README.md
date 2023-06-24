@@ -581,3 +581,35 @@ Please let me know if there is anything else I can help you with!
 The process of documentation needs to be correct for everyone, as understanding documentation enables effective communication and collaboration.
 
 The structure is also important for achieving perfect documentation.
+
+#Registered Default Function(RDF)
+
+## RegisterDefaultPointer 1.0
+The RegisterDefaultPointer function is updated to match my provided signature, taking std::string Name, Version Version, and std::string Description as parameters.
+Inside the function, I can perform any desired operations, such as adding the provided information to the documentation or performing further processing.
+
+## SetLibrary 1.0
+Function to set the pointer map.
+
+## GetPointer 1.0
+Function to retrieve a function from the pointer map.
+
+## AddPointer 1.0
+Function to add or update an entry in the pointer map.
+
+## ErasePointer 1.0
+Function to remove in the pointer map.
+
+#Pointer(P)
+
+## Setup 1.0
+Function to start Setup
+
+## Setup 1.1
+Function to start Background
+
+## Erase 1.0
+Function to Erase Background
+
+## Erase 1.1
+Function to Erase Setup
