@@ -575,3 +575,9 @@ In the updated text, I made the necessary formatting improvements and adjusted t
 The function `Services()` is declared as private, which means it can only be accessed within the `PCOrCP` class and is not accessible from other files or classes. This encapsulation ensures that the implementation details of the services are hidden from external code, promoting better code organization and security.
 
 Please let me know if there is anything else I can help you with!
+
+# Process of documentation
+
+The process of documentation needs to be correct for everyone, as understanding documentation enables effective communication and collaboration.
+
+The structure is also important for achieving perfect documentation.
