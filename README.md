@@ -614,9 +614,3 @@ Function to Erase Background
 ## Erase 1.1
 Function to Erase Setup
 
-Function to Erase Background
-Function to start Setup
-
-D:\How-do-i-get-your-attention\promo.claims-or-was-it-claims.promo\Program\x64\Setup.exe (process 2668) exited with code 0.
-To automatically close the console when debugging stops, enable Tools->Options->Debugging->Automatically close the console when debugging stops.
-Press any key to close this window . . .
