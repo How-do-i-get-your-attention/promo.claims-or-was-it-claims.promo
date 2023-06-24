@@ -606,11 +606,20 @@ Function to remove in the pointer map.
 Function to start Setup
 
 ## Setup 1.1
-Function to start Background
+Function to start Setup(Background)
 
 ## Erase 1.0
-Function to Erase Background
+Function to Erase Setup 1.1
 
 ## Erase 1.1
-Function to Erase Setup
+Function to Erase Setup 1.0
 
+@Documention its end next is console messegsas and test or result!
+
+
+
+Function to start Setup
+
+D:\How-do-i-get-your-attention\promo.claims-or-was-it-claims.promo\Program\x64\Setup.exe (process 9704) exited with code 0.
+To automatically close the console when debugging stops, enable Tools->Options->Debugging->Automatically close the console when debugging stops.
+Press any key to close this window . . .

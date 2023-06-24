@@ -51,11 +51,23 @@ namespace PCOrCP {
                 RegisterDefaultPointer("GetPointer", { 1, 0 }, "Function to retrieve a function from the pointer map.");
                 RegisterDefaultPointer("AddPointer", { 1, 0 }, "Function to add or update an entry in the pointer map.");
                 RegisterDefaultPointer("ErasePointer", { 1, 0 }, "Function to remove in the pointer map.");
-                AddPointer("Setup", { 1, 0 }, "Function to start Setup", []() {std::cout << "Function to start Setup" << std::endl;});
-                AddPointer("Setup", { 1, 1 }, "Function to start Background", []() {std::cout << "Function to start Background" << std::endl;});
-                AddPointer("Erase", { 1, 0 }, "Function to Erase Background", []() {std::cout << "Function to Erase Background" << std::endl; });
-                AddPointer("Erase", { 1, 1 }, "Function to Erase Setup", []() {std::cout << "Function to Erase Setup" << std::endl; });
 
+
+
+                AddPointer("Setup", { 1, 0 }, "Function to start Setup", []() {
+                    std::cout << "Function to start Setup" << std::endl;
+                    });
+                AddPointer("Setup", { 1, 1 }, "Function to start Setup(Background)", []() {
+                    std::cout << "Function to start Background" << std::endl;
+                    });
+                AddPointer("Erase", { 1, 0 }, "Function to Erase Setup 1.1", [this]() {
+                    this->ErasePointer("Setup", { 1, 1 });
+                });
+                AddPointer("Erase", { 1, 1 }, "Function to Erase Setup 1.0", [this]() {
+                    this->ErasePointer("Setup", { 1, 0 });
+                });
+
+               
                 break;
             }
         }
@@ -63,7 +75,6 @@ namespace PCOrCP {
         void RegisterDefaultPointer(std::string Name, Version Version, std::string Description) {
             if (this->RunAsValue != LibraryBySetup)
                 return;
-
             RegisterDefaultPointerText += "\n\n## " + Name + " " + std::to_string(Version.MAJOR) + "." + std::to_string(Version.ID) +  "\n" + Description;
         }
         void SetLibrary() {
@@ -85,7 +96,7 @@ namespace PCOrCP {
             this->PointerMap = program.PointerMap;
 
             if (this->RunAsValue == Setup) {
-                std::cout << program.RegisterDefaultPointerText << std::endl << std::endl << program.PointerText<< std::endl << std::endl;
+                std::cout << program.RegisterDefaultPointerText << std::endl << std::endl << program.PointerText << std::endl << std::endl << "@Documention its end next is console messegsas and test or result!" << std::endl << std::endl << std::endl << std::endl;
             }
         }
 
@@ -104,7 +115,7 @@ namespace PCOrCP {
             auto it = PointerMap.find(Name + " " + std::to_string(Version.MAJOR) + "." + std::to_string(Version.ID));
             if (it != PointerMap.end()) {
                 if (this->RunAsValue == LibraryBySetup)
-                    PointerText += "\n\n# Overwrite:";
+                    PointerText += "\n\n# Working on:";
             }
             if (this->RunAsValue == LibraryBySetup)
                 PointerText += "\n\n## " + Name + " " + std::to_string(Version.MAJOR) + "." + std::to_string(Version.ID)  + "\n" + Description;
