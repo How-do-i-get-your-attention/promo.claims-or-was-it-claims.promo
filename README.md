@@ -581,8 +581,8 @@ Please let me know if there is anything else I can help you with!
 The process of documentation needs to be correct for everyone, as understanding documentation enables effective communication and collaboration.
 
 The structure is also important for achieving perfect documentation.
-
-#Registered Default Function(RDF)
+<--Code-->
+# Registered Default Function(RDF)
 
 ## RegisterDefaultPointer 1.0
 The RegisterDefaultPointer function is updated to match my provided signature, taking std::string Name, Version Version, and std::string Description as parameters.
@@ -600,7 +600,7 @@ Function to add or update an entry in the pointer map.
 ## ErasePointer 1.0
 Function to remove in the pointer map.
 
-#Pointer(P)
+# Pointer(P)
 
 ## Setup 1.0
 Function to start Setup
@@ -613,3 +613,10 @@ Function to Erase Background
 
 ## Erase 1.1
 Function to Erase Setup
+
+Function to Erase Background
+Function to start Setup
+
+D:\How-do-i-get-your-attention\promo.claims-or-was-it-claims.promo\Program\x64\Setup.exe (process 2668) exited with code 0.
+To automatically close the console when debugging stops, enable Tools->Options->Debugging->Automatically close the console when debugging stops.
+Press any key to close this window . . .

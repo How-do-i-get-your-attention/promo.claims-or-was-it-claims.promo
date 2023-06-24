@@ -24,9 +24,9 @@ namespace PCOrCP {
     class Program {
 
     public:
-        std::string RegisterDefaultPointerText = "#Registered Default Function(RDF)";
+        std::string RegisterDefaultPointerText = "# Registered Default Function(RDF)";
         HMODULE LibraryPath;
-        std::string PointerText = "#Pointer(P)";
+        std::string PointerText = "# Pointer(P)";
         std::map<std::string, std::pair<Version, std::function<void()>>> PointerMap;
         wchar_t** Argv;
         wchar_t** Envp;
