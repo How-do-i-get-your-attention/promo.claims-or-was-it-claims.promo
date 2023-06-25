@@ -582,44 +582,36 @@ The process of documentation needs to be correct for everyone, as understanding 
 
 The structure is also important for achieving perfect documentation.
 <--Code-->
-# Registered Default Function(RDF)
+# Name: Documention
+## ID: 0
+## Description: Struct for Documention
 
-## RegisterDefaultPointer 1.0
-The RegisterDefaultPointer function is updated to match my provided signature, taking std::string Name, Version Version, and std::string Description as parameters.
-Inside the function, I can perform any desired operations, such as adding the provided information to the documentation or performing further processing.
+# Name: Documentations
+## ID: 1
+## Description: std::map<int, Documention> documentations
 
-## SetLibrary 1.0
-Function to set the pointer map.
+# Name: View
+## ID: 2
+## Description: View()
 
-## GetPointer 1.0
-Function to retrieve a function from the pointer map.
+# Name: Add
+## ID: 3
+## Description: Add(std::string name, std::string description, void (*run)())
 
-## AddPointer 1.0
-Function to add or update an entry in the pointer map.
+# Name: Init
+## ID: 4
+## Description: Init(wchar_t* envp[], wchar_t* argv[])
 
-## ErasePointer 1.0
-Function to remove in the pointer map.
+# Name: Setup
+## ID: 5
+## Description: Setup()
 
-# Pointer(P)
+# Name: Background
+## ID: 6
+## Description: Background()
 
-## Setup 1.0
-Function to start Setup
+# Name: Dispose
+## ID: 7
+## Description: Dispose()
 
-## Setup 1.1
-Function to start Setup(Background)
-
-## Erase 1.0
-Function to Erase Setup 1.1
-
-## Erase 1.1
-Function to Erase Setup 1.0
-
-@Documention its end next is console messegsas and test or result!
-
-
-
-Function to start Setup
-
-D:\How-do-i-get-your-attention\promo.claims-or-was-it-claims.promo\Program\x64\Setup.exe (process 9704) exited with code 0.
-To automatically close the console when debugging stops, enable Tools->Options->Debugging->Automatically close the console when debugging stops.
-Press any key to close this window . . .
+Enter ID to start:
