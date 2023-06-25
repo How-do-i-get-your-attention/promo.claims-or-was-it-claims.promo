@@ -582,36 +582,188 @@ The process of documentation needs to be correct for everyone, as understanding 
 
 The structure is also important for achieving perfect documentation.
 <--Code-->
-# Name: Documention
+# Name: Documentation
 ## ID: 0
-## Description: Struct for Documention
+## Description:
+Struct for Documentation
 
 # Name: Documentations
 ## ID: 1
-## Description: std::map<int, Documention> documentations
+## Description:
+std::map<int, Documentation> documentations
 
 # Name: View
 ## ID: 2
-## Description: View()
+## Description:
+View() - View all Documentations
 
 # Name: Add
 ## ID: 3
-## Description: Add(std::string name, std::string description, void (*run)())
+## Description:
+Add(std::string name, std::string description, void (*run)())
 
 # Name: Init
 ## ID: 4
-## Description: Init(wchar_t* envp[], wchar_t* argv[])
+## Description:
+Init(wchar_t* envp[], wchar_t* argv[])
 
 # Name: Setup
 ## ID: 5
-## Description: Setup()
+## Description:
+Setup()
 
 # Name: Background
 ## ID: 6
-## Description: Background()
+## Description:
+Background()
 
 # Name: Dispose
 ## ID: 7
-## Description: Dispose()
+## Description:
+Dispose()
+
+# Name: Envp
+## ID: 8
+## Description:
+Envp is wchar_t**
+
+# Name: Argv
+## ID: 9
+## Description:
+Argv is wchar_t**
+
+# Name: Environment
+## ID: 10
+## Description:
+Environment()
+This function printing all Envp
+
+# Name: Arguments
+## ID: 11
+## Description:
+Arguments()
+This function printing all Argv
+
+# Name: IsVisualStudio
+## ID: 12
+## Description:
+IsVisualStudio()
+Check if it's Visual Studio and return a bool.
+
+# Name: Exit
+## ID: 13
+## Description:
+Exit()
+An Exit for Setup.exe
+
+# Name: Install
+## ID: 14
+## Description:
+Install()
+An installer for Background.dll as a service in Windows.
+It includes an Exit function.
 
 Enter ID to start:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
