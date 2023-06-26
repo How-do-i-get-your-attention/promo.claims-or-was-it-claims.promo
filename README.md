@@ -581,8 +581,7 @@ Please let me know if there is anything else I can help you with!
 The process of documentation needs to be correct for everyone, as understanding documentation enables effective communication and collaboration.
 
 The structure is also important for achieving perfect documentation.
-<--Code-->
-# Documentation / ID: 0
+<--Code--># Documentation / ID: 0
 Struct for Documentation
 
 # Documentations / ID: 1
@@ -611,101 +610,58 @@ Automatic cleanup and removal of all gateway entries.
 Environment()
 This function printing all Envp
 
-# Arguments  / ID: 9
+# GetEnvironmentVariable / ID: 9
+std::wstring GetEnvironmentVariable(const wchar_t* variable)
+This function retrieves the value of the specified environment variable.
+
+# Arguments  / ID: 10
 Arguments()
 This function printing all Argv
 
-# IsVisualStudio / ID: 10
+# IsVisualStudio / ID: 11
 IsVisualStudio()
 Check if it's Visual Studio and return a bool.
 
-# Gateway / ID: 11
+# Gateway / ID: 12
 std::map<int, SOCKET> Gateway
 
-# CreateGateway / ID: 12
+# CreateGateway / ID: 13
 std::pair<int, SOCKET> CreateGateway(int addressFamily, int socketType, int protocol)
 
-# RemoveGateway / ID: 13
+# RemoveGateway / ID: 14
 void RemoveGateway(int key)
 
-# ComputerName / ID: 14
+# ComputerName / ID: 15
 std::string ComputerName()
 This function gets the computer name.
 It uses IsVisualStudio() to determine if it's Visual Studio and adds 'vs-' prefix if true.
 
-# Exit / ID: 15
+# PCOrCPFolderPath / ID: 16
+std::wstring PCOrCPFolderPath()
+This function retrieves the folder path for the PCOrCP folder.
+It uses GetEnvironmentVariable(L"HOMEDRIVE") and the computer name to construct the path.
+
+# PCOrCPFolderCreate / ID: 17
+bool PCOrCPFolderCreate()
+This function checks if the PCOrCP folder exists and creates it if it doesn't exist.
+Returns true if the folder is created or already exists, false if the creation fails.
+
+It uses PCOrCPFolderPath() to obtain the folder path.
+
+# ExecutablePath / ID: 18
+std::string ExecutablePath()
+This function retrieves the path by removing the executable name from the Argv[0] string.
+Returns the modified path as a std::string.
+
+# Exit / ID: 19
 Exit()
 An Exit for Setup.exe
 
-# Install / ID: 16
+# Install / ID: 20
 Install()
 An installer for Background.dll as a service in Windows.
+It includes an PCOrCPFolderCreate function
+nIt includes an BackgroundClone function
 It includes an Exit function.
 
 Enter ID to start:
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
