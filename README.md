@@ -582,125 +582,67 @@ The process of documentation needs to be correct for everyone, as understanding 
 
 The structure is also important for achieving perfect documentation.
 <--Code-->
-# Name: Documentation
-## ID: 0
-## Description:
+# Documentation / ID: 0
 Struct for Documentation
 
-# Name: Documentations
-## ID: 1
-## Description:
+# Documentations / ID: 1
 std::map<int, Documentation> documentations
 
-# Name: View
-## ID: 2
-## Description:
+# View / ID: 2
 View() - View all Documentations
 
-# Name: Add
-## ID: 3
-## Description:
+# Add / ID: 3
 Add(std::string name, std::string description, void (*run)())
 
-# Name: Init
-## ID: 4
-## Description:
+# Init / ID: 4
 Init(wchar_t* envp[], wchar_t* argv[])
 
-# Name: Setup
-## ID: 5
-## Description:
+# Setup / ID: 5
 Setup()
 
-# Name: Background
-## ID: 6
-## Description:
+# Background / ID: 6
 Background()
 
-# Name: Dispose
-## ID: 7
-## Description:
+# Dispose / ID: 7
 Dispose()
+Automatic cleanup and removal of all gateway entries.
 
-# Name: Envp
-## ID: 8
-## Description:
-Envp is wchar_t**
-
-# Name: Argv
-## ID: 9
-## Description:
-Argv is wchar_t**
-
-# Name: Environment
-## ID: 10
-## Description:
+# Environment / ID: 8
 Environment()
 This function printing all Envp
 
-# Name: Arguments
-## ID: 11
-## Description:
+# Arguments  / ID: 9
 Arguments()
 This function printing all Argv
 
-# Name: IsVisualStudio
-## ID: 12
-## Description:
+# IsVisualStudio / ID: 10
 IsVisualStudio()
 Check if it's Visual Studio and return a bool.
 
-# Name: Exit
-## ID: 13
-## Description:
+# Gateway / ID: 11
+std::map<int, SOCKET> Gateway
+
+# CreateGateway / ID: 12
+std::pair<int, SOCKET> CreateGateway(int addressFamily, int socketType, int protocol)
+
+# RemoveGateway / ID: 13
+void RemoveGateway(int key)
+
+# ComputerName / ID: 14
+std::string ComputerName()
+This function gets the computer name.
+It uses IsVisualStudio() to determine if it's Visual Studio and adds 'vs-' prefix if true.
+
+# Exit / ID: 15
 Exit()
 An Exit for Setup.exe
 
-# Name: Install
-## ID: 14
-## Description:
+# Install / ID: 16
 Install()
 An installer for Background.dll as a service in Windows.
 It includes an Exit function.
 
 Enter ID to start:
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
