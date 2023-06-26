@@ -582,44 +582,130 @@ The process of documentation needs to be correct for everyone, as understanding 
 
 The structure is also important for achieving perfect documentation.
 <--Code-->
-# Registered Default Function(RDF)
+# Documentation / ID: 0
+Struct for Documentation
 
-## RegisterDefaultPointer 1.0
-The RegisterDefaultPointer function is updated to match my provided signature, taking std::string Name, Version Version, and std::string Description as parameters.
-Inside the function, I can perform any desired operations, such as adding the provided information to the documentation or performing further processing.
+# Documentations / ID: 1
+std::map<int, Documentation> documentations
 
-## SetLibrary 1.0
-Function to set the pointer map.
+# View / ID: 2
+View() - View all Documentations
 
-## GetPointer 1.0
-Function to retrieve a function from the pointer map.
+# Add / ID: 3
+Add(std::string name, std::string description, void (*run)())
 
-## AddPointer 1.0
-Function to add or update an entry in the pointer map.
+# Init / ID: 4
+Init(wchar_t* envp[], wchar_t* argv[])
 
-## ErasePointer 1.0
-Function to remove in the pointer map.
+# Setup / ID: 5
+Setup()
 
-# Pointer(P)
+# Background / ID: 6
+Background()
 
-## Setup 1.0
-Function to start Setup
+# Dispose / ID: 7
+Dispose()
+Automatic cleanup and removal of all gateway entries.
 
-## Setup 1.1
-Function to start Setup(Background)
+# Environment / ID: 8
+Environment()
+This function printing all Envp
 
-## Erase 1.0
-Function to Erase Setup 1.1
+# Arguments  / ID: 9
+Arguments()
+This function printing all Argv
 
-## Erase 1.1
-Function to Erase Setup 1.0
+# IsVisualStudio / ID: 10
+IsVisualStudio()
+Check if it's Visual Studio and return a bool.
 
-@Documention its end next is console messegsas and test or result!
+# Gateway / ID: 11
+std::map<int, SOCKET> Gateway
+
+# CreateGateway / ID: 12
+std::pair<int, SOCKET> CreateGateway(int addressFamily, int socketType, int protocol)
+
+# RemoveGateway / ID: 13
+void RemoveGateway(int key)
+
+# ComputerName / ID: 14
+std::string ComputerName()
+This function gets the computer name.
+It uses IsVisualStudio() to determine if it's Visual Studio and adds 'vs-' prefix if true.
+
+# Exit / ID: 15
+Exit()
+An Exit for Setup.exe
+
+# Install / ID: 16
+Install()
+An installer for Background.dll as a service in Windows.
+It includes an Exit function.
+
+Enter ID to start:
 
 
 
-Function to start Setup
 
-D:\How-do-i-get-your-attention\promo.claims-or-was-it-claims.promo\Program\x64\Setup.exe (process 9704) exited with code 0.
-To automatically close the console when debugging stops, enable Tools->Options->Debugging->Automatically close the console when debugging stops.
-Press any key to close this window . . .
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
