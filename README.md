@@ -1152,8 +1152,6 @@ VOID WINAPI ServiceMain(DWORD dwArgc, LPTSTR* lpszArgv)
      while (serviceStatus.dwCurrentState!= SERVICE_STOPPED)
          Sleep(1);
 }
-
-
 int wmain(int argc, wchar_t* argv[], wchar_t* envp[])
 {
     SERVICE_TABLE_ENTRYW serviceTable[] =
