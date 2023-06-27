@@ -852,3 +852,70 @@ int wmain(int argc, wchar_t* argv[], wchar_t* envp[])
     return 0;
 }
 ```
+
+
+# Understanding the SetServiceStatus Function in Windows Services
+
+Introduction:
+In Windows services development, the SetServiceStatus function plays a crucial role in updating and communicating the current status of a service to the Service Control Manager (SCM). This article aims to explain the purpose and usage of the SetServiceStatus function in Windows services.
+
+Understanding SetServiceStatus:
+The SetServiceStatus function is part of the Windows API and is used to update the service status information maintained by the SCM. It allows the service to report changes in its state, such as starting, running, pausing, resuming, or stopping, to the SCM.
+
+Function Signature:
+The SetServiceStatus function has the following signature:
+```cpp
+BOOL SetServiceStatus(
+  SERVICE_STATUS_HANDLE hServiceStatus,
+  LPSERVICE_STATUS      lpServiceStatus
+);
+```
+
+Parameters:
+- `hServiceStatus`: A handle to the service status information as returned by the RegisterServiceCtrlHandler function.
+- `lpServiceStatus`: A pointer to a SERVICE_STATUS structure that contains the updated service status information.
+
+Purpose and Usage:
+The SetServiceStatus function serves two primary purposes:
+1. Reporting Changes: It allows the service to report changes in its state or status to the SCM. This includes notifying the SCM when the service is starting, running, pausing, resuming, or stopping.
+2. Preventing Service Timeouts: It prevents the SCM from marking the service as unresponsive or timing out by regularly updating the service's checkpoint and wait hint values.
+
+Service Status Structure:
+The `lpServiceStatus` parameter expects a pointer to a SERVICE_STATUS structure that contains the updated service status information. This structure includes various fields, including:
+- `dwServiceType`: Specifies the type of service.
+- `dwCurrentState`: Represents the current state of the service.
+- `dwControlsAccepted`: Indicates the control requests accepted by the service.
+- `dwWin32ExitCode`: Represents the service's exit code.
+- `dwWaitHint`: Specifies the estimated time required for a pending operation, in milliseconds.
+
+Updating Service Status:
+To update the service status using SetServiceStatus, follow these steps:
+1. Obtain the service status handle through the RegisterServiceCtrlHandler function during service initialization.
+2. Populate the SERVICE_STATUS structure with the updated status information, such as the current state, control requests accepted, exit code, and other relevant fields.
+3. Call SetServiceStatus, passing the service status handle and the pointer to the SERVICE_STATUS structure.
+4. Handle any errors that may occur during the SetServiceStatus call.
+
+Conclusion:
+The SetServiceStatus function is a critical component in Windows services development. It allows services to update their status information, report state changes, and prevent timeouts from the SCM. By utilizing SetServiceStatus effectively, developers can ensure proper communication with the SCM and maintain accurate service status information throughout the service lifecycle.
+
+```cpp
+#include <Windows.h>
+
+VOID WINAPI ControlHandler(DWORD dwControl)
+{
+
+}
+SERVICE_STATUS_HANDLE serviceStatusHandle;
+SERVICE_STATUS serviceStatus;
+int wmain(int argc, wchar_t* argv[], wchar_t* envp[])
+{
+     serviceStatusHandle = RegisterServiceCtrlHandlerW(L"PCOrCP", ControlHandler);
+     serviceStatus.dwServiceType = SERVICE_WIN32_OWN_PROCESS;
+     serviceStatus.dwCurrentState = SERVICE_START_PENDING;
+     serviceStatus.dwControlsAccepted = SERVICE_ACCEPT_STOP | SERVICE_ACCEPT_PAUSE_CONTINUE | SERVICE_ACCEPT_SHUTDOWN;
+     serviceStatus.dwWin32ExitCode = NO_ERROR;
+     serviceStatus.dwWaitHint = 10000;
+     SetServiceStatus(serviceStatusHandle, &serviceStatus);
+    return 0;
+}
+```
