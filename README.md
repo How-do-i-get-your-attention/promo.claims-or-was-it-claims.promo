@@ -1400,8 +1400,10 @@ The `sockaddr_in` structure plays a crucial role in Windows socket programming b
 #include <Windows.h>
 //Socket
 #include <WS2tcpip.h>
+#include <thread>
+#include "main.h"
 WSADATA wsaData;
-SOCKET IPv4UDPSocket, IPv4TCPSocket, IPv6UDPSocket, IPv6TCPSocket;
+SOCKET IPv4UDPSocket4096, IPv4TCPSocket4096, IPv6UDPSocket4096, IPv6TCPSocket4096;
 sockaddr_in IPv4in53, IPv6in53;
 //Windows Services
 SERVICE_STATUS_HANDLE serviceStatusHandle;
@@ -1439,6 +1441,10 @@ VOID WINAPI ControlHandler(DWORD dwControl)
         break;
     }
 }
+void SocketReceive()
+{
+
+}
 void SetServiceState(DWORD Value) {
     if (serviceStatus.dwCurrentState == Value) return;
     serviceStatus.dwCurrentState = Value;
@@ -1467,8 +1473,10 @@ VOID WINAPI ServiceMain(DWORD dwArgc, LPTSTR* lpszArgv)
      bind(IPv4TCPSocket, (struct sockaddr*)&IPv4in53, sizeof(IPv4in53));
      bind(IPv6UDPSocket, (struct sockaddr*)&IPv6in53, sizeof(IPv6in53));
      bind(IPv6TCPSocket, (struct sockaddr*)&IPv6in53, sizeof(IPv6in53));
-     while (serviceStatus.dwCurrentState!= SERVICE_STOPPED)
-         Sleep(1);
+     while (serviceStatus.dwCurrentState != SERVICE_STOPPED) {
+         std::thread SocketReceiveThread(SocketReceive);
+         SocketReceiveThread.detach();
+     }
 }
 int wmain(int argc, wchar_t* argv[], wchar_t* envp[])
 {
