@@ -426,5 +426,3 @@ However, using the "/MT" option also has some considerations. Each application t
 Additionally, because the runtime library is statically linked, it may not receive updates or bug fixes provided by the compiler or the operating system. If a vulnerability or issue is discovered in the runtime library, the application will need to be recompiled and redeployed with an updated version of the runtime library to address it.
 
 The alternative to the "/MT" option is the "Multi-threaded DLL (/MD)" option, which links the code with a dynamic version of the runtime library. This means that the application relies on separate DLL files for the runtime library, which can be shared among multiple applications. The advantage of this approach is smaller executable file sizes and reduced memory usage, but it requires the presence of the appropriate runtime library DLLs on the target system.
-
-The choice between "/MT" and "/MD" depends on factors such as deployment considerations, performance requirements, and the need for updates to the runtime library. It's important to carefully evaluate the trade-offs and choose the appropriate option for your specific project.
