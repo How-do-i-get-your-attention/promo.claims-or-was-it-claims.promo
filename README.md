@@ -1007,3 +1007,53 @@ Here's what happens after the `SetServiceStatus` call:
 
 By calling `SetServiceStatus` with the updated service status information, the service establishes communication with the SCM, ensures proper handling of control requests, and keeps the SCM informed about the service's progress and responsiveness.
 
+# ControlHandler(DWORD dwControl)
+```cpp
+VOID WINAPI ControlHandler(DWORD dwControl)
+{
+    switch (dwControl)
+    {
+        case SERVICE_CONTROL_STOP:
+            // Handle stop request
+            break;
+
+        case SERVICE_CONTROL_PAUSE:
+            // Handle pause request
+            break;
+
+        case SERVICE_CONTROL_CONTINUE:
+            // Handle continue request
+            break;
+
+        case SERVICE_CONTROL_INTERROGATE:
+            // Handle interrogate request
+            break;
+
+        case SERVICE_CONTROL_SHUTDOWN:
+            // Handle system shutdown notification
+            break;
+
+        // Add cases for any additional control events you want to handle
+
+        default:
+            // Handle unrecognized control code
+            break;
+    }
+}
+```
+
+The `dwControl` parameter in the `ControlHandler` function represents the control code that indicates the type of control event received by the service control handler. This parameter is of type `DWORD`, which is a 32-bit unsigned integer.
+
+The value of `dwControl` can vary depending on the control event that is being triggered. The possible values include, but are not limited to:
+
+- `SERVICE_CONTROL_STOP` (0x00000001): Indicates a stop request for the service.
+- `SERVICE_CONTROL_PAUSE` (0x00000002): Indicates a pause request for the service.
+- `SERVICE_CONTROL_CONTINUE` (0x00000003): Indicates a continue request for the service.
+- `SERVICE_CONTROL_INTERROGATE` (0x00000004): Indicates an interrogate request for the service, where the service should report its current status.
+- `SERVICE_CONTROL_SHUTDOWN` (0x00000005): Indicates a system shutdown notification, which is typically sent to services prior to the system shutting down.
+
+These control codes are defined in the `WinSvc.h` header file.
+
+Inside the `ControlHandler` function, you can use a `switch` statement or `if-else` conditions to handle different control events based on the value of `dwControl`. You can define custom behavior for each control event, such as stopping or pausing the service, or performing any other necessary actions specific to your service.
+
+It's important to handle control events appropriately and respond accordingly to maintain proper functionality and compliance with the Windows service model.
