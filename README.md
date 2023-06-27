@@ -572,8 +572,7 @@ VOID WINAPI ControlHandler(DWORD dwControl)
     // ...
 }
 
-// Entry point of the service
-int wmain(int argc, wchar_t* argv[], wchar_t* envp[])
+VOID WINAPI ServiceMain(DWORD dwArgc, LPTSTR* lpszArgv)
 {
     // Register the service control handler
     SERVICE_STATUS_HANDLE serviceStatusHandle = RegisterServiceCtrlHandlerW(L"PCOrCP", ControlHandler);
@@ -591,7 +590,6 @@ int wmain(int argc, wchar_t* argv[], wchar_t* envp[])
 
     // Perform cleanup and shutdown when needed
 
-    return 0;
 }
 ```
 
@@ -728,8 +726,6 @@ VOID WINAPI ServiceMain(DWORD dwArgc, LPTSTR* lpszArgv)
 
     // Start the service main loop
     // ...
-
-    return 0;
 }
 ```
 
@@ -919,7 +915,6 @@ VOID WINAPI ServiceMain(DWORD dwArgc, LPTSTR* lpszArgv)
      serviceStatus.dwControlsAccepted = SERVICE_ACCEPT_STOP | SERVICE_ACCEPT_PAUSE_CONTINUE | SERVICE_ACCEPT_SHUTDOWN;
      serviceStatus.dwWin32ExitCode = NO_ERROR;
      serviceStatus.dwWaitHint = 10000;
-    return 0;
 }
 ```
 
