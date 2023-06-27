@@ -636,7 +636,7 @@ VOID WINAPI ControlHandler(DWORD dwControl)
 }
 
 // Entry point of the service
-int wmain(int argc, wchar_t* argv[], wchar_t* envp[])
+VOID WINAPI ServiceMain(DWORD dwArgc, LPTSTR* lpszArgv)
 {
     serviceStatusHandle = RegisterServiceCtrlHandlerW(L"MyService", ControlHandler);
 
