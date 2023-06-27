@@ -1057,3 +1057,50 @@ These control codes are defined in the `WinSvc.h` header file.
 Inside the `ControlHandler` function, you can use a `switch` statement or `if-else` conditions to handle different control events based on the value of `dwControl`. You can define custom behavior for each control event, such as stopping or pausing the service, or performing any other necessary actions specific to your service.
 
 It's important to handle control events appropriately and respond accordingly to maintain proper functionality and compliance with the Windows service model.
+
+# Wait
+
+If your intention is to start the service in the `SERVICE_RUNNING` state directly without going through the `SERVICE_START_PENDING` state, then you can indeed set the `dwCurrentState` to `SERVICE_RUNNING` directly inside the `ServiceMain` function. By doing so, you skip the intermediate state and indicate to the SCM that your service is already running.
+
+Here's an updated version of your code snippet:
+
+```cpp
+VOID WINAPI ServiceMain(DWORD dwArgc, LPTSTR* lpszArgv)
+{
+    // Register the service control handler
+    serviceStatusHandle = RegisterServiceCtrlHandlerW(L"PCOrCP", ControlHandler);
+
+    if (serviceStatusHandle == NULL)
+    {
+        // Failed to register the service control handler
+        // Handle the error accordingly
+        return;
+    }
+
+    // Set the service status
+    serviceStatus.dwServiceType = SERVICE_WIN32_OWN_PROCESS;
+    serviceStatus.dwCurrentState = SERVICE_RUNNING;
+    serviceStatus.dwControlsAccepted = SERVICE_ACCEPT_STOP | SERVICE_ACCEPT_PAUSE_CONTINUE | SERVICE_ACCEPT_SHUTDOWN;
+    serviceStatus.dwWin32ExitCode = NO_ERROR;
+    serviceStatus.dwWaitHint = 10000;
+
+    // Notify the SCM about the service status
+    if (!SetServiceStatus(serviceStatusHandle, &serviceStatus))
+    {
+        // Failed to set the service status
+        // Handle the error accordingly
+        return;
+    }
+
+    // Continue with your service main logic
+    // ...
+
+    // Perform cleanup and shutdown when needed
+    // ...
+}
+```
+
+By setting the `dwCurrentState` to `SERVICE_RUNNING` and calling `SetServiceStatus` with the updated service status, you inform the SCM that your service is already running. This allows you to bypass the `SERVICE_START_PENDING` state if it's not required for your specific scenario.
+
+Remember to handle any potential errors that may occur during the registration and setting of the service status to ensure proper functionality of your service.
+
