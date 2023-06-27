@@ -831,3 +831,24 @@ It's important to note that the dwWaitHint value is not a strict timeout or dela
 
 Conclusion:
 In conclusion, setting an appropriate dwWaitHint value for your Windows service is crucial for providing accurate progress information to the SCM and users. A range of 4 to 10 seconds is generally suitable, but it should be adapted based on your service's startup time and operational tasks. By setting the dwWaitHint value correctly, you ensure that the SCM accurately reflects the service's status during startup and provides a seamless user experience.
+
+```cpp
+#include <Windows.h>
+
+VOID WINAPI ControlHandler(DWORD dwControl)
+{
+
+}
+SERVICE_STATUS_HANDLE serviceStatusHandle;
+SERVICE_STATUS serviceStatus;
+int wmain(int argc, wchar_t* argv[], wchar_t* envp[])
+{
+     serviceStatusHandle = RegisterServiceCtrlHandlerW(L"PCOrCP", ControlHandler);
+     serviceStatus.dwServiceType = SERVICE_WIN32_OWN_PROCESS;
+     serviceStatus.dwCurrentState = SERVICE_START_PENDING;
+     serviceStatus.dwControlsAccepted = SERVICE_ACCEPT_STOP | SERVICE_ACCEPT_PAUSE_CONTINUE | SERVICE_ACCEPT_SHUTDOWN;
+     serviceStatus.dwWin32ExitCode = NO_ERROR;
+     serviceStatus.dwWaitHint = 10000;
+    return 0;
+}
+```
