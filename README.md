@@ -416,7 +416,7 @@ Having the right tools is essential for developers. I personally use Visual Stud
 
 In today's interconnected world, leveraging the power of the internet is crucial. If possible, running everything on the internet can offer numerous advantages. Microsoft has recognized this trend and has started developing server solutions that are lightweight and GUI-free. For testing purposes, I can install the Windows Server 2022 Standard Evaluation version. To simplify the installation process, I can utilize PowerShell or create a shortcut function for installing on Windows Server Services.
 
-Here's the corrected version of the article:
+
 
 # PowerShell (15)
 
@@ -424,16 +424,31 @@ PowerShell is a powerful command-line shell and scripting language built on top 
 
 Compared to traditional command-line interfaces, PowerShell provides a more robust and feature-rich experience. It grants access to various .NET classes and APIs, enabling users to leverage the capabilities of the .NET Framework or .NET Core within their PowerShell scripts.
 
-Using PowerShell, users can execute commands, write scripts, and create functions to automate complex tasks, manage system configurations, perform administrative duties, interact with external systems, and more. PowerShell provides a comprehensive set of cmdlets (commands) that encapsulate specific functionalities, simplifying common tasks without the need to write complex code from scratch.
+With PowerShell, we can execute commands, write scripts, and create functions to automate complex tasks, manage system configurations, perform administrative duties, interact with external systems, and more. PowerShell offers a comprehensive set of cmdlets (commands) that encapsulate specific functionalities, simplifying common tasks without the need for writing complex code from scratch.
 
 In summary, PowerShell extends the capabilities of traditional command-line interfaces by providing a scripting language and access to the .NET Framework or .NET Core. It empowers users to automate tasks and perform administrative duties more efficiently.
 
-However, it's important to note that PowerShell can also pose a potential security risk. To enhance security, it is recommended to disable PowerShell after configuring the necessary services.
+However, it's important to note that PowerShell can also be a potential gateway for hackers. To enhance security, it's recommended to disable PowerShell after configuring the necessary services.
 
-To disable PowerShell, execute the following command: Set-ExecutionPolicy -ExecutionPolicy Restricted -Scope LocalMachine
-
-Alternatively, i can create a file named "Restricted-PowerShell.ps1" with the following content:
-```
+To disable PowerShell, you can execute the following command:
+```powershell
 Set-ExecutionPolicy -ExecutionPolicy Restricted -Scope LocalMachine
 ```
 
+Alternatively, wee can create a file called `Disable-PSRemoting.ps1` with the following content:
+```powershell
+Disable-PSRemoting
+Set-ExecutionPolicy -ExecutionPolicy Restricted -Scope LocalMachine
+```
+
+To enable PowerShell remoting on the server, use the following command:
+```powershell
+Enable-PSRemoting
+```
+
+To disable PowerShell, use the following command:
+```powershell
+Disable-PSRemoting
+```
+
+These commands allow us to enable or disable PowerShell remoting functionality on the local machine. Enabling PowerShell remoting enables us to execute commands on remote machines, while disabling it restricts remote access.
