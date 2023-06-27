@@ -1432,16 +1432,20 @@ VOID WINAPI ControlHandler(DWORD dwControl)
     case SERVICE_CONTROL_SHUTDOWN:
         // Handle system shutdown notification
         // Perform necessary cleanup before the system shuts down
-        closesocket(IPv4UDPSocket);
-        closesocket(IPv4TCPSocket);
-        closesocket(IPv6UDPSocket);
-        closesocket(IPv6TCPSocket);
+        closesocket(IPv4UDPSocket4096);
+        closesocket(IPv4TCPSocket4096);
+        closesocket(IPv6UDPSocket4096);
+        closesocket(IPv6TCPSocket4096);
         WSACleanup();
         SetServiceState(SERVICE_STOPPED);
         break;
     }
 }
-void SocketReceive()
+void TCPSocketReceive4096()
+{
+
+}
+void UCPSocketReceive4096()
 {
 
 }
@@ -1459,23 +1463,25 @@ VOID WINAPI ServiceMain(DWORD dwArgc, LPTSTR* lpszArgv)
      serviceStatus.dwWaitHint = 0;
      SetServiceState(SERVICE_RUNNING);
      WSAStartup(MAKEWORD(2, 2), &wsaData);
-     IPv4UDPSocket = socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP);
-     IPv4TCPSocket = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
-     IPv6UDPSocket = socket(AF_INET6, SOCK_DGRAM, IPPROTO_UDP);
-     IPv6TCPSocket = socket(AF_INET6, SOCK_STREAM, IPPROTO_TCP);
+     IPv4UDPSocket4096 = socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP);
+     IPv4TCPSocket4096 = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
+     IPv6UDPSocket4096 = socket(AF_INET6, SOCK_DGRAM, IPPROTO_UDP);
+     IPv6TCPSocket4096 = socket(AF_INET6, SOCK_STREAM, IPPROTO_TCP);
      IPv4in53.sin_family = AF_INET;
      IPv4in53.sin_addr.s_addr = INADDR_ANY;
      IPv4in53.sin_port = htons(53);
      IPv6in53.sin_family = AF_INET6;
      IPv6in53.sin_addr.s_addr = INADDR_ANY;
      IPv6in53.sin_port = htons(53);
-     bind(IPv4UDPSocket, (struct sockaddr*)&IPv4in53, sizeof(IPv4in53));
-     bind(IPv4TCPSocket, (struct sockaddr*)&IPv4in53, sizeof(IPv4in53));
-     bind(IPv6UDPSocket, (struct sockaddr*)&IPv6in53, sizeof(IPv6in53));
-     bind(IPv6TCPSocket, (struct sockaddr*)&IPv6in53, sizeof(IPv6in53));
+     bind(IPv4UDPSocket4096, (struct sockaddr*)&IPv4in53, sizeof(IPv4in53));
+     bind(IPv4TCPSocket4096, (struct sockaddr*)&IPv4in53, sizeof(IPv4in53));
+     bind(IPv6UDPSocket4096, (struct sockaddr*)&IPv6in53, sizeof(IPv6in53));
+     bind(IPv6TCPSocket4096, (struct sockaddr*)&IPv6in53, sizeof(IPv6in53));
      while (serviceStatus.dwCurrentState != SERVICE_STOPPED) {
-         std::thread SocketReceiveThread(SocketReceive);
-         SocketReceiveThread.detach();
+         std::thread TCPSocketReceive4096Thread(TCPSocketReceive4096);
+         std::thread UCPSocketReceive4096Thread(UCPSocketReceive4096);
+         TCPSocketReceive4096Thread.detach();
+         UCPSocketReceive4096Thread.detach();
      }
 }
 int wmain(int argc, wchar_t* argv[], wchar_t* envp[])
