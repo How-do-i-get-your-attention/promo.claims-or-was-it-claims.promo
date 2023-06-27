@@ -408,3 +408,11 @@ It's important to note that maintaining a secure server environment involves mor
 Ultimately, the choice of an antivirus program will depend on specific requirements, budget, and the level of protection you seek. It's recommended to research and evaluate different antivirus solutions to determine which one best suits your needs and provides adequate protection for the server environment.
 
 By reading this section, we can agree that Ubuntu is an open-source operating system, which may be more accessible to hackers. On the other hand, Microsoft's Windows Server provides robust security measures, although it may require more effort to configure and manage. Therefore, the choice of my server will always be Windows.
+
+
+# Developer Environment
+
+Having the right tools is essential for developers. I personally use Visual Studio as it meets all my requirements, and I can customize it to fit my needs. 
+
+In today's interconnected world, leveraging the power of the internet is crucial. If possible, running everything on the internet can offer numerous advantages. Microsoft has recognized this trend and has started developing server solutions that are lightweight and GUI-free. For testing purposes, I can install the Windows Server 2022 Standard Evaluation version. To simplify the installation process, I can utilize PowerShell or create a shortcut function for installing on Windows Server Services.
+
