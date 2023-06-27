@@ -464,6 +464,30 @@ When working with LPWSTR strings, you can use various string manipulation functi
 Conclusion:
 The LPWSTR data type plays a significant role in Windows programming, particularly when dealing with Unicode strings. It provides a convenient way to handle and manipulate wide character strings, enabling support for internationalization and multilingual applications.
 
+# Understanding VOID WINAPI in Windows Programming
+
+VOID WINAPI is a function declaration specifier used in Windows programming. It is a combination of two keywords: VOID and WINAPI.
+
+1. VOID: VOID is a data type in C and C++ that indicates the absence of a value. When used as a return type, it means that the function does not return any value. In other words, it is a void or empty return type.
+
+2. WINAPI: WINAPI is a calling convention used in Windows API (Application Programming Interface) functions. It specifies how functions should be called, how parameters are passed, and how the stack is cleaned up after the function call. WINAPI is defined as a macro that expands to the appropriate calling convention based on the compiler and platform.
+
+When used together, VOID WINAPI signifies a function that does not return a value and follows the WINAPI calling convention. The WINAPI calling convention typically uses the stdcall calling convention, which specifies that function arguments are pushed onto the stack in reverse order and the called function is responsible for cleaning up the stack.
+
+Here's an example of a function declaration using VOID WINAPI:
+
+```cpp
+VOID WINAPI MyFunction()
+{
+    // Function body
+    // ...
+}
+```
+
+In this example, MyFunction is a function that does not return a value (VOID) and follows the WINAPI calling convention. It is commonly used in Windows programming, especially when working with Windows API functions or defining callback functions for Windows services.
+
+It's important to note that VOID WINAPI is specific to Windows programming and may not be portable to other platforms or compilers. It is primarily used for compatibility with the Windows operating system and its APIs.
+
 
 # Understanding the SERVICE_STATUS_HANDLE in Windows Service Programming
 
@@ -942,26 +966,3 @@ Here's what happens after the `SetServiceStatus` call:
 
 By calling `SetServiceStatus` with the updated service status information, the service establishes communication with the SCM, ensures proper handling of control requests, and keeps the SCM informed about the service's progress and responsiveness.
 
-# Understanding VOID WINAPI in Windows Programming
-
-VOID WINAPI is a function declaration specifier used in Windows programming. It is a combination of two keywords: VOID and WINAPI.
-
-1. VOID: VOID is a data type in C and C++ that indicates the absence of a value. When used as a return type, it means that the function does not return any value. In other words, it is a void or empty return type.
-
-2. WINAPI: WINAPI is a calling convention used in Windows API (Application Programming Interface) functions. It specifies how functions should be called, how parameters are passed, and how the stack is cleaned up after the function call. WINAPI is defined as a macro that expands to the appropriate calling convention based on the compiler and platform.
-
-When used together, VOID WINAPI signifies a function that does not return a value and follows the WINAPI calling convention. The WINAPI calling convention typically uses the stdcall calling convention, which specifies that function arguments are pushed onto the stack in reverse order and the called function is responsible for cleaning up the stack.
-
-Here's an example of a function declaration using VOID WINAPI:
-
-```cpp
-VOID WINAPI MyFunction()
-{
-    // Function body
-    // ...
-}
-```
-
-In this example, MyFunction is a function that does not return a value (VOID) and follows the WINAPI calling convention. It is commonly used in Windows programming, especially when working with Windows API functions or defining callback functions for Windows services.
-
-It's important to note that VOID WINAPI is specific to Windows programming and may not be portable to other platforms or compilers. It is primarily used for compatibility with the Windows operating system and its APIs.
