@@ -1151,5 +1151,10 @@ sc create <ServiceName> binPath= "<PathToExecutable>"
 
 ```
 ```cmd
-sc start <ServiceName>
+sc config <ServiceName> start=auto
+```
+If needed
+```cmd
+sc stop <ServiceName>
+sc delete <ServiceName>
 ```
