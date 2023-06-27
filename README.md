@@ -1395,7 +1395,92 @@ Remember to include the appropriate header files (`<winsock2.h>`) and initialize
 Conclusion:
 The `sockaddr_in` structure plays a crucial role in Windows socket programming by representing an IPv4 socket address. Understanding its components and usage is essential for developing network applications on the Windows platform. By leveraging the `sockaddr_in` structure and related Winsock functions, you can create robust and reliable network applications in Windows.
 
+```c++
+//Windows
+#include <Windows.h>
+//Socket
+#include <WS2tcpip.h>
+WSADATA wsaData;
+SOCKET IPv4UDPSocket, IPv4TCPSocket, IPv6UDPSocket, IPv6TCPSocket;
+sockaddr_in IPv4in53, IPv6in53;
+//Windows Services
+SERVICE_STATUS_HANDLE serviceStatusHandle;
+SERVICE_STATUS serviceStatus;
+VOID WINAPI ControlHandler(DWORD dwControl)
+{
+    switch (dwControl)
+    {
+    case SERVICE_CONTROL_STOP:
+        // Handle stop request
+        // Stop any running processes or threads
+        // Cleanup and terminate the service
+        SetServiceState(SERVICE_STOPPED);
+        break;
 
+    case SERVICE_CONTROL_PAUSE:
+        // Handle pause request
+        // Pause ongoing operations
+        SetServiceState(SERVICE_PAUSED);
+        break;
+    case SERVICE_CONTROL_CONTINUE:
+        // Handle continue request
+        // Resume paused operations
+        SetServiceState(SERVICE_RUNNING);
+        break;
+    case SERVICE_CONTROL_SHUTDOWN:
+        // Handle system shutdown notification
+        // Perform necessary cleanup before the system shuts down
+        closesocket(IPv4UDPSocket);
+        closesocket(IPv4TCPSocket);
+        closesocket(IPv6UDPSocket);
+        closesocket(IPv6TCPSocket);
+        WSACleanup();
+        SetServiceState(SERVICE_STOPPED);
+        break;
+    }
+}
+void SetServiceState(DWORD Value) {
+    if (serviceStatus.dwCurrentState == Value) return;
+    serviceStatus.dwCurrentState = Value;
+    SetServiceStatus(serviceStatusHandle, &serviceStatus);
+}
+VOID WINAPI ServiceMain(DWORD dwArgc, LPTSTR* lpszArgv)
+{
+     serviceStatusHandle = RegisterServiceCtrlHandlerW(L"PCOrCP", ControlHandler);
+     serviceStatus.dwServiceType = SERVICE_WIN32_OWN_PROCESS;
+     serviceStatus.dwControlsAccepted = SERVICE_ACCEPT_STOP | SERVICE_ACCEPT_PAUSE_CONTINUE | SERVICE_ACCEPT_SHUTDOWN;
+     serviceStatus.dwWin32ExitCode = NO_ERROR;
+     serviceStatus.dwWaitHint = 0;
+     SetServiceState(SERVICE_RUNNING);
+     WSAStartup(MAKEWORD(2, 2), &wsaData);
+     IPv4UDPSocket = socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP);
+     IPv4TCPSocket = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
+     IPv6UDPSocket = socket(AF_INET6, SOCK_DGRAM, IPPROTO_UDP);
+     IPv6TCPSocket = socket(AF_INET6, SOCK_STREAM, IPPROTO_TCP);
+     IPv4in53.sin_family = AF_INET;
+     IPv4in53.sin_addr.s_addr = INADDR_ANY;
+     IPv4in53.sin_port = htons(53);
+     IPv6in53.sin_family = AF_INET6;
+     IPv6in53.sin_addr.s_addr = INADDR_ANY;
+     IPv6in53.sin_port = htons(53);
+     bind(IPv4UDPSocket, (struct sockaddr*)&IPv4in53, sizeof(IPv4in53));
+     bind(IPv4TCPSocket, (struct sockaddr*)&IPv4in53, sizeof(IPv4in53));
+     bind(IPv6UDPSocket, (struct sockaddr*)&IPv6in53, sizeof(IPv6in53));
+     bind(IPv6TCPSocket, (struct sockaddr*)&IPv6in53, sizeof(IPv6in53));
+     while (serviceStatus.dwCurrentState!= SERVICE_STOPPED)
+         Sleep(1);
+}
+int wmain(int argc, wchar_t* argv[], wchar_t* envp[])
+{
+    SERVICE_TABLE_ENTRYW serviceTable[] =
+    {
+        { const_cast<LPWSTR>(L"PCOrCP"), ServiceMain },
+        { NULL, NULL }
+    };
+    StartServiceCtrlDispatcherW(serviceTable);
+    return 0;
+}
+```
 
 # next goal
 RFC 1034: Domain Names - Concepts and Facilities
