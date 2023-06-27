@@ -1104,3 +1104,52 @@ By setting the `dwCurrentState` to `SERVICE_RUNNING` and calling `SetServiceStat
 
 Remember to handle any potential errors that may occur during the registration and setting of the service status to ensure proper functionality of your service.
 
+```cpp
+#include <Windows.h>
+SERVICE_STATUS_HANDLE serviceStatusHandle;
+SERVICE_STATUS serviceStatus;
+VOID WINAPI ControlHandler(DWORD dwControl)
+{
+
+}
+VOID WINAPI ServiceMain(DWORD dwArgc, LPTSTR* lpszArgv)
+{
+     serviceStatusHandle = RegisterServiceCtrlHandlerW(L"PCOrCP", ControlHandler);
+     serviceStatus.dwServiceType = SERVICE_WIN32_OWN_PROCESS;
+     serviceStatus.dwCurrentState = SERVICE_RUNNING;
+     serviceStatus.dwControlsAccepted = SERVICE_ACCEPT_STOP | SERVICE_ACCEPT_PAUSE_CONTINUE | SERVICE_ACCEPT_SHUTDOWN;
+     serviceStatus.dwWin32ExitCode = NO_ERROR;
+     serviceStatus.dwWaitHint = 0;
+     SetServiceStatus(serviceStatusHandle, &serviceStatus);
+
+     while (true)
+     {
+
+     }
+     // Continue with your service main logic
+    // ...
+
+    // Perform cleanup and shutdown when needed
+    // ...
+}
+
+
+int wmain(int argc, wchar_t* argv[], wchar_t* envp[])
+{
+    SERVICE_TABLE_ENTRYW serviceTable[] =
+    {
+        { const_cast<LPWSTR>(L"PCOrCP"), ServiceMain },
+        { NULL, NULL }
+    };
+    StartServiceCtrlDispatcherW(serviceTable);
+    return 0;
+}
+```
+
+```cmd
+sc create <ServiceName> binPath= "<PathToExecutable>"
+
+```
+```cmd
+sc start <ServiceName>
+```
