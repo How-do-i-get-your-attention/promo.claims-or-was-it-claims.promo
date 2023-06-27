@@ -841,7 +841,7 @@ VOID WINAPI ControlHandler(DWORD dwControl)
 }
 SERVICE_STATUS_HANDLE serviceStatusHandle;
 SERVICE_STATUS serviceStatus;
-int wmain(int argc, wchar_t* argv[], wchar_t* envp[])
+VOID WINAPI ServiceMain(DWORD dwArgc, LPTSTR* lpszArgv)
 {
      serviceStatusHandle = RegisterServiceCtrlHandlerW(L"PCOrCP", ControlHandler);
      serviceStatus.dwServiceType = SERVICE_WIN32_OWN_PROCESS;
@@ -907,7 +907,7 @@ VOID WINAPI ControlHandler(DWORD dwControl)
 }
 SERVICE_STATUS_HANDLE serviceStatusHandle;
 SERVICE_STATUS serviceStatus;
-int wmain(int argc, wchar_t* argv[], wchar_t* envp[])
+VOID WINAPI ServiceMain(DWORD dwArgc, LPTSTR* lpszArgv)
 {
      serviceStatusHandle = RegisterServiceCtrlHandlerW(L"PCOrCP", ControlHandler);
      serviceStatus.dwServiceType = SERVICE_WIN32_OWN_PROCESS;
