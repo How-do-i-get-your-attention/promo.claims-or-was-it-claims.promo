@@ -584,9 +584,9 @@ In Windows service development, the `SERVICE_STATUS` structure plays a vital rol
 
 The `dwCurrentState` member of the `SERVICE_STATUS` structure represents the current operational state of a service. It can take on different values that indicate the service's state at any given moment. The possible values include:
 
-- `SERVICE_STOPPED`: This value indicates that the service has stopped and is not running.
 - `SERVICE_START_PENDING`: The service is in the process of starting, and its initialization has not yet completed.
 - `SERVICE_STOP_PENDING`: The service is in the process of stopping, and its termination has not yet completed.
+- `SERVICE_STOPPED`: This value indicates that the service has stopped and is not running.
 - `SERVICE_RUNNING`: This value signifies that the service is currently running and operational.
 - `SERVICE_CONTINUE_PENDING`: The service is in the process of resuming after being paused.
 - `SERVICE_PAUSE_PENDING`: The service is in the process of pausing its operations.
