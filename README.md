@@ -416,17 +416,24 @@ Having the right tools is essential for developers. I personally use Visual Stud
 
 In today's interconnected world, leveraging the power of the internet is crucial. If possible, running everything on the internet can offer numerous advantages. Microsoft has recognized this trend and has started developing server solutions that are lightweight and GUI-free. For testing purposes, I can install the Windows Server 2022 Standard Evaluation version. To simplify the installation process, I can utilize PowerShell or create a shortcut function for installing on Windows Server Services.
 
+Here's the corrected version of the article:
+
 # PowerShell (15)
 
 PowerShell is a powerful command-line shell and scripting language built on top of the .NET Framework (Windows PowerShell) or .NET Core (PowerShell Core). It offers a wide range of commands and features that allow users to interact with the operating system, manage system resources, automate tasks, and perform administrative duties.
 
-Compared to traditional command-line interfaces, PowerShell provides a more robust and feature-rich experience. It grants access to various .NET classes and APIs, enabling users to harness the capabilities of the .NET Framework or .NET Core within their PowerShell scripts.
+Compared to traditional command-line interfaces, PowerShell provides a more robust and feature-rich experience. It grants access to various .NET classes and APIs, enabling users to leverage the capabilities of the .NET Framework or .NET Core within their PowerShell scripts.
 
-Using PowerShell, I can execute commands, write scripts, and create functions to automate complex tasks, manage system configurations, perform administrative duties, interact with external systems, and more. PowerShell offers a comprehensive set of cmdlets (commands) that encapsulate specific functionalities, simplifying common tasks without the need for writing complex code from scratch.
+Using PowerShell, users can execute commands, write scripts, and create functions to automate complex tasks, manage system configurations, perform administrative duties, interact with external systems, and more. PowerShell provides a comprehensive set of cmdlets (commands) that encapsulate specific functionalities, simplifying common tasks without the need to write complex code from scratch.
 
 In summary, PowerShell extends the capabilities of traditional command-line interfaces by providing a scripting language and access to the .NET Framework or .NET Core. It empowers users to automate tasks and perform administrative duties more efficiently.
 
-However, it's important to note that PowerShell can also be a potential gateway for hackers. It's recommended to disable it after configuring the necessary services to enhance security.
+However, it's important to note that PowerShell can also pose a potential security risk. To enhance security, it is recommended to disable PowerShell after configuring the necessary services.
 
-To disable PowerShell, execute the following command:
+To disable PowerShell, execute the following command: Set-ExecutionPolicy -ExecutionPolicy Restricted -Scope LocalMachine
+
+Alternatively, you can create a file named "Restricted-Powershell.ps1" with the following content:
+```
 Set-ExecutionPolicy -ExecutionPolicy Restricted -Scope LocalMachine
+```
+
