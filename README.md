@@ -1344,6 +1344,10 @@ Note: It's important to handle any potential errors that may occur during socket
 Conclusion:
 The socket() function is a fundamental part of network programming that allows applications to create sockets for communication. By specifying the address family, socket type, and protocol, developers can tailor the behavior of the socket to meet their specific requirements. Understanding the socket() function is crucial for building robust and efficient network applications.
 
+Closing the Socket:
+After the socket is no longer needed, it should be closed using the close() or closesocket() function, depending on the platform. This ensures the proper release of system resources and prevents resource leaks.
+
+
 # next goal
 RFC 1034: Domain Names - Concepts and Facilities
 RFC 1035: Domain Names - Implementation and Specification
