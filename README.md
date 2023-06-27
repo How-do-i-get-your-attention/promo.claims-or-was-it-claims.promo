@@ -1176,35 +1176,68 @@ If needed
 sc stop <ServiceName>
 sc delete <ServiceName>
 ```
-# Understanding the WSADATA Structure in Winsock
+# Exploring WSAStartup, MAKEWORD, and WSACleanup in Winsock Programming
 
 Introduction:
-When working with network programming in Windows, the WSADATA structure plays a crucial role in initializing and configuring the network functionality provided by the Winsock library. This article aims to provide an overview of the WSADATA structure and its significance in network programming.
+WSAStartup, MAKEWORD, and WSACleanup are essential components of Winsock programming that facilitate network communication in Windows applications. This article provides insights into WSAStartup, MAKEWORD, and WSACleanup, highlighting their significance and usage in network programming.
 
-Overview of the WSADATA Structure:
-The WSADATA structure is defined in the Winsock library and is used to store information about the initialized version of Winsock and the network implementation on the system. It contains several fields that provide valuable insights into the state of the network functionality.
+Understanding WSAStartup:
+WSAStartup is a function used to initialize the Winsock library and specify the desired version of Winsock for network operations. It ensures compatibility between the application and the underlying network implementation. WSAStartup takes two parameters: wVersionRequested and lpWSAData.
 
-1. wVersion:
-The wVersion field indicates the requested version of Winsock during initialization. It allows programmers to specify the desired version and verify if it is available on the system.
+Understanding MAKEWORD:
+MAKEWORD is a macro provided by the Winsock library that combines two byte-sized values into a word-sized value. It takes two arguments: the major version number and the minor version number. For example, MAKEWORD(2, 2) combines the major version 2 and minor version 2 into a word value of 0x0202.
 
-2. wHighVersion:
-The wHighVersion field represents the highest available version of Winsock on the system. It provides information about the maximum Winsock version supported by the network implementation.
+Understanding WSACleanup:
+WSACleanup is a function used to terminate the use of the Winsock library and release any resources associated with it. It should be called after the completion of network operations to ensure proper cleanup and prevent resource leaks.
 
-3. szDescription:
-The szDescription field is a null-terminated string that describes the specific implementation of Winsock on the system. It provides details about the version, vendor, and other relevant information related to the Winsock implementation.
+Usage in Winsock Programming:
+To utilize WSAStartup, MAKEWORD, and WSACleanup in your Winsock application, include the necessary headers and follow the steps outlined below:
 
-4. szSystemStatus:
-The szSystemStatus field is another null-terminated string that provides additional status information about the network implementation on the system. It can include details about the current network configuration, available protocols, and other relevant system-level network information.
+1. Declare the necessary variables:
+   - WSADATA wsaData: A structure that receives details about the Winsock implementation.
 
-Utilizing the WSADATA Structure:
-The WSADATA structure is typically used as a parameter in the WSAStartup function, which initializes the Winsock library. After calling WSAStartup, the WSADATA structure is populated with the actual version and status information of the Winsock implementation on the system. Programmers can then access the fields of the WSADATA structure to verify the desired version and gather information about the network configuration.
+2. Call WSAStartup:
+   - Use the MAKEWORD macro to specify the desired version of Winsock.
+   - Pass the created version value and the address of the wsaData structure to WSAStartup.
+   - Check the return value of WSAStartup to handle any initialization errors.
 
-Cleanup with WSACleanup:
-Once the network operations are completed, it is essential to perform cleanup by calling the WSACleanup function. This function releases any resources allocated during the initialization of Winsock, including the WSADATA structure.
+3. Perform network operations:
+   - Once WSAStartup succeeds, you can proceed with your network operations using the initialized Winsock library.
+
+4. Call WSACleanup:
+   - After completing the network operations, call WSACleanup to release any allocated resources.
+
+Here's an example illustrating the usage of WSAStartup, MAKEWORD, and WSACleanup:
+
+```c++
+#include <Winsock2.h>
+#include <WS2tcpip.h>
+
+int main()
+{
+    WSADATA wsaData;
+    WORD wVersionRequested = MAKEWORD(2, 2);
+
+    // Initialize Winsock
+    if (WSAStartup(wVersionRequested, &wsaData) != 0)
+    {
+        // Handle initialization error
+        return 1;
+    }
+
+    // Perform network operations
+
+    // Cleanup and release resources
+    WSACleanup();
+
+    return 0;
+}
+```
+
+In the provided example, WSAStartup is invoked with the requested version of Winsock (2.2) created using the MAKEWORD macro. After successful initialization, the application can proceed with network operations. Finally, WSACleanup is called to release any resources associated with the Winsock library.
 
 Conclusion:
-The WSADATA structure is a vital component in Winsock programming as it provides valuable information about the initialized version of Winsock and the network implementation on the system. Understanding and utilizing the WSADATA structure correctly ensures compatibility and proper handling of network operations.
-# Next studie
+WSAStartup, MAKEWORD, and WSACleanup are crucial functions in Winsock programming, enabling the initialization, version specification, and cleanup of the Winsock library. By properly utilizing these functions, developers can ensure compatibility, efficient network communication, and resource management in their Windows applications.
 
 RFC 1034: Domain Names - Concepts and Facilities
 RFC 1035: Domain Names - Implementation and Specification
