@@ -432,7 +432,7 @@ However, it's important to note that PowerShell can also pose a potential securi
 
 To disable PowerShell, execute the following command: Set-ExecutionPolicy -ExecutionPolicy Restricted -Scope LocalMachine
 
-Alternatively, you can create a file named "Restricted-Powershell.ps1" with the following content:
+Alternatively, i can create a file named "Restricted-Powershell.ps1" with the following content:
 ```
 Set-ExecutionPolicy -ExecutionPolicy Restricted -Scope LocalMachine
 ```
