@@ -409,9 +409,22 @@ Ultimately, the choice of an antivirus program will depend on specific requireme
 
 By reading this section, we can agree that Ubuntu is an open-source operating system, which may be more accessible to hackers. On the other hand, Microsoft's Windows Server provides robust security measures, although it may require more effort to configure and manage. Therefore, the choice of my server will always be Windows.
 
-
 # Developer Environment
 
 Having the right tools is essential for developers. I personally use Visual Studio as it meets all my requirements, and I can customize it to fit my needs. 
 
 In today's interconnected world, leveraging the power of the internet is crucial. If possible, running everything on the internet can offer numerous advantages. Microsoft has recognized this trend and has started developing server solutions that are lightweight and GUI-free. For testing purposes, I can install the Windows Server 2022 Standard Evaluation version.
+
+# Multi-threaded (/MT)
+
+The "Multi-threaded (/MT)" runtime library option is a setting used when compiling C++ code in Microsoft Visual Studio. It determines how the code will link to the C and C++ runtime libraries provided by the compiler.
+
+When the "/MT" option is selected, it means that the code will be linked with a static version of the runtime library. This means that all the necessary code from the runtime library is directly embedded into the final executable file. The advantage of this approach is that it allows the executable to be self-contained and does not require the presence of separate runtime library files on the target system. It can simplify deployment and distribution of the application.
+
+However, using the "/MT" option also has some considerations. Each application that uses the "/MT" option will have its own copy of the runtime library code embedded in the executable. This can result in larger file sizes and potentially higher memory usage. It also means that if multiple applications on the same system use the "/MT" option, there will be multiple copies of the runtime library in memory, which can lead to increased memory usage.
+
+Additionally, because the runtime library is statically linked, it may not receive updates or bug fixes provided by the compiler or the operating system. If a vulnerability or issue is discovered in the runtime library, the application will need to be recompiled and redeployed with an updated version of the runtime library to address it.
+
+The alternative to the "/MT" option is the "Multi-threaded DLL (/MD)" option, which links the code with a dynamic version of the runtime library. This means that the application relies on separate DLL files for the runtime library, which can be shared among multiple applications. The advantage of this approach is smaller executable file sizes and reduced memory usage, but it requires the presence of the appropriate runtime library DLLs on the target system.
+
+The choice between "/MT" and "/MD" depends on factors such as deployment considerations, performance requirements, and the need for updates to the runtime library. It's important to carefully evaluate the trade-offs and choose the appropriate option for your specific project.
