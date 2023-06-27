@@ -1176,3 +1176,24 @@ If needed
 sc stop <ServiceName>
 sc delete <ServiceName>
 ```
+# RFC 1034 Domain Names - Concepts and Facilities
+
+RFC 1034: "Domain Names - Concepts and Facilities"
+This RFC provides an overview of the DNS system, including the structure of domain names, delegation of authority, and the distributed nature of DNS.
+
+RFC 1035: "Domain Names - Implementation and Specification"
+This RFC defines the DNS protocol and its various components, including message format, resource records, name resolution process, and DNS server operations.
+
+RFC 2181: "Clarifications to the DNS Specification"
+This RFC clarifies and updates some aspects of the DNS protocol defined in RFC 1035, addressing issues related to caching, zone transfers, negative responses, and more.
+
+RFC 1996: "A Mechanism for Prompt Notification of Zone Changes (DNS NOTIFY)"
+This RFC introduces the DNS NOTIFY mechanism, which allows DNS servers to promptly notify their peers of changes in DNS zone data, improving the efficiency of DNS updates.
+
+RFC 2136: "Dynamic Updates in the Domain Name System (DNS UPDATE)"
+This RFC describes the DNS UPDATE mechanism, which enables dynamic modification of DNS records, allowing for automated updates of DNS information.
+
+RFC 2308: "Negative Caching of DNS Queries (DNS NCACHE)"
+This RFC discusses the caching behavior for negative DNS responses, helping to reduce the load on DNS servers and improve response times.
+
+These are just a few examples of the many RFCs that defin
