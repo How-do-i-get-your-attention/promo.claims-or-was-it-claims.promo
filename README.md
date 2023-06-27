@@ -919,3 +919,26 @@ int wmain(int argc, wchar_t* argv[], wchar_t* envp[])
     return 0;
 }
 ```
+After the call to `SetServiceStatus(serviceStatusHandle, &serviceStatus);`, the service updates its status information and communicates it to the Service Control Manager (SCM). This function is crucial for notifying the SCM about changes in the service's state and keeping the SCM informed about the service's progress and responsiveness.
+
+Here's what happens after the `SetServiceStatus` call:
+
+1. Updating Service Status:
+   - The `serviceStatus` structure contains the updated service status information, including the current state, control requests accepted, exit code, wait hint, and other relevant fields.
+   - By calling `SetServiceStatus`, the service provides the updated status information to the SCM.
+
+2. Communication with the SCM:
+   - The SCM receives the updated service status information through the service status handle (`serviceStatusHandle`) obtained from the `RegisterServiceCtrlHandler` function.
+   - The SCM uses this information to track and monitor the service's state and respond to control requests sent by the SCM or other system components.
+
+3. Service State Transition:
+   - If the service status indicates that the service is in the "SERVICE_START_PENDING" state, it informs the SCM that the service is in the process of starting.
+   - The SCM may use the wait hint value (`dwWaitHint`) provided by the service to determine how long it should wait before considering the service as unresponsive or timing out.
+   - The service may also update the checkpoint value (`dwCheckPoint`) periodically during initialization or long-running operations to indicate progress to the SCM.
+
+4. Control Requests:
+   - The `dwControlsAccepted` field of the service status structure specifies the control requests accepted by the service.
+   - By including `SERVICE_ACCEPT_STOP`, `SERVICE_ACCEPT_PAUSE_CONTINUE`, and `SERVICE_ACCEPT_SHUTDOWN`, the service indicates that it can handle requests to stop, pause/resume, and perform system shutdown, respectively.
+
+By calling `SetServiceStatus` with the updated service status information, the service establishes communication with the SCM, ensures proper handling of control requests, and keeps the SCM informed about the service's progress and responsiveness.
+
