@@ -271,6 +271,7 @@ Thats why i try to make this work in HTML to
   by:<br/>  
 Pirasath Luxchumykanthan, Inventor and Founder<br/>
 
+"I'm not here to teach you programming languages."<br/><br/>
 <h1>IPA and APK: A Common File Format</h1>
 The IPA (iOS App Store Package) and APK (Android Application Package) file formats, although designed for different mobile platforms, share a common underlying structure. Both IPA and APK files utilize the ZIP file format for compression, organization, and distribution of their respective application contents.
 The ZIP file format, originally introduced by Phil Katz in the late 1980s, provides a standardized approach for compressing files and directories into a single archive. Over time, it has undergone updates and extensions to support new features, improved compression methods, and enhanced compatibility.
