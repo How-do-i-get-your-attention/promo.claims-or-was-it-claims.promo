@@ -1,12 +1,6 @@
-#include "../Network/Network.h"
-//Windows Services
+#include <Windows.h>
 SERVICE_STATUS_HANDLE serviceStatusHandle;
 SERVICE_STATUS serviceStatus;
-void SetServiceState(DWORD Value) {
-    if (serviceStatus.dwCurrentState == Value) return;
-    serviceStatus.dwCurrentState = Value;
-    SetServiceStatus(serviceStatusHandle, &serviceStatus);
-}
 VOID WINAPI ControlHandler(DWORD dwControl)
 {
     switch (dwControl)
@@ -31,11 +25,14 @@ VOID WINAPI ControlHandler(DWORD dwControl)
     case SERVICE_CONTROL_SHUTDOWN:
         // Handle system shutdown notification
         // Perform necessary cleanup before the system shuts down
-        CloseAllSocket();
-        WSACleanup();
         SetServiceState(SERVICE_STOPPED);
         break;
     }
+}
+void SetServiceState(DWORD Value) {
+    if (serviceStatus.dwCurrentState == Value) return;
+    serviceStatus.dwCurrentState = Value;
+    SetServiceStatus(serviceStatusHandle, &serviceStatus);
 }
 VOID WINAPI ServiceMain(DWORD dwArgc, LPTSTR* lpszArgv)
 {
@@ -45,8 +42,8 @@ VOID WINAPI ServiceMain(DWORD dwArgc, LPTSTR* lpszArgv)
     serviceStatus.dwWin32ExitCode = NO_ERROR;
     serviceStatus.dwWaitHint = 0;
     SetServiceState(SERVICE_RUNNING);
-    WSAStartup(MAKEWORD(2, 2), &windowsSocketsData);
-    while (serviceStatus.dwCurrentState != SERVICE_STOPPED) {}
+    while (serviceStatus.dwCurrentState != SERVICE_STOPPED)
+        Sleep(1);
 }
 int wmain(int argc, wchar_t* argv[], wchar_t* envp[])
 {
