@@ -31,7 +31,7 @@ VOID WINAPI ControlHandler(DWORD dwControl)
     case SERVICE_CONTROL_SHUTDOWN:
         // Handle system shutdown notification
         // Perform necessary cleanup before the system shuts down
-        
+        CloseAllSocket();
         WSACleanup();
         SetServiceState(SERVICE_STOPPED);
         break;
