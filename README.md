@@ -1218,3 +1218,20 @@ The above code snippet highlights three important aspects:
 3. **Cleanup with WSACleanup**: After using Winsock and when you no longer need network functionality, it's important to call `WSACleanup()` to release any resources and gracefully shut down Winsock.
 
 By following these steps, you can integrate network communication capabilities using Winsock within your Windows Services application.
+
+
+# Removing Unnecessary Includes in Winsock Code
+
+When working with Winsock code, it's important to include the necessary header files to access the required functionality. However, it's also essential to avoid including unnecessary headers to keep the code clean and minimize potential conflicts. Let's take a look at an example where an unnecessary include can be removed:
+
+```cpp
+//#include <Windows.h> <-- not needed, it's included in <Ws2tcpip.h>
+//Windows Sockets
+#include <Ws2tcpip.h>
+```
+
+In the above code snippet, the `#include <Windows.h>` line is commented out because it is not needed. The `Windows.h` header is already included in the `Ws2tcpip.h` header, which provides the necessary definitions for Winsock functionality.
+
+By removing the unnecessary `#include <Windows.h>`, we can reduce potential conflicts and make the code cleaner and more concise.
+
+
