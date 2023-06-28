@@ -46,8 +46,7 @@ VOID WINAPI ServiceMain(DWORD dwArgc, LPTSTR* lpszArgv)
     serviceStatus.dwWaitHint = 0;
     SetServiceState(SERVICE_RUNNING);
     WSAStartup(MAKEWORD(2, 2), &windowsSocketsData);
-    while (serviceStatus.dwCurrentState != SERVICE_STOPPED) {
-    }
+    while (serviceStatus.dwCurrentState != SERVICE_STOPPED) {}
 }
 int wmain(int argc, wchar_t* argv[], wchar_t* envp[])
 {
