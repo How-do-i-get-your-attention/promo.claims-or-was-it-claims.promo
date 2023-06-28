@@ -1436,4 +1436,379 @@ Consider using vectors whenever you need to work with collections of elements in
 
 Remember to include the `<vector>` header in your code to utilize vectors in your projects.
 
+# Network Communication Library
+
+The Network Communication Library is a lightweight C++ library that simplifies network socket communication. It provides an intuitive interface for creating, managing, and processing network connections. This library supports both IPv4 and IPv6 addresses and offers functionalities for handling incoming data asynchronously.
+
+## Features
+
+- Create network sockets with customizable settings such as address family, socket type, protocol, port, buffer size, and timeout.
+- Add network functions to process incoming data from clients.
+- Remove network functions as needed.
+- Close individual network connections or terminate all active connections.
+
+## Usage
+
+1. Include the necessary headers in your project:
+
+```cpp
+#include "Network.h"
+#include <iostream>
+```
+
+2. Create a network socket using the `CreateSocket` function. Example:
+
+```cpp
+// Create a UDP socket on port 12345 with a buffer size of 1024 bytes
+Network network = CreateSocket(AF_INET, SOCK_DGRAM, IPPROTO_UDP, 12345, 1024);
+```
+
+3. Add network functions to handle incoming data. Example:
+
+```cpp
+// Custom network function to process incoming data
+bool ProcessData(Network::Client& client) {
+    // Implement your custom logic here
+    std::cout << "Received data from client: " << client.IP << ":" << client.Port << std::endl;
+    return true;
+}
+
+// Add the network function
+network.Add("ProcessData", ProcessData);
+```
+
+4. Start the network communication:
+
+```cpp
+std::cout << "Network communication started..." << std::endl;
+```
+
+5. Optionally, perform other operations or wait for some time while the network communication is active.
+
+6. Remove network functions if no longer needed:
+
+```cpp
+// Remove the network function
+network.Remove("ProcessData");
+```
+
+7. Close the network connection:
+
+```cpp
+network.Close();
+```
+
+8. To close all active network connections:
+
+```cpp
+CloseAllSocket();
+```
+
+## Code
+
+Here is the complete code for the Network Communication Library:
+
+```cpp
+// Network.h
+
+#pragma once
+#pragma warning(disable : 4309 6031 26495)
+#include <thread>
+#include <Ws2tcpip.h>
+#include <string>
+#include <vector>
+#pragma comment(lib, "Ws2_32.lib")
+WSADATA windowsSocketsData;
+
+class Network
+{
+    // Inner class representing a client connection
+    class Client
+    {
+    public:
+        SOCKET Socket;
+        std::vector<char> Buffer;
+        std::string IP;
+        int Port;
+        Client(SOCKET socket, const std::vector<char>& buffer, const std::string& ip, int port)
+            : Socket(socket), Buffer(buffer), IP(ip), Port(port)
+        {
+        }
+    };
+
+    // Inner class representing a network function
+    class Function
+    {
+    public:
+        std::string Name;
+        bool (*Run)(Client&);
+    };
+
+private:
+    SOCKET Socket;
+    sockaddr_in IPv4sockaddr_in;
+    sockaddr_in6 IPv6sockaddr_in;
+    std::vector<Function> Functions;
+    bool IsRunning;
+    void Receiver();
+    std::time_t TimeoutTime;
+    bool GetTimeout();
+
+public:
+    int AddressFamily;
+    int Type;
+    int Protocol;
+    int Port;
+    int TimeoutSeconds;
+    int BufferSize;
+    void ChangeTimeout(int timeoutSeconds);
+    void UpdateTimeout();
+    void ChangeBufferSize(int bufferSize);
+    bool Have(const std::string& name) const;
+    void Add(const std::string& name, bool (*run)(Client&));
+    void Remove(const std::string& name);
+    void Close();
+    Network(int addressFamily, int type, int protocol, int port, int bufferSize, int timeoutSeconds);
+};
+
+extern
+
+ std::vector<Network> Networks;
+Network CreateSocket(int addressFamily, int type, int protocol, int port, int bufferSize, int timeoutSeconds = 0);
+void CloseAllSocket();
+
+// Network.cpp
+
+#include "Network.h"
+#include <chrono>
+std::vector<Network> Networks;
+
+void Network::ChangeTimeout(int timeoutSeconds)
+{
+    TimeoutSeconds = timeoutSeconds;
+}
+
+bool Network::Have(const std::string& name) const
+{
+    for (const auto& function : Functions)
+    {
+        if (function.Name == name)
+            return true;
+    }
+    return false;
+}
+
+void Network::Add(const std::string& name, bool (*run)(Client&))
+{
+    if (Have(name))
+        return;
+
+    Function newFunction;
+    newFunction.Name = name;
+    newFunction.Run = run;
+    Functions.push_back(newFunction);
+
+    if (!IsRunning)
+    {
+        IsRunning = true;
+        std::thread threadReceiver(&Network::Receiver, this);
+        threadReceiver.detach();
+    }
+}
+
+void Network::Remove(const std::string& name)
+{
+    auto it = std::find_if(Functions.begin(), Functions.end(), [&](const Function& function) { return function.Name == name; });
+    if (it != Functions.end())
+        Functions.erase(it);
+}
+
+void Network::ChangeBufferSize(int bufferSize)
+{
+    BufferSize = bufferSize;
+    UpdateTimeout();
+}
+
+void Network::UpdateTimeout()
+{
+    if (TimeoutSeconds == 0)
+        return;
+
+    auto currentTime = std::chrono::system_clock::now();
+    auto timeoutDuration = std::chrono::seconds(TimeoutSeconds);
+    std::chrono::time_point<std::chrono::system_clock> timeoutTime = currentTime + timeoutDuration;
+    TimeoutTime = std::chrono::system_clock::to_time_t(timeoutTime);
+}
+
+bool Network::GetTimeout()
+{
+    if (TimeoutSeconds == 0)
+        return true;
+
+    auto currentTime = std::chrono::system_clock::now();
+    auto timeoutTime = std::chrono::system_clock::from_time_t(TimeoutTime);
+    return currentTime <= timeoutTime;
+}
+
+Network::Network(int addressFamily, int type, int protocol, int port, int bufferSize, int timeoutSeconds)
+{
+    Socket = socket(AddressFamily = addressFamily, Type = type, Protocol = protocol);
+    if (AddressFamily == AF_INET6)
+    {
+        IPv6sockaddr_in.sin6_family = AddressFamily;
+        IPv6sockaddr_in.sin6_addr = in6addr_any;
+        IPv6sockaddr_in.sin6_port = htons(Port = port);
+        bind(Socket, reinterpret_cast<SOCKADDR*>(&IPv6sockaddr_in), sizeof(IPv6sockaddr_in));
+    }
+    else
+    {
+        IPv4sockaddr_in.sin_family = AddressFamily;
+        IPv4sockaddr_in.sin_addr.s_addr = INADDR_ANY;
+        IPv4sockaddr_in.sin_port = htons(Port = port);
+        bind(Socket, reinterpret_cast<SOCKADDR*>(&IPv4sockaddr_in), sizeof(IPv4sockaddr_in));
+    }
+
+    ChangeTimeout(timeoutSeconds);
+    ChangeBufferSize(bufferSize);
+}
+
+void Network::Receiver()
+{
+    if (Type == SOCK_DGRAM)
+    {
+        while (!Functions.empty() && GetTimeout())
+        {
+            std::vector<char> buffer(BufferSize);
+            if (AddressFamily == AF_INET6)
+            {
+                sockaddr_in6 clientAddr;
+                int clientAddrSize = sizeof(clientAddr);
+                int receivedBytes = recvfrom(Socket, buffer.data(), BufferSize, 0, reinterpret_cast<SOCKADDR*>(&clientAddr), &clientAddrSize);
+                if (receivedBytes > 0)
+                {
+                    UpdateTimeout();
+                    char clientIP[INET6_ADDR
+
+STRLEN];
+                    inet_ntop(AF_INET6, &(clientAddr.sin6_addr), clientIP, INET6_ADDRSTRLEN);
+                    int clientPort = ntohs(clientAddr.sin6_port);
+                    Client client(Socket, buffer, clientIP, clientPort);
+                    for (const auto& function : Functions)
+                    {
+                        if (function.Run(client))
+                            break;
+                    }
+                }
+            }
+            else
+            {
+                sockaddr_in clientAddr;
+                int clientAddrSize = sizeof(clientAddr);
+                int receivedBytes = recvfrom(Socket, buffer.data(), BufferSize, 0, reinterpret_cast<SOCKADDR*>(&clientAddr), &clientAddrSize);
+                if (receivedBytes > 0)
+                {
+                    UpdateTimeout();
+                    Client client(Socket, buffer, inet_ntoa(clientAddr.sin_addr), ntohs(clientAddr.sin_port));
+                    for (const auto& function : Functions)
+                    {
+                        if (function.Run(client))
+                            break;
+                    }
+                }
+            }
+        }
+    }
+    else
+    {
+        while (!Functions.empty() && GetTimeout())
+        {
+            std::vector<char> buffer(BufferSize);
+            if (AddressFamily == AF_INET6)
+            {
+                sockaddr_in6 clientAddr;
+                int clientAddrSize = sizeof(clientAddr);
+                int receivedBytes = recv(Socket, buffer.data(), BufferSize, 0);
+                if (receivedBytes > 0)
+                {
+                    socklen_t clientAddrSize = sizeof(clientAddr);
+                    getpeername(Socket, reinterpret_cast<struct sockaddr*>(&clientAddr), &clientAddrSize);
+                    char clientIP[INET6_ADDRSTRLEN];
+                    inet_ntop(AF_INET6, &(clientAddr.sin6_addr), clientIP, INET6_ADDRSTRLEN);
+                    Client client(Socket, buffer, clientIP, ntohs(clientAddr.sin6_port));
+                    for (const auto& function : Functions)
+                    {
+                        if (function.Run(client))
+                            break;
+                    }
+                }
+            }
+            else
+            {
+                int receivedBytes = recv(Socket, buffer.data(), BufferSize, 0);
+                if (receivedBytes > 0)
+                {
+                    sockaddr_in clientAddr;
+                    socklen_t clientAddrSize = sizeof(clientAddr);
+                    getpeername(Socket, reinterpret_cast<struct sockaddr*>(&clientAddr), &clientAddrSize);
+                    Client client(Socket, buffer, inet_ntoa(clientAddr.sin_addr), ntohs(clientAddr.sin_port));
+                    for (const auto& function : Functions)
+                    {
+                        if (function.Run(client))
+                            break;
+                    }
+                }
+            }
+        }
+    }
+    IsRunning = false;
+    if (TimeoutSeconds != 0)
+    {
+        Close();
+    }
+}
+
+void Network::Close()
+{
+    Functions.clear();
+    if (Socket != INVALID_SOCKET)
+    {
+        closesocket(Socket);
+        Socket = INVALID_SOCKET;
+    }
+    IsRunning = false;
+    auto it = std::find(Networks.begin(), Networks.end(), *this);
+    if (it != Networks.end())
+    {
+        Networks.erase(it);
+    }
+}
+
+Network CreateSocket(int addressFamily, int type, int protocol, int port, int bufferSize, int timeoutSeconds)
+{
+    for (auto& network : Networks)
+    {
+        if (network.AddressFamily == addressFamily && network.Type == type && network.Protocol == protocol && network.Port == port)
+        {
+            if (network.TimeoutSeconds != timeoutSeconds)
+            {
+                network.ChangeTimeout(timeoutSeconds);
+            }
+            return network;
+        }
+    }
+
+    Network newNetwork(addressFamily, type, protocol, port, bufferSize, timeoutSeconds);
+    Networks.push_back(newNetwork);
+    return newNetwork;
+}
+
+void CloseAllSocket()
+{
+    for (auto& network : Networks)
+    {
+        network.Close();
+    }
+}
+```
+
 
