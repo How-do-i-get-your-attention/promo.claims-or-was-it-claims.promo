@@ -1329,9 +1329,9 @@ Dynamic loading and control of DLL modules in Windows Services enable us to intr
 
 Services.exe is a dynamic module controller designed for managing and sending signals to DLL files. It keeps DLL modules in memory and has the primary function of sending `Play()`, `Pause()`, and `Stop()` signals to the attached DLLs. Each of these DLLs should contain the following mandatory functions:
 
-- `void Play()`
-- `void Pause()`
-- `void Stop()`
+- `extern "C" __declspec(dllexport) void Play()`
+- `extern "C" __declspec(dllexport) void Pause()`
+- `extern "C" __declspec(dllexport) void Stop()`
 
 In addition to these control functions, each DLL must contain an `Init()` function with the following signature:
 
