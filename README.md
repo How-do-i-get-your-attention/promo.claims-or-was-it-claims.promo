@@ -1325,9 +1325,9 @@ To start the service, I use the `ServiceMain` function, where we load the desire
 
 Dynamic loading and control of DLL modules in Windows Services enable us to introduce new functionality, update existing features, and manage services without restarting the entire program. By leveraging functions like `LoadLibrary`, `GetProcAddress`, and proper function pointer handling, we can dynamically access and control the behavior of DLL modules.
 
-# Services.dll - A Dynamic Module Controller for DLLs
+# Services.exe - A Dynamic Module Controller for DLLs
 
-Services.dll is a dynamic module controller designed for managing and sending signals to DLL files. It keeps DLL modules in memory and has the primary function of sending `Play()`, `Pause()`, and `Stop()` signals to the attached DLLs. Each of these DLLs should contain the following mandatory functions:
+Services.exe is a dynamic module controller designed for managing and sending signals to DLL files. It keeps DLL modules in memory and has the primary function of sending `Play()`, `Pause()`, and `Stop()` signals to the attached DLLs. Each of these DLLs should contain the following mandatory functions:
 
 - `void Play()`
 - `void Pause()`
@@ -1362,6 +1362,7 @@ extern "C" __declspec(dllexport) void Init(vector<tuple<string, string, HMODULE>
     while (true)
     {
     }
+    // Else it will be close... and remove from the list
 }
 ```
 
