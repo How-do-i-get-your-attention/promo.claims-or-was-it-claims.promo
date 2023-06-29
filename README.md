@@ -1366,7 +1366,7 @@ extern "C" __declspec(dllexport) void Init(vector<tuple<string, string, HMODULE>
 }
 ```
 
-The Services.dll system provides the following functions:
+The Services.exe system provides the following functions:
 
 - `InitModule(const string& path)`: Initialize a DLL module by providing its path. The `Init()` function of the DLL is called with the necessary parameters to allow it to interact with the services system.
   
