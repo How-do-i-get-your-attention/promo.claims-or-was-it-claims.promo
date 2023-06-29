@@ -1365,8 +1365,10 @@ extern "C" __declspec(dllexport) void Init(vector<tuple<string, string, HMODULE>
 	RemoveModule = removeModule;
 	thread theadPlay(Play);
 	theadPlay.detach();
+	//run forever
 	while (Interaction!=0)
 		Sleep(5000);
+	//Otherwise, RemoveModule will be called automatically
 }
 extern "C" __declspec(dllexport) void Play() {
 	Interaction = 1;
