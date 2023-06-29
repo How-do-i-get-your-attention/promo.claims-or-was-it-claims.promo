@@ -1325,3 +1325,58 @@ To start the service, I use the `ServiceMain` function, where we load the desire
 
 Dynamic loading and control of DLL modules in Windows Services enable us to introduce new functionality, update existing features, and manage services without restarting the entire program. By leveraging functions like `LoadLibrary`, `GetProcAddress`, and proper function pointer handling, we can dynamically access and control the behavior of DLL modules.
 
+# Services.dll - A Dynamic Module Controller for DLLs
+
+Services.dll is a dynamic module controller designed for managing and sending signals to DLL files. It keeps DLL modules in memory and has the primary function of sending `Play()`, `Pause()`, and `Stop()` signals to the attached DLLs. Each of these DLLs should contain the following mandatory functions:
+
+- `void Play()`
+- `void Pause()`
+- `void Stop()`
+
+In addition to these control functions, each DLL must contain an `Init()` function with the following signature:
+
+```cpp
+extern "C" __declspec(dllexport) void Init(vector<tuple<string, string, HMODULE>>(*getModules), void(*initModule)(const string&), HMODULE(*getModule)(const string&), void(*removeModule)(const string&))
+```
+
+This `Init()` function serves as the entry point to initialize the module with the services.exe, providing it access to the controller's functions.
+
+An example of the `Init()` function in a DLL would look like this:
+
+```cpp
+using namespace std;
+
+vector<tuple<string, string, HMODULE>>(*GetModules);
+void(*InitModule)(const string&);
+HMODULE(*GetModule)(const string&);
+void(*RemoveModule)(const string&);
+
+extern "C" __declspec(dllexport) void Init(vector<tuple<string, string, HMODULE>>(*getModules), void(*initModule)(const string&), HMODULE(*getModule)(const string&), void(*removeModule)(const string&))
+{
+    GetModules = getModules;
+    InitModule = initModule;
+    GetModule = getModule;
+    RemoveModule = removeModule;
+    
+    // Run forever
+    while (true)
+    {
+    }
+}
+```
+
+The Services.dll system provides the following functions:
+
+- `InitModule(const string& path)`: Initialize a DLL module by providing its path. The `Init()` function of the DLL is called with the necessary parameters to allow it to interact with the services system.
+  
+- `RemoveModule(const string& path)`: Removes a DLL module from the system.
+  
+- `GetModule(const string& path)`: Returns the HMODULE of a loaded DLL module.
+  
+- `GetModules()`: Returns a list of all currently loaded DLL modules.
+
+All DLL files should be placed in the same directory as services.dll for them to be recognized and managed.
+
+It is important to note that `PCOrCP.dll` is the starting DLL and will be extended to make the system more dynamic.
+
+Remember that this documentation is crucial for other programmers to understand the structure and usage of the services system.
