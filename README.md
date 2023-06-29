@@ -1363,6 +1363,19 @@ extern "C" __declspec(dllexport) void Init(vector<tuple<string, string, HMODULE>
 	InitModule = initModule;
 	GetModule = getModule;
 	RemoveModule = removeModule;
+	// Other installations before Play
+	//....
+	// Start Play in background.<
+	/*
+---------------------------
+|     Layer 1: Startup    |
+|-------------------------|
+| Layer 2: Background Run |
+|   Thread 1              |
+|   Thread 2              |
+|   ...                   |
+---------------------------
+	*/
 	thread theadPlay(Play);
 	theadPlay.detach();
 	//Run forever with Interaction
@@ -1379,6 +1392,10 @@ extern "C" __declspec(dllexport) void Pause() {
 extern "C" __declspec(dllexport) void Stop() {
 	Interaction = 0;
 }
+
+
+
+
 ```
 
 The Services.exe system provides the following functions:
