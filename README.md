@@ -1347,7 +1347,7 @@ An example of the `Init()` function in a DLL would look like this:
 #include "PCOrCP.h"
 
 using namespace std;
-vector<tuple<string, string, HMODULE>>(*GetModules);
+vector<tuple<string, string, HMODULE>>(*GetModules)();
 void(*InitModule)(const string&);
 HMODULE(*GetModule)(const string&);
 void(*RemoveModule)(const string&);
