@@ -1376,7 +1376,7 @@ The Services.exe system provides the following functions:
   
 - `GetModules()`: Returns a list of all currently loaded DLL modules.
 
-All DLL files should be placed in the same directory as services.dll for them to be recognized and managed.
+All DLL files should be placed in the same directory or sub as services.exe for them to be recognized and managed.
 
 It is important to note that `PCOrCP.dll` is the starting DLL and will be extended to make the system more dynamic.
 
