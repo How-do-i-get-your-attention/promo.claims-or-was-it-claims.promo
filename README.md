@@ -1344,25 +1344,38 @@ This `Init()` function serves as the entry point to initialize the module with t
 An example of the `Init()` function in a DLL would look like this:
 
 ```cpp
-using namespace std;
+#include "PCOrCP.h"
 
+using namespace std;
 vector<tuple<string, string, HMODULE>>(*GetModules);
 void(*InitModule)(const string&);
 HMODULE(*GetModule)(const string&);
 void(*RemoveModule)(const string&);
-
+/*
+	Stop=0
+	Play=1
+	Pause=2
+*/
+int Interaction = 1;
 extern "C" __declspec(dllexport) void Init(vector<tuple<string, string, HMODULE>>(*getModules), void(*initModule)(const string&), HMODULE(*getModule)(const string&), void(*removeModule)(const string&))
 {
-    GetModules = getModules;
-    InitModule = initModule;
-    GetModule = getModule;
-    RemoveModule = removeModule;
-    
-    // Run forever
-    while (true)
-    {
-    }
-    // Else it will be close... and remove from the list
+	GetModules = getModules;
+	InitModule = initModule;
+	GetModule = getModule;
+	RemoveModule = removeModule;
+	thread theadPlay(Play);
+	theadPlay.detach();
+	while (Interaction!=0)
+		Sleep(5000);
+}
+extern "C" __declspec(dllexport) void Play() {
+	Interaction = 1;
+}
+extern "C" __declspec(dllexport) void Pause() {
+	Interaction = 2;
+}
+extern "C" __declspec(dllexport) void Stop() {
+	Interaction = 0;
 }
 ```
 
