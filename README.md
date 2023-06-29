@@ -1367,14 +1367,14 @@ extern "C" __declspec(dllexport) void Init(vector<tuple<string, string, HMODULE>
 	//....
 	// Start Play in background.<
 	/*
----------------------------
-|     Layer 1: Startup    |
-|-------------------------|
-| Layer 2: Background Run |
-|   Thread 1              |
-|   Thread 2              |
-|   ...                   |
----------------------------
+							---------------------------
+							|     Layer 1: Startup    |
+							|-------------------------|
+							| Layer 2: Background Run |
+							|   Thread 1              |
+							|   Thread 2              |
+							|   ...                   |
+							---------------------------
 	*/
 	thread theadPlay(Play);
 	theadPlay.detach();
