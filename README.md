@@ -1214,7 +1214,7 @@ DNS serves as a distributed naming system that enables the translation of human-
 
 Controlling the Flow of Domain Names:
 
-Building upon the foundation of DNS, we can explore the concept of controlling the flow of domain names. By implementing a robust DNS infrastructure, administrators can shape and manage the way users interact with various online entities. The selection of intriguing domain names such as "how-do-i-get-your-attention.com," "promo.claims," "claims.promo," "memory.claims," "memories.claims," "good.claims," "between.claims," and "bad.claims" exemplifies the potential for creating distinctive online destinations that capture attention and convey specific messages or branding.
+Building upon the foundation of DNS, we can explore the concept of controlling the flow of domain names. By implementing a robust DNS infrastructure, administrators can shape and manage the way users interact with various online entities. The selection of intriguing domain names such as how-do-i-get-your-attention.com, promo.claims and claims.promo exemplifies the potential for creating distinctive online destinations that capture attention and convey specific messages or branding.
 
 Designing the DNS Infrastructure:
 
