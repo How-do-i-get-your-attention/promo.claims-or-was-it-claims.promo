@@ -1329,3 +1329,54 @@ Remember that your software will need the appropriate permissions to write to th
 ## In Conclusion
 
 The Windows Event Log is a powerful tool for diagnosing and understanding system events and software behavior. By using `wevtutil` and the Windows API, you can create, manage, and analyze event logs to help maintain the health and security of your systems.
+
+
+# Logging Events to Windows Event Log in C++
+
+Introduction:
+In C++, you can log events to the Windows Event Log using the `ReportEvent` function. This allows you to record important information, errors, warnings, or other events that occur within your application or system. This article will guide you through the process of logging events to the Windows Event Log in C++ and provide an example code snippet.
+
+Logging Events with `ReportEvent`:
+
+To log events to the Windows Event Log, you need to use the `ReportEvent` function. Here's an example function that simplifies the process of logging events:
+
+```cpp
+#define AppName L"Your app name"
+
+void EventLog(WORD type, WORD category, DWORD eventID, LPCTSTR* message) {
+    HANDLE handle = RegisterEventSource(NULL, AppName);
+    ReportEvent(handle, type, category, eventID, NULL, 0, 0, message, NULL);
+    DeregisterEventSource(handle);
+}
+```
+
+In the above code, the `EventLog` function takes the following parameters:
+
+- `type`: Specifies the type of the event. It can be one of the following values:
+  - `EVENTLOG_SUCCESS`: Successful operation event.
+  - `EVENTLOG_AUDIT_FAILURE`: Security event indicating a failure to access a system resource.
+  - `EVENTLOG_AUDIT_SUCCESS`: Security event indicating a successful access to a system resource.
+  - `EVENTLOG_ERROR_TYPE`: Error event.
+  - `EVENTLOG_INFORMATION_TYPE`: Informational event.
+  - `EVENTLOG_WARNING_TYPE`: Warning event.
+
+- `category`: Specifies the category of the event. You can define your own categories within your application. If not needed, set it to zero.
+
+- `eventID`: Specifies the identifier of the event. You can define your own event IDs within your application to categorize different events.
+
+- `message`: An array of strings that will be merged into the event description. Each string corresponds to an insert string in the event message template. Make sure to terminate the array with a `NULL` pointer.
+
+Usage Example:
+
+Here's an example of how you can use the `EventLog` function to log an event:
+
+```cpp
+LPCTSTR messages[] = { L"Hello", L"World", NULL };
+EventLog(EVENTLOG_ERROR_TYPE, 0, 1234, messages);
+```
+
+This code logs an error event with event ID 1234 and the insert strings "Hello" and "World". Adjust the event type, category, event ID, and insert strings according to your specific needs.
+
+Conclusion:
+
+Logging events to the Windows Event Log is a useful way to record important information and track the behavior of your application or system. By utilizing the `ReportEvent` function in C++, you can easily log events with different types, categories, and event IDs. This allows you to analyze and troubleshoot issues, monitor system activity, and keep a record of critical events.
