@@ -1464,3 +1464,16 @@ After testing and verifying the event logging functionality, it is recommended t
 
 ### Conclusion
 Implementing event logging in C++ enables developers to capture and record significant events and errors in their applications. By leveraging the Windows API, developers can log events with specific types, categories, event IDs, and accompanying messages. Use appropriate event types based on the nature of the event, categorize events, and provide informative event IDs for easier analysis. After testing, it is crucial to manage and remove unnecessary event logging to optimize system resources and memory usage.
+
+
+# Disclaimer:
+
+This project code is publicly available for educational and informational purposes. We believe in transparency and aim to showcase the project in its entirety. However, please note the following:
+
+1. Respect Ownership: We kindly request that you refrain from using this code as your own project without proper permission or attribution. The code and associated resources are the intellectual property of their respective owners.
+
+2. Learn and Get Inspired: We encourage you to explore the code, understand its concepts, and use it as a source of inspiration for your own projects. Feel free to adapt and modify the code to suit your needs while adhering to relevant licenses and copyright laws.
+
+3. Collaboration and Profit Sharing: If you are interested in joining us and contributing to the project, we welcome your participation. Please send an email to hello@how-do-i-get-your-attention.com expressing your interest. Upon mutual agreement and under specific terms, profit sharing opportunities may be considered for developers who actively contribute to the project's success.
+
+Remember, programming is an ever-evolving field, and we believe in fostering a community of learning, growth, and fair collaboration. Let's code responsibly and create amazing projects together!
