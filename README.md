@@ -1331,17 +1331,14 @@ Remember that your software will need the appropriate permissions to write to th
 The Windows Event Log is a powerful tool for diagnosing and understanding system events and software behavior. By using `wevtutil` and the Windows API, you can create, manage, and analyze event logs to help maintain the health and security of your systems.
 
 
-# Logging Events to Windows Event Log in C++
+## Event Logging in C++ with Example Code
 
-Introduction:
-In C++, you can log events to the Windows Event Log using the `ReportEvent` function. This allows you to record important information, errors, warnings, or other events that occur within your application or system. This article will guide you through the process of logging events to the Windows Event Log in C++ and provide an example code snippet.
+### Introduction
+Event logging is an essential aspect of software development that enables applications to record important events and errors for later analysis and troubleshooting. This article demonstrates how to implement event logging in C++ using the Windows API. It covers the different event types, categories, event IDs, and message parameters.
 
-Logging Events with `ReportEvent`:
-
-To log events to the Windows Event Log, you need to use the `ReportEvent` function. Here's an example function that simplifies the process of logging events:
-
+### Code Example
 ```cpp
-#define AppName L"Your app name"
+#define AppName L"PCOrCP"
 
 void EventLog(WORD type, WORD category, DWORD eventID, LPCTSTR* message) {
     HANDLE handle = RegisterEventSource(NULL, AppName);
@@ -1350,33 +1347,31 @@ void EventLog(WORD type, WORD category, DWORD eventID, LPCTSTR* message) {
 }
 ```
 
-In the above code, the `EventLog` function takes the following parameters:
+### Explanation
+The provided code snippet showcases a function named `EventLog` that performs event logging using the Windows API. Let's examine the various components and their purposes.
 
-- `type`: Specifies the type of the event. It can be one of the following values:
-  - `EVENTLOG_SUCCESS`: Successful operation event.
-  - `EVENTLOG_AUDIT_FAILURE`: Security event indicating a failure to access a system resource.
-  - `EVENTLOG_AUDIT_SUCCESS`: Security event indicating a successful access to a system resource.
-  - `EVENTLOG_ERROR_TYPE`: Error event.
-  - `EVENTLOG_INFORMATION_TYPE`: Informational event.
-  - `EVENTLOG_WARNING_TYPE`: Warning event.
+#### Event Types
+The `type` parameter represents the type of the event and can take on the following values:
+- `EVENTLOG_SUCCESS`: Indicates a successful event.
+- `EVENTLOG_AUDIT_FAILURE`: Denotes a failure in an audited security event.
+- `EVENTLOG_AUDIT_SUCCESS`: Represents a successful audited security event.
+- `EVENTLOG_ERROR_TYPE`: Indicates an error event.
+- `EVENTLOG_INFORMATION_TYPE`: Denotes an informational event.
+- `EVENTLOG_WARNING_TYPE`: Represents a warning event.
 
-- `category`: Specifies the category of the event. You can define your own categories within your application. If not needed, set it to zero.
+#### Categories and Event IDs
+The `category` parameter allows you to categorize events based on your application's requirements. You can define custom categories specific to your application's needs. The `eventID` parameter represents a unique identifier for each event. These values help classify and identify events for analysis and troubleshooting purposes.
 
-- `eventID`: Specifies the identifier of the event. You can define your own event IDs within your application to categorize different events.
+#### Message Parameter
+The `message` parameter is an array of strings (`LPCTSTR*`) that contains the detailed information or error message associated with the logged event. You can pass relevant information or error descriptions to provide context and aid in issue resolution.
 
-- `message`: An array of strings that will be merged into the event description. Each string corresponds to an insert string in the event message template. Make sure to terminate the array with a `NULL` pointer.
+#### Event Logging Process
+1. The `RegisterEventSource` function creates a handle (`handle`) for the event source, associating it with the specified application name (`AppName`).
+2. The `ReportEvent` function is called to log the event using the provided parameters: `type`, `category`, `eventID`, `message`, and others.
+3. Once the event is logged, the `DeregisterEventSource` function is called to release the handle and free associated resources.
 
-Usage Example:
+### Best Practices
+After testing and verifying the event logging functionality, it is recommended to remove or disable excessive event logging to conserve system resources and memory. Event logs can consume disk space and impact performance if not managed properly. Ensure that event logging is used judiciously and only for events that require monitoring or troubleshooting.
 
-Here's an example of how you can use the `EventLog` function to log an event:
-
-```cpp
-LPCTSTR messages[] = { L"Hello", L"World", NULL };
-EventLog(EVENTLOG_ERROR_TYPE, 0, 1234, messages);
-```
-
-This code logs an error event with event ID 1234 and the insert strings "Hello" and "World". Adjust the event type, category, event ID, and insert strings according to your specific needs.
-
-Conclusion:
-
-Logging events to the Windows Event Log is a useful way to record important information and track the behavior of your application or system. By utilizing the `ReportEvent` function in C++, you can easily log events with different types, categories, and event IDs. This allows you to analyze and troubleshoot issues, monitor system activity, and keep a record of critical events.
+### Conclusion
+Implementing event logging in C++ enables developers to capture and record significant events and errors in their applications. By leveraging the Windows API, developers can log events with specific types, categories, event IDs, and accompanying messages. Use appropriate event types based on the nature of the event, categorize events, and provide informative event IDs for easier analysis. After testing, it is crucial to manage and remove unnecessary event logging to optimize system resources and memory usage.
