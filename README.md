@@ -1305,7 +1305,7 @@ The `wevtutil` tool comes built-in with Windows and allows you to retrieve and m
 For example, to query the Application log for entries from a specific source, you can use the following command:
 
 ```cmd
-wevtutil qe Application /q:"*[System[Provider[@Name='YourSource']]]" /f:text
+wevtutil qe Application /q:"*[System[Provider[@Name='Your App Name']]]" /f:text
 ```
 
 This command says to query events (`qe`) from the Application log where the Provider's Name is 'YourSource', and to format (`/f`) the output as text.
@@ -1317,7 +1317,7 @@ You can also write to the event log from your own software. This can be especial
 In C++, you can use the `ReportEvent` function from the Windows API to log events. Here is a brief example:
 
 ```cpp
-HANDLE hEventLog = RegisterEventSource(NULL, L"YourSource");
+HANDLE hEventLog = RegisterEventSource(NULL, L"Your App Name");
 ReportEvent(hEventLog, EVENTLOG_ERROR_TYPE, 0, 0, NULL, 1, 0, L"Your message", NULL);
 DeregisterEventSource(hEventLog);
 ```
