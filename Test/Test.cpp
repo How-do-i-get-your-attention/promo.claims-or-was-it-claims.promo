@@ -1,27 +1,48 @@
-#include "Test.h"
-#include <iostream>
-
+#include <string>
+#include <thread>
 #include <Windows.h>
-#include <tuple>
 #include <tuple>
 #include <vector>
 #include <tuple>
 #include <Windows.h>
-#include <string>
-#include <guiddef.h>
-#include <random>
-#include <thread>
 
-
-void(*InitModule)(const std::string&);
-HMODULE(*GetModule)(const std::string&);
-void(*RemoveModule)(const std::string&);
-extern "C" __declspec(dllexport) void Init(std::vector<std::tuple<std::string, std::string, HMODULE>>&modules, void(*initModule)(const std::string&), HMODULE(*getModule)(const std::string&), void(*removeModule)(const std::string&))
+using namespace std;
+vector<tuple<string, string, HMODULE>>(*GetModules);
+void(*InitModule)(const string&);
+HMODULE(*GetModule)(const string&);
+void(*RemoveModule)(const string&);
+/*
+	Stop=0
+	Play=1
+	Pause=2
+	PrepareForUpdate=3
+*/
+int Interaction = 1;
+extern "C" __declspec(dllexport) void Init(vector<tuple<string, string, HMODULE>>(*getModules), void(*initModule)(const string&), HMODULE(*getModule)(const string&), void(*removeModule)(const string&))
 {
-    std::cout << "hallo world" << std::endl;
-    //RemoveModule("Test.dll");
+	GetModules = getModules;
+	InitModule = initModule;
+	GetModule = getModule;
+	RemoveModule = removeModule;
+	thread theadPlay(Play);
+	theadPlay.detach();
+	//Run forever with Interaction
+	while (Interaction != 0)
+		Sleep(5000);
+	//Otherwise, RemoveModule will be called automatically
 }
-extern "C" __declspec(dllexport) void Play() {}
-extern "C" __declspec(dllexport) void Pause() {}
-extern "C" __declspec(dllexport) void Stop() {}
+extern "C" __declspec(dllexport) void Play() {
+	Interaction = 1;
+}
+extern "C" __declspec(dllexport) void Pause() {
+	Interaction = 2;
+}
+extern "C" __declspec(dllexport) void Stop() {
+	Interaction = 0;
+}
 
+#define SOFTWARE_VERSION 0
+extern "C"  __declspec(dllexport) int Version() { return SOFTWARE_VERSION; }
+extern "C"  __declspec(dllexport) void PrepareForUpdate() {
+	Interaction = 3;
+}
