@@ -1429,9 +1429,9 @@ Event logging is an essential aspect of software development that enables applic
 ```cpp
 #define AppName L"PCOrCP"
 
-void EventLog(WORD type, WORD category, DWORD eventID, LPCTSTR* message) {
+void EventLog(WORD type, WORD category, DWORD eventID, LPCTSTR* messages) {
     HANDLE handle = RegisterEventSource(NULL, AppName);
-    ReportEvent(handle, type, category, eventID, NULL, 0, 0, message, NULL);
+    ReportEvent(handle, type, category, eventID, NULL, 0, 0, messages, NULL);
     DeregisterEventSource(handle);
 }
 ```
