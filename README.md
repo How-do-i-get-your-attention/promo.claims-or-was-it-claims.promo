@@ -1420,50 +1420,6 @@ To ensure robust and reliable code, it is crucial to follow best practices when 
 ### Conclusion
 Handle management is a critical aspect of C++ programming when dealing with system resources and objects. By understanding the HANDLE data type, its features, and best practices for handle management, you can efficiently access, manipulate, and synchronize resources in your C++ applications. With this comprehensive guide, you now have the knowledge and resources to effectively work with HANDLEs and ensure optimal resource utilization and error-free execution.
 
-## Event Logging in C++ with Example Code
-
-### Introduction
-Event logging is an essential aspect of software development that enables applications to record important events and errors for later analysis and troubleshooting. This article demonstrates how to implement event logging in C++ using the Windows API. It covers the different event types, categories, event IDs, and message parameters.
-
-### Code Example
-```cpp
-#define AppName L"PCOrCP"
-
-void EventLog(WORD type, WORD category, DWORD eventID, LPCTSTR* messages) {
-    HANDLE handle = RegisterEventSource(NULL, AppName);
-    ReportEvent(handle, type, category, eventID, NULL, 0, 0, messages, NULL);
-    DeregisterEventSource(handle);
-}
-```
-
-### Explanation
-The provided code snippet showcases a function named `EventLog` that performs event logging using the Windows API. Let's examine the various components and their purposes.
-
-#### Event Types
-The `type` parameter represents the type of the event and can take on the following values:
-- `EVENTLOG_SUCCESS`: Indicates a successful event.
-- `EVENTLOG_AUDIT_FAILURE`: Denotes a failure in an audited security event.
-- `EVENTLOG_AUDIT_SUCCESS`: Represents a successful audited security event.
-- `EVENTLOG_ERROR_TYPE`: Indicates an error event.
-- `EVENTLOG_INFORMATION_TYPE`: Denotes an informational event.
-- `EVENTLOG_WARNING_TYPE`: Represents a warning event.
-
-#### Categories and Event IDs
-The `category` parameter allows you to categorize events based on your application's requirements. You can define custom categories specific to your application's needs. The `eventID` parameter represents a unique identifier for each event. These values help classify and identify events for analysis and troubleshooting purposes.
-
-#### Message Parameter
-The `message` parameter is an array of strings (`LPCTSTR*`) that contains the detailed information or error message associated with the logged event. You can pass relevant information or error descriptions to provide context and aid in issue resolution.
-
-#### Event Logging Process
-1. The `RegisterEventSource` function creates a handle (`handle`) for the event source, associating it with the specified application name (`AppName`).
-2. The `ReportEvent` function is called to log the event using the provided parameters: `type`, `category`, `eventID`, `message`, and others.
-3. Once the event is logged, the `DeregisterEventSource` function is called to release the handle and free associated resources.
-
-### Best Practices
-After testing and verifying the event logging functionality, it is recommended to remove or disable excessive event logging to conserve system resources and memory. Event logs can consume disk space and impact performance if not managed properly. Ensure that event logging is used judiciously and only for events that require monitoring or troubleshooting.
-
-### Conclusion
-Implementing event logging in C++ enables developers to capture and record significant events and errors in their applications. By leveraging the Windows API, developers can log events with specific types, categories, event IDs, and accompanying messages. Use appropriate event types based on the nature of the event, categorize events, and provide informative event IDs for easier analysis. After testing, it is crucial to manage and remove unnecessary event logging to optimize system resources and memory usage.
 
 
 # Disclaimer:
