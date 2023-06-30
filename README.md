@@ -1479,14 +1479,12 @@ This project code is publicly available for educational and informational purpos
 Remember, programming is an ever-evolving field, and we believe in fostering a community of learning, growth, and fair collaboration. Let's code responsibly and create amazing projects together!
 
 <div align="center">
-
 <small>Project - An International Endeavor</small>
-
 <small>I don't know if there is a God or not, and that's not something you need to teach me. However, what I do know is that by doing good, I can improve my own life. As a programmer, I often ponder on how I can contribute to the well-being of those who use my app or services.</small>
-
 <small>I call it "my" app, but I started it. My name is Pirasath Luxchumykanthan, and I want many to be a part of this project. I aim to create tools that are accessible to everyone and connect people worldwide. I may not know exactly what people want, but I understand the importance of following the laws and regulations of each country. This is how I build this platform, but regulations can change, so I will strive to keep up.</small>
-
 <small>As I mentioned before, we are only human, and all we can do is try. I hope you will join me on this journey.</small>
-
+<small>What did you do yesterday?</small>
+<small>What are you about to do?</small>
+<small>What will you do tomorrow?</small>
 </div>
 
