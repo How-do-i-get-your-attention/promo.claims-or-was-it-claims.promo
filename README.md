@@ -1485,7 +1485,7 @@ Remember, programming is an ever-evolving field, and we believe in fostering a c
 
 <small>I call it "my" app, but I started it. My name is Pirasath Luxchumykanthan, and I want many to be a part of this project. I aim to create tools that are accessible to everyone and connect people worldwide. I may not know exactly what people want, but I understand the importance of following the laws and regulations of each country. This is how I build this platform, but regulations can change, so I will strive to keep up.</small>
 
-<small>As I mentioned before, we are only human, and all we can "try". I hope you will join me on this journey.</small>
+<small>As I mentioned before, we are only human, we can only "try". I hope you will join me on this journey.</small>
 
 <small>What did you do yesterday?</small>
 
