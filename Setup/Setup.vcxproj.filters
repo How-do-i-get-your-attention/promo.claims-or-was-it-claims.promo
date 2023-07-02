@@ -15,12 +15,12 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="PCOrCP.h">
+    <ClInclude Include="Setup.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="PCOrCP.cpp">
+    <ClCompile Include="Setup.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
