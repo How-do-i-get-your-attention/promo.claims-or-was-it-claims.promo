@@ -1214,7 +1214,7 @@ DNS serves as a distributed naming system that enables the translation of human-
 
 Controlling the Flow of Domain Names:
 
-Building upon the foundation of DNS, we can explore the concept of controlling the flow of domain names. By implementing a robust DNS infrastructure, administrators can shape and manage the way users interact with various online entities. The selection of intriguing domain names such as "how-do-i-get-your-attention.com," "promo.claims," "claims.promo," "memory.claims," "memories.claims," "good.claims," "between.claims," and "bad.claims" exemplifies the potential for creating distinctive online destinations that capture attention and convey specific messages or branding.
+Building upon the foundation of DNS, we can explore the concept of controlling the flow of domain names. By implementing a robust DNS infrastructure, administrators can shape and manage the way users interact with various online entities. The selection of intriguing domain names such as how-do-i-get-your-attention.com, promo.claims and claims.promo exemplifies the potential for creating distinctive online destinations that capture attention and convey specific messages or branding.
 
 Designing the DNS Infrastructure:
 
@@ -1420,47 +1420,34 @@ To ensure robust and reliable code, it is crucial to follow best practices when 
 ### Conclusion
 Handle management is a critical aspect of C++ programming when dealing with system resources and objects. By understanding the HANDLE data type, its features, and best practices for handle management, you can efficiently access, manipulate, and synchronize resources in your C++ applications. With this comprehensive guide, you now have the knowledge and resources to effectively work with HANDLEs and ensure optimal resource utilization and error-free execution.
 
-## Event Logging in C++ with Example Code
 
-### Introduction
-Event logging is an essential aspect of software development that enables applications to record important events and errors for later analysis and troubleshooting. This article demonstrates how to implement event logging in C++ using the Windows API. It covers the different event types, categories, event IDs, and message parameters.
 
-### Code Example
-```cpp
-#define AppName L"PCOrCP"
+# Disclaimer:
 
-void EventLog(WORD type, WORD category, DWORD eventID, LPCTSTR* message) {
-    HANDLE handle = RegisterEventSource(NULL, AppName);
-    ReportEvent(handle, type, category, eventID, NULL, 0, 0, message, NULL);
-    DeregisterEventSource(handle);
-}
-```
+This project code is publicly available for educational and informational purposes. We believe in transparency and aim to showcase the project in its entirety. However, please note the following:
 
-### Explanation
-The provided code snippet showcases a function named `EventLog` that performs event logging using the Windows API. Let's examine the various components and their purposes.
+1. Respect Ownership: We kindly request that you refrain from using this code as your own project without proper permission or attribution. The code and associated resources are the intellectual property of their respective owners.
 
-#### Event Types
-The `type` parameter represents the type of the event and can take on the following values:
-- `EVENTLOG_SUCCESS`: Indicates a successful event.
-- `EVENTLOG_AUDIT_FAILURE`: Denotes a failure in an audited security event.
-- `EVENTLOG_AUDIT_SUCCESS`: Represents a successful audited security event.
-- `EVENTLOG_ERROR_TYPE`: Indicates an error event.
-- `EVENTLOG_INFORMATION_TYPE`: Denotes an informational event.
-- `EVENTLOG_WARNING_TYPE`: Represents a warning event.
+2. Learn and Get Inspired: We encourage you to explore the code, understand its concepts, and use it as a source of inspiration for your own projects. Feel free to adapt and modify the code to suit your needs while adhering to relevant licenses and copyright laws.
 
-#### Categories and Event IDs
-The `category` parameter allows you to categorize events based on your application's requirements. You can define custom categories specific to your application's needs. The `eventID` parameter represents a unique identifier for each event. These values help classify and identify events for analysis and troubleshooting purposes.
+3. Collaboration and Profit Sharing: If you are interested in joining us and contributing to the project, we welcome your participation. Please send an email to hello@how-do-i-get-your-attention.com expressing your interest. Upon mutual agreement and under specific terms, profit sharing opportunities may be considered for developers who actively contribute to the project's success.
 
-#### Message Parameter
-The `message` parameter is an array of strings (`LPCTSTR*`) that contains the detailed information or error message associated with the logged event. You can pass relevant information or error descriptions to provide context and aid in issue resolution.
+Remember, programming is an ever-evolving field, and we believe in fostering a community of learning, growth, and fair collaboration. Let's code responsibly and create amazing projects together!
 
-#### Event Logging Process
-1. The `RegisterEventSource` function creates a handle (`handle`) for the event source, associating it with the specified application name (`AppName`).
-2. The `ReportEvent` function is called to log the event using the provided parameters: `type`, `category`, `eventID`, `message`, and others.
-3. Once the event is logged, the `DeregisterEventSource` function is called to release the handle and free associated resources.
+<div align="center">
+<small>Project - An International Endeavor</small>
+            
+<small>I don't know if there is a God or not, and that's not something you need to teach me. However, what I do know is that by doing good, I can improve my own life. As a programmer, I often ponder on how I can contribute to the well-being of those who use my app or services.</small>
 
-### Best Practices
-After testing and verifying the event logging functionality, it is recommended to remove or disable excessive event logging to conserve system resources and memory. Event logs can consume disk space and impact performance if not managed properly. Ensure that event logging is used judiciously and only for events that require monitoring or troubleshooting.
+<small>I call it "my" app, but I started it. My name is Pirasath Luxchumykanthan, and I want many to be a part of this project. I aim to create tools that are accessible to everyone and connect people worldwide. I may not know exactly what people want, but I understand the importance of following the laws and regulations of each country. This is how I build this platform, but regulations can change, so I will strive to keep up.</small>
 
-### Conclusion
-Implementing event logging in C++ enables developers to capture and record significant events and errors in their applications. By leveraging the Windows API, developers can log events with specific types, categories, event IDs, and accompanying messages. Use appropriate event types based on the nature of the event, categorize events, and provide informative event IDs for easier analysis. After testing, it is crucial to manage and remove unnecessary event logging to optimize system resources and memory usage.
+<small>As I mentioned before, we are only human, we can only "try". I hope you will join me on this journey.</small>
+
+<small>What did you do yesterday?</small>
+
+<small>What are you about to do?</small>
+
+<small>What will you do tomorrow?</small>
+</div>
+
+# Setup
