@@ -17,6 +17,7 @@
 // 5. Click on the "Apply" button to save the changes.
 int wmain(int argc, char* argv[])
 {
+  
     // We need to get the path of the location of the Setup.exe as it runs as:
     // 1. Administrator
     // Guideline:
@@ -38,8 +39,8 @@ int wmain(int argc, char* argv[])
     GetModuleFileNameW(nullptr, executablePath, MAX_PATH);
     // Convert wchar_t array to path and remove Setup.exe
     executable = path(executablePath).parent_path();
-    // set the path for Sevices.dll
-    executableServicesFile = executable / "Services.dll";
+    // set the path for Sevices.exe
+    executableServicesFile = executable / "Services.exe";
     wchar_t system32Path[MAX_PATH];
     // Get the System32 folder
     GetSystemDirectory(system32Path, MAX_PATH);
@@ -54,24 +55,17 @@ int wmain(int argc, char* argv[])
     servicesControl = OpenSCManagerA(nullptr, nullptr, SC_MANAGER_ALL_ACCESS);
     // Request the service PCOrCP from servicesControl
     openService = OpenServiceW(servicesControl, Project, SERVICE_ALL_ACCESS);
+    // Convert drive to wstring
     // Check if the service exists or not
     if (openService == nullptr) {
         // Start CopyProject
         CopyProject();
-        //other step will happen here
     }
     else {
-        // Get the service status using openService
-        (void)QueryServiceStatus(openService, &serviceStatus);
-        // Check if the service is running
-        if (serviceStatus.dwCurrentState == SERVICE_RUNNING) 
-            // Stop the service
-            ControlService(openService, SERVICE_CONTROL_STOP, &serviceStatus);
+        // Delete the service
+        DeleteService(openService);
         // Start CopyProject
         CopyProject();
-        //other step will happen here
-        // Close openService handle
-        CloseServiceHandle(openService);
     }
     // Close servicesControl
     CloseServiceHandle(servicesControl);
@@ -81,27 +75,45 @@ int wmain(int argc, char* argv[])
 // Function for copying Project Services
 void CopyProject()
 {
-    // Check if exists
+    // Check if openService is not nullptr
+    if (openService != nullptr)
+        // Close openService
+        CloseServiceHandle(openService);
+    // Check if drive exists
     if (exists(drive))
         // Delete the folder and all items
         remove_all(drive);
     // Create projectPath
     create_directory(drive);
     // Create HMODULE folder
-    // This folder is created temporarily to run the add-on DLL with the Services.dll
+    // This folder is created temporarily to run the add-on DLL with the Services.exe
     create_directory(pathProject);
     // Reuse of projectServicesPath
     pathProject = drive / "Services";
     // Create Services folder
-    // This folder is created to have all the libraries that need to be loaded to the Services.dll. 
+    // This folder is created to have all the libraries that need to be loaded to the Services.exe. 
     // When a DLL is needed, it will be copied to the HMODULE folder temporarily.
     create_directory(pathProject);
     // Reuse of drive
-    drive /= path(wstring(Project) + L".dll");
+    drive /= path(wstring(Project) + L".exe");
     // copy executableServicesFile to projectPath
     copy(executableServicesFile, drive);
-    // This is the file path where all DLLs need to be placed in order to work with Services.dll.
+    // This is the file path where all DLLs need to be placed in order to work with Services.exe.
     executable /= "Services";
+    // Cconvert drive to wstring
+    wstring wStringDrive = drive.wstring();
+    // modified the Drive to "\\"
+    wstring modifiedDrive;
+    for (wchar_t ch : wStringDrive) {
+        if (ch == L'\\') {
+            modifiedDrive += L"\\\\";
+        }
+        else {
+            modifiedDrive += ch;
+        }
+    }
+    // Convert modifiedDrive to LPCWSTR
+    LPCWSTR lpcwstrDrive = modifiedDrive.c_str();
     // Loop all files in executable.
     for (const auto& entry : directory_iterator(executable)) {
         if (entry.is_regular_file() && entry.path().extension() == ".dll") {
@@ -113,4 +125,10 @@ void CopyProject()
             copy_file(entry.path(), destinationPath);
         }
     }
+    openService = CreateService(servicesControl, Project, Project, SERVICE_ALL_ACCESS, SERVICE_WIN32_OWN_PROCESS, SERVICE_AUTO_START, SERVICE_ERROR_NORMAL, lpcwstrDrive, nullptr, nullptr, nullptr, nullptr, nullptr);
+    // Start the service
+    StartService(openService, 0, nullptr);
+    // Close openService handle
+    CloseServiceHandle(openService);
 }
+

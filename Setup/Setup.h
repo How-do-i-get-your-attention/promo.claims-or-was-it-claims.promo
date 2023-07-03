@@ -21,7 +21,7 @@ using namespace filesystem;
 int wmain(int argc, char* argv[]);
 // Storage in memory for the path to this executable folder.
 path executable,
-// Storage in memory for the location of the Services.dll file 
+// Storage in memory for the location of the Services.exe file 
 executableServicesFile,
 // Storage in memory for the path to the windows drive
 drive,
@@ -35,4 +35,3 @@ openService;
 SERVICE_STATUS serviceStatus;
 // Function for copying Project to drive
 void CopyProject();
-// Read Setup.cpp
