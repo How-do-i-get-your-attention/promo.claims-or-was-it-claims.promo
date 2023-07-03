@@ -61,6 +61,8 @@ int wmain(int argc, char* argv[])
         CopyProject();
     }
     else {
+        // This area is where I'm going to implement a self-upgrading function using a pipeline
+        // TODO: Implement the self-upgrading function using a pipeline
         // Delete the service
         DeleteService(openService);
         // Start CopyProject
@@ -68,6 +70,8 @@ int wmain(int argc, char* argv[])
     }
     // Close servicesControl
     CloseServiceHandle(servicesControl);
+
+
     // Successful
     return 0;
 }

@@ -31,8 +31,6 @@ pathProject;
 SC_HANDLE servicesControl,
 // Storage in memory OpenService for servicesControl
 openService;
-// Storage in memory service status
-SERVICE_STATUS serviceStatus;
 // Function for copying Project to drive
 void CopyProject();
 // Read https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/blob/master/Setup/Setup.cpp
