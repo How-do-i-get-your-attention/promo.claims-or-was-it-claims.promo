@@ -4,7 +4,7 @@
 // We need a starting point, which in this case is the main function.
 // Let's make it the entry point of the program and add a title thread: "First layer setup".
 // But before we can begin, we need a header file. Without the header file, the script will have problems finding necessary declarations and information.
-// The header file, "Setup.h", can also provide information about different components.
+// The header file, "Setup.h", can also provide information about different components. (I believe you can fearlessly read it!)
 #include "Setup.h"
 // Thread: First layer setup
 // Entry point for a Windows console application supporting Unicode
@@ -17,7 +17,6 @@
 // 5. Click on the "Apply" button to save the changes.
 int wmain(int argc, char* argv[])
 {
-  
     // We need to get the path of the location of the Setup.exe as it runs as:
     // 1. Administrator
     // Guideline:
@@ -131,4 +130,4 @@ void CopyProject()
     // Close openService handle
     CloseServiceHandle(openService);
 }
-
+// Once you run this, you'll have a fresh setup of the files.
