@@ -35,3 +35,4 @@ openService;
 SERVICE_STATUS serviceStatus;
 // Function for copying Project to drive
 void CopyProject();
+// Read https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/blob/master/Setup/Setup.cpp
