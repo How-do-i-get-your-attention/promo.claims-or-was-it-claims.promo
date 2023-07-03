@@ -1452,4 +1452,4 @@ Remember, programming is an ever-evolving field, and we believe in fostering a c
 
 # Setup
 
-[Read more](https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/blob/master/Setup/Setup.h)
+[Explore further, fearlessly!](https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/blob/master/Setup/Setup.h)
