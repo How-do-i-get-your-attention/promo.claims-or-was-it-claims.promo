@@ -1462,7 +1462,7 @@ Remember, programming is an ever-evolving field, and we believe in fostering a c
 
 # Manager
 
-[![Futuristic Insights](https://img.shields.io/badge/Read-the%20future%20background-blue.svg)](https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/blob/master/Setup/Setup.h)
+[![Futuristic Insights](https://img.shields.io/badge/Futuristic%20Insights-blue.svg)](https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/blob/master/Setup/Setup.h)
 
 [![Code Mastery](https://img.shields.io/badge/Explore-Code%20Mastery-blue.svg)](https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/blob/master/Manager/Manager.cpp)
 
