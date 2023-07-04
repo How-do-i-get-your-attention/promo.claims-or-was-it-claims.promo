@@ -41,3 +41,5 @@ extern "C" {
     // Shutdown function
     __declspec(dllexport) void Shutdown();
 }
+// Go and read the code at the specified URL
+// https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/blob/master/Manager/Manager.cpp
