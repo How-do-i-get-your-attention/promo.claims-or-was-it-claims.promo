@@ -19,18 +19,7 @@ using namespace std;
 using namespace filesystem;
 // Thread: First layer setup
 int wmain(int argc, char* argv[]);
-// Storage in memory for the path to this executable folder.
-path executable,
-// Storage in memory for the location of the Services.exe file 
-executableServicesFile,
-// Storage in memory for the path to the windows drive
-drive,
-// path for project folder
-pathProject;
-// Storage in memory for the Services Control.
-SC_HANDLE servicesControl,
-// Storage in memory OpenService for servicesControl
-openService;
-// Function for copying Project to drive
-void CopyProject();
-// Read https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/blob/master/Setup/Setup.cpp
+
+
+
+// Go and Read https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/blob/master/Setup/Setup.cpp

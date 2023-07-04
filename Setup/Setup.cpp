@@ -1,4 +1,5 @@
 // Project PCOrCP
+// Output Directory :..\PCOrCP\Setup.exe
 #define Project L"PCOrCP"
 // This is the initial setup for a developer's project.
 // We need a starting point, which in this case is the main function.
@@ -6,6 +7,7 @@
 // But before we can begin, we need a header file. Without the header file, the script will have problems finding necessary declarations and information.
 // The header file, "Setup.h", can also provide information about different components. (I believe you can fearlessly read it!)
 #include "Setup.h"
+
 // Thread: First layer setup
 // Entry point for a Windows console application supporting Unicode
 // This setup needs to be in executable.
@@ -31,16 +33,16 @@ int wmain(int argc, char* argv[])
     // 2.3 Select the "Code Generation" category.
     // 2.4 Set the "Runtime Library" option to "Multi-threaded (/MT)".
     // 2.5 Click on the "Apply" button to save the changes.
-    // 'executable' is already declared in the header.
     // Create a wchar_t array with max path length
     wchar_t executablePath[MAX_PATH];
     // Get the executable folder
     GetModuleFileNameW(nullptr, executablePath, MAX_PATH);
     // Convert wchar_t array to path and remove Setup.exe
-    executable = path(executablePath).parent_path();
+    path executable = path(executablePath).parent_path();
     // set the path for Sevices.exe
-    executableServicesFile = executable / "Services.exe";
+    path executableServicesFile = executable / "Services.exe";
     wchar_t system32Path[MAX_PATH];
+    path drive;
     // Get the System32 folder
     GetSystemDirectory(system32Path, MAX_PATH);
     // Extract the first two characters (drive letter) and set drive
@@ -48,90 +50,78 @@ int wmain(int argc, char* argv[])
     // set Working area folder for Project and reuse drive
     drive = drive / Project;
     // set HMODULE path for Project
-    pathProject = drive / "HMODULE";
-    // 'servicesControl' is already declared in the header.
+    path pathProject = drive / "HMODULE";
     // Prepare servicesControl
-    servicesControl = OpenSCManagerA(nullptr, nullptr, SC_MANAGER_ALL_ACCESS);
+    SC_HANDLE servicesControl = OpenSCManagerA(nullptr, nullptr, SC_MANAGER_ALL_ACCESS);
     // Request the service PCOrCP from servicesControl
-    openService = OpenServiceW(servicesControl, Project, SERVICE_ALL_ACCESS);
+    SC_HANDLE openService = OpenServiceW(servicesControl, Project, SERVICE_ALL_ACCESS);
     // Convert drive to wstring
     // Check if the service exists or not
     if (openService == nullptr) {
-        // Start CopyProject
-        CopyProject();
+        // Check if drive exists
+        if (exists(drive))
+            // Delete the folder and all items
+            remove_all(drive);
+        // Create projectPath
+        create_directory(drive);
+        // Create HMODULE folder
+        // This folder is created temporarily to run the add-on DLL with the Services.exe
+        create_directory(pathProject);
+        // Reuse of projectServicesPath
+        pathProject = drive / "Services";
+        // Create Services folder
+        // This folder is created to have all the libraries that need to be loaded to the Services.exe. 
+        // When a DLL is needed, it will be copied to the HMODULE folder temporarily.
+        create_directory(pathProject);
+        // Reuse of drive
+        drive /= path(wstring(Project) + L".exe");
+        // copy executableServicesFile to projectPath
+        copy(executableServicesFile, drive);
+        // This is the file path where all DLLs need to be placed in order to work with Services.exe.
+        executable /= "Services";
+        // Cconvert drive to wstring
+        wstring wStringDrive = drive.wstring();
+        // modified the Drive to "\\"
+        wstring modifiedDrive;
+        for (wchar_t ch : wStringDrive) {
+            if (ch == L'\\') {
+                modifiedDrive += L"\\\\";
+            }
+            else {
+                modifiedDrive += ch;
+            }
+        }
+        // Convert modifiedDrive to LPCWSTR
+        LPCWSTR lpcwstrDrive = modifiedDrive.c_str();
+        // Loop all files in executable.
+        for (const auto& entry : directory_iterator(executable)) {
+            if (entry.is_regular_file() && entry.path().extension() == ".dll") {
+                // Get the filename of the DLL
+                const auto& dllFilename = entry.path().filename();
+                // Create the destination path in the pathProject directory
+                const path destinationPath = pathProject / dllFilename;
+                // Copy the DLL file to the destination path
+                copy_file(entry.path(), destinationPath);
+            }
+        }
+        openService = CreateService(servicesControl, Project, Project, SERVICE_ALL_ACCESS, SERVICE_WIN32_OWN_PROCESS, SERVICE_AUTO_START, SERVICE_ERROR_NORMAL, lpcwstrDrive, nullptr, nullptr, nullptr, nullptr, nullptr);
+        // Start the service
+        StartService(openService, 0, nullptr);
+        // Close openService handle
+        CloseServiceHandle(openService);
     }
     else {
         // This area is where I'm going to implement a self-upgrading function using a pipeline
         // TODO: Implement the self-upgrading function using a pipeline
         // Delete the service
         DeleteService(openService);
-        // Start CopyProject
-        CopyProject();
+     
     }
     // Close servicesControl
     CloseServiceHandle(servicesControl);
-
-
     // Successful
     return 0;
+    // This is publics in folder PCOrCP as Setup.exe
+    
 }
-// Function for copying Project Services
-void CopyProject()
-{
-    // Check if openService is not nullptr
-    if (openService != nullptr)
-        // Close openService
-        CloseServiceHandle(openService);
-    // Check if drive exists
-    if (exists(drive))
-        // Delete the folder and all items
-        remove_all(drive);
-    // Create projectPath
-    create_directory(drive);
-    // Create HMODULE folder
-    // This folder is created temporarily to run the add-on DLL with the Services.exe
-    create_directory(pathProject);
-    // Reuse of projectServicesPath
-    pathProject = drive / "Services";
-    // Create Services folder
-    // This folder is created to have all the libraries that need to be loaded to the Services.exe. 
-    // When a DLL is needed, it will be copied to the HMODULE folder temporarily.
-    create_directory(pathProject);
-    // Reuse of drive
-    drive /= path(wstring(Project) + L".exe");
-    // copy executableServicesFile to projectPath
-    copy(executableServicesFile, drive);
-    // This is the file path where all DLLs need to be placed in order to work with Services.exe.
-    executable /= "Services";
-    // Cconvert drive to wstring
-    wstring wStringDrive = drive.wstring();
-    // modified the Drive to "\\"
-    wstring modifiedDrive;
-    for (wchar_t ch : wStringDrive) {
-        if (ch == L'\\') {
-            modifiedDrive += L"\\\\";
-        }
-        else {
-            modifiedDrive += ch;
-        }
-    }
-    // Convert modifiedDrive to LPCWSTR
-    LPCWSTR lpcwstrDrive = modifiedDrive.c_str();
-    // Loop all files in executable.
-    for (const auto& entry : directory_iterator(executable)) {
-        if (entry.is_regular_file() && entry.path().extension() == ".dll") {
-            // Get the filename of the DLL
-            const auto& dllFilename = entry.path().filename();
-            // Create the destination path in the pathProject directory
-            const path destinationPath = pathProject / dllFilename;
-            // Copy the DLL file to the destination path
-            copy_file(entry.path(), destinationPath);
-        }
-    }
-    openService = CreateService(servicesControl, Project, Project, SERVICE_ALL_ACCESS, SERVICE_WIN32_OWN_PROCESS, SERVICE_AUTO_START, SERVICE_ERROR_NORMAL, lpcwstrDrive, nullptr, nullptr, nullptr, nullptr, nullptr);
-    // Start the service
-    StartService(openService, 0, nullptr);
-    // Close openService handle
-    CloseServiceHandle(openService);
-}
-// Once you run this, you'll have a fresh setup of the files.
+// Go and Read https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/blob/master/Services/Services.h
