@@ -1459,3 +1459,10 @@ Remember, programming is an ever-evolving field, and we believe in fostering a c
 [![Read the future background](https://img.shields.io/badge/Read-the%20future%20background-blue.svg)](https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/blob/master/Setup/Setup.h)
 
 [![Unleash the Power](https://img.shields.io/badge/Unleash%20the%20Power-blue.svg)](https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/blob/master/Services/Services.cpp)
+
+# Manager
+
+[![Futuristic Insights](https://img.shields.io/badge/Read-the%20future%20background-blue.svg)](https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/blob/master/Setup/Setup.h)
+
+[![Code Mastery](https://img.shields.io/badge/Explore-Code%20Mastery-blue.svg)](https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/blob/master/Manager/Manager.cpp)
+
