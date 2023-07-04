@@ -1,9 +1,14 @@
 #include "Manager.h"
 
-#include <iostream>
 
-void Init()
+void Shutdown() {
+
+}
+void Heartbeat() {
+
+}
+void Init(const std::wstring&, const std::wstring&, HMODULE&)
 {
     // Function implementation
-    std::cout << "Hello from Init!" << std::endl;
+    std::cout << "Hello from Inhhit!" << std::endl;
 }
