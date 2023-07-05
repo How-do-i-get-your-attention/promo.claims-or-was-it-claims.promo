@@ -1458,11 +1458,15 @@ Remember, programming is an ever-evolving field, and we believe in fostering a c
 # Services
 [![Read the future background](https://img.shields.io/badge/Read-the%20future%20background-blue.svg)](https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/blob/master/Setup/Setup.h)
 
-[![Unleash the Power](https://img.shields.io/badge/Unleash%20the%20Power-blue.svg)](https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/blob/master/Services/Services.cpp)
+[![Unleash the Power](https://img.shields.io/badge/Unleash%20the%20Power-blue.svg)](https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/blob/master/Services/Services.cpp) <img src="https://github.githubassets.com/images/icons/emoji/unicode/23f3.png" width="16" height="16" alt="working on it">
 
 # Manager
 
 [![Futuristic Insights](https://img.shields.io/badge/Futuristic%20Insights-blue.svg)](https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/blob/master/Setup/Setup.h) <img src="https://github.githubassets.com/images/icons/emoji/unicode/23f3.png" width="16" height="16" alt="working on it">
 
 [![Code Mastery](https://img.shields.io/badge/Explore-Code%20Mastery-blue.svg)](https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/blob/master/Manager/Manager.cpp) <img src="https://github.githubassets.com/images/icons/emoji/unicode/23f3.png" width="16" height="16" alt="working on it">
+
+# Defender
+
+# Firewall
 
