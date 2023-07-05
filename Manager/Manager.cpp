@@ -22,9 +22,9 @@ HMODULE Get(LPCWSTR Path) {
         return nullptr;
     }
     UUID newUUID;
-    UuidCreate(&newUUID);  // Generate a new UUID
+    (void)UuidCreate(&newUUID);  // Generate a new UUID
     wchar_t uuidString[40];  // Buffer to hold the UUID string
-    UuidToStringW(&newUUID, (RPC_WSTR*)&uuidString);  // Convert the UUID to a string representation
+    (void)UuidToStringW(&newUUID, (RPC_WSTR*)&uuidString);  // Convert the UUID to a string representation
     wstring newFileName = wstring(uuidString) + L".dll";  // Combine the UUID string with ".dll" to form the new filename
     wstring destinationPath = _hmodule + L"\\" + newFileName;  // Generate the full destination path
     // Copy the contents of the source file to the destination file
@@ -61,7 +61,56 @@ HMODULE Get(LPCWSTR Path) {
 
 // Function to update a file
 void Update(LPCWSTR Path) {
-    HMODULE module = Get(Path);
+    // Find the File with a matching Path using std::find_if
+    auto it = find_if(Files.begin(), Files.end(),
+        [Path](const File& file) {
+            return wcscmp(file.OldPath, Path) == 0;
+        });
+    if (it == Files.end()) {
+        (void)Get(Path);
+    }
+    else
+    {
+        auto oldCreationTime = last_write_time(it->OldPath);
+        auto newCreationTime = last_write_time(it->NewPath);
+
+        if (oldCreationTime > newCreationTime) {
+            wstring sourcePath = _services + L"\\" + Path;
+            ifstream sourceFile(sourcePath, ios::binary);
+            if (!sourceFile) {
+                // Handle error when unable to open the source file
+                return;
+            }
+            UUID newUUID;
+            (void)UuidCreate(&newUUID);  // Generate a new UUID
+            wchar_t uuidString[40];  // Buffer to hold the UUID string
+            (void)UuidToStringW(&newUUID, (RPC_WSTR*)&uuidString);  // Convert the UUID to a string representation
+            wstring newFileName = wstring(uuidString) + L".dll";  // Combine the UUID string with ".dll" to form the new filename
+            wstring destinationPath = _hmodule + L"\\" + newFileName;  // Generate the full destination path
+            // Copy the contents of the source file to the destination file
+            ofstream destinationFile(destinationPath, ios::binary);
+            destinationFile << sourceFile.rdbuf();
+            // Close the files
+            sourceFile.close();
+            destinationFile.close();
+            // Load the copied module
+            HMODULE module = LoadLibraryW(destinationPath.c_str());
+            FreeLibrary(it->Module);
+            it->Module = module;
+            remove(it->NewPath);
+            it->NewPath = destinationPath.c_str();
+            // Get the "Init" function address from the module
+            ModuleInit moduleInit = reinterpret_cast<ModuleInit>(GetProcAddress(module, "Init"));
+            // Set the heartbeat function address from the module if available
+            it->Heartbeat = reinterpret_cast<ModuleHeartbeat>(GetProcAddress(module, "Heartbeat"));
+            // Set the shutdown function address from the module if available
+            it->Shutdown = reinterpret_cast<ModuleShutdown>(GetProcAddress(module, "Shutdown"));
+            // Call the moduleInit function if it exists
+            if (moduleInit != nullptr) {
+                moduleInit(_services, _manager);  // Initialize the module
+            }
+        }
+    }
 
     // Perform update logic if needed
 }
@@ -121,6 +170,11 @@ void Shutdown() {
         if (file.Shutdown != nullptr) {
             file.Shutdown();  // Call the shutdown function
         }
-        FreeLibrary(file.Module);  // Free the associated library
     }
+    for (const auto& file : Files) {
+        FreeLibrary(file.Module);  // Free the associated library
+        remove(file.NewPath);
+    }
+    // Clear the list
+    Files.clear();
 }

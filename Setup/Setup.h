@@ -24,6 +24,10 @@ using namespace std;
 using namespace filesystem;
 // Let's create a manager HMODULE
 HMODULE hMODULEManager;
+// Typedefs for function pointers
+typedef void (*ManagerInit)(const std::wstring&, const std::wstring&, HMODULE&);
+typedef void (*ManagerHeartbeat)();
+typedef void (*ManagerShutdown)();
 // Thread: First layer setup
 int wmain(int argc, char* argv[]);
 // Go and Read the code at the specified URL

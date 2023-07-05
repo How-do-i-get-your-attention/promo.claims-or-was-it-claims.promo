@@ -145,10 +145,71 @@ int wmain(int argc, char* argv[])
     }
     // Close servicesControl
     CloseServiceHandle(servicesControl);
+
+    // Get the paths as wstrings
+    wstring services = (drive / L"Services").wstring();
+    wstring hmodule = (drive / L"HMODULE").wstring();
+    wstring managerPath = (services + L"\\Manager.dll");
+
+
+    // Load Manager.dll
+    HMODULE hMODULEManager = LoadLibraryW(managerPath.c_str());
+    if (hMODULEManager == nullptr)
+        return 0;
+
+
+
+    // Get function pointers
+    ManagerInit managerInit = reinterpret_cast<ManagerInit>(GetProcAddress(hMODULEManager, "Init"));
+    ManagerHeartbeat managerHeartbeat = reinterpret_cast<ManagerHeartbeat>(GetProcAddress(hMODULEManager, "Heartbeat"));
+
+    if (managerInit == nullptr || managerHeartbeat == nullptr) {
+        FreeLibrary(hMODULEManager);
+        return 0;
+    }
+
+    // Initialize Manager
+    managerInit(services, hmodule, hMODULEManager);
+
+    // Perform heartbeat flag
+    bool performHeartbeat = true;
+
+    // Start heartbeat thread
+    thread testThreadHeartbeat([managerHeartbeat, &performHeartbeat]() {
+        while (performHeartbeat) {
+            // Start a new thread for the heartbeat
+            std::thread threadHeartbeat(managerHeartbeat);
+            threadHeartbeat.detach();
+
+            // Sleep for 1 millisecond
+            Sleep(1);
+        }
+        });
+    testThreadHeartbeat.detach();
+
+    // Wait for user input (Enter key) to stop the heartbeat
+    std::cout << "Press Enter to stop the heartbeat." << std::endl;
+    std::string input;
+    std::getline(std::cin, input); // Wait for user input (Enter key)
+
+    // Set the flag to stop the heartbeat
+    performHeartbeat = false;
+
+    // Get the function pointer for the "Shutdown" function from the loaded DLL
+    ManagerShutdown managerShutdown = reinterpret_cast<ManagerShutdown>(GetProcAddress(hMODULEManager, "Shutdown"));
+
+    // Call the "Shutdown" function
+    managerShutdown();
+
+    // Cleanup
+    FreeLibrary(hMODULEManager);
+
     // Successful
     return 0;
+
     // This is published in folder PCOrCP as Setup.exe
 }
+
 // Go and read the code at the specified URL
 // - Services: [URL to Services.h]
 //   URL: https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/blob/master/Services/Services.h

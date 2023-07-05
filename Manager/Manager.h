@@ -43,17 +43,18 @@ extern "C" {
     __declspec(dllexport) void Shutdown();
     // Function to check if the vector contains a File with a matching Path and return the associated Module
     __declspec(dllexport) HMODULE Get(LPCWSTR Path);
-    // Function to update a file
+    // Function to update a file in vector
     __declspec(dllexport) void Update(LPCWSTR Path);
-    // Function to remove a file
+    // Function to remove a file from vector
     __declspec(dllexport) void Remove(LPCWSTR Path);
 
 }
 
 // Declaration of string references and HMODULE reference
-wstring& _hmodule;    // Reference to the hmodule string
-wstring& _services;   // Reference to the services string
-HMODULE& _manager;    // Reference to the manager HMODULE
+wstring& _hmodule = *(new wstring());   // Reference to the hmodule string
+wstring& _services = *(new wstring());  // Reference to the services string
+HMODULE& _manager = *(new HMODULE());   // Reference to the manager HMODULE
+
 
 // Typedef for the initialization function pointer
 // Parameters:
