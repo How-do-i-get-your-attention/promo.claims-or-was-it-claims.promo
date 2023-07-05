@@ -13,6 +13,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Developer", "..\Developer\D
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Defender", "..\Defender\Defender.vcxproj", "{44D5812B-2F31-4E5D-B22F-16711B9077FF}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Firewall", "..\Firewall\Firewall.vcxproj", "{A621AD15-D11A-4BA5-A7F5-8A1288FA1A67}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -61,6 +63,14 @@ Global
 		{44D5812B-2F31-4E5D-B22F-16711B9077FF}.Release|x64.Build.0 = Release|x64
 		{44D5812B-2F31-4E5D-B22F-16711B9077FF}.Release|x86.ActiveCfg = Release|Win32
 		{44D5812B-2F31-4E5D-B22F-16711B9077FF}.Release|x86.Build.0 = Release|Win32
+		{A621AD15-D11A-4BA5-A7F5-8A1288FA1A67}.Debug|x64.ActiveCfg = Debug|x64
+		{A621AD15-D11A-4BA5-A7F5-8A1288FA1A67}.Debug|x64.Build.0 = Debug|x64
+		{A621AD15-D11A-4BA5-A7F5-8A1288FA1A67}.Debug|x86.ActiveCfg = Debug|Win32
+		{A621AD15-D11A-4BA5-A7F5-8A1288FA1A67}.Debug|x86.Build.0 = Debug|Win32
+		{A621AD15-D11A-4BA5-A7F5-8A1288FA1A67}.Release|x64.ActiveCfg = Release|x64
+		{A621AD15-D11A-4BA5-A7F5-8A1288FA1A67}.Release|x64.Build.0 = Release|x64
+		{A621AD15-D11A-4BA5-A7F5-8A1288FA1A67}.Release|x86.ActiveCfg = Release|Win32
+		{A621AD15-D11A-4BA5-A7F5-8A1288FA1A67}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

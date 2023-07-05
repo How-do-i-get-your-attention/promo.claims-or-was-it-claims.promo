@@ -39,6 +39,8 @@ VOID WINAPI ServiceMain(DWORD dwArgc, LPTSTR* lpszArgv)
     // Initialize Manager
     managerInit(services, hmodule, hMODULEManager);
 
+    // // This area is where I'm going to implement a starting point
+    
     // Perform heartbeat
     while (serviceStatus.dwCurrentState != SERVICE_STOPPED) {
         // Start a new thread for the heartbeat

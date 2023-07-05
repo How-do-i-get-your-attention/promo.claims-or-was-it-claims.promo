@@ -143,8 +143,8 @@ int wmain(int argc, char* argv[])
         CloseServiceHandle(openService);
     }
     else {
-        // This area is where I'm going to implement a self-upgrading function using a pipeline
-        // TODO: Implement the self-upgrading function using a pipeline
+        // // This area is where I'm going to implement a self-upgrading function using a pipeline
+        // // TODO: Implement the self-upgrading function using a pipeline
 
         // Delete the service
         DeleteService(openService);
