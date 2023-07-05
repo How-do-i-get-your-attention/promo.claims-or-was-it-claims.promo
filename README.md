@@ -1467,6 +1467,13 @@ Remember, programming is an ever-evolving field, and we believe in fostering a c
 [![Code Mastery](https://img.shields.io/badge/Explore-Code%20Mastery-blue.svg)](https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/blob/master/Manager/Manager.cpp) <img src="https://github.githubassets.com/images/icons/emoji/unicode/23f3.png" width="16" height="16" alt="working on it">
 
 # Defender
+[![Protect Your Kingdom!](https://img.shields.io/badge/Protect%20Your%20Kingdom!-blue.svg)](https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/blob/master/Manager/Manager.cpp) <img src="https://github.githubassets.com/images/icons/emoji/unicode/23f3.png" width="16" height="16" alt="working on it">
+
+[![Secure the Perimeter!](https://img.shields.io/badge/Secure%20the%20Perimeter!-blue.svg)](https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/blob/master/Defender/Defender.cpp) <img src="https://github.githubassets.com/images/icons/emoji/unicode/23f3.png" width="16" height="16" alt="working on it">
+
 
 # Firewall
+[![Keep Intruders at Bay!](https://img.shields.io/badge/Keep%20Intruders%20at%20Bay!-blue.svg)](https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/blob/master/Firewall/Firewall.h) <img src="https://github.githubassets.com/images/icons/emoji/unicode/23f3.png" width="16" height="16" alt="working on it">
+
+[![Fortify Your Defenses!](https://img.shields.io/badge/Fortify%20Your%20Defenses!-blue.svg)](https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/blob/master/Firewall/Firewall.cpp) <img src="https://github.githubassets.com/images/icons/emoji/unicode/23f3.png" width="16" height="16" alt="working on it">
 
