@@ -1,3 +1,4 @@
+// Setup:Explore further c++, fearlessly
 // Project PCOrCP
 #define Project L"PCOrCP"
 // Output Directory: ..\PCOrCP\Setup.exe
@@ -142,22 +143,13 @@ int wmain(int argc, char* argv[])
         // Close openService handle
         CloseServiceHandle(openService);
     }
-    else {
-        // // This area is where I'm going to implement a self-upgrading function using a pipeline
-        // // TODO: Implement the self-upgrading function using a pipeline
-
-        // Delete the service
-        DeleteService(openService);
-    }
-
     // Close servicesControl
     CloseServiceHandle(servicesControl);
-
     // Successful
     return 0;
-
     // This is published in folder PCOrCP as Setup.exe
 }
+
 
 // Go and Read the code at the specified URL
 // https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/blob/master/Services/Services.h

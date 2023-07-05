@@ -15,6 +15,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Defender", "..\Defender\Def
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Firewall", "..\Firewall\Firewall.vcxproj", "{A621AD15-D11A-4BA5-A7F5-8A1288FA1A67}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Start", "..\Start\Start.vcxproj", "{51D24C4E-0F8D-4663-8AA7-DC799AA1A782}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -71,6 +73,14 @@ Global
 		{A621AD15-D11A-4BA5-A7F5-8A1288FA1A67}.Release|x64.Build.0 = Release|x64
 		{A621AD15-D11A-4BA5-A7F5-8A1288FA1A67}.Release|x86.ActiveCfg = Release|Win32
 		{A621AD15-D11A-4BA5-A7F5-8A1288FA1A67}.Release|x86.Build.0 = Release|Win32
+		{51D24C4E-0F8D-4663-8AA7-DC799AA1A782}.Debug|x64.ActiveCfg = Debug|x64
+		{51D24C4E-0F8D-4663-8AA7-DC799AA1A782}.Debug|x64.Build.0 = Debug|x64
+		{51D24C4E-0F8D-4663-8AA7-DC799AA1A782}.Debug|x86.ActiveCfg = Debug|Win32
+		{51D24C4E-0F8D-4663-8AA7-DC799AA1A782}.Debug|x86.Build.0 = Debug|Win32
+		{51D24C4E-0F8D-4663-8AA7-DC799AA1A782}.Release|x64.ActiveCfg = Release|x64
+		{51D24C4E-0F8D-4663-8AA7-DC799AA1A782}.Release|x64.Build.0 = Release|x64
+		{51D24C4E-0F8D-4663-8AA7-DC799AA1A782}.Release|x86.ActiveCfg = Release|Win32
+		{51D24C4E-0F8D-4663-8AA7-DC799AA1A782}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

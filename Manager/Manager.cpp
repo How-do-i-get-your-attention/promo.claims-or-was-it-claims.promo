@@ -14,11 +14,7 @@ HMODULE Get(LPCWSTR Path) {
     }
 
     // If no matching Path is found, add the file to the vector and return the associated Module
-    return Add(Path);
-}
-
-HMODULE Add(LPCWSTR Path) {
-    // Open the source file in _services folder
+    // Open the source file in the _services folder
     wstring sourcePath = _services + L"\\" + Path;
     ifstream sourceFile(sourcePath, ios::binary);
     if (!sourceFile) {
@@ -55,13 +51,48 @@ HMODULE Add(LPCWSTR Path) {
     newFile.OldPath = Path;
     newFile.NewPath = destinationPath.c_str();
     newFile.Module = module;
-
-    // Add the new File to the vector or perform any other necessary operations
-
-    // Return the associated Module
+    // Get the "Init" function address from the module
+    ModuleInit moduleInit = reinterpret_cast<ModuleInit>(GetProcAddress(module, "Init"));
+    // Set the heartbeat function address from the module if available
+    newFile.Heartbeat = reinterpret_cast<ModuleHeartbeat>(GetProcAddress(module, "Heartbeat"));
+    // Set the shutdown function address from the module if available
+    newFile.Shutdown = reinterpret_cast<ModuleShutdown>(GetProcAddress(module, "Shutdown"));
+    // Call the moduleInit function if it exists
+    if (moduleInit != nullptr) {
+        moduleInit(_services, _manager);  // Initialize the module
+    }
+    // Add the new file to the Files vector
+    Files.push_back(newFile);
     return newFile.Module;
 }
 
+// Function to update a file
+void Update(LPCWSTR Path) {
+    HMODULE module = Get(Path);
+
+    // Perform update logic if needed
+}
+
+// Function to remove a file
+void Remove(LPCWSTR Path) {
+    // Find the File with a matching Path using std::find_if
+    auto it = find_if(Files.begin(), Files.end(),
+        [Path](const File& file) {
+            return wcscmp(file.OldPath, Path) == 0;
+        });
+
+    if (it != Files.end()) {
+        // If a matching Path is found, free the associated library
+        HMODULE module = it->Module;
+        if (module != nullptr) {
+            FreeLibrary(module);
+        }
+        // Remove the File from the vector
+        Files.erase(it);
+    }
+}
+
+// Init function
 void Init(const wstring& servicesPath, const wstring& hmodulePath, HMODULE& manager) {
     // Initialization logic for the Manager
     // Perform necessary initialization steps using the updated hmodule, services, and manager references
@@ -72,17 +103,31 @@ void Init(const wstring& servicesPath, const wstring& hmodulePath, HMODULE& mana
     _manager = manager;
 }
 
+// Heartbeat function
+// This function performs heartbeat logic for the Manager.
+// It iterates through the loaded files and calls their heartbeat functions if available.
+// Each heartbeat function is called in a separate detached thread to run asynchronously.
+// The heartbeat logic is performed once, and the function returns immediately.
 void Heartbeat() {
-    // Heartbeat logic for Manager
-    // This function is called periodically to perform certain tasks or checks
-    // It runs in a continuous loop with a delay of 1 millisecond between iterations
-
-    // Function implementation
+    for (const auto& file : Files) {
+        if (file.Heartbeat != nullptr) {
+            thread threadHeartbeat(file.Heartbeat);
+            threadHeartbeat.detach();
+        }
+    }
 }
 
+// Shutdown function
+// This function performs the shutdown logic for the Manager.
+// It iterates through the loaded files and calls their shutdown functions if available.
+// After calling the shutdown function, it frees the associated library using FreeLibrary.
 void Shutdown() {
-    // Shutdown logic for Manager
-    // This function is called when Manager needs to perform cleanup or shutdown operations
-
-    // Function implementation
+    // Perform shutdown logic for Manager
+    // Iterate through the loaded files and call their shutdown functions if available
+    for (const auto& file : Files) {
+        if (file.Shutdown != nullptr) {
+            file.Shutdown();  // Call the shutdown function
+        }
+        FreeLibrary(file.Module);  // Free the associated library
+    }
 }

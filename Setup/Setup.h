@@ -1,4 +1,5 @@
 #pragma once
+// Setup:Explore further, fearlessly
 // This directive ensures that the header file is included only once in the compilation process
 
 // Preview - Features from the Latest C++ Working Draft (/std:c++latest)
@@ -21,9 +22,9 @@ using namespace std;
 
 // We use the filesystem namespace for Windows
 using namespace filesystem;
-
+// Let's create a manager HMODULE
+HMODULE hMODULEManager;
 // Thread: First layer setup
 int wmain(int argc, char* argv[]);
-
 // Go and Read the code at the specified URL
 // https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/blob/master/Setup/Setup.cpp

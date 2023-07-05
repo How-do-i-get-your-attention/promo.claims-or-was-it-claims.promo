@@ -18,13 +18,13 @@
 // Manager.h
 
 #include <iostream>      // Provides basic input/output stream functionality
-#include <iostream>      // Duplicate inclusion, not necessary
 #include <windows.h>     // Provides Windows-specific functions and types
 #include <filesystem>    // Provides filesystem-related functionality
 #include <fstream>       // For file operations
 #include <Shlwapi.h>     // For PathCombineW
 #include <sstream>       // For string manipulation
 #pragma comment(lib, "Rpcrt4.lib")  // Link against Rpcrt4.lib
+
 using namespace std;
 using namespace filesystem;
 
@@ -43,20 +43,40 @@ extern "C" {
     __declspec(dllexport) void Shutdown();
     // Function to check if the vector contains a File with a matching Path and return the associated Module
     __declspec(dllexport) HMODULE Get(LPCWSTR Path);
+    // Function to update a file
+    __declspec(dllexport) void Update(LPCWSTR Path);
+    // Function to remove a file
+    __declspec(dllexport) void Remove(LPCWSTR Path);
 
 }
+
 // Declaration of string references and HMODULE reference
 wstring& _hmodule;    // Reference to the hmodule string
 wstring& _services;   // Reference to the services string
 HMODULE& _manager;    // Reference to the manager HMODULE
 
+// Typedef for the initialization function pointer
+// Parameters:
+//   - const wstring&: A constant reference to a wstring object representing the services path.
+//   - HMODULE&: A reference to an HMODULE object representing the manager.
+typedef void (*ModuleInit)(const wstring&, HMODULE&);
+
+// Typedef for the module heartbeat function pointer
+typedef void (*ModuleHeartbeat)();
+
+// Typedef for the module shutdown function pointer
+typedef void (*ModuleShutdown)();
+
 // Struct to represent a loaded DLL file
 struct File
 {
-    LPCWSTR OldPath;   // Path to the original file
-    LPCWSTR NewPath;   // Path to the new file
-    HMODULE Module;    // HMODULE associated with the file
+    LPCWSTR OldPath;             // Path to the original file
+    LPCWSTR NewPath;             // Path to the new file
+    HMODULE Module;              // HMODULE associated with the file
+    ModuleHeartbeat Heartbeat;   // Heartbeat function
+    ModuleShutdown Shutdown;     // Shutdown function
 };
+
 // Vector to store loaded DLL files
 vector<File> Files;
 
