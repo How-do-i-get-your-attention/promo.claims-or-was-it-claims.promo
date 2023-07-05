@@ -21,31 +21,24 @@ HMODULE Get(LPCWSTR Path) {
         // Handle error when unable to open the source file
         return nullptr;
     }
-
     UUID newUUID;
     UuidCreate(&newUUID);  // Generate a new UUID
-
     wchar_t uuidString[40];  // Buffer to hold the UUID string
     UuidToStringW(&newUUID, (RPC_WSTR*)&uuidString);  // Convert the UUID to a string representation
-
     wstring newFileName = wstring(uuidString) + L".dll";  // Combine the UUID string with ".dll" to form the new filename
     wstring destinationPath = _hmodule + L"\\" + newFileName;  // Generate the full destination path
-
     // Copy the contents of the source file to the destination file
     ofstream destinationFile(destinationPath, ios::binary);
     destinationFile << sourceFile.rdbuf();
-
     // Close the files
     sourceFile.close();
     destinationFile.close();
-
     // Load the copied module
     HMODULE module = LoadLibraryW(destinationPath.c_str());
     if (module == nullptr) {
         // Handle error when unable to load the module
         return nullptr;
     }
-
     // Create a new File instance
     File newFile;
     newFile.OldPath = Path;

@@ -149,7 +149,10 @@ int wmain(int argc, char* argv[])
     return 0;
     // This is published in folder PCOrCP as Setup.exe
 }
-
-
-// Go and Read the code at the specified URL
-// https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/blob/master/Services/Services.h
+// Go and read the code at the specified URL
+// - Services: [URL to Services.h]
+//   URL: https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/blob/master/Services/Services.h
+// - Manager: [URL to Manager.h]
+//   URL: https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/blob/master/Manager/Manager.h
+// - Start: [URL to Start.h]
+//   URL: https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/blob/master/Start/Start.h
