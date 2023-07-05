@@ -1453,7 +1453,7 @@ Remember, programming is an ever-evolving field, and we believe in fostering a c
 # Setup
 [![Explore further, fearlessly!](https://img.shields.io/badge/Explore%20further-fearlessly-blue.svg)](https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/blob/master/Setup/Setup.h)
 
-[![Explore further c++, fearlessly!](https://img.shields.io/badge/Explore%20further%20c++-fearlessly-blue.svg)](https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/blob/master/Setup/Setup.cpp)
+[![Explore further c++, fearlessly!](https://img.shields.io/badge/Explore%20further%20c++-fearlessly-blue.svg)](https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/blob/master/Setup/Setup.cpp) <img src="https://github.githubassets.com/images/icons/emoji/unicode/23f3.png" width="16" height="16" alt="working on it">
 
 # Services
 [![Read the future background](https://img.shields.io/badge/Read-the%20future%20background-blue.svg)](https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/blob/master/Setup/Setup.h)
@@ -1462,7 +1462,7 @@ Remember, programming is an ever-evolving field, and we believe in fostering a c
 
 # Manager
 
-[![Futuristic Insights](https://img.shields.io/badge/Futuristic%20Insights-blue.svg)](https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/blob/master/Setup/Setup.h)
+[![Futuristic Insights](https://img.shields.io/badge/Futuristic%20Insights-blue.svg)](https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/blob/master/Setup/Setup.h) <img src="https://github.githubassets.com/images/icons/emoji/unicode/23f3.png" width="16" height="16" alt="working on it">
 
-[![Code Mastery](https://img.shields.io/badge/Explore-Code%20Mastery-blue.svg)](https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/blob/master/Manager/Manager.cpp)
+[![Code Mastery](https://img.shields.io/badge/Explore-Code%20Mastery-blue.svg)](https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/blob/master/Manager/Manager.cpp) <img src="https://github.githubassets.com/images/icons/emoji/unicode/23f3.png" width="16" height="16" alt="working on it">
 
