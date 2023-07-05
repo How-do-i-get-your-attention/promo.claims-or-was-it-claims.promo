@@ -21,7 +21,10 @@
 #include <iostream>      // Duplicate inclusion, not necessary
 #include <windows.h>     // Provides Windows-specific functions and types
 #include <filesystem>    // Provides filesystem-related functionality
-
+#include <fstream>       // For file operations
+#include <Shlwapi.h>     // For PathCombineW
+#include <sstream>       // For string manipulation
+#pragma comment(lib, "Rpcrt4.lib")  // Link against Rpcrt4.lib
 using namespace std;
 using namespace filesystem;
 
@@ -33,13 +36,29 @@ extern "C" {
     //   - services: The path to the Services folder
     //   - hmodule: The path to the HMODULE folder
     //   - manager: Reference to the HMODULEManager
-    __declspec(dllexport) void Init(const std::wstring& services, const std::wstring& hmodule, HMODULE& manager);
-
+    __declspec(dllexport) void Init(const wstring& services, const wstring& hmodule, HMODULE& manager);
     // Heartbeat function
     __declspec(dllexport) void Heartbeat();
-
     // Shutdown function
     __declspec(dllexport) void Shutdown();
+    // Function to check if the vector contains a File with a matching Path and return the associated Module
+    __declspec(dllexport) HMODULE Get(LPCWSTR Path);
+
 }
+// Declaration of string references and HMODULE reference
+wstring& _hmodule;    // Reference to the hmodule string
+wstring& _services;   // Reference to the services string
+HMODULE& _manager;    // Reference to the manager HMODULE
+
+// Struct to represent a loaded DLL file
+struct File
+{
+    LPCWSTR OldPath;   // Path to the original file
+    LPCWSTR NewPath;   // Path to the new file
+    HMODULE Module;    // HMODULE associated with the file
+};
+// Vector to store loaded DLL files
+vector<File> Files;
+
 // Go and read the code at the specified URL
 // https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/blob/master/Manager/Manager.cpp

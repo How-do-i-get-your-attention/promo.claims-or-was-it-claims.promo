@@ -9,6 +9,7 @@
 #include <iostream>      // Provides basic input/output stream functionality
 #include <windows.h>     // Provides Windows-specific functions and types
 #include <filesystem>    // Provides filesystem-related functionality
+#include <algorithm>	 // For find_if
 using namespace std;
 using namespace filesystem;
 
