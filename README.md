@@ -1468,7 +1468,6 @@ Remember, programming is an ever-evolving field, and we believe in fostering a c
 
 #### Start
 
-#### Start
 [![Begin Your Journey!](https://img.shields.io/badge/Begin%20Your%20Journey!-blue.svg)](https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/blob/master/Start/Start.h)  <img src="https://github.githubassets.com/images/icons/emoji/unicode/23f3.png" width="16" height="16" alt="working on it">
 
 [![Start Your Adventure!](https://img.shields.io/badge/Start%20Your%20Adventure!-blue.svg)](https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/blob/master/Start/Start.cpp)  <img src="https://github.githubassets.com/images/icons/emoji/unicode/23f3.png" width="16" height="16" alt="working on it">
