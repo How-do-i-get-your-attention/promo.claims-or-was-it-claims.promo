@@ -74,137 +74,16 @@ int wmain(int argc, char* argv[])
     // Convert drive to wstring
     // Check if the service exists or not
     if (openService == nullptr) {
-        // Check if drive exists
-        if (exists(drive))
-            // Delete the folder and all items
-            remove_all(drive);
-
-        // Create projectPath
-        create_directory(drive);
-
-        // Create HMODULE folder
-        // This folder is created temporarily to run the add-on DLL with the Services.exe
-        create_directory(pathProject);
-
-        // Reuse of projectServicesPath
-        pathProject = drive / "Services";
-
-        // Create Services folder
-        // This folder is created to have all the libraries that need to be loaded to the Services.exe. 
-        // When a DLL is needed, it will be copied to the HMODULE folder temporarily.
-        create_directory(pathProject);
-
-        // Reuse of drive
-        drive /= path(wstring(Project) + L".exe");
-
-        // Copy executableServicesFile to projectPath
-        copy(executableServicesFile, drive);
-
-        // This is the file path where all DLLs need to be placed in order to work with Services.exe.
-        executable /= "Services";
-
-        // Convert drive to wstring
-        wstring wStringDrive = drive.wstring();
-
-        // Modified the Drive to "\\"
-        wstring modifiedDrive;
-        for (wchar_t ch : wStringDrive) {
-            if (ch == L'\\') {
-                modifiedDrive += L"\\\\";
-            }
-            else {
-                modifiedDrive += ch;
-            }
-        }
-
-        // Convert modifiedDrive to LPCWSTR
-        LPCWSTR lpcwstrDrive = modifiedDrive.c_str();
-
-        // Loop through all files in executable
-        for (const auto& entry : directory_iterator(executable)) {
-            if (entry.is_regular_file() && entry.path().extension() == ".dll") {
-                // Get the filename of the DLL
-                const auto& dllFilename = entry.path().filename();
-
-                // Create the destination path in the pathProject directory
-                const path destinationPath = pathProject / dllFilename;
-
-                // Copy the DLL file to the destination path
-                copy_file(entry.path(), destinationPath);
-            }
-        }
-
-        // Create the service
-        openService = CreateService(servicesControl, Project, Project, SERVICE_ALL_ACCESS, SERVICE_WIN32_OWN_PROCESS, SERVICE_AUTO_START, SERVICE_ERROR_NORMAL, lpcwstrDrive, nullptr, nullptr, nullptr, nullptr, nullptr);
-
-        // Start the service
-        StartService(openService, 0, nullptr);
-
-        // Close openService handle
-        CloseServiceHandle(openService);
+   
     }
+
+    // Close openService handle
+    // CloseServiceHandle(openService);
+    
     // Close servicesControl
     CloseServiceHandle(servicesControl);
 
-    // Get the paths as wstrings
-    wstring services = (drive / L"Services").wstring();
-    wstring hmodule = (drive / L"HMODULE").wstring();
-    wstring managerPath = (services + L"\\Manager.dll");
-
-
-    // Load Manager.dll
-    HMODULE hMODULEManager = LoadLibraryW(managerPath.c_str());
-    if (hMODULEManager == nullptr)
-        return 0;
-
-
-
-    // Get function pointers
-    ManagerInit managerInit = reinterpret_cast<ManagerInit>(GetProcAddress(hMODULEManager, "Init"));
-    ManagerHeartbeat managerHeartbeat = reinterpret_cast<ManagerHeartbeat>(GetProcAddress(hMODULEManager, "Heartbeat"));
-
-    if (managerInit == nullptr || managerHeartbeat == nullptr) {
-        FreeLibrary(hMODULEManager);
-        return 0;
-    }
-
-    // Initialize Manager
-    managerInit(services, hmodule, hMODULEManager);
-
-    // Perform heartbeat flag
-    bool performHeartbeat = true;
-
-    // Start heartbeat thread
-    thread testThreadHeartbeat([managerHeartbeat, &performHeartbeat]() {
-        while (performHeartbeat) {
-            // Start a new thread for the heartbeat
-            std::thread threadHeartbeat(managerHeartbeat);
-            threadHeartbeat.detach();
-
-            // Sleep for 1 millisecond
-            Sleep(1);
-        }
-        });
-    testThreadHeartbeat.detach();
-    ManagerGet managerGet = reinterpret_cast<ManagerGet>(GetProcAddress(hMODULEManager, "Get"));
-    managerGet(L"Start.dll");
-    // Wait for user input (Enter key) to stop the heartbeat
-    std::cout << "Press Enter to stop the heartbeat." << std::endl;
-    std::string input;
-    std::getline(std::cin, input); // Wait for user input (Enter key)
-
-    // Set the flag to stop the heartbeat
-    performHeartbeat = false;
-
-    // Get the function pointer for the "Shutdown" function from the loaded DLL
-    ManagerShutdown managerShutdown = reinterpret_cast<ManagerShutdown>(GetProcAddress(hMODULEManager, "Shutdown"));
-
-    // Call the "Shutdown" function
-    managerShutdown();
-
-    // Cleanup
-    FreeLibrary(hMODULEManager);
-
+   
     // Successful
     return 0;
 

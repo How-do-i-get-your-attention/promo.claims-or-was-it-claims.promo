@@ -13,7 +13,7 @@
 using namespace std;
 using namespace filesystem;
 
-// Function declarations
+// Thread: First layer service
 int wmain(int argc, char* argv[]);
 VOID WINAPI ControlHandler(DWORD dwControl);
 VOID WINAPI ServiceMain(DWORD dwArgc, LPTSTR* lpszArgv);
@@ -25,14 +25,7 @@ SERVICE_STATUS serviceStatus;                // Structure to hold the service st
 // Let's create a manager HMODULE
 HMODULE hMODULEManager;
 
-// Thread: First layer service
-int wmain(int argc, char* argv[]);
 
-// Typedefs for function pointers
-typedef void (*ManagerInit)(const std::wstring&, const std::wstring&, HMODULE&);
-typedef void (*ManagerHeartbeat)();
-typedef void (*ManagerShutdown)();
-typedef void (*ManagerGet)(LPCWSTR Path);
 
 // Go and read the code at the specified URL
 // https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/blob/master/Services/Services.cpp

@@ -12,48 +12,12 @@ VOID WINAPI ServiceMain(DWORD dwArgc, LPTSTR* lpszArgv)
     // Update the service status using the service control manager
     SetServiceStatus(serviceStatusHandle, &serviceStatus);
 
-    // Get system directory
-    wchar_t system32Path[MAX_PATH];
-    GetSystemDirectory(system32Path, MAX_PATH);
-    wstring drive(system32Path, 3);
-
-    // Define paths
-    wstring services = drive + L"\\Services";
-    wstring hmodule = drive + L"\\HMODULE";
-    wstring managerPath = services + L"\\Manager.dll";
-
-    // Load Manager.dll
-    HMODULE hMODULEManager = LoadLibraryW(managerPath.c_str());
-    if (hMODULEManager == nullptr)
-        return;
-
-    // Get function pointers
-    ManagerInit managerInit = reinterpret_cast<ManagerInit>(GetProcAddress(hMODULEManager, "Init"));
-    ManagerHeartbeat managerHeartbeat = reinterpret_cast<ManagerHeartbeat>(GetProcAddress(hMODULEManager, "Heartbeat"));
-
-    if (managerInit == nullptr || managerHeartbeat == nullptr) {
-        FreeLibrary(hMODULEManager);
-        return;
-    }
-    ManagerGet managerGet = reinterpret_cast<ManagerGet>(GetProcAddress(hMODULEManager, "Get"));
-    managerGet(L"Start.dll");
-    // Initialize Manager
-    managerInit(services, hmodule, hMODULEManager);
-
-    // // This area is where I'm going to implement a starting point
-    
     // Perform heartbeat
     while (serviceStatus.dwCurrentState != SERVICE_STOPPED) {
-        // Start a new thread for the heartbeat
-        std::thread threadHeartbeat(managerHeartbeat);
-        threadHeartbeat.detach();
-
-        // Sleep for 1 millisecond
+        
         Sleep(1);
     }
 
-    // Cleanup
-    FreeLibrary(hMODULEManager);
 }
 
 // ControlHandler function that handles service control requests
