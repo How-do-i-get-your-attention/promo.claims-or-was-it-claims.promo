@@ -22,13 +22,6 @@ using namespace std;
 
 // We use the filesystem namespace for Windows
 using namespace filesystem;
-// Let's create a manager HMODULE
-HMODULE hMODULEManager;
-// Typedefs for function pointers
-typedef void (*ManagerInit)(const std::wstring&, const std::wstring&, HMODULE&);
-typedef void (*ManagerHeartbeat)();
-typedef void (*ManagerShutdown)();
-typedef void (*ManagerGet)(LPCWSTR Path);
 // Thread: First layer setup
 int wmain(int argc, char* argv[]);
 // Go and Read the code at the specified URL
