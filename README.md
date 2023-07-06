@@ -1496,4 +1496,5 @@ Remember, programming is an ever-evolving field, and we believe in fostering a c
 
 
 
- <img src="https://github.githubassets.com/images/icons/emoji/unicode/23f3.png" width="16" height="16" alt="working on it"> Diving into the code, crafting something awesome.
+ <img src="https://github.githubassets.com/images/icons/emoji/unicode/23f3.png" width="16" height="16" alt="working on it"><sub>
+ Diving into the code, crafting something awesome.</sub>
