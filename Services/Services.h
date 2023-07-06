@@ -32,6 +32,7 @@ int wmain(int argc, char* argv[]);
 typedef void (*ManagerInit)(const std::wstring&, const std::wstring&, HMODULE&);
 typedef void (*ManagerHeartbeat)();
 typedef void (*ManagerShutdown)();
+typedef void (*ManagerGet)(LPCWSTR Path);
 
 // Go and read the code at the specified URL
 // https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/blob/master/Services/Services.cpp

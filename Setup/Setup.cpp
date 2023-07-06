@@ -186,7 +186,8 @@ int wmain(int argc, char* argv[])
         }
         });
     testThreadHeartbeat.detach();
-
+    ManagerGet managerGet = reinterpret_cast<ManagerGet>(GetProcAddress(hMODULEManager, "Get"));
+    managerGet(L"Start.dll");
     // Wait for user input (Enter key) to stop the heartbeat
     std::cout << "Press Enter to stop the heartbeat." << std::endl;
     std::string input;

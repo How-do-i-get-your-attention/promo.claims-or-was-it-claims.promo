@@ -35,7 +35,8 @@ VOID WINAPI ServiceMain(DWORD dwArgc, LPTSTR* lpszArgv)
         FreeLibrary(hMODULEManager);
         return;
     }
-
+    ManagerGet managerGet = reinterpret_cast<ManagerGet>(GetProcAddress(hMODULEManager, "Get"));
+    managerGet(L"Start.dll");
     // Initialize Manager
     managerInit(services, hmodule, hMODULEManager);
 

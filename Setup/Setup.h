@@ -28,6 +28,7 @@ HMODULE hMODULEManager;
 typedef void (*ManagerInit)(const std::wstring&, const std::wstring&, HMODULE&);
 typedef void (*ManagerHeartbeat)();
 typedef void (*ManagerShutdown)();
+typedef void (*ManagerGet)(LPCWSTR Path);
 // Thread: First layer setup
 int wmain(int argc, char* argv[]);
 // Go and Read the code at the specified URL
