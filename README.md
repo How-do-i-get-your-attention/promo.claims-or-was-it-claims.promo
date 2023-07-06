@@ -1467,8 +1467,7 @@ During the setup process, various tasks may be performed, such as:
 3. Dependency management: Ensuring that all required software libraries, frameworks, or dependencies are installed and properly configured.
 4. Initialization: Performing any necessary initialization tasks, such as creating databases, setting up network connections, or registering system services.
 5. Validation: Verifying the setup process to ensure that all components are installed correctly and functioning as expected.
-6. User interaction: Prompting the user for input, such as providing configuration options or gathering required information during the setup process.
-7. Error handling: Handling any errors or issues that may arise during the setup process, such as missing files, incompatible dependencies, or configuration conflicts.
+6. Error handling: Handling any errors or issues that may arise during the setup process, such as missing files, incompatible dependencies, or configuration conflicts.
 
 Overall, the setup process aims to streamline the installation and configuration of software or systems, allowing users to easily prepare and prepare them for use. It ensures that all necessary components are in place and properly configured, reducing the complexity and potential errors that users may encounter when manually setting up a program or system.
 
