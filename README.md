@@ -1471,6 +1471,8 @@ During the setup process, various tasks may be performed, such as:
 7. Error handling: Handling any errors or issues that may arise during the setup process, such as missing files, incompatible dependencies, or configuration conflicts.
 
 Overall, the setup process aims to streamline the installation and configuration of software or systems, allowing users to easily prepare and prepare them for use. It ensures that all necessary components are in place and properly configured, reducing the complexity and potential errors that users may encounter when manually setting up a program or system.
+
+
 ## Services
 <img src="visual_studio.png" width="20"/> <img src="cplusplus.png" height="15"/>
 
