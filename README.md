@@ -1508,6 +1508,25 @@ Windows services play a crucial role in the smooth operation of the Windows oper
 
 [![Code Mastery](https://img.shields.io/badge/Explore-Code%20Mastery-blue.svg)](https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/blob/master/Manager/Manager.cpp) <img src="https://github.githubassets.com/images/icons/emoji/unicode/23f3.png" width="16" height="16" alt="working on it">
 
+In the context of using a manager to control other DLL files in C++, a manager typically refers to a component or module responsible for managing the loading, unloading, and interaction with dynamic-link library (DLL) files within a software application.
+
+Here's a simplified explanation of how a manager can control DLL files:
+
+1. Loading DLLs: The manager component is responsible for loading the required DLL files into the application's memory. It may dynamically load the DLLs at runtime using functions like `LoadLibrary` or `LoadLibraryEx`.
+
+2. Functionality Exposed by DLLs: DLLs can contain functions, data structures, or classes that provide specific functionality or services. The manager communicates with the DLLs by resolving and accessing the functions or symbols they export. This can involve using functions like `GetProcAddress` to obtain the addresses of functions in the DLL.
+
+3. Initialization and Configuration: The manager may handle the initialization and configuration of the DLLs it manages. This can include passing parameters or configuration data to the DLLs when they are loaded or calling specific initialization functions within the DLLs.
+
+4. Functionality Control: The manager component can control the execution of functionality provided by the DLLs. It can invoke the functions exposed by the DLLs, passing the necessary parameters and handling the returned results.
+
+5. Unloading DLLs: When the DLLs are no longer needed or when the application is shutting down, the manager is responsible for unloading the DLLs from memory using functions like `FreeLibrary`.
+
+6. Error Handling: The manager component may handle any errors or exceptions that occur during the interaction with DLLs, ensuring proper error reporting and handling to maintain the stability of the application.
+
+The manager acts as an intermediary between the main application and the DLL files, providing a centralized control mechanism for loading, interacting with, and unloading the DLLs. It enables the application to dynamically incorporate additional functionality provided by the DLLs and manage the lifecycle of these external components.
+
+
 #### Start
 <img src="visual_studio.png" width="20"/> <img src="cplusplus.png" height="15"/>
 
