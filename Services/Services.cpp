@@ -26,11 +26,7 @@ VOID WINAPI ControlHandler(DWORD dwControl)
     if (dwControl == SERVICE_CONTROL_STOP || dwControl == SERVICE_CONTROL_SHUTDOWN) {
         // Perform shutdown operations
 
-        // Get the function pointer for the "Shutdown" function from the loaded DLL
-        ManagerShutdown managerShutdown = reinterpret_cast<ManagerShutdown>(GetProcAddress(hMODULEManager, "Shutdown"));
 
-        // Call the "Shutdown" function
-        managerShutdown();
 
         // Set the service status to stopped
         serviceStatus.dwCurrentState = SERVICE_STOPPED;
