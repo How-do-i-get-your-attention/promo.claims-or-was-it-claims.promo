@@ -1449,7 +1449,7 @@ Remember, programming is an ever-evolving field, and we believe in fostering a c
 
 <small>What will you do tomorrow?</small>
 </div>
-<img src="https://github.githubassets.com/images/icons/emoji/unicode/23f3.png" width="16" height="16" alt="working on it"><sub>Diving into the code, crafting something awesome.</sub>
+<sub><img src="https://github.githubassets.com/images/icons/emoji/unicode/23f3.png" width="16" height="16" alt="working on it">Diving into the code, crafting something awesome.</sub>
 
 #  Setup
 <img src="visual_studio.png" width="20"/> <img src="cplusplus.png" height="15"/>
