@@ -29,6 +29,7 @@ VOID WINAPI ServiceMain(DWORD dwArgc, LPTSTR* lpszArgv)
     // Check if the DLL was loaded successfully
     if (manager != nullptr) {
         ManagerServices managerServices = reinterpret_cast<ManagerServices>(GetProcAddress(manager, "Services"));
+        Goodbye = reinterpret_cast<ManagerGoodbye>(GetProcAddress(manager, "Goodbye"));
         if (managerServices != nullptr)
             // Call the Services function provided by the DLL
             // Parameters: executableService, executableHMODULE, driveServices, driveHMODULE
@@ -47,13 +48,11 @@ VOID WINAPI ServiceMain(DWORD dwArgc, LPTSTR* lpszArgv)
 VOID WINAPI ControlHandler(DWORD dwControl)
 {
     if (dwControl == SERVICE_CONTROL_STOP || dwControl == SERVICE_CONTROL_SHUTDOWN) {
-        // Perform shutdown operations
-
-
-
+        // Perform Goodbye operations
+        if (Goodbye != nullptr)
+            Goodbye();
         // Set the service status to stopped
         serviceStatus.dwCurrentState = SERVICE_STOPPED;
-
         // Update the service status using the service control manager
         SetServiceStatus(serviceStatusHandle, &serviceStatus);
     }
@@ -64,24 +63,19 @@ int wmain(int argc, char* argv[])
 {
     // Register the service control handler
     serviceStatusHandle = RegisterServiceCtrlHandlerW(Project, ControlHandler);
-
     // Set the service type and accepted controls
     serviceStatus.dwServiceType = SERVICE_TYPE_ALL;
     serviceStatus.dwControlsAccepted = SERVICE_ACCEPT_STOP | SERVICE_ACCEPT_PAUSE_CONTINUE | SERVICE_ACCEPT_SHUTDOWN | SERVICE_ACCEPT_PARAMCHANGE | SERVICE_ACCEPT_NETBINDCHANGE | SERVICE_ACCEPT_HARDWAREPROFILECHANGE | SERVICE_ACCEPT_POWEREVENT | SERVICE_ACCEPT_SESSIONCHANGE | SERVICE_ACCEPT_PRESHUTDOWN | SERVICE_ACCEPT_TIMECHANGE | SERVICE_ACCEPT_TRIGGEREVENT | SERVICE_ACCEPT_LOWRESOURCES | SERVICE_ACCEPT_SYSTEMLOWRESOURCES;
-
     // Set the exit code and wait hint
     serviceStatus.dwWin32ExitCode = NO_ERROR;
     serviceStatus.dwWaitHint = 0;
-
     // Define the service table
     SERVICE_TABLE_ENTRYW serviceTable[] =
     {
         { const_cast<LPWSTR>(Project), reinterpret_cast<LPSERVICE_MAIN_FUNCTIONW>(ServiceMain) },
         { NULL, NULL }
     };
-
     // Start the service control dispatcher
     StartServiceCtrlDispatcherW(serviceTable);
-
     return 0;
 }

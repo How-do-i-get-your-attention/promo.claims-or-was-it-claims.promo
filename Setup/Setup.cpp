@@ -1,4 +1,4 @@
-
+﻿
 // Project PCOrCP
 #define Project L"PCOrCP"
 // Output Directory: ..\PCOrCP\Setup.exe
@@ -24,6 +24,14 @@
 // 3. Select the "General" category.
 // 4. Locate the "Configuration Type" option and set it to "Application (.exe)".
 // 5. Click on the "Apply" button to save the changes.
+// Function to print a message box to the console
+void Messages(string context) {
+    int width = context.length() + 4; // Calculate the width of the box
+    string horizontalLine(width, '-'); // Create the horizontal line
+    // Print the box with the input text centered
+    cout << endl << '+' << horizontalLine << '+' << endl << "| " << context <<  endl << '+' << horizontalLine << '+' << endl;
+}
+
 int wmain(int argc, char* argv[])
 {
     // We need to get the path of the location of the Setup.exe as it runs as:
@@ -47,7 +55,6 @@ int wmain(int argc, char* argv[])
     // Convert wchar_t array to path and remove Setup.exe
     path executable = path(executablePath).parent_path();
     path executableService = executable / "Services";
-    path executableHMODULE = executable / "HMODULE";
 
     wchar_t system32Path[MAX_PATH];
     path drive;
@@ -75,10 +82,12 @@ int wmain(int argc, char* argv[])
         // Close the service handle
         CloseServiceHandle(openService);
     }
-    CloseServiceHandle(servicesControl);
     // If the drive exists, remove it
-    if(exists(drive))
+    if (exists(drive))
         remove_all(drive);
+    // We always provide a fresh installation for developers.
+    CloseServiceHandle(servicesControl);
+    // Let's validate the source.
     // Convert the path to a string
     string managerPathString = (executableService / "Manager.dll").string();
 
@@ -88,18 +97,24 @@ int wmain(int argc, char* argv[])
     // Check if the DLL was loaded successfully
     if (manager != nullptr) {
         ManagerSetup managerSetup = reinterpret_cast<ManagerSetup>(GetProcAddress(manager, "Setup"));
-        if (managerSetup != nullptr) 
-            // Call the Setup function provided by the DLL
-            // Parameters: executableService, executableHMODULE, driveServices, driveHMODULE
-            managerSetup(executableService, executableHMODULE, driveServices, driveHMODULE, manager);
+        if (managerSetup != nullptr)
+            if (managerSetup(executableService, driveServices, driveHMODULE, manager)) {
+                Messages("Install services");
+                // Handle successful Setup
+            }
+            else
+                // Print error message for services not being installed
+                Messages("Services not installed");
+
+        // Print error message for services not being installed
         else
             // Print an error message indicating the failure to retrieve the "Setup" function address
-            cout << "Failed to retrieve (Setup) function address." << endl;
+            Messages("Failed to retrieve (Setup) function address.");
     }
     else 
         // Failed to load the DLL, display an error message
         // Print an error message indicating the failure to load the DLL
-        cout << "Failed to load DLL: " << managerPathString << endl;
+        Messages("Failed to load DLL: " + managerPathString);
     // Successful
     return 0;
     // This is published in folder PCOrCP as Setup.exe

@@ -16,6 +16,8 @@
 #include <iostream>      // Provides basic input/output stream functionality
 #include <filesystem>    // Provides filesystem-related functionality
 #include <windows.h>     // Provides Windows-specific functions and types
+#include <tuple>		 // Provides tuple
+#include <chrono>        // Provides time-related functionality
 
 // We use the std namespace for C++
 using namespace std;
@@ -23,10 +25,14 @@ using namespace std;
 // We use the filesystem namespace for Windows
 using namespace filesystem;
 
+// We use the chrono namespace for time-related functionality
+using namespace chrono;
+
 // Let's create a manager 
-typedef void (*ManagerSetup)(path, path, path, HMODULE);
+typedef bool (*ManagerSetup)(path, path, path, HMODULE);
+// Define the tuple type to store time and message
+typedef tuple<system_clock::time_point, bool, string> Message;
 
 // Thread: First layer setup
 int wmain(int argc, char* argv[]);
-// Go and Read the code at the specified URL
-// https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/blob/master/Setup/Setup.cpp
+
