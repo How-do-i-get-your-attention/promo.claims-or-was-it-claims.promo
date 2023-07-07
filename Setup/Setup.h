@@ -22,6 +22,10 @@ using namespace std;
 
 // We use the filesystem namespace for Windows
 using namespace filesystem;
+
+// Let's create a manager 
+typedef void (*ManagerSetup)(path, path, path, HMODULE);
+
 // Thread: First layer setup
 int wmain(int argc, char* argv[]);
 // Go and Read the code at the specified URL

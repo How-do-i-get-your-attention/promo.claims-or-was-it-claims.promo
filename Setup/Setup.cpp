@@ -1,8 +1,7 @@
-// Setup:Explore further c++, fearlessly
+
 // Project PCOrCP
 #define Project L"PCOrCP"
 // Output Directory: ..\PCOrCP\Setup.exe
-
 // This directive ensures that the header file is included only once in the compilation process
 #pragma once
 #include "Setup.h"
@@ -41,59 +40,69 @@ int wmain(int argc, char* argv[])
     // 2.3 Select the "Code Generation" category.
     // 2.4 Set the "Runtime Library" option to "Multi-threaded (/MT)".
     // 2.5 Click on the "Apply" button to save the changes.
-
     // Create a wchar_t array with max path length
     wchar_t executablePath[MAX_PATH];
     // Get the executable folder
     GetModuleFileNameW(nullptr, executablePath, MAX_PATH);
     // Convert wchar_t array to path and remove Setup.exe
     path executable = path(executablePath).parent_path();
-    // Set the path for Services.exe
-    path executableServicesFile = executable / "Services.exe";
+    path executableService = executable / "Services";
+    path executableHMODULE = executable / "HMODULE";
 
     wchar_t system32Path[MAX_PATH];
     path drive;
-
     // Get the System32 folder
     GetSystemDirectory(system32Path, MAX_PATH);
     // Extract the first two characters (drive letter) and set drive
     drive.assign(system32Path, system32Path + 3);
-
     // Set Working area folder for Project and reuse drive
     drive = drive / Project;
-
-    // Set HMODULE path for Project
-    path pathProject = drive / "HMODULE";
+    path driveServices = drive / "Services";
+    path driveHMODULE = drive / "HMODULE";
 
     // Prepare servicesControl
     SC_HANDLE servicesControl = OpenSCManagerA(nullptr, nullptr, SC_MANAGER_ALL_ACCESS);
-
     // Request the service PCOrCP from servicesControl
     SC_HANDLE openService = OpenServiceW(servicesControl, Project, SERVICE_ALL_ACCESS);
-
-    // Convert drive to wstring
     // Check if the service exists or not
-    if (openService == nullptr) {
-   
+    if (openService != nullptr) {
+        // Declare a variable to store the service status
+        SERVICE_STATUS serviceStatus;
+        // Stop the service
+        ControlService(openService, SERVICE_CONTROL_STOP, &serviceStatus);
+        // Delete the service
+        DeleteService(openService);
+        // Close the service handle
+        CloseServiceHandle(openService);
     }
-
-    // Close openService handle
-    // CloseServiceHandle(openService);
-    
-    // Close servicesControl
     CloseServiceHandle(servicesControl);
+    // If the drive exists, remove it
+    if(exists(drive))
+        remove_all(drive);
+    // Convert the path to a string
+    string managerPathString = (executableService / "Manager.dll").string();
 
-   
+    LPCSTR managerPathLPCSTR = managerPathString.c_str();
+    // Load the DLL using LoadLibraryA
+    HMODULE manager = LoadLibraryA(managerPathString.c_str());
+    // Check if the DLL was loaded successfully
+    if (manager != nullptr) {
+        ManagerSetup managerSetup = reinterpret_cast<ManagerSetup>(GetProcAddress(manager, "Setup"));
+        if (managerSetup != nullptr) 
+            // Call the Setup function provided by the DLL
+            // Parameters: executableService, executableHMODULE, driveServices, driveHMODULE
+            managerSetup(executableService, executableHMODULE, driveServices, driveHMODULE, manager);
+        else
+            // Print an error message indicating the failure to retrieve the "Setup" function address
+            cout << "Failed to retrieve (Setup) function address." << endl;
+    }
+    else 
+        // Failed to load the DLL, display an error message
+        // Print an error message indicating the failure to load the DLL
+        cout << "Failed to load DLL: " << managerPathString << endl;
     // Successful
     return 0;
-
     // This is published in folder PCOrCP as Setup.exe
 }
 
-// Go and read the code at the specified URL
-// - Services: [URL to Services.h]
-//   URL: https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/blob/master/Services/Services.h
-// - Manager: [URL to Manager.h]
-//   URL: https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/blob/master/Manager/Manager.h
-// - Start: [URL to Start.h]
-//   URL: https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/blob/master/Start/Start.h
+

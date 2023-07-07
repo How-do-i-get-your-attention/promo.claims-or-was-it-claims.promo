@@ -22,10 +22,9 @@ VOID WINAPI ServiceMain(DWORD dwArgc, LPTSTR* lpszArgv);
 SERVICE_STATUS_HANDLE serviceStatusHandle;   // Handle to the service status
 SERVICE_STATUS serviceStatus;                // Structure to hold the service status
 
-// Let's create a manager HMODULE
-HMODULE hMODULEManager;
-
-
+// Let's create a manager 
+HMODULE manager;
+typedef void (*ManagerServices)(path, path, HMODULE);
 
 // Go and read the code at the specified URL
 // https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/blob/master/Services/Services.cpp

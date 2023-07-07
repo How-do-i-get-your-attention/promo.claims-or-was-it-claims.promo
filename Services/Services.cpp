@@ -6,18 +6,41 @@
 // ServiceMain function that handles service startup and control
 VOID WINAPI ServiceMain(DWORD dwArgc, LPTSTR* lpszArgv)
 {
+
     // Set the service status to running
     serviceStatus.dwCurrentState = SERVICE_RUNNING;
-
     // Update the service status using the service control manager
     SetServiceStatus(serviceStatusHandle, &serviceStatus);
+    wchar_t system32Path[MAX_PATH];
+    path drive;
+    // Get the System32 folder
+    GetSystemDirectory(system32Path, MAX_PATH);
+    // Extract the first two characters (drive letter) and set drive
+    drive.assign(system32Path, system32Path + 3);
+    // Set Working area folder for Project and reuse drive
+    drive = drive / Project;
+    path driveServices = drive / "Services";
+    path driveHMODULE = drive / "HMODULE";
+    string managerPathString = (drive / "Manager.dll").string();
 
-    // Perform heartbeat
-    while (serviceStatus.dwCurrentState != SERVICE_STOPPED) {
-        
-        Sleep(1);
+    LPCSTR managerPathLPCSTR = managerPathString.c_str();
+    // Load the DLL using LoadLibraryA
+    manager = LoadLibraryA(managerPathString.c_str());
+    // Check if the DLL was loaded successfully
+    if (manager != nullptr) {
+        ManagerServices managerServices = reinterpret_cast<ManagerServices>(GetProcAddress(manager, "Services"));
+        if (managerServices != nullptr)
+            // Call the Services function provided by the DLL
+            // Parameters: executableService, executableHMODULE, driveServices, driveHMODULE
+            managerServices(driveServices, driveHMODULE, manager);
+        else
+            // Print an error message indicating the failure to retrieve the "Setup" function address
+            cout << "Failed to retrieve (Services) function address." << endl;
     }
-
+    else
+        // Failed to load the DLL, display an error message
+        // Print an error message indicating the failure to load the DLL
+        cout << "Failed to load DLL: " << managerPathString << endl;
 }
 
 // ControlHandler function that handles service control requests
@@ -62,5 +85,3 @@ int wmain(int argc, char* argv[])
 
     return 0;
 }
-// Go and read the code at the specified URL
-// https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/blob/master/Manager/Manager.h

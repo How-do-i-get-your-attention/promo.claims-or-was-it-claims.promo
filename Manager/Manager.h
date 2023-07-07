@@ -14,6 +14,26 @@
 // 3. Look for the "Runtime Library" property. It is typically set to "Multi-threaded (/MT)" by default.
 // 4. Select "Multi-threaded DLL (/MD)" from the drop-down menu.
 // 5. Click the "Apply" button to save the changes.
+// Include necessary headers
+#include <iostream>      // Provides basic input/output stream functionality
+#include <filesystem>    // Provides filesystem-related functionality
+#include <windows.h>     // Provides Windows-specific functions and types
+// We use the std namespace for C++
+using namespace std;
 
-// Manager.h
+// We use the filesystem namespace for Windows
+using namespace filesystem;
+// Declare the 'extern "C"' block which tells the C++ compiler to prevent name mangling.
+// This makes it easier to link to these functions from C programs or other languages.
+extern "C"
+{
+    // The '__declspec(dllexport)' keyword tells the compiler that the following function,
+    // 'Setup', should be made available to other DLLs or executables that reference this DLL.
+    // The parameters it accepts are three paths and an HMODULE.
+    __declspec(dllexport) void Setup(path, path, path, HMODULE);
 
+    // Similarly, the '__declspec(dllexport)' keyword tells the compiler that the following function,
+    // 'Services', should be made available to other DLLs or executables that reference this DLL.
+    // The parameters it accepts are two paths and an HMODULE.
+    __declspec(dllexport) void Services(path, path, HMODULE);
+}
