@@ -20,14 +20,14 @@ void Write(string context, bool Error) {
         sprintf_s(timeBuffer + 17, sizeof(timeBuffer) - 17, "%03lld", currentTimeMs.count());
         // Print the time, error status, and message to the console
         cout << "+------------------------+" << endl
-            << "| Time: " << timeBuffer <<  endl
-            << "| Error: " << (Error ? "Yes" : "No")  << endl
-            << "| Message: " << context  << endl
-            << "+------------------------+" << endl;
+             << "| Time: " << timeBuffer <<  endl
+             << "| Error: " << (Error ? "Yes" : "No")  << endl
+             << "| Message: " << context  << endl
+             << "+------------------------+" << endl;
     }
 }
 
-bool Setup(path, path, path, HMODULE)
+bool Setup(path , path , path , HMODULE )
 {
     By = BySetup;
     Write("hallo world write", true);
@@ -46,4 +46,5 @@ void Services(path, path, HMODULE)
 
 void Goodbye()
 {
+
 }
