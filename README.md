@@ -1528,49 +1528,6 @@ Here's a simplified explanation of how a manager can control DLL files:
 The manager acts as an intermediary between the main application and the DLL files, providing a centralized control mechanism for loading, interacting with, and unloading the DLLs. It enables the application to dynamically incorporate additional functionality provided by the DLLs and manage the lifecycle of these external components.
 
 
-#### PortableExecutable
-
-##### IMAGE_DOS_HEADER
-
-
-- `e_magic`: Magic number that identifies the file as an MS-DOS executable. It should be set to the value `0x5A4D` (the letters 'MZ' in ASCII).
-
-- `e_cblp`: Number of bytes on the last page of the file. It is typically used to calculate the file size. (Wee will come back to this later)
-    
-
-- `e_cp`: Number of pages in the file. Each page is 512 bytes in size.
-
-- `e_crlc`: Number of relocation entries stored in the relocation table. This field is usually set to 0 for executable files. If the value of is 0, it means that the file does not contain any relocations. This suggests that the binary code is position-independent and can be loaded into memory at any base address without requiring any modifications.
-
-- `e_cparhdr`: Size of the header in paragraphs (16-byte units). If the value is 4, it means that the size of the header is 4 paragraphs, which corresponds to 64 bytes (4 * 16). This indicates that the DOS header occupies a specific portion of the file, starting from the beginning.  If the value  is 2, it means that the size of the header is 2 paragraphs, which corresponds to 32 bytes (2 * 16).
-
-- `e_minalloc`: Minimum number of extra paragraphs required by the program. If the value is 0, it indicates that there is no minimum extra memory allocation required for the executable.
-
-- `e_maxalloc`: Maximum number of extra paragraphs the program can allocate. If the value  is `0xFFFF`, it indicates that there is no maximum extra memory allocation required for the executable.
-
-- `e_ss`: Initial value of the SS (Stack Segment) register.
-
-- `e_sp`: Initial value of the SP (Stack Pointer) register.
-
-- `e_csum`: Checksum of the executable file. This field is typically set to 0 and is not used in modern systems.
-
-- `e_ip`: Initial value of the IP (Instruction Pointer) register.
-
-- `e_cs`: Initial value of the CS (Code Segment) register.
-
-- `e_lfarlc`: File address of the relocation table. It specifies the offset from the beginning of the file to the relocation table.
-
-- `e_ovno`: Overlay number. It indicates the overlay to be loaded when the executable file is run as an overlay.
-
-- `e_res[4]`: Reserved words. These fields are not used in the PE format and are reserved for compatibility reasons.
-
-- `e_oemid`: OEM identifier. It specifies additional information about the file format or system requirements.
-
-- `e_oeminfo`: OEM information. It provides further details based on the value of `e_oemid`.
-
-- `e_res2[10]`: Reserved words. Similar to `e_res`, these fields are not used in the PE format and are reserved for compatibility reasons.
-
-- `e_lfanew`: File address of the new exe header (PE header). It points to the offset where the PE header begins in the file.
 
 #### Start
 <img src="visual_studio.png" width="20"/> <img src="cplusplus.png" height="15"/>
