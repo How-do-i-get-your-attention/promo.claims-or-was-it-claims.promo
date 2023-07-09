@@ -1530,7 +1530,7 @@ The manager acts as an intermediary between the main application and the DLL fil
 
 #### PortableExecutable
 
-The file start
+##### DOS header 
 
                                   +----------------+
                              +----|   e_magic      | (2 bytes)
