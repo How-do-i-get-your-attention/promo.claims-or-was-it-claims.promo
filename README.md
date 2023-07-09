@@ -1535,7 +1535,7 @@ The manager acts as an intermediary between the main application and the DLL fil
 
 - `e_magic`: Magic number that identifies the file as an MS-DOS executable. It should be set to the value `0x5A4D` (the letters 'MZ' in ASCII).
 
-- `e_cblp`: Number of bytes on the last page of the file. It is typically used to calculate the file size. (Wee wukk come back to this later)
+- `e_cblp`: Number of bytes on the last page of the file. It is typically used to calculate the file size. (Wee will come back to this later)
     
 
 - `e_cp`: Number of pages in the file. Each page is 512 bytes in size.
