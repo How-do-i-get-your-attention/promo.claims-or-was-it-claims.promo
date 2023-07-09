@@ -1535,28 +1535,18 @@ The manager acts as an intermediary between the main application and the DLL fil
 
 - `e_magic`: Magic number that identifies the file as an MS-DOS executable. It should be set to the value `0x5A4D` (the letters 'MZ' in ASCII).
 
-- `e_cblp`: Number of bytes on the last page of the file. It is typically used to calculate the file size. The `e_cblp` field in the DOS header represents the number of bytes on the last page of the file that are not part of the program. It specifies the number of bytes within the last file page that are not used by the program and can be ignored when loading the executable into memory. This value is typically used for alignment purposes.
-
-In some case, if the value of `e_cblp` is 90, it means that the last page of the file contains 90 bytes that are not used by the program. The 90 bytes specified by the `e_cblp` field represent the unused bytes on the last page of the file. To find these bytes, you would need to locate the end of the file and examine the remaining data after the last page used by the program.
-
-You can determine the location of the last page used by the program by considering the `e_cp` (Pages in the file) and `e_cparhdr` (Size of the header in paragraphs) fields. The formula to calculate the size of the program in bytes is `(e_cp - 1) * 512 + e_cparhdr * 16`. Once you have the size of the program, you can identify the start of the unused bytes on the last page by subtracting the value of `e_cblp` (Bytes on the last page of the file) from the program size.
-
-For example, if the program size is 4096 bytes (4 pages) and `e_cblp` is 90, the unused bytes would be located at the offset 4006 (4096 - 90) within the last page of the file.
-
-If the value of `e_cblp` is 0, it means that there are no unused bytes on the last page of the file. This indicates that the entire last page is used by the program, and there are no additional bytes left unused.
-
-In such a case, you would not need to locate any specific bytes as there are no unused bytes available. The program occupies the entire last page without any remaining space.
-
+- `e_cblp`: Number of bytes on the last page of the file. It is typically used to calculate the file size. (Wee wukk come back to this later)
+    
 
 - `e_cp`: Number of pages in the file. Each page is 512 bytes in size.
 
-- `e_crlc`: Number of relocation entries stored in the relocation table. This field is usually set to 0 for executable files.
+- `e_crlc`: Number of relocation entries stored in the relocation table. This field is usually set to 0 for executable files. If the value of is 0, it means that the file does not contain any relocations. This suggests that the binary code is position-independent and can be loaded into memory at any base address without requiring any modifications.
 
-- `e_cparhdr`: Size of the header in paragraphs (16-byte units).
+- `e_cparhdr`: Size of the header in paragraphs (16-byte units). If the value is 4, it means that the size of the header is 4 paragraphs, which corresponds to 64 bytes (4 * 16). This indicates that the DOS header occupies a specific portion of the file, starting from the beginning.  If the value  is 2, it means that the size of the header is 2 paragraphs, which corresponds to 32 bytes (2 * 16).
 
-- `e_minalloc`: Minimum number of extra paragraphs required by the program.
+- `e_minalloc`: Minimum number of extra paragraphs required by the program. If the value is 0, it indicates that there is no minimum extra memory allocation required for the executable.
 
-- `e_maxalloc`: Maximum number of extra paragraphs the program can allocate.
+- `e_maxalloc`: Maximum number of extra paragraphs the program can allocate. If the value  is `0xFFFF`, it indicates that there is no maximum extra memory allocation required for the executable.
 
 - `e_ss`: Initial value of the SS (Stack Segment) register.
 
