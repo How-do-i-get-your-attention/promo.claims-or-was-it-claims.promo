@@ -1528,6 +1528,8 @@ Here's a simplified explanation of how a manager can control DLL files:
 The manager acts as an intermediary between the main application and the DLL files, providing a centralized control mechanism for loading, interacting with, and unloading the DLLs. It enables the application to dynamically incorporate additional functionality provided by the DLLs and manage the lifecycle of these external components.
 
 
+#### PortableExecutable
+
 #### Start
 <img src="visual_studio.png" width="20"/> <img src="cplusplus.png" height="15"/>
 
