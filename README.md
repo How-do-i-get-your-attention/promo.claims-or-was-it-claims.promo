@@ -1530,133 +1530,28 @@ The manager acts as an intermediary between the main application and the DLL fil
 
 #### PortableExecutable
 
-##### DOS header 
+##### IMAGE_DOS_HEADER
 
-                                  +----------------+
-                             +----|   e_magic      | (2 bytes)
-                             |    +----------------+
-                             |
-                             |    +----------------+
-                             +----|   e_cblp       | (2 bytes)
-                             |    +----------------+
-                             |
-                             |    +----------------+
-                             +----|   e_cp         | (2 bytes)
-                             |    +----------------+
-                             |
-                             |    +----------------+
-                             +----|   e_crlc       | (2 bytes)
-                             |    +----------------+
-                             |
-                             |    +----------------+
-                             +----|   e_cparhdr    | (2 bytes)
-                             |    +----------------+
-                             |
-                             |    +----------------+
-                             +----|   e_minalloc   | (2 bytes)
-                             |    +----------------+
-                             |
-                             |    +----------------+
-                             +----|   e_maxalloc   | (2 bytes)
-                             |    +----------------+
-                             |
-                             |    +----------------+
-                             +----|   e_ss         | (2 bytes)
-                             |    +----------------+
-                             |
-                             |    +----------------+
-                             +----|   e_sp         | (2 bytes)
-                             |    +----------------+
-                             |
-                             |    +----------------+
-                             +----|   e_csum       | (2 bytes)
-                             |    +----------------+
-                             |
-                             |    +----------------+
-                             +----|   e_ip         | (2 bytes)
-                             |    +----------------+
-                             |
-                             |    +----------------+
-                             +----|   e_cs         | (2 bytes)
-                             |    +----------------+
-                             |
-                             |    +----------------+
-                             +----|   e_lfarlc     | (2 bytes)
-                             |    +----------------+
-                             |
-                             |    +----------------+
-                             +----|   e_ovno       | (2 bytes)
-                             |    +----------------+
-                             |
-                             |    +----------------+
-                             +----|   e_res[0]     | (2 bytes)
-                             |    +----------------+
-                             |
-                             |    +----------------+
-                             +----|   e_res[1]     | (2 bytes)
-                             |    +----------------+
-                             |
-                             |    +----------------+
-                             +----|   e_res[2]     | (2 bytes)
-                             |    +----------------+
-                             |
-                             |    +----------------+
-                             +----|   e_res[3]     | (2 bytes)
-                             |    +----------------+
-                             |
-                             |    +----------------+
-                             +----|   e_oemid      | (2 bytes)
-                             |    +----------------+
-                             |
-                             |    +----------------+
-                             +----|   e_oeminfo    | (2 bytes)
-                             |    +----------------+
-                             |
-                             |    +----------------+
-                             +----|   e_res2[0]    | (2 bytes)
-                             |    +----------------+
-                             |
-                             |    +----------------+
-                             +----|   e_res2[1]    | (2 bytes)
-                             |    +----------------+
-                             |
-                             |    +----------------+
-                             +----|   e_res2[2]    | (2 bytes)
-                             |    +----------------+
-                             |
-                             |    +----------------+
-                             +----|   e_res2[3]    | (2 bytes)
-                             |    +----------------+
-                             |
-                             |    +----------------+
-                             +----|   e_res2[4]    | (2 bytes)
-                             |    +----------------+
-                             |
-                             |    +----------------+
-                             +----|   e_res2[5]    | (2 bytes)
-                             |    +----------------+
-                             |
-                             |    +----------------+
-                             +----|   e_res2[6]    | (2 bytes)
-                             |    +----------------+
-                             |
-                             |    +----------------+
-                             +----|   e_res2[7]    | (2 bytes)
-                             |    +----------------+
-                             |
-                             |    +----------------+
-                             +----|   e_res2[8]    | (2 bytes)
-                             |    +----------------+
-                             |
-                             |    +----------------+
-                             +----|   e_res2[9]    | (2 bytes)
-                             |    +----------------+
-                             |
-                             |    +----------------+
-                             +----|   e_lfanew     | (4 bytes)
-                             |    +----------------+
-                             |
-                             +-----------------------+
+1. `e_magic`: Magic number that identifies the file as a DOS executable. Its value is typically `0x5A4D` (MZ).
+2. `e_cblp`: Bytes on the last page of the file. This field specifies the size of the last page in the file that is not fully utilized.
+3. `e_cp`: Pages in the file. It indicates the total number of pages in the executable file.
+4. `e_crlc`: Relocations. This field represents the number of relocation entries stored in the relocation table.
+5. `e_cparhdr`: Size of header in paragraphs. It specifies the size of the header in paragraphs, where each paragraph is 16 bytes.
+6. `e_minalloc`: Minimum extra paragraphs needed. It indicates the minimum number of extra paragraphs the program will need to allocate.
+7. `e_maxalloc`: Maximum extra paragraphs needed. This field specifies the maximum number of extra paragraphs the program will need to allocate.
+8. `e_ss`: Initial (relative) SS value. It stores the value to be loaded into the SS (Stack Segment) register at program startup.
+9. `e_sp`: Initial SP value. This field contains the value to be loaded into the SP (Stack Pointer) register at program startup.
+10. `e_csum`: Checksum. It represents the 16-bit checksum of the entire file.
+11. `e_ip`: Initial IP value. This field stores the value to be loaded into the IP (Instruction Pointer) register at program startup.
+12. `e_cs`: Initial (relative) CS value. It contains the value to be loaded into the CS (Code Segment) register at program startup.
+13. `e_lfarlc`: File address of relocation table. This field specifies the offset from the start of the file to the relocation table.
+14. `e_ovno`: Overlay number. It represents the overlay number used to indicate the current overlay.
+15. `e_res`: Reserved words. These are reserved fields with no specific purpose.
+16. `e_oemid`: OEM identifier. It stores an OEM-specific identifier.
+17. `e_oeminfo`: OEM information. This field contains additional information specific to the OEM.
+18. `e_res2`: Reserved words. Similar to `e_res`, these are reserved fields with no specific purpose.
+19. `e_lfanew`: File address of new exe header. This field specifies the offset from the start of the file to the PE signature, indicating the start of the PE header.
+
 
 
 #### Start
