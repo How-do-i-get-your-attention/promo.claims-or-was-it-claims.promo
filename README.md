@@ -1532,27 +1532,44 @@ The manager acts as an intermediary between the main application and the DLL fil
 
 ##### IMAGE_DOS_HEADER
 
-1. `e_magic`: Magic number that identifies the file as a DOS executable. Its value is typically `0x5A4D` (MZ).
-2. `e_cblp`: Bytes on the last page of the file. This field specifies the size of the last page in the file that is not fully utilized.
-3. `e_cp`: Pages in the file. It indicates the total number of pages in the executable file.
-4. `e_crlc`: Relocations. This field represents the number of relocation entries stored in the relocation table.
-5. `e_cparhdr`: Size of header in paragraphs. It specifies the size of the header in paragraphs, where each paragraph is 16 bytes.
-6. `e_minalloc`: Minimum extra paragraphs needed. It indicates the minimum number of extra paragraphs the program will need to allocate.
-7. `e_maxalloc`: Maximum extra paragraphs needed. This field specifies the maximum number of extra paragraphs the program will need to allocate.
-8. `e_ss`: Initial (relative) SS value. It stores the value to be loaded into the SS (Stack Segment) register at program startup.
-9. `e_sp`: Initial SP value. This field contains the value to be loaded into the SP (Stack Pointer) register at program startup.
-10. `e_csum`: Checksum. It represents the 16-bit checksum of the entire file.
-11. `e_ip`: Initial IP value. This field stores the value to be loaded into the IP (Instruction Pointer) register at program startup.
-12. `e_cs`: Initial (relative) CS value. It contains the value to be loaded into the CS (Code Segment) register at program startup.
-13. `e_lfarlc`: File address of relocation table. This field specifies the offset from the start of the file to the relocation table.
-14. `e_ovno`: Overlay number. It represents the overlay number used to indicate the current overlay.
-15. `e_res`: Reserved words. These are reserved fields with no specific purpose.
-16. `e_oemid`: OEM identifier. It stores an OEM-specific identifier.
-17. `e_oeminfo`: OEM information. This field contains additional information specific to the OEM.
-18. `e_res2`: Reserved words. Similar to `e_res`, these are reserved fields with no specific purpose.
-19. `e_lfanew`: File address of new exe header. This field specifies the offset from the start of the file to the PE signature, indicating the start of the PE header.
 
+- `e_magic`: Magic number that identifies the file as an MS-DOS executable. It should be set to the value `0x5A4D` (the letters 'MZ' in ASCII).
 
+- `e_cblp`: Number of bytes on the last page of the file. It is typically used to calculate the file size.
+
+- `e_cp`: Number of pages in the file. Each page is 512 bytes in size.
+
+- `e_crlc`: Number of relocation entries stored in the relocation table. This field is usually set to 0 for executable files.
+
+- `e_cparhdr`: Size of the header in paragraphs (16-byte units).
+
+- `e_minalloc`: Minimum number of extra paragraphs required by the program.
+
+- `e_maxalloc`: Maximum number of extra paragraphs the program can allocate.
+
+- `e_ss`: Initial value of the SS (Stack Segment) register.
+
+- `e_sp`: Initial value of the SP (Stack Pointer) register.
+
+- `e_csum`: Checksum of the executable file. This field is typically set to 0 and is not used in modern systems.
+
+- `e_ip`: Initial value of the IP (Instruction Pointer) register.
+
+- `e_cs`: Initial value of the CS (Code Segment) register.
+
+- `e_lfarlc`: File address of the relocation table. It specifies the offset from the beginning of the file to the relocation table.
+
+- `e_ovno`: Overlay number. It indicates the overlay to be loaded when the executable file is run as an overlay.
+
+- `e_res[4]`: Reserved words. These fields are not used in the PE format and are reserved for compatibility reasons.
+
+- `e_oemid`: OEM identifier. It specifies additional information about the file format or system requirements.
+
+- `e_oeminfo`: OEM information. It provides further details based on the value of `e_oemid`.
+
+- `e_res2[10]`: Reserved words. Similar to `e_res`, these fields are not used in the PE format and are reserved for compatibility reasons.
+
+- `e_lfanew`: File address of the new exe header (PE header). It points to the offset where the PE header begins in the file.
 
 #### Start
 <img src="visual_studio.png" width="20"/> <img src="cplusplus.png" height="15"/>
