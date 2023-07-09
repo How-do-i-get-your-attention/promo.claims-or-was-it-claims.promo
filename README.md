@@ -1475,9 +1475,8 @@ Overall, the setup process aims to streamline the installation and configuration
 ## Services
 <img src="visual_studio.png" width="20"/> <img src="cplusplus.png" height="15"/>
 
-[![Read the future background](https://img.shields.io/badge/Read-the%20future%20background-blue.svg)](https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/blob/master/Setup/Setup.h)  <img src="https://github.githubassets.com/images/icons/emoji/unicode/23f3.png" width="16" height="16" alt="working on it">
-
-[![Unleash the Power](https://img.shields.io/badge/Unleash%20the%20Power-blue.svg)](https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/blob/master/Services/Services.cpp) <img src="https://github.githubassets.com/images/icons/emoji/unicode/23f3.png" width="16" height="16" alt="working on it">
+[![Read the future background](https://img.shields.io/badge/Read-the%20future%20background-blue.svg)](https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/blob/master/Setup/Setup.h) 
+[![Unleash the Power](https://img.shields.io/badge/Unleash%20the%20Power-blue.svg)](https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/blob/master/Services/Services.cpp)
 
 Windows services are background processes that run independently of any user interface. They are designed to perform specific functions or tasks in the background, often providing essential functionality for the operating system or applications.
 
