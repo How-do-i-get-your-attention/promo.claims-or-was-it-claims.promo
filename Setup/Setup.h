@@ -11,28 +11,23 @@
 // 5. Add /std:c++latest to the "Additional Options" field.
 // 6. Click on the "Apply" button to save the changes.
 // This comment provides instructions for enabling the latest C++ features in Visual Studio
-
 // Include necessary headers
 #include <iostream>      // Provides basic input/output stream functionality
 #include <filesystem>    // Provides filesystem-related functionality
 #include <windows.h>     // Provides Windows-specific functions and types
 #include <tuple>		 // Provides tuple
 #include <chrono>        // Provides time-related functionality
-
 // We use the std namespace for C++
 using namespace std;
-
 // We use the filesystem namespace for Windows
 using namespace filesystem;
-
 // We use the chrono namespace for time-related functionality
 using namespace chrono;
-
 // Let's create a manager 
-typedef bool (*ManagerSetup)(path, path, path, HMODULE);
+typedef bool (*ManagerSetup)(path, path, path, HMODULE&);
+// Function pointer type for ManagerGoodbye
+typedef bool (*ManagerGoodbye)();
 // Define the tuple type to store time and message
 typedef tuple<system_clock::time_point, bool, string> Message;
-
 // Thread: First layer setup
 int wmain(int argc, char* argv[]);
-

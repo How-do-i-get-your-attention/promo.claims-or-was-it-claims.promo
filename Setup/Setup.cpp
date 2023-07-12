@@ -29,11 +29,14 @@ void Messages(string context) {
     int width = context.length() + 4; // Calculate the width of the box
     string horizontalLine(width, '-'); // Create the horizontal line
     // Print the box with the input text centered
-    cout << endl << '+' << horizontalLine << '+' << endl << "| " << context <<  endl << '+' << horizontalLine << '+' << endl;
+    cout << '+' << horizontalLine << '+' << endl << "| " << context <<  endl << '+' << horizontalLine << '+' << endl;
 }
 
 int wmain(int argc, char* argv[])
 {
+    // Make the console maximize
+    HWND consoleWindow = GetConsoleWindow();
+    ShowWindow(consoleWindow, SW_MAXIMIZE);
     // We need to get the path of the location of the Setup.exe as it runs as:
     // 1. Administrator
     // Guideline:
@@ -85,6 +88,13 @@ int wmain(int argc, char* argv[])
     // If the drive exists, remove it
     if (exists(drive))
         remove_all(drive);
+    // Create the directories for the DLLs
+    create_directories(driveServices);
+    // Create the directories for the dynamic free libraries with UUIDs
+    create_directories(driveHMODULE);
+
+    
+
     // We always provide a fresh installation for developers.
     CloseServiceHandle(servicesControl);
     // Let's validate the source.
@@ -97,16 +107,24 @@ int wmain(int argc, char* argv[])
     // Check if the DLL was loaded successfully
     if (manager != nullptr) {
         ManagerSetup managerSetup = reinterpret_cast<ManagerSetup>(GetProcAddress(manager, "Setup"));
+        ManagerGoodbye managerGoodbye = reinterpret_cast<ManagerGoodbye>(GetProcAddress(manager, "Goodbye"));
+
         if (managerSetup != nullptr)
-            if (managerSetup(executableService, driveServices, driveHMODULE, manager)) {
+        {
+            bool mSetup = managerSetup(executableService, driveServices, driveHMODULE, manager);
+            if (managerGoodbye != nullptr) 
+                managerGoodbye();
+            HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+            SetConsoleTextAttribute(hConsole, mSetup ? FOREGROUND_GREEN : FOREGROUND_RED);
+            if (mSetup) {
                 Messages("Install services");
                 // Handle successful Setup
             }
             else
                 // Print error message for services not being installed
                 Messages("Services not installed");
-
-        // Print error message for services not being installed
+            SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
+        }
         else
             // Print an error message indicating the failure to retrieve the "Setup" function address
             Messages("Failed to retrieve (Setup) function address.");

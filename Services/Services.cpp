@@ -1,12 +1,9 @@
 #define Project L"PCOrCP"
 #pragma warning(disable: 6387)
-
 #include "Services.h"
-
 // ServiceMain function that handles service startup and control
 VOID WINAPI ServiceMain(DWORD dwArgc, LPTSTR* lpszArgv)
 {
-
     // Set the service status to running
     serviceStatus.dwCurrentState = SERVICE_RUNNING;
     // Update the service status using the service control manager
@@ -22,7 +19,6 @@ VOID WINAPI ServiceMain(DWORD dwArgc, LPTSTR* lpszArgv)
     path driveServices = drive / "Services";
     path driveHMODULE = drive / "HMODULE";
     string managerPathString = (drive / "Manager.dll").string();
-
     LPCSTR managerPathLPCSTR = managerPathString.c_str();
     // Load the DLL using LoadLibraryA
     manager = LoadLibraryA(managerPathString.c_str());
@@ -43,7 +39,6 @@ VOID WINAPI ServiceMain(DWORD dwArgc, LPTSTR* lpszArgv)
         // Print an error message indicating the failure to load the DLL
         cout << "Failed to load DLL: " << managerPathString << endl;
 }
-
 // ControlHandler function that handles service control requests
 VOID WINAPI ControlHandler(DWORD dwControl)
 {
@@ -57,7 +52,6 @@ VOID WINAPI ControlHandler(DWORD dwControl)
         SetServiceStatus(serviceStatusHandle, &serviceStatus);
     }
 }
-
 //thread:First Layer of Services
 int wmain(int argc, char* argv[])
 {
