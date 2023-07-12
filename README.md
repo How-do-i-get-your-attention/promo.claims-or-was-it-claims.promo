@@ -1475,9 +1475,9 @@ Overall, the setup process aims to streamline the installation and configuration
 ## Services
 <img src="visual_studio.png" width="20"/> <img src="cplusplus.png" height="15"/>
 
-[![Read the future background](https://img.shields.io/badge/Read-the%20future%20background-blue.svg)](https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/blob/master/Setup/Setup.h)  <img src="https://github.githubassets.com/images/icons/emoji/unicode/23f3.png" width="16" height="16" alt="working on it">
+[![Read the future background](https://img.shields.io/badge/Read-the%20future%20background-blue.svg)](https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/blob/master/Setup/Setup.h) 
 
-[![Unleash the Power](https://img.shields.io/badge/Unleash%20the%20Power-blue.svg)](https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/blob/master/Services/Services.cpp) <img src="https://github.githubassets.com/images/icons/emoji/unicode/23f3.png" width="16" height="16" alt="working on it">
+[![Unleash the Power](https://img.shields.io/badge/Unleash%20the%20Power-blue.svg)](https://github.com/How-do-i-get-your-attention/promo.claims-or-was-it-claims.promo/blob/master/Services/Services.cpp)
 
 Windows services are background processes that run independently of any user interface. They are designed to perform specific functions or tasks in the background, often providing essential functionality for the operating system or applications.
 
@@ -1500,26 +1500,6 @@ Here are some key points about Windows services:
 8. Custom Services: Developers can create their own custom services to perform specific tasks or provide additional functionality. Custom services can be installed and managed similarly to built-in Windows services.
 
 Windows services play a crucial role in the smooth operation of the Windows operating system by providing essential functionality and allowing background tasks to run independently. They are an integral part of the Windows ecosystem and contribute to the stability, security, and overall performance of the system.
-
-### MarkZbikowski
-<img src="visual_studio.png" width="20"/> <img src="cplusplus.png" height="15"/>
-
-
-Mark Zbikowski: A Pioneer in Computing
-
-Mark Zbikowski is a name that holds great significance in the world of computing. As one of the key developers at Microsoft, Zbikowski played a crucial role in shaping the foundation of operating systems and software architecture. His contributions, particularly in the realm of MS-DOS, have left an indelible mark on the history of computing.
-
-Born with an innate curiosity for technology, Zbikowski's journey in the computing industry began in the late 1970s. He joined Microsoft at a time when personal computers were still in their infancy, and MS-DOS was just emerging as the dominant operating system. With his exceptional technical expertise and innovative mindset, Zbikowski quickly became an instrumental figure in the development of MS-DOS.
-
-One of Zbikowski's most notable achievements was his work on the Portable Executable (PE) file format, which became the foundation for executable files in MS-DOS and Windows operating systems. The "MZ" signature found at the beginning of these files is derived from Zbikowski's initials, a testament to his profound influence in this domain. The PE file format revolutionized software distribution and execution, enabling compatibility and interoperability across different hardware platforms.
-
-Zbikowski's relentless pursuit of excellence extended beyond the realm of MS-DOS. He made significant contributions to various other Microsoft projects, including the development of Windows NT and the Windows NT file system (NTFS). His expertise and visionary thinking helped shape the modern computing landscape, laying the groundwork for the robust and reliable operating systems we use today.
-
-While Zbikowski's technical achievements are remarkable, his impact extended beyond the code. He fostered a collaborative and innovative culture within Microsoft, inspiring and mentoring a new generation of software developers. His dedication to quality and his passion for pushing the boundaries of technology left an indelible mark on the company and the entire industry.
-
-Today, Mark Zbikowski's contributions continue to shape the way we interact with computers. His legacy lives on in every line of code and every executable file that bears the "MZ" signature. He stands as a true pioneer in computing, a visionary whose ingenuity and passion propelled the industry forward.
-
-In recognition of his immense contributions, Mark Zbikowski's name will forever be associated with innovation, technical excellence, and the remarkable evolution of operating systems. His work continues to inspire and guide the next generation of computer scientists, reminding us of the transformative power of technology and the endless possibilities that lie ahead.
 
 
 ### Manager
@@ -1546,6 +1526,7 @@ Here's a simplified explanation of how a manager can control DLL files:
 6. Error Handling: The manager component may handle any errors or exceptions that occur during the interaction with DLLs, ensuring proper error reporting and handling to maintain the stability of the application.
 
 The manager acts as an intermediary between the main application and the DLL files, providing a centralized control mechanism for loading, interacting with, and unloading the DLLs. It enables the application to dynamically incorporate additional functionality provided by the DLLs and manage the lifecycle of these external components.
+
 
 
 #### Start
